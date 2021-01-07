@@ -205,7 +205,7 @@ const Home = () => {
         line.moveTo(0, +VRTop)
         line.lineTo(0, +VRBottom)
         line.zIndex = 999
-        // objectContainer.addChild(line)
+        objectContainer.addChild(line)
 
         values(housingGrid).forEach((grids) => {
           const gridLine = new Graphics()
@@ -233,10 +233,6 @@ const Home = () => {
         })
 
         viewport.addChild(objectContainer)
-        // const scaleRatio = window.innerWidth / app.stage.width
-        // app.stage.scale.set(scaleRatio, scaleRatio)
-
-        console.log(viewport.getVisibleBounds())
       })
 
       return () => {

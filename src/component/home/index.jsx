@@ -68,7 +68,7 @@ const Home = () => {
       const mapId = selectedMapTheme.templateMapID
       const MapData = Maps[mapId]
       const defaultTheme = '0'
-      const fakeTheme = 's2'
+      const fakeTheme = '0'
       const {
         info: { VRTop, VRRight, VRBottom, VRLeft },
         housingGrid,
@@ -176,7 +176,7 @@ const Home = () => {
             obj.x = frames[0].x
             obj.y = frames[0].y
             obj.zIndex = frames[0].z
-            obj.animationSpeed = 0.3
+            obj.animationSpeed = 1 / ((frames[0].delay || 80) / 16)
             obj.play()
             objectContainer.addChild(obj)
             const objTicker = (delta) => {

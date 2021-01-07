@@ -8,6 +8,7 @@ import {
   Sprite,
   Graphics,
 } from 'pixi.js-legacy'
+import { Viewport } from 'pixi-viewport'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -22,6 +23,7 @@ import {
   pickBy,
   pipe,
   prop,
+  times,
   toPairs,
   values,
 } from 'ramda'
@@ -60,30 +62,51 @@ const getImageName = ({
 
 const Home = () => {
   useEffect(() => {
-    let app
+    let app, viewport
     if (canvasRef.current) {
       const selectedMapTheme = MapTheme[MAP_SELECTION]
       const mapId = selectedMapTheme.templateMapID
       const MapData = Maps[mapId]
       const defaultTheme = '0'
-      const fakeTheme = 's1'
+      const fakeTheme = 's2'
       const {
         info: { VRTop, VRRight, VRBottom, VRLeft },
+        housingGrid,
       } = MapData
       const origin = {
         x: +VRLeft,
         y: +VRTop,
       }
+      const worldWidth = Math.abs(+VRLeft) + Math.abs(+VRRight)
+      const worldHeight = Math.abs(+VRTop) + Math.abs(+VRBottom)
       app = new Application({
-        width: Math.abs(+VRLeft) + Math.abs(+VRRight),
-        height: Math.abs(+VRTop) + Math.abs(+VRBottom),
+        width: window.innerWidth,
+        height: window.innerHeight - 200,
         transparent: true,
-        resolution: window.devicePixelRatio || 1,
         view: canvasRef.current,
       })
-      app.stage.x = Math.abs(+VRLeft)
-      app.stage.y = Math.abs(+VRTop)
+      viewport = new Viewport({
+        screenWidth: window.innerWidth,
+        screenHeight: window.innerHeight - 200,
+        worldWidth,
+        worldHeight,
+        interaction: app.renderer.plugins.interaction,
+      })
+      const scaleRatio = window.innerWidth / worldWidth
+      viewport
+        .clampZoom({
+          maxWidth: worldWidth + viewport.screenWidth,
+          maxHeight: worldHeight + viewport.screenHeight,
+        })
+        .moveCenter({ x: Math.abs(origin.x), y: Math.abs(origin.y) })
+      app.stage.addChild(viewport)
+      viewport.drag().pinch().wheel()
+      // viewport.setZoom(scaleRatio, true)
+      app.renderer.runners['destroy'].add({
+        destroy: viewport.destroy.bind(viewport),
+      })
       const objectContainer = new Container()
+      objectContainer.position.set(Math.abs(+VRLeft), Math.abs(+VRTop))
       objectContainer.sortableChildren = true
       const objectList = getMapObjects(MapData).map(
         ({
@@ -177,15 +200,43 @@ const Home = () => {
         })
         const line = new Graphics()
         line.lineStyle(2, 0x000000, 1)
-        line.moveTo(VRLeft, 0)
-        line.lineTo(app.screen.width, 0)
-        line.moveTo(0, VRTop)
-        line.lineTo(0, app.screen.height)
+        line.moveTo(+VRLeft, 0)
+        line.lineTo(+VRRight, 0)
+        line.moveTo(0, +VRTop)
+        line.lineTo(0, +VRBottom)
         line.zIndex = 999
-        objectContainer.addChild(line)
-        app.stage.addChild(objectContainer)
+        // objectContainer.addChild(line)
+
+        values(housingGrid).forEach((grids) => {
+          const gridLine = new Graphics()
+          gridLine.lineStyle(2, 0x333333, 1)
+          gridLine.zIndex = 990
+          const gridUnit = 30
+          const row = +grids.row
+          const col = +grids.col
+          const startX = +grids.left
+          const startY = +grids.top
+          const endX = startX + col * gridUnit
+          const endY = startY + row * gridUnit
+          times((index) => {
+            const currentY = startY + index * gridUnit
+            console.log(currentY)
+            gridLine.moveTo(startX, currentY)
+            gridLine.lineTo(endX, currentY)
+          }, row + 1)
+          times((index) => {
+            const currentX = startX + index * gridUnit
+            gridLine.moveTo(currentX, startY)
+            gridLine.lineTo(currentX, endY)
+          }, col + 1)
+          objectContainer.addChild(gridLine)
+        })
+
+        viewport.addChild(objectContainer)
         // const scaleRatio = window.innerWidth / app.stage.width
         // app.stage.scale.set(scaleRatio, scaleRatio)
+
+        console.log(viewport.getVisibleBounds())
       })
 
       return () => {

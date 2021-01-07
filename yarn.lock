@@ -5965,6 +5965,11 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+penner@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/penner/-/penner-0.1.3.tgz#0b8b482d4e9b39af2f3d7c37592229b8acc29705"
+  integrity sha1-C4tILU6bOa8vPXw3WSIpuKzClwU=
+
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
@@ -6001,6 +6006,13 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
+
+pixi-viewport@^4.18.1:
+  version "4.18.1"
+  resolved "https://registry.yarnpkg.com/pixi-viewport/-/pixi-viewport-4.18.1.tgz#10fd7fef68a0163c1c2a1c6f23cdca56fcdb46f3"
+  integrity sha512-/SXfC6+7mIyFLq4fyJIsYvl2xg9/boKjKPrWwBtpFrTHiM7rJyAy1fIf2taTj7tydlfVb7EoYt8SCaycU+8TIA==
+  dependencies:
+    penner "^0.1.3"
 
 pixi.js-legacy@^5.3.7:
   version "5.3.7"

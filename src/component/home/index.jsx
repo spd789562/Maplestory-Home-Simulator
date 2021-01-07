@@ -18,6 +18,7 @@ import {
   flatten,
   keys,
   map,
+  path,
   pickBy,
   pipe,
   prop,
@@ -110,22 +111,31 @@ const Home = () => {
           return pipe(
             toPairs,
             map(
-              ([frame, { origin = {}, _imageData = {}, delay = 0 } = {}]) => ({
+              ([
                 frame,
-                x: +origin.x * -1 + +x,
-                y: +origin.y * -1 + +y,
-                z: +z,
-                size: _imageData,
-                src: getImageName({
-                  wzType,
-                  homeType,
-                  objectType,
-                  objectIndex,
-                  theme: themedObj ? fakeTheme : defaultTheme,
+                { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
+              ]) => {
+                const linkObj = _inlink
+                  ? path([wzType, ..._inlink.split('/')], MapObject)
+                  : null
+
+                return {
                   frame,
-                }),
-                delay,
-              })
+                  x: +origin.x * -1 + +x,
+                  y: +origin.y * -1 + +y,
+                  z: +z,
+                  size: linkObj ? linkObj._imageData : _imageData,
+                  src: getImageName({
+                    wzType,
+                    homeType,
+                    objectType,
+                    objectIndex,
+                    theme: themedObj ? fakeTheme : defaultTheme,
+                    frame,
+                  }),
+                  delay,
+                }
+              }
             )
           )(currentObj)
         }

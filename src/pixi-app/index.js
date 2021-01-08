@@ -61,7 +61,7 @@ class PixiAPP {
   constructor(canvasRef) {
     this.canvas = {
       width: window.innerWidth,
-      height: window.innerWidth - HF_HEIGHT,
+      height: window.innerHeight - HF_HEIGHT,
     }
     this.app = new Application({
       width: this.canvas.width,

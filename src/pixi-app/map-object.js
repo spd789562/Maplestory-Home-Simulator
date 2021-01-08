@@ -74,35 +74,37 @@ class MapObject {
   changeTheme(theme) {
     if (this.themeData[theme]) {
       this.theme = theme
-      // this.render()
+      this.render()
     }
   }
   render() {
     const isAnimation = this.frames.length > 1
     const { x, y, size } = this.frames[0]
-    if (!this.sprite) {
-      this.sprite = new AnimatedSprite(
-        this.framesSrc.map((src) => this.app.loader.resources[src].texture)
-      )
-    } else {
-      this.sprite.textures = this.framesSrc.map(
-        (src) => this.app.loader.resources[src].texture
-      )
-    }
-
-    this.sprite.width = +size.width
-    this.sprite.height = +size.height
-    this.sprite.x = x
-    this.sprite.y = y
-    this.sprite.zIndex = this.position.z
-    if (isAnimation) {
-      this.sprite.animationSpeed = 1 / ((this.frames[0].delay || 80) / 16)
-      this.sprite.play()
-      this.app.ticker.add(this.animationTicker)
-    } else {
-      this.app.ticker.remove(this.animationTicker)
-      this.sprite.stop()
-    }
+    this.app.loaderManager.load(this.framesSrc, () => {
+      if (!this.sprite) {
+        this.sprite = new AnimatedSprite(
+          this.framesSrc.map((src) => this.app.loader.resources[src].texture)
+        )
+        this.app.layers[this.layer].addChild(this.sprite)
+      } else {
+        this.sprite.textures = this.framesSrc.map(
+          (src) => this.app.loader.resources[src].texture
+        )
+      }
+      this.sprite.width = +size.width
+      this.sprite.height = +size.height
+      this.sprite.x = x
+      this.sprite.y = y
+      this.sprite.zIndex = this.position.z
+      if (isAnimation) {
+        this.sprite.animationSpeed = 1 / ((this.frames[0].delay || 80) / 16)
+        this.sprite.play()
+        this.app.ticker.add(this.animationTicker)
+      } else {
+        this.app.ticker.remove(this.animationTicker)
+        this.sprite.stop()
+      }
+    })
   }
   animationTicker() {
     const data = frames[this.sprite.currentFrame]

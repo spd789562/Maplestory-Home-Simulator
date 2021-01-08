@@ -8,6 +8,7 @@ import {
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
 import MapObject from './map-object'
+import PixiLoaderManager from './pixi-loader-manager'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -68,8 +69,9 @@ class PixiAPP {
       transparent: true,
       view: canvasRef,
     })
-    this.layers = {}
     this.showGrid = true
+    this.app.loaderManager = new PixiLoaderManager(this.app)
+    this.app.layers = {}
   }
   /**
    * @param {string} selectId
@@ -131,11 +133,11 @@ class PixiAPP {
     this.renderMap()
   }
   createLayer(index) {
-    if (this.layers[index]) return
+    if (this.app.layers[index]) return
     const layer = new Container()
     layer.sortableChildren = true
-    this.layers[index] = layer
-    this.$map.addChild(this.layers[index])
+    this.app.layers[index] = layer
+    this.$map.addChild(this.app.layers[index])
   }
   toggleGrid() {
     this.showGrid = !this.showGrid
@@ -154,18 +156,6 @@ class PixiAPP {
     if (!this.homeObject[objectType]) return
     const objects = values(this.homeObject[objectType])
     objects.forEach((object) => object.changeTheme(theme))
-    this.app.loader
-      .add(
-        pipe(
-          map(prop('framesSrc')),
-          flatten,
-          filter((src) => !this.app.loader.resources[src]),
-          uniq
-        )(objects)
-      )
-      .load(() => {
-        objects.forEach((object) => object.render())
-      })
   }
   renderObject() {
     const allHomeObject = getMapObjects(this.mapData).map(
@@ -179,22 +169,10 @@ class PixiAPP {
       homeObjects[objectType][objects.objectIndex] = objects
       return homeObjects
     }, {})
-    this.app.loader
-      .add(
-        pipe(
-          map(prop('framesSrc')),
-          flatten,
-          filter((src) => !this.app.loader.resources[src]),
-          uniq
-        )(allHomeObject)
-      )
-      .load(() => {
-        allHomeObject.forEach((obj) => {
-          !this.layers[obj.layer] && this.createLayer(obj.layer)
-          obj.render()
-          this.layers[obj.layer].addChild(obj.sprite)
-        })
-      })
+    allHomeObject.forEach((obj) => {
+      !this.app.layers[obj.layer] && this.createLayer(obj.layer)
+      obj.render()
+    })
   }
   renderBack() {}
   renderGrid() {

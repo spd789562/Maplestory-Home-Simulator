@@ -47,13 +47,18 @@ class MapObject {
           { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
         ]) => {
           const linkObj = _inlink
-            ? path([this.wzType, ..._inlink.split('/')], MapObjectMapping)
+            ? path(
+                [this.dataPath.wzType, ..._inlink.split('/')],
+                MapObjectMapping
+              )
             : null
+          const originX = linkObj?.origin?.x || origin.x
+          const originY = linkObj?.origin?.y || origin.y
           return {
             frame,
-            x: +origin.x * -1 + this.position.x,
-            y: +origin.y * -1 + this.position.y,
-            size: (linkObj && linkObj._imageData) || _imageData,
+            x: +originX * -1 + this.position.x,
+            y: +originY * -1 + this.position.y,
+            size: linkObj?._imageData || _imageData,
             src: getMapObjectImagePath({
               wzType: this.dataPath.wzType,
               homeType: this.dataPath.homeType,
@@ -81,6 +86,11 @@ class MapObject {
     const isAnimation = this.frames.length > 1
     const { x, y, size } = this.frames[0]
     this.app.loaderManager.load(this.framesSrc, () => {
+      if (
+        !this.framesSrc.filter((src) => this.app.loader.resources[src]).length
+      ) {
+        return
+      }
       if (!this.sprite) {
         this.sprite = new AnimatedSprite(
           this.framesSrc.map((src) => this.app.loader.resources[src].texture)
@@ -106,10 +116,11 @@ class MapObject {
       }
     })
   }
-  animationTicker() {
-    const data = frames[this.sprite.currentFrame]
-    this.sprite.width = data.size.width || this.sprite.width
-    this.sprite.height = data.size.height || this.sprite.height
+  animationTicker = () => {
+    if (!this.sprite) return
+    const data = this.frames[this.sprite.currentFrame]
+    this.sprite.width = +data.size.width || this.sprite.width
+    this.sprite.height = +data.size.height || this.sprite.height
     this.sprite.x = data.x || this.sprite.x
     this.sprite.y = data.y || this.sprite.y
   }

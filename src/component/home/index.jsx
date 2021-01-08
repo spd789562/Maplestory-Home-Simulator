@@ -5,7 +5,7 @@ import PixiAPP from '../../pixi-app'
 
 const canvasRef = createRef()
 
-const MAP_SELECTION = '011'
+const MAP_SELECTION = '017'
 
 const Home = () => {
   useEffect(() => {
@@ -13,7 +13,7 @@ const Home = () => {
     if (canvasRef.current) {
       app = new PixiAPP(canvasRef.current)
       app.changeHomeMap(MAP_SELECTION)
-      app.changeHomeTheme('roof', 's1')
+      app.changeHomeTheme('chimney', 's1')
     }
 
     return () => {

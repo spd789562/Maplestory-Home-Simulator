@@ -13,6 +13,7 @@ const Home = () => {
     if (canvasRef.current) {
       app = new PixiAPP(canvasRef.current)
       app.changeHomeMap(MAP_SELECTION)
+      app.changeHomeTheme('roof', 's1')
     }
 
     return () => {

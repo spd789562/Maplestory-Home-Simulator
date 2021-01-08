@@ -7,6 +7,7 @@ import {
   Graphics,
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
+import MapObject from './map-object'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -15,6 +16,7 @@ import {
   assoc,
   clone,
   evolve,
+  filter,
   flatten,
   keys,
   map,
@@ -23,6 +25,7 @@ import {
   pickBy,
   pipe,
   prop,
+  tap,
   times,
   toPairs,
   uniq,
@@ -34,7 +37,7 @@ import { getMapObjectImagePath } from '@utils/get-image-path'
 
 /* mapping */
 import MapTheme from '@mapping/map-theme'
-import MapObject from '@mapping/map-object'
+import MapObjectMapping from '@mapping/map-object'
 import Maps from '@mapping/map'
 
 const getMapObjects = pipe(
@@ -147,115 +150,49 @@ class PixiAPP {
     this.renderObject()
     this.renderGrid()
   }
-  renderObject() {
-    const objectList = getMapObjects(this.mapData).map(
-      ({
-        layer,
-        x,
-        y,
-        z,
-        oS: wzType,
-        l0: homeType,
-        l1: objectType,
-        l2: objectIndex,
-      }) => {
-        /* TODO: create MapObject class */
-        let objs = MapObject[wzType][homeType][objectType][objectIndex]
-
-        const defaultFrames = pipe(
-          pickBy((_, key) => !Number.isNaN(+key)),
-          map(clone)
-        )(objs)
-        const classifiedObj = pickBy(
-          (_, key) => key === '0' || Number.isNaN(+key),
-          { ...objs, 0: defaultFrames }
-        )
-        const themedObj = classifiedObj[fakeTheme]
-        const currentObj = themedObj || classifiedObj[defaultTheme]
-        objectType === 'foot' && console.log(objectType, currentObj)
-        return pipe(
-          toPairs,
-          map(
-            ([
-              frame,
-              { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
-            ]) => {
-              const linkObj = _inlink
-                ? path([wzType, ..._inlink.split('/')], MapObject)
-                : null
-              console.log(origin, +x)
-              return {
-                frame,
-                layer,
-                x: +origin.x * -1 + +x,
-                y: +origin.y * -1 + +y,
-                z: +z,
-                size: linkObj ? linkObj._imageData : _imageData,
-                src: getMapObjectImagePath({
-                  wzType,
-                  homeType,
-                  objectType,
-                  objectIndex,
-                  theme: themedObj ? fakeTheme : defaultTheme,
-                  frame,
-                }),
-                delay,
-              }
-            }
-          )
-        )(currentObj)
-      }
-    )
-
+  changeHomeTheme(objectType, theme) {
+    if (!this.homeObject[objectType]) return
+    const objects = values(this.homeObject[objectType])
+    objects.forEach((object) => object.changeTheme(theme))
     this.app.loader
       .add(
-        uniq(
-          flatten(objectList)
-            .map(prop('src'))
-            .filter((src) => !this.app.loader.resources[src])
-        )
+        pipe(
+          map(prop('framesSrc')),
+          flatten,
+          filter((src) => !this.app.loader.resources[src]),
+          uniq
+        )(objects)
       )
       .load(() => {
-        objectList.map((frames) => {
-          let { layer, x, y, z, size } = frames[0]
-
-          /* if layer doesn't exist, create one */
-          !this.layers[layer] && this.createLayer(layer)
-
-          let sprite
-          if (frames.length > 1) {
-            sprite = new AnimatedSprite(
-              frames
-                .map(prop('src'))
-                .map((src) => this.app.loader.resources[src].texture)
-            )
-            sprite.width = +size.width
-            sprite.height = +size.height
-            sprite.x = x
-            sprite.y = y
-            sprite.zIndex = z
-            sprite.animationSpeed = 1 / ((frames[0].delay || 80) / 16)
-            sprite.play()
-            const objTicker = (delta) => {
-              const data = frames[sprite.currentFrame]
-              sprite.width = data.size.width
-              sprite.height = data.size.height
-              sprite.x = data.x
-              sprite.y = data.y
-            }
-            this.app.ticker.add(objTicker)
-          } else {
-            sprite = new Sprite(
-              this.app.loader.resources[frames[0].src].texture
-            )
-            sprite.width = +size.width
-            sprite.height = +size.height
-            sprite.x = x
-            sprite.y = y
-            sprite.zIndex = z
-          }
-
-          this.layers[layer].addChild(sprite)
+        objects.forEach((object) => object.render())
+      })
+  }
+  renderObject() {
+    const allHomeObject = getMapObjects(this.mapData).map(
+      (objectData) => new MapObject(this.app, objectData)
+    )
+    this.homeObject = allHomeObject.reduce((homeObjects, objects) => {
+      const objectType = objects.objectType
+      if (!homeObjects[objectType]) {
+        homeObjects[objectType] = {}
+      }
+      homeObjects[objectType][objects.objectIndex] = objects
+      return homeObjects
+    }, {})
+    this.app.loader
+      .add(
+        pipe(
+          map(prop('framesSrc')),
+          flatten,
+          filter((src) => !this.app.loader.resources[src]),
+          uniq
+        )(allHomeObject)
+      )
+      .load(() => {
+        allHomeObject.forEach((obj) => {
+          !this.layers[obj.layer] && this.createLayer(obj.layer)
+          obj.render()
+          this.layers[obj.layer].addChild(obj.sprite)
         })
       })
   }

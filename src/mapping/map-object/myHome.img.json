@@ -252,6 +252,18 @@
   "henesysType": {
     "roof": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1195",
+            "height": "434"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "650",
+            "y": "202"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -368,6 +380,18 @@
     },
     "wall": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "421"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "451"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -412,6 +436,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "1151",
+            "height": "465"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "575",
+            "y": "465"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -458,6 +494,19 @@
     },
     "tile": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "814",
+            "height": "245"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "245"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -490,6 +539,19 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "762",
+            "height": "244"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "244"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -522,6 +584,19 @@
         }
       },
       "2": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "245"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "245"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -554,6 +629,19 @@
         }
       },
       "3": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "421"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "239"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -588,6 +676,18 @@
     },
     "window": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1187",
+            "height": "356"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "620",
+            "y": "356"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -782,6 +882,18 @@
   "commerzType": {
     "roof": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1245",
+            "height": "316"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "619",
+            "y": "0"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -898,6 +1010,18 @@
     },
     "wall": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "420"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "450"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -928,6 +1052,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "1153",
+            "height": "422"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "577",
+            "y": "422"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -960,6 +1096,19 @@
     },
     "tile": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "759",
+            "height": "241"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "241"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -992,6 +1141,19 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "771",
+            "height": "243"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "396",
+            "y": "243"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1024,6 +1186,19 @@
         }
       },
       "2": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "245"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "245"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1056,6 +1231,19 @@
         }
       },
       "3": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "419"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "239"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1090,6 +1278,18 @@
     },
     "window": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1228",
+            "height": "404"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "626",
+            "y": "405"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1124,6 +1324,18 @@
   "halloweenType": {
     "roof": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1131",
+            "height": "635"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "548",
+            "y": "497"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1196,6 +1408,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "455",
+            "height": "502"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "254",
+            "y": "766"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1268,6 +1492,102 @@
         }
       },
       "2": {
+        "0": {
+          "_imageData": {
+            "width": "660",
+            "height": "312"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "328"
+          },
+          "z": "0"
+        },
+        "1": {
+          "_imageData": {
+            "width": "660",
+            "height": "313"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "329"
+          },
+          "z": "0"
+        },
+        "2": {
+          "_imageData": {
+            "width": "660",
+            "height": "314"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "330"
+          },
+          "z": "0"
+        },
+        "3": {
+          "_imageData": {
+            "width": "660",
+            "height": "312"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "328"
+          },
+          "z": "0"
+        },
+        "4": {
+          "_imageData": {
+            "width": "660",
+            "height": "310"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "326"
+          },
+          "z": "0"
+        },
+        "5": {
+          "_imageData": {
+            "width": "660",
+            "height": "309"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "325"
+          },
+          "z": "0"
+        },
+        "6": {
+          "_imageData": {
+            "width": "660",
+            "height": "308"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "324"
+          },
+          "z": "0"
+        },
+        "7": {
+          "_imageData": {
+            "width": "660",
+            "height": "310"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "551",
+            "y": "326"
+          },
+          "z": "0"
+        },
         "s1": null,
         "s2": null,
         "s3": {
@@ -1374,6 +1694,18 @@
     },
     "wall": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "600",
+            "height": "642"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "300",
+            "y": "628"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1404,6 +1736,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "1061",
+            "height": "430"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "541",
+            "y": "416"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1436,6 +1780,19 @@
     },
     "tile": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "600",
+            "height": "451"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "300",
+            "y": "437"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1468,6 +1825,19 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "618",
+            "height": "451"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "300",
+            "y": "437"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1500,6 +1870,20 @@
         }
       },
       "2": {
+        "0": {
+          "_imageData": {
+            "width": "600",
+            "height": "455"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "300",
+            "y": "441"
+          },
+          "z": "0",
+          "foothold": null,
+          "ladder": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1536,6 +1920,18 @@
     },
     "window": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1253",
+            "height": "412"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "644",
+            "y": "398"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1608,6 +2004,54 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "30",
+            "height": "32"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "631",
+            "y": "82"
+          },
+          "z": "0"
+        },
+        "1": {
+          "_imageData": {
+            "width": "35",
+            "height": "33"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "634",
+            "y": "83"
+          },
+          "z": "0"
+        },
+        "2": {
+          "_imageData": {
+            "width": "32",
+            "height": "32"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "633",
+            "y": "82"
+          },
+          "z": "0"
+        },
+        "3": {
+          "_imageData": {
+            "width": "29",
+            "height": "32"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "632",
+            "y": "82"
+          },
+          "z": "0"
+        },
         "s1": null,
         "s2": null,
         "s3": {
@@ -1714,6 +2158,17 @@
     },
     "roofDeco": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-215",
+            "y": "573"
+          }
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1916,6 +2371,18 @@
   "NewYearType": {
     "roof": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "1286",
+            "height": "722"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "643",
+            "y": "361"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -1960,6 +2427,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "538",
+            "height": "312"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "269",
+            "y": "297"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2004,6 +2483,17 @@
         }
       },
       "2": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-215",
+            "y": "573"
+          }
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2020,6 +2510,17 @@
         }
       },
       "3": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-215",
+            "y": "573"
+          }
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2038,6 +2539,18 @@
     },
     "wall": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "647",
+            "height": "568"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "353",
+            "y": "281"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2082,6 +2595,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "1175",
+            "height": "801"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "673",
+            "y": "517"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2098,6 +2623,18 @@
         }
       },
       "2": {
+        "0": {
+          "_imageData": {
+            "width": "354",
+            "height": "149"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "178",
+            "y": "147"
+          },
+          "z": "0"
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2130,6 +2667,19 @@
     },
     "tile": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "620",
+            "height": "362"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "290",
+            "y": "362"
+          },
+          "z": "0",
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2179,6 +2729,17 @@
     },
     "exteriorDeco": {
       "0": {
+        "0": {
+          "_imageData": {
+            "width": "297",
+            "height": "254"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "134",
+            "y": "163"
+          }
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -2194,6 +2755,18 @@
         }
       },
       "1": {
+        "0": {
+          "_imageData": {
+            "width": "223",
+            "height": "134"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "180",
+            "y": "163"
+          },
+          "foothold": null
+        },
         "s1": {
           "0": {
             "_imageData": {

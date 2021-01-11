@@ -4,11 +4,13 @@ import {
   Container,
   AnimatedSprite,
   Sprite,
+  Rectangle,
   Graphics,
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
-import MapObject from './map-object'
 import PixiLoaderManager from './pixi-loader-manager'
+import MapObject from './map-object'
+import MapBack from './map-back'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -53,7 +55,7 @@ const getMapObjects = pipe(
   flatten
 )
 
-const HF_HEIGHT = 260
+const HF_HEIGHT = 180
 const fakeTheme = 's1'
 const defaultTheme = '0'
 
@@ -99,10 +101,10 @@ class PixiAPP {
     }
     this.world = {
       width:
-        this.mapData.miniMap.width ||
+        +this.mapData.miniMap.width ||
         Math.abs(this.edge.right) + Math.abs(this.edge.left),
       height:
-        this.mapData.miniMap.height ||
+        +this.mapData.miniMap.height ||
         Math.abs(this.edge.top) + Math.abs(this.edge.bottom),
     }
 
@@ -136,6 +138,7 @@ class PixiAPP {
     if (this.app.layers[index]) return
     const layer = new Container()
     layer.sortableChildren = true
+    layer.zIndex = +index
     this.app.layers[index] = layer
     this.$map.addChild(this.app.layers[index])
   }
@@ -149,6 +152,8 @@ class PixiAPP {
     this.$map.sortableChildren = true
     this.viewport.addChild(this.$map)
 
+    this.renderMask()
+    this.renderBack()
     this.renderObject()
     this.renderGrid()
   }
@@ -174,7 +179,21 @@ class PixiAPP {
       obj.render()
     })
   }
-  renderBack() {}
+  renderBack() {
+    const backLayer = new Container()
+    const frontLayer = new Container()
+    backLayer.sortableChildren = true
+    backLayer.zIndex = -1
+    frontLayer.sortableChildren = true
+    frontLayer.zIndex = 9999
+    this.app.layers.back = backLayer
+    this.app.layers.front = frontLayer
+    this.$map.addChild(this.app.layers.back, this.app.layers.front)
+    const allMapBack = Object.values(this.mapData.back).map(
+      (backData, index) => new MapBack(this, backData, index)
+    )
+    allMapBack.forEach((back) => back.render())
+  }
   renderGrid() {
     if (this.$gridLayer) {
       this.$gridLayer.alpha = +this.showGrid
@@ -185,15 +204,6 @@ class PixiAPP {
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
       this.$map.addChild(this.$gridLayer)
-
-      /* just basic coordinate */
-      const line = new Graphics()
-      line.lineStyle(2, 0x000000, 1)
-      line.moveTo(this.edge.left, 0)
-      line.lineTo(this.edge.right, 0)
-      line.moveTo(0, this.edge.top)
-      line.lineTo(0, this.edge.bottom)
-      this.$gridLayer.addChild(line)
 
       /* house grid */
       values(this.mapData.housingGrid).forEach((grids) => {
@@ -220,6 +230,18 @@ class PixiAPP {
         this.$gridLayer.addChild(gridLine)
       })
     }
+  }
+  renderMask() {
+    const mask = new Graphics()
+    mask.beginFill(0xffffff)
+    mask.moveTo(this.edge.left, this.edge.top)
+    mask.lineTo(this.edge.right, this.edge.top)
+    mask.lineTo(this.edge.right, this.edge.bottom)
+    mask.lineTo(this.edge.left, this.edge.bottom)
+    mask.lineTo(this.edge.left, this.edge.top)
+    mask.endFill()
+    this.$map.addChild(mask)
+    this.$map.mask = mask
   }
 
   destory() {

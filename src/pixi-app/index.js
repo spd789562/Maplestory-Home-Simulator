@@ -176,15 +176,15 @@ class PixiAPP {
   }
   renderBack() {}
   renderGrid() {
-    if (this.$layer) {
-      this.$layer.alpha = +this.showGrid
+    if (this.$gridLayer) {
+      this.$gridLayer.alpha = +this.showGrid
     } else {
       /* remove previous layer */
-      this.$layer && this.$map.removeChild(this.$layer)
+      this.$gridLayer && this.$map.removeChild(this.$gridLayer)
 
-      this.$layer = new Container()
-      this.$layer.zIndex = 999
-      this.$map.addChild(this.$layer)
+      this.$gridLayer = new Container()
+      this.$gridLayer.zIndex = 999
+      this.$map.addChild(this.$gridLayer)
 
       /* just basic coordinate */
       const line = new Graphics()
@@ -193,7 +193,7 @@ class PixiAPP {
       line.lineTo(this.edge.right, 0)
       line.moveTo(0, this.edge.top)
       line.lineTo(0, this.edge.bottom)
-      this.$layer.addChild(line)
+      this.$gridLayer.addChild(line)
 
       /* house grid */
       values(this.mapData.housingGrid).forEach((grids) => {
@@ -217,7 +217,7 @@ class PixiAPP {
           gridLine.moveTo(currentX, startY)
           gridLine.lineTo(currentX, endY)
         }, col + 1)
-        this.$layer.addChild(gridLine)
+        this.$gridLayer.addChild(gridLine)
       })
     }
   }

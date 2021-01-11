@@ -30,7 +30,6 @@ class PixiLoaderManager {
       filter((src) => !this.app.loader.resources[src]),
       uniq
     )(currentTask.src)
-    console.log(needLoadSrc)
     if (needLoadSrc.length) {
       this.app.loader.add(needLoadSrc).load(() => {
         currentTask.callback()

@@ -59,6 +59,19 @@ module.exports = composeConfig(
     config.plugins.push(new MomentLocalesPlugin())
     config.resolve.modules.push(path.resolve('./'))
 
+    /* remove pixi warn */
+    config.module.rules.push({
+      test: '/.[js|ts]/',
+      use: [
+        {
+          loader: 'webpack-preprocessor-loader',
+          options: {
+            debug: false,
+          },
+        },
+      ],
+    })
+
     return config
   },
   rewrites: async () => nextI18NextRewrites(localeSubpaths),

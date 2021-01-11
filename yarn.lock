@@ -8173,6 +8173,11 @@ webpack-bundle-analyzer@3.6.1:
     opener "^1.5.1"
     ws "^6.0.0"
 
+webpack-preprocessor-loader@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/webpack-preprocessor-loader/-/webpack-preprocessor-loader-1.1.3.tgz#857865c5a4105bc034fcf7ad5a9041b361e285c0"
+  integrity sha512-BdYOYWeFoHT/mGE+VRkeQfflQi8mh5347wHz5esGN5o8TxhWxDfX6Roe+8DXn29QUXx3M1krEGaEfUyGz3Nd9g==
+
 webpack-sources@1.4.3, webpack-sources@^1.1.0, webpack-sources@^1.3.0, webpack-sources@^1.4.0, webpack-sources@^1.4.1:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"

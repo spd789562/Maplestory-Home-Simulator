@@ -5,20 +5,49 @@ class Minimap extends Container {
     super()
     this.pixiApp = pixiApp
     this.$minimap = new Graphics()
-    this.$minimap.interactive = true
     this.$viewable = new Graphics()
+    this.$minimap.interactive = true
+    this.$viewable.interactive = true
+    this.$viewable.buttonMode = true
+    this.$viewable.isDrag = false
   }
   multipleRate(value) {
     return value * this.scaleRate
   }
   update() {
-    const visibleRect = this.pixiApp.visibleRect
+    const visibleRect = this.pixiApp.viewport.getVisibleBounds()
     this.$viewable.position.set(
       this.multipleRate(visibleRect.x),
       this.multipleRate(visibleRect.y)
     )
     this.$viewable.width = this.multipleRate(visibleRect.width)
     this.$viewable.height = this.multipleRate(visibleRect.height)
+  }
+  moveVisible = (event) => {
+    const mapPosition = event.data.getLocalPosition(this.$minimap)
+    const offsetX = this.$viewable.width / 2
+    const offsetY = this.$viewable.height / 2
+    const resultX = mapPosition.x
+    const resultY = mapPosition.y
+    let moveX =
+      resultX > this.mapWidth
+        ? this.mapWidth - offsetX
+        : resultX < 0
+        ? offsetX
+        : resultX
+    let moveY =
+      resultY > this.mapWidth
+        ? this.mapWidth - offsetY
+        : resultY < 0
+        ? offsetY
+        : resultY
+
+    this.$viewable.position.set(moveX, moveY)
+    this.pixiApp.viewport.moveCenter(
+      moveX / this.scaleRate,
+      moveY / this.scaleRate
+    )
+    this.update()
   }
   renderMinimap(width) {
     const scaleRate = width / this.pixiApp.world.width
@@ -33,10 +62,6 @@ class Minimap extends Container {
     minimap.alpha = 0.8
     this.$minimap.endFill()
     this.$mask = this.$minimap.clone()
-
-    this.$minimap.on('pointerdown', (event) => {
-      console.log(event.data.getLocalPosition(this.$minimap))
-    })
 
     this.$viewable.beginFill(0xffffff)
     const viewable = this.$viewable.drawRect(
@@ -56,6 +81,26 @@ class Minimap extends Container {
     this.addChild(this.$viewable)
     this.addChild(this.$mask)
     this.mask = this.$mask
+
+    this.$minimap.on('pointerdown', this.moveVisible)
+    this.$viewable
+      .on('pointerdown', this.startDragVisible)
+      .on('pointerup', this.endDragVisible)
+      .on('pointerupoutside', this.endDragVisible)
+      .on('pointermove', this.dragingVisible)
+  }
+  startDragVisible = (event) => {
+    this.$viewable.isDrag = true
+    this.$viewable.eventData = event
+  }
+  endDragVisible = () => {
+    this.$viewable.isDrag = true
+    this.$viewable.eventData = null
+  }
+  dragingVisible = () => {
+    this.$viewable.isDrag &&
+      this.$viewable.eventData &&
+      this.moveVisible(this.$viewable.eventData)
   }
 }
 

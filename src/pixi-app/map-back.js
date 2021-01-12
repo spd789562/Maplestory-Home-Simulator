@@ -1,9 +1,11 @@
 /* components */
 import { AnimatedSprite, TilingSprite } from 'pixi.js-legacy'
+import GapTilingSprite from './gap-tiling-sprite'
 
 /* utils */
 import {
   clone,
+  includes,
   map,
   path,
   pickBy,
@@ -89,14 +91,18 @@ class MapBack {
   render() {
     const { x, y, size } = this.frames[0]
     this.app.loaderManager.load(this.framesSrc, () => {
-      if ((this.type === 3 || this.type === 1) && this.copies.x === 0) {
-        this.sprite = new TilingSprite(
-          this.app.loader.resources[this.framesSrc[0]].texture,
-          this.pixiApp.world.width,
-          +size.height
-        )
-        this.sprite.x = this.pixiApp.edge.left
-        this.sprite.y = y
+      // only repeat place 0 or negitive gep back
+      if (this.type > 0 && this.type < 4 && this.copies.x - +size.width <= 0) {
+        this.sprite = new GapTilingSprite({
+          texture: this.app.loader.resources[this.framesSrc[0]].texture,
+          width: this.pixiApp.world.width,
+          height: this.pixiApp.world.height,
+          size: map(Number, size),
+          gap: this.copies,
+          mode: this.type,
+        })
+        this.sprite.x = includes(this.type, [1, 3]) ? this.pixiApp.edge.left : x
+        this.sprite.y = includes(this.type, [2, 3]) ? this.pixiApp.edge.top : y
       } else {
         this.sprite = new AnimatedSprite(
           this.framesSrc.map((src) => this.app.loader.resources[src].texture)

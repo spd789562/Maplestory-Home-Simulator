@@ -36,6 +36,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "throttle-debounce": "^2.3.0",
-    "use-context-selector": "^1.2.10"
+    "use-context-selector": "^1.2.10",
+    "webpack-preprocessor-loader": "^1.1.3"
   }
 }

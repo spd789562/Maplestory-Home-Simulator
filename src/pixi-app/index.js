@@ -4,11 +4,13 @@ import {
   Container,
   AnimatedSprite,
   Sprite,
+  Rectangle,
   Graphics,
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
-import MapObject from './map-object'
 import PixiLoaderManager from './pixi-loader-manager'
+import MapObject from './map-object'
+import MapBack from './map-back'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -53,7 +55,7 @@ const getMapObjects = pipe(
   flatten
 )
 
-const HF_HEIGHT = 260
+const HF_HEIGHT = 180
 const fakeTheme = 's1'
 const defaultTheme = '0'
 
@@ -99,10 +101,10 @@ class PixiAPP {
     }
     this.world = {
       width:
-        this.mapData.miniMap.width ||
+        +this.mapData.miniMap.width ||
         Math.abs(this.edge.right) + Math.abs(this.edge.left),
       height:
-        this.mapData.miniMap.height ||
+        +this.mapData.miniMap.height ||
         Math.abs(this.edge.top) + Math.abs(this.edge.bottom),
     }
 
@@ -113,15 +115,25 @@ class PixiAPP {
       worldHeight: this.world.height,
       interaction: this.app.renderer.plugins.interaction,
     })
-      // limit zoom range
+    // limit zoom range
+    this.viewport
       .clampZoom({
-        maxWidth: this.world.width + this.canvas.width,
-        maxHeight: this.world.height + this.canvas.height,
+        maxWidth: this.world.width,
+      })
+      .clamp({
+        left: this.edge.left,
+        top: this.edge.top,
+        right: this.edge.right,
+        bottom: this.edge.bottom,
+        direction: 'all',
       })
       .moveCenter(this.center)
       .drag()
       .pinch()
       .wheel()
+      .on('moved', ({ viewport }) => {
+        // console.log(viewport.hitArea.x, this.viewport.getVisibleBounds().x)
+      })
 
     // binding destory event
     this.app.renderer.runners['destroy'].add({
@@ -136,6 +148,7 @@ class PixiAPP {
     if (this.app.layers[index]) return
     const layer = new Container()
     layer.sortableChildren = true
+    layer.zIndex = +index
     this.app.layers[index] = layer
     this.$map.addChild(this.app.layers[index])
   }
@@ -149,6 +162,8 @@ class PixiAPP {
     this.$map.sortableChildren = true
     this.viewport.addChild(this.$map)
 
+    this.renderMask()
+    this.renderBack()
     this.renderObject()
     this.renderGrid()
   }
@@ -174,26 +189,31 @@ class PixiAPP {
       obj.render()
     })
   }
-  renderBack() {}
+  renderBack() {
+    const backLayer = new Container()
+    const frontLayer = new Container()
+    backLayer.sortableChildren = true
+    backLayer.zIndex = -1
+    frontLayer.sortableChildren = true
+    frontLayer.zIndex = 9999
+    this.app.layers.back = backLayer
+    this.app.layers.front = frontLayer
+    this.$map.addChild(this.app.layers.back, this.app.layers.front)
+    const allMapBack = Object.values(this.mapData.back).map(
+      (backData, index) => new MapBack(this, backData, index)
+    )
+    allMapBack.forEach((back) => back.render())
+  }
   renderGrid() {
-    if (this.$layer) {
-      this.$layer.alpha = +this.showGrid
+    if (this.$gridLayer) {
+      this.$gridLayer.alpha = +this.showGrid
     } else {
       /* remove previous layer */
-      this.$layer && this.$map.removeChild(this.$layer)
+      this.$gridLayer && this.$map.removeChild(this.$gridLayer)
 
-      this.$layer = new Container()
-      this.$layer.zIndex = 999
-      this.$map.addChild(this.$layer)
-
-      /* just basic coordinate */
-      const line = new Graphics()
-      line.lineStyle(2, 0x000000, 1)
-      line.moveTo(this.edge.left, 0)
-      line.lineTo(this.edge.right, 0)
-      line.moveTo(0, this.edge.top)
-      line.lineTo(0, this.edge.bottom)
-      this.$layer.addChild(line)
+      this.$gridLayer = new Container()
+      this.$gridLayer.zIndex = 999
+      this.$map.addChild(this.$gridLayer)
 
       /* house grid */
       values(this.mapData.housingGrid).forEach((grids) => {
@@ -217,9 +237,21 @@ class PixiAPP {
           gridLine.moveTo(currentX, startY)
           gridLine.lineTo(currentX, endY)
         }, col + 1)
-        this.$layer.addChild(gridLine)
+        this.$gridLayer.addChild(gridLine)
       })
     }
+  }
+  renderMask() {
+    const mask = new Graphics()
+    mask.beginFill(0xffffff)
+    mask.moveTo(this.edge.left, this.edge.top)
+    mask.lineTo(this.edge.right, this.edge.top)
+    mask.lineTo(this.edge.right, this.edge.bottom)
+    mask.lineTo(this.edge.left, this.edge.bottom)
+    mask.lineTo(this.edge.left, this.edge.top)
+    mask.endFill()
+    this.$map.addChild(mask)
+    this.$map.mask = mask
   }
 
   destory() {

@@ -115,15 +115,25 @@ class PixiAPP {
       worldHeight: this.world.height,
       interaction: this.app.renderer.plugins.interaction,
     })
-      // limit zoom range
+    // limit zoom range
+    this.viewport
       .clampZoom({
-        maxWidth: this.world.width + this.canvas.width,
-        maxHeight: this.world.height + this.canvas.height,
+        maxWidth: this.world.width,
+      })
+      .clamp({
+        left: this.edge.left,
+        top: this.edge.top,
+        right: this.edge.right,
+        bottom: this.edge.bottom,
+        direction: 'all',
       })
       .moveCenter(this.center)
       .drag()
       .pinch()
       .wheel()
+      .on('moved', ({ viewport }) => {
+        // console.log(viewport.hitArea.x, this.viewport.getVisibleBounds().x)
+      })
 
     // binding destory event
     this.app.renderer.runners['destroy'].add({

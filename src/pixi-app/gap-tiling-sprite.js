@@ -1,4 +1,4 @@
-import { Container, Sprite } from 'pixi.js'
+import { Container, Sprite } from 'pixi.js-legacy'
 
 /* utils */
 import { flatten, isNil, times } from 'ramda'

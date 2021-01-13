@@ -1,17 +1,29 @@
-import { Container, Graphics } from 'pixi.js-legacy'
+import { Container, Graphics, Text, TextStyle } from 'pixi.js-legacy'
+import { flatten } from 'ramda'
+
+const ButtonPath = flatten([
+  [0, 0],
+  [100, 0],
+  [92.5, 24],
+  [7.5, 24],
+  [0, 0],
+])
 
 class Minimap extends Container {
   constructor(pixiApp) {
     super()
     this.pixiApp = pixiApp
+    this.$mapContainer = new Container()
     this.$minimap = new Graphics()
     this.$viewable = new Graphics()
     this.$minimap.interactive = true
     this.$viewable.interactive = true
     this.$viewable.buttonMode = true
     this.$viewable.isDrag = false
-    this.addChild(this.$minimap)
-    this.addChild(this.$viewable)
+    this.$mapContainer.addChild(this.$minimap)
+    this.$mapContainer.addChild(this.$viewable)
+    this.addChild(this.$mapContainer)
+    this.renderButton()
     this.show = true
   }
   multipleRate(value) {
@@ -52,6 +64,25 @@ class Minimap extends Container {
     )
     this.update()
   }
+  renderButton() {
+    this.$button = new Graphics()
+    this.$button.interactive = true
+    this.$button.buttonMode = true
+    this.$button.beginFill(0x0000000)
+    this.$button.drawPolygon(ButtonPath)
+    this.$button.beginFill()
+    const buttonTextStyle = new TextStyle({
+      fontFamily: 'Arial',
+      fontSize: 18,
+      fill: 0xffffff,
+    })
+    const buttonText = new Text('Minimap', buttonTextStyle)
+    buttonText.x = 18
+    this.$button.addChild(buttonText)
+    this.$button.on('pointerdown', this.toggleMinimap)
+    this.pixiApp.app.ticker.add(this.toggleTicker)
+    this.addChild(this.$button)
+  }
   renderMinimap(width) {
     const scaleRate = width / this.pixiApp.world.width
     this.scaleRate = scaleRate
@@ -59,6 +90,7 @@ class Minimap extends Container {
     this.mapWidth = width
     this.mapHeight = height
     const visibleRect = this.pixiApp.visibleRect
+    this.$button.y = height
 
     this.$minimap.clear()
     this.$minimap.beginFill(0x000000)
@@ -81,11 +113,11 @@ class Minimap extends Container {
       this.multipleRate(visibleRect.y)
     )
     // remove previous mask
-    this.$mask && this.removeChild(this.$mask)
+    this.$mask && this.$mapContainer.removeChild(this.$mask)
     this.$mask = this.$minimap.clone()
-    this.addChild(this.$mask)
+    this.$mapContainer.addChild(this.$mask)
     // apply mask
-    this.mask = this.$mask
+    this.$mapContainer.mask = this.$mask
 
     // click minimap
     this.$minimap.on('pointerdown', this.moveVisible)
@@ -108,6 +140,18 @@ class Minimap extends Container {
     this.$viewable.isDrag &&
       this.$viewable.eventData &&
       this.moveVisible(this.$viewable.eventData)
+  }
+  toggleMinimap = () => {
+    this.show = !this.show
+  }
+  toggleTicker = (delta) => {
+    if (!this.show && this.y >= -this.mapHeight) {
+      const movePoint = this.y - delta * 6
+      this.y = movePoint < -this.mapHeight ? -this.mapHeight : movePoint
+    } else if (this.show && this.y <= 0) {
+      const movePoint = this.y + delta * 6
+      this.y = movePoint > 0 ? 0 : movePoint
+    }
   }
 }
 

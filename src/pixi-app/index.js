@@ -71,6 +71,7 @@ class PixiAPP {
       height: this.canvas.height,
       transparent: true,
       view: canvasRef,
+      antialias: true,
     })
     this.showGrid = true
     this.app.loaderManager = new PixiLoaderManager(this.app)

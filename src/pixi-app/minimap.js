@@ -10,6 +10,9 @@ class Minimap extends Container {
     this.$viewable.interactive = true
     this.$viewable.buttonMode = true
     this.$viewable.isDrag = false
+    this.addChild(this.$minimap)
+    this.addChild(this.$viewable)
+    this.show = true
   }
   multipleRate(value) {
     return value * this.scaleRate
@@ -57,12 +60,13 @@ class Minimap extends Container {
     this.mapHeight = height
     const visibleRect = this.pixiApp.visibleRect
 
+    this.$minimap.clear()
     this.$minimap.beginFill(0x000000)
     const minimap = this.$minimap.drawRect(0, 0, width, height)
     minimap.alpha = 0.8
     this.$minimap.endFill()
-    this.$mask = this.$minimap.clone()
 
+    this.$viewable.clear()
     this.$viewable.beginFill(0xffffff)
     const viewable = this.$viewable.drawRect(
       0,
@@ -76,13 +80,16 @@ class Minimap extends Container {
       this.multipleRate(visibleRect.x),
       this.multipleRate(visibleRect.y)
     )
-
-    this.addChild(this.$minimap)
-    this.addChild(this.$viewable)
+    // remove previous mask
+    this.$mask && this.removeChild(this.$mask)
+    this.$mask = this.$minimap.clone()
     this.addChild(this.$mask)
+    // apply mask
     this.mask = this.$mask
 
+    // click minimap
     this.$minimap.on('pointerdown', this.moveVisible)
+    // drag visible
     this.$viewable
       .on('pointerdown', this.startDragVisible)
       .on('pointerup', this.endDragVisible)

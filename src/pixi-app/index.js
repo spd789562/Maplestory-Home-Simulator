@@ -255,10 +255,12 @@ class PixiAPP {
     const mask = new Graphics()
     mask.beginFill(0xffffff)
     mask.moveTo(this.edge.left, this.edge.top)
-    mask.lineTo(this.edge.right, this.edge.top)
-    mask.lineTo(this.edge.right, this.edge.bottom)
-    mask.lineTo(this.edge.left, this.edge.bottom)
-    mask.lineTo(this.edge.left, this.edge.top)
+    mask.drawRect(
+      this.edge.left,
+      this.edge.top,
+      this.world.width,
+      this.world.height
+    )
     mask.endFill()
     this.$map.addChild(mask)
     this.$map.mask = mask

@@ -11,6 +11,7 @@ import { Viewport } from 'pixi-viewport'
 import PixiLoaderManager from './pixi-loader-manager'
 import MapObject from './map-object'
 import MapBack from './map-back'
+import Minimap from './minimap'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -70,6 +71,7 @@ class PixiAPP {
       height: this.canvas.height,
       transparent: true,
       view: canvasRef,
+      antialias: true,
     })
     this.showGrid = true
     this.app.loaderManager = new PixiLoaderManager(this.app)
@@ -131,9 +133,9 @@ class PixiAPP {
       .drag()
       .pinch()
       .wheel()
-      .on('moved', ({ viewport }) => {
-        // console.log(viewport.hitArea.x, this.viewport.getVisibleBounds().x)
-      })
+      .on('moved', this.setVisibleRect)
+
+    this.setVisibleRect()
 
     // binding destory event
     this.app.renderer.runners['destroy'].add({
@@ -143,6 +145,10 @@ class PixiAPP {
 
     /* start render */
     this.renderMap()
+  }
+  setVisibleRect = () => {
+    this.visibleRect = this.viewport.getVisibleBounds()
+    this.$minimap && this.$minimap.update()
   }
   createLayer(index) {
     if (this.app.layers[index]) return
@@ -166,6 +172,10 @@ class PixiAPP {
     this.renderBack()
     this.renderObject()
     this.renderGrid()
+
+    this.$minimap = new Minimap(this)
+    this.$minimap.renderMinimap(300)
+    this.app.stage.addChild(this.$minimap)
   }
   changeHomeTheme(objectType, theme) {
     if (!this.homeObject[objectType]) return

@@ -9,25 +9,27 @@
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1599px) {
+/* @media screen and (max-width: 1599px) {
   .header-container,
   .footer {
     padding-right: 1rem;
     padding-left: 1rem;
   }
-}
+} */
 
 @media screen and (min-width: 1600px) {
   .header-container,
   .content {
     width: 100%;
-    max-width: 1600px;
     margin-right: auto;
     margin-left: auto;
   }

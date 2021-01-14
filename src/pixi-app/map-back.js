@@ -92,17 +92,20 @@ class MapBack {
     const { x, y, size } = this.frames[0]
     this.app.loaderManager.load(this.framesSrc, () => {
       // only repeat place 0 or negitive gep back
-      if (this.type > 0 && this.type < 4 && this.copies.x - +size.width <= 0) {
+      if (this.type > 0 && this.type < 4) {
         this.sprite = new GapTilingSprite({
           texture: this.app.loader.resources[this.framesSrc[0]].texture,
-          width: this.pixiApp.world.width,
-          height: this.pixiApp.world.height,
+          scene: {
+            edge: this.pixiApp.edge,
+            center: this.pixiApp.center,
+          },
           size: map(Number, size),
           gap: this.copies,
+          position: { x, y },
           mode: this.type,
         })
-        this.sprite.x = includes(this.type, [1, 3]) ? this.pixiApp.edge.left : x
-        this.sprite.y = includes(this.type, [2, 3]) ? this.pixiApp.edge.top : y
+        this.sprite.x = x
+        this.sprite.y = y
       } else {
         this.sprite = new AnimatedSprite(
           this.framesSrc.map((src) => this.app.loader.resources[src].texture)

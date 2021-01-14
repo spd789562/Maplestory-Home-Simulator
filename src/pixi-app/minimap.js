@@ -1,5 +1,8 @@
 import { Container, Graphics, Text, TextStyle } from 'pixi.js-legacy'
+
+/* utils */
 import { flatten } from 'ramda'
+import deltaMoveStep from '@utils/delta-move-step'
 
 const ButtonPath = flatten([
   [0, 0],
@@ -146,10 +149,10 @@ class Minimap extends Container {
   }
   toggleTicker = (delta) => {
     if (!this.show && this.y >= -this.mapHeight) {
-      const movePoint = this.y - delta * 6
+      const movePoint = this.y - deltaMoveStep(this.mapHeight, 300, delta)
       this.y = movePoint < -this.mapHeight ? -this.mapHeight : movePoint
     } else if (this.show && this.y <= 0) {
-      const movePoint = this.y + delta * 6
+      const movePoint = this.y + deltaMoveStep(this.mapHeight, 300, delta)
       this.y = movePoint > 0 ? 0 : movePoint
     }
   }

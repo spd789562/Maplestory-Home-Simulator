@@ -15,8 +15,8 @@ class GapTilingSprite extends Container {
     }
     /* position */
     this.pos = {
-      x: position.x,
-      y: position.y,
+      x: position.x || 0,
+      y: position.y || 0,
     }
     /* texture size */
     this.size = size
@@ -33,7 +33,7 @@ class GapTilingSprite extends Container {
       this.colUnit
     const minimumTopDistance =
       Math.ceil((posWithCenterY - scene.edge.top) / this.rowUnit) * this.rowUnit
-    this.startX = posWithCenterX - minimumLeftDistance
+    this.startX = posWithCenterX - minimumLeftDistance - this.pos.x
     this.startY = posWithCenterY - minimumTopDistance
 
     /* tiling size */

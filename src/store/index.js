@@ -7,28 +7,14 @@ import {
 } from 'use-context-selector'
 
 import { combineReducer } from './_helper'
-import hairReducer from './hair'
-import faceReducer from './face'
-import hsitoryReducer from './history'
-import searchReducer from './search'
 import metaReducer from './meta'
-import characterReducer from './character'
-import hatReducer from './hat'
-import overallReducer from './overall'
 
 import { isNil, prop, curry, path, pickAll } from 'ramda'
 
 const GlobalStore = createContext({})
 
 const [combinedReducers, initialState] = combineReducer({
-  hair: hairReducer,
   meta: metaReducer,
-  character: characterReducer,
-  face: faceReducer,
-  search: searchReducer,
-  hat: hatReducer,
-  overall: overallReducer,
-  history: hsitoryReducer,
 })
 
 export const Provider = ({ children }) => {

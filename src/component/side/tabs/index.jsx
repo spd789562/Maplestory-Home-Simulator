@@ -44,7 +44,10 @@ const Tabs = () => {
           onClick={handleChangeTab(id)}
           key={`side-tab-${id}`}
         >
-          <FontAwesomeIcon icon={icon} />
+          <FontAwesomeIcon
+            icon={icon}
+            style={{ color: +currentId === id && open ? '#6373ca' : '#999' }}
+          />
         </li>
       ))}
     </ul>

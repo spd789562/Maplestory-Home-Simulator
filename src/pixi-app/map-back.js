@@ -1,5 +1,12 @@
 /* components */
-import { AnimatedSprite, TilingSprite } from 'pixi.js-legacy'
+import {
+  AnimatedSprite,
+  TilingSprite,
+  Graphics,
+  Sprite,
+  Rectangle,
+  Texture,
+} from 'pixi.js-legacy'
 import GapTilingSprite from './gap-tiling-sprite'
 
 /* utils */
@@ -35,8 +42,10 @@ class MapBack {
       rx,
       ry,
       type,
-      cx,
-      cy,
+      cx = 0,
+      cy = 0,
+      flowX,
+      flowY,
       a: aphla,
     } = backData
 
@@ -44,7 +53,7 @@ class MapBack {
 
     this.dataPath = { homeType, backType, backIndex }
 
-    this.data = MapBackMapping[homeType][backType][backIndex]
+    this.data = MapBackMapping[`${homeType}.img`][backType][backIndex]
 
     this.layer = +front === 0 ? 'back' : 'front'
     this.flip = !!+f
@@ -55,6 +64,12 @@ class MapBack {
     this.z = index
     this.aphla = Math.floor(+aphla / 255)
     this.animated = ani === '1'
+
+    this.isMove = !!flowX || !!flowY
+    this.move = {
+      x: +flowX || 0,
+      y: +flowY || 0,
+    }
   }
   get frames() {
     const backs = this.animated ? values(this.data) : [this.data]
@@ -104,8 +119,9 @@ class MapBack {
           position: { x, y },
           mode: this.type,
         })
-        this.sprite.x = x
-        this.sprite.y = y
+        if (this.isMove) {
+          this.app.ticker.add(this.moveTicker)
+        }
       } else {
         this.sprite = new AnimatedSprite(
           this.framesSrc.map((src) => this.app.loader.resources[src].texture)
@@ -131,6 +147,11 @@ class MapBack {
     this.sprite.height = +data.size.height || this.sprite.height
     this.sprite.x = data.x || this.sprite.x
     this.sprite.y = data.y || this.sprite.y
+  }
+  moveTicker = () => {
+    if (!this.sprite) return
+    this.sprite.tilePosition.x += this.move.x
+    this.sprite.tilePosition.y += this.move.y
   }
 }
 

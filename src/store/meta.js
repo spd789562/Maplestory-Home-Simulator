@@ -10,7 +10,7 @@ const isClient = typeof window !== 'undefined'
 const initialState = {
   side: {
     open: false,
-    current: null,
+    current: 0,
   },
 }
 const reducer = reducerCreator(initialState, {

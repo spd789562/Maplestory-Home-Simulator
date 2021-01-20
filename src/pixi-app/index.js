@@ -117,10 +117,13 @@ class PixiAPP {
       worldHeight: this.world.height,
       interaction: this.app.renderer.plugins.interaction,
     })
+    const maxZoomWidthScale = this.world.width / this.canvas.width
+    const maxZoomHeightScale = this.world.height / this.canvas.height
+    const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
     // limit zoom range
     this.viewport
       .clampZoom({
-        maxWidth: this.world.width,
+        maxWidth: this.canvas.width * maxZoomScale,
       })
       .clamp({
         left: this.edge.left,

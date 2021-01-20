@@ -3,19 +3,16 @@ import Etc from './myHome.img.json'
 /* utils */
 import {
   assoc,
-  either,
-  equals,
   filter,
   groupBy,
   is,
-  join,
   map,
   not,
   pipe,
   prop,
-  splitWhen,
   toPairs,
 } from 'ramda'
+import { getTheme } from './name'
 
 export const ParsedTheme = pipe(
   toPairs,
@@ -23,16 +20,10 @@ export const ParsedTheme = pipe(
   map(([key, data]) => assoc('id', key, data)),
   map((data) => ({
     ...filter(pipe(is(Object), not), data),
+    theme: getTheme(data.id),
     themeable: filter(is(Object), data),
   })),
-  groupBy(
-    pipe(
-      prop('info'),
-      splitWhen(either(equals('_'), equals('-'))),
-      prop(0),
-      join('')
-    )
-  )
+  groupBy(prop('theme'))
 )(Etc)
 
 export default Etc

@@ -23,7 +23,7 @@ export const getTheme = (mapId) => {
     case '871100007':
     case '871100008':
     case '871100009':
-      return 'hallowween'
+      return 'halloween'
     case '011':
     case '871100010':
       return 'newyear'

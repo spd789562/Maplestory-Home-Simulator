@@ -102,14 +102,15 @@ class Minimap extends Container {
     this.$minimap.endFill()
 
     this.$viewable.clear()
-    this.$viewable.beginFill(0xffffff)
+    this.$viewable.beginFill(0xffffff, 0.5)
+    this.$viewable.lineStyle(1, 0xffffff)
     const viewable = this.$viewable.drawRect(
       0,
       0,
       this.multipleRate(visibleRect.width),
       this.multipleRate(visibleRect.height)
     )
-    viewable.alpha = 0.3
+    viewable.alpha = 0.5
     this.$viewable.beginFill()
     this.$viewable.position.set(
       this.multipleRate(visibleRect.x),

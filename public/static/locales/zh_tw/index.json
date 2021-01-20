@@ -8,6 +8,24 @@
   "comma": ", ",
 
 
+  "home_theme_toturial": "迷你菇菇屋",
+  "home_theme_henesys": "舒適的菇菇屋",
+  "home_theme_commerz": "精緻的洋房",
+  "home_theme_halloween": "月夜的萬聖節住宅",
+  "home_theme_newyear": "蓮花池庭院瓦屋",
+  "home_theme_lithharbor": "海邊的露臺小屋",
+  "home_theme_christmas": "聖誕雙層房屋",
+
+  "home_type_basic": "基本型",
+  "home_type_stair": "階梯型",
+  "home_type_right_curve_stair": "右側彎曲階梯型",
+  "home_type_left_curve_stair": "右側彎曲階梯型",
+  "home_type_right_stair": "右側側斜角階梯型",
+  "home_type_left_stair": "左側斜角階梯型",
+  "home_type_center_stair": "中央住家階梯型",
+  "home_type_hidden_stair": "隱藏樓梯型",
+  "home_type_ladder": "簡潔樓梯型",
+
   "other_tools": "其他工具",
   "web_arcane_symbol_calculator": "秘法符文計算機",
   "web_boss_crystal_calculator": "力量結晶計算機",

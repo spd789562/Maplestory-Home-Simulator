@@ -23,6 +23,8 @@ import {
   equals,
 } from 'ramda'
 
+import Home from '@modules/home'
+
 export const HOUSE_CHANGE = 'HOUSE_CHANGE'
 export const HOUSE_REORDER = 'HOUSE_REORDER'
 export const HOUSE_INITIAL = 'HOUSE_INITIAL'
@@ -32,7 +34,7 @@ export const HOUSE_DUPLICATE = 'HOUSE_DUPLICATE'
 export const HOUSE_DELETE = 'HOUSE_DELETE'
 
 const initialState = {
-  houses: [],
+  houses: [new Home('017')],
   current: 0,
   lastId: 1000000,
 }
@@ -76,15 +78,7 @@ const reducer = reducerCreator(initialState, {
   [HOUSE_UPDATE]: (state, payload) =>
     pipe(
       evolve({
-        houses: pipe(
-          findHouseIndexById(payload.id),
-          ifElse(
-            // If character has been delete, append this
-            equals(-1),
-            () => append(payload, state.houses),
-            update(__, payload, state.houses)
-          )
-        ),
+        houses: update(state.current, payload),
       }),
       SaveToStorage
     )(state),

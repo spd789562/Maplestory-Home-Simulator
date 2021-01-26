@@ -1,25 +1,33 @@
-import { useEffect, createRef } from 'react'
+import { useEffect, createRef, useRef } from 'react'
+
+/* store */
+import { useStore } from '@store'
 
 /* components */
 import PixiAPP from '../../pixi-app'
 
 const canvasRef = createRef()
-
-const MAP_SELECTION = '017'
+const appRef = createRef()
 
 const Home = () => {
-  useEffect(() => {
-    let app
-    if (canvasRef.current) {
-      app = new PixiAPP(canvasRef.current)
-      app.changeHomeMap(MAP_SELECTION)
-      app.changeHomeTheme('chimney', 's1')
-    }
+  const [currentIndex] = useStore('house.current')
+  const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
 
+  useEffect(() => {
+    if (canvasRef.current) {
+      appRef.current = new PixiAPP(canvasRef.current)
+    }
     return () => {
-      app && app.destory()
+      appRef.current && appRef.current.destory()
     }
   }, [])
+  useEffect(() => {
+    const app = appRef.current
+    if (app) {
+      app.changeHomeMap(currentHomeData.selectId)
+      app.applyHomeTheme(currentHomeData.theme)
+    }
+  }, [appRef.current, currentHomeData])
 
   return <canvas ref={canvasRef} />
 }

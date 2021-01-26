@@ -38,6 +38,7 @@ import {
 
 /* utils */
 import { getMapObjectImagePath } from '@utils/get-image-path'
+import { entries } from '@utils/ramda'
 
 /* mapping */
 import MapTheme from '@mapping/map-theme'
@@ -82,6 +83,7 @@ class PixiAPP {
    */
   changeHomeMap(selectId) {
     this.selectedMapTheme = MapTheme[selectId]
+    if (this.mapId === this.selectedMapTheme.templateMapID) return
     this.mapId = this.selectedMapTheme.templateMapID
     this.mapData = Maps[this.mapId]
     this.defaultTheme = '0'
@@ -116,6 +118,7 @@ class PixiAPP {
       worldWidth: this.world.width,
       worldHeight: this.world.height,
       interaction: this.app.renderer.plugins.interaction,
+      divWheel: this.app.view,
     })
     const maxZoomWidthScale = this.world.width / this.canvas.width
     const maxZoomHeightScale = this.world.height / this.canvas.height
@@ -179,6 +182,12 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
+  }
+  applyHomeTheme(themes) {
+    entries(([key, value]) => {
+      const themeType = +value === 0 ? value : `s${value}`
+      this.changeHomeTheme(key, themeType)
+    }, themes)
   }
   changeHomeTheme(objectType, theme) {
     if (!this.homeObject[objectType]) return

@@ -97,6 +97,8 @@ class MapObject {
         )
         this.app.layers[this.layer].addChild(this.sprite)
       } else {
+        this.sprite.stop && this.sprite.stop()
+        this.app.ticker.remove(this.animationTicker)
         this.sprite.textures = this.framesSrc.map(
           (src) => this.app.loader.resources[src].texture
         )

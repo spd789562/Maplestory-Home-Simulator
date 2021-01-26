@@ -2,11 +2,14 @@ import { useMemo } from 'react'
 
 /* store */
 import { useStore } from '@store'
+import { CHANGE_SIDE_OPEN } from '@store/meta'
 
 /* component */
 import { Drawer } from 'antd'
 import Tabs from './tabs'
 import HomeStyle from './home-style'
+
+import isClient from '@utils/is-client'
 
 const TabMapping = [
   { id: 0, title: 'tab_home_style', component: <HomeStyle /> },
@@ -15,15 +18,18 @@ const TabMapping = [
 ]
 
 const Side = () => {
-  const [{ open, current: currentId }] = useStore('meta.side')
+  const [{ open, current: currentId }, dispatch] = useStore('meta.side')
   const currentTab = useMemo(() => TabMapping[currentId] || {}, [currentId])
+  const width = Math.min(isClient() ? window.innerWidth - 30 : 300, 300)
+  const handleClose = () => dispatch({ type: CHANGE_SIDE_OPEN, payload: false })
   return (
     <Drawer
       title={currentTab.title}
       placement="right"
-      closable={false}
       mask={false}
       visible={open}
+      width={width}
+      onClose={handleClose}
       forceRender
     >
       <Tabs />

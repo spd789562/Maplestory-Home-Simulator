@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useCallback } from 'react'
 
 /* store */
 import { useStore } from '@store'
@@ -21,7 +21,10 @@ const Side = () => {
   const [{ open, current: currentId }, dispatch] = useStore('meta.side')
   const currentTab = useMemo(() => TabMapping[currentId] || {}, [currentId])
   const width = Math.min(isClient() ? window.innerWidth - 30 : 300, 300)
-  const handleClose = () => dispatch({ type: CHANGE_SIDE_OPEN, payload: false })
+  const handleClose = useCallback(
+    () => dispatch({ type: CHANGE_SIDE_OPEN, payload: false }),
+    []
+  )
   return (
     <Drawer
       title={currentTab.title}

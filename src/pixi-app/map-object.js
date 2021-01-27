@@ -80,6 +80,7 @@ class MapObject {
   changeTheme(theme) {
     if (has(theme, this.themeData) && theme !== this.theme) {
       this.theme = theme
+      this.sprite && this.sprite.stop && this.sprite.stop()
       this.render()
     }
   }
@@ -101,7 +102,6 @@ class MapObject {
         )
         this.app.layers[this.layer].addChild(this.sprite)
       } else {
-        this.sprite.stop && this.sprite.stop()
         this.app.ticker.remove(this.animationTicker)
         this.sprite.textures = this.framesSrc.map(
           (src) => this.app.loader.resources[src].texture

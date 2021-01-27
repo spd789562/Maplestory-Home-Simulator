@@ -1,6 +1,8 @@
 /* utils */
 import { pipe, filter, uniq } from 'ramda'
 
+const { IMAGE_CDN } = process.env
+
 class PixiLoaderManager {
   constructor(app) {
     this.app = app
@@ -31,10 +33,20 @@ class PixiLoaderManager {
       uniq
     )(currentTask.src)
     if (needLoadSrc.length) {
-      this.app.loader.add(needLoadSrc).load(() => {
-        currentTask.callback()
-        this.runTask()
-      })
+      this.app.loader
+        .add(
+          needLoadSrc.map((url) => ({
+            name: url,
+            url:
+              !url.startsWith('/') || process.env.NODE_ENV === 'development'
+                ? url
+                : `${IMAGE_CDN}${location.host}${url}`,
+          }))
+        )
+        .load(() => {
+          currentTask.callback()
+          this.runTask()
+        })
     } else {
       currentTask.callback()
       this.runTask()

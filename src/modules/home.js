@@ -4,7 +4,7 @@ import { getTheme } from '@mapping/map-theme/name'
 
 /* utils */
 import { entries } from '@utils/ramda'
-import { fromPairs, propEq } from 'ramda'
+import { fromPairs, map, propEq } from 'ramda'
 
 class Home {
   constructor(selectId) {
@@ -13,7 +13,11 @@ class Home {
     this.selectId = selectId
     this.mapId = currentMapData.templateMapID
     this.theme = fromPairs(
-      entries(([key]) => [key, '0'], currentMapData.themeable)
+      map(
+        ({ 0: { info, itemID, ...themeObject } }) =>
+          map(({ name, state }) => [name, state], themeObject),
+        currentMapData.themeable
+      )
     )
     this.furnitures = []
   }

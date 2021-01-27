@@ -2,7 +2,7 @@
 import { AnimatedSprite } from 'pixi.js-legacy'
 
 /* utils */
-import { clone, map, path, pickBy, pipe, prop, toPairs, uniq } from 'ramda'
+import { clone, has, map, path, pickBy, pipe, prop, toPairs, uniq } from 'ramda'
 import { getMapObjectImagePath } from '@utils/get-image-path'
 
 /* mapping */
@@ -16,6 +16,7 @@ class MapObject {
       x,
       y,
       z,
+      name,
       oS: wzType,
       l0: homeType,
       l1: objectType,
@@ -34,7 +35,7 @@ class MapObject {
     this.layer = layer
     this.position = { x: +x, y: +y, z: +z }
     this.theme = '0'
-    this.objectType = objectType
+    this.objectType = name || objectType
     this.objectIndex = objectIndex
   }
   get frames() {
@@ -77,14 +78,17 @@ class MapObject {
     return this.frames.map(prop('src'))
   }
   changeTheme(theme) {
-    if (this.themeData[theme]) {
+    if (has(theme, this.themeData) && theme !== this.theme) {
       this.theme = theme
       this.render()
     }
   }
   render() {
     const isAnimation = this.frames.length > 1
-    const { x, y, size } = this.frames[0]
+    if (this.sprite) {
+      this.sprite.alpha = !this.frames.length ? 0 : 1
+    }
+    const { x, y, size } = this.frames[0] || {}
     this.app.loaderManager.load(this.framesSrc, () => {
       if (
         !this.framesSrc.filter((src) => this.app.loader.resources[src]).length
@@ -119,7 +123,7 @@ class MapObject {
     })
   }
   animationTicker = () => {
-    if (!this.sprite) return
+    if (!this.sprite || !this.frames[this.sprite.currentFrame]) return
     const data = this.frames[this.sprite.currentFrame]
     this.sprite.width = +data.size.width || this.sprite.width
     this.sprite.height = +data.size.height || this.sprite.height

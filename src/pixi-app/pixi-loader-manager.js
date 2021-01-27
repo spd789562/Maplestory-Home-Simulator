@@ -1,7 +1,8 @@
 /* utils */
 import { pipe, filter, uniq } from 'ramda'
+import getConfig from 'next/config'
 
-const { IMAGE_CDN } = process.env
+const { IMAGE_CDN } = getConfig().publicRuntimeConfig
 
 class PixiLoaderManager {
   constructor(app) {

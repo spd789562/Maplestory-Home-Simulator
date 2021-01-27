@@ -84,6 +84,7 @@ module.exports = composeConfig(
   publicRuntimeConfig: {
     ...config,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID || '',
+    IMAGE_CDN: process.env.IMAGE_CDN || '',
     localeSubpaths,
     isProd,
   },

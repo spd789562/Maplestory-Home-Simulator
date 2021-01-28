@@ -75,7 +75,6 @@ class PixiAPP {
       antialias: true,
     })
     this.showGrid = true
-    this.app.loaderManager = new PixiLoaderManager(this.app)
     this.app.layers = {}
 
     this.viewZoom = 1
@@ -177,7 +176,10 @@ class PixiAPP {
     this.renderGrid()
   }
   clearMap() {
-    this.app.loaderManager.reset()
+    // clear task
+    this.app.loaderManager && this.app.loaderManager.reset()
+    // create new loader
+    this.app.loaderManager = new PixiLoaderManager(this.app)
     this.viewport && this.app.stage.removeChild(this.viewport)
     this.$minimap && this.app.stage.removeChild(this.$minimap)
     this.$gridLayer = null

@@ -20,6 +20,7 @@ class PixiLoaderManager {
     this.checkTask()
   }
   reset() {
+    this.isLoaderRunning = false
     this.app.loader.reset()
     this.task = []
   }

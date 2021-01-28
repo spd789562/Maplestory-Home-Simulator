@@ -1,76 +1,51 @@
-import { Container, Sprite } from 'pixi.js-legacy'
+import {
+  Texture,
+  Rectangle,
+  Sprite,
+  TilingSprite,
+  Graphics,
+} from 'pixi.js-legacy'
 
 /* utils */
 import { flatten, isNil, times } from 'ramda'
 
-class GapTilingSprite extends Container {
+class GapTilingSprite extends TilingSprite {
   constructor({ texture, scene, size, gap, position, mode = 3 }) {
-    super()
-    this.texture = texture
+    const gapTexture = GapTilingSprite.generateGapTexture(texture, size, gap)
 
-    /* tiling gap */
-    this.gap = {
-      x: isNil(gap.x) ? size.width : gap.x,
-      y: isNil(gap.y) ? size.height : gap.y,
-    }
-    /* position */
-    this.pos = {
-      x: position.x || 0,
-      y: position.y || 0,
-    }
-    /* texture size */
-    this.size = size
-    this.mode = mode
+    const width = mode === 2 ? size.width : scene.edge.right - scene.edge.left
+    const height = mode === 1 ? size.height : scene.edge.bottom - scene.edge.top
+    super(gapTexture, width, height)
 
-    /* calc start point */
-    this.colUnit = this.gap.x || this.size.width
-    this.rowUnit = this.gap.y || this.size.height
-
-    const posWithCenterX = scene.center.x + this.pos.x
-    const posWithCenterY = scene.center.y + this.pos.y
-    const minimumLeftDistance =
-      Math.ceil((posWithCenterX - scene.edge.left) / this.colUnit) *
-      this.colUnit
-    const minimumTopDistance =
-      Math.ceil((posWithCenterY - scene.edge.top) / this.rowUnit) * this.rowUnit
-    this.startX = posWithCenterX - minimumLeftDistance - this.pos.x
-    this.startY = posWithCenterY - minimumTopDistance
-
-    /* tiling size */
-    this.boxSize = {
-      width: scene.edge.right - this.startX,
-      height: scene.edge.bottom - this.startY,
-    }
-
-    this.data = []
-
-    this.placeTexture()
+    this.x = mode !== 2 ? scene.edge.left : position.x
+    this.y = mode !== 1 ? scene.edge.top : position.y
+    this.tilePosition.x = position.x
+    this.tilePosition.y = this.type !== 2 ? 0 : position.y
   }
-  get points() {
-    const rowCount =
-      this.mode === 1 ? 1 : Math.ceil(this.boxSize.height / this.rowUnit) + 1
-    const colCount =
-      this.mode === 2 ? 1 : Math.ceil(this.boxSize.width / this.colUnit) + 1
+  static generateGapTexture(texture, size, gap) {
+    const gapBox = new Graphics()
+    const boxWidth = gap.x ? gap.x : size.width
+    const boxHeight = gap.y ? gap.y : size.height
 
-    return flatten(
-      times((xIndex) => {
-        const x = (colCount === 1 ? 0 : this.startX) + xIndex * this.colUnit
-        return times((yIndex) => {
-          const y = (rowCount === 1 ? 0 : this.startY) + yIndex * this.rowUnit
-          return { x, y }
-        }, rowCount)
-      }, colCount)
-    )
-  }
-  placeTexture() {
-    this.points.forEach(({ x, y }) => {
-      const sprite = new Sprite(this.texture)
-      sprite.width = this.size.width
-      sprite.height = this.size.height
-      sprite.position.set(x, y)
-      this.addChild(sprite)
-      this.data.push(sprite)
-    })
+    /* empty box */
+    gapBox.drawRect(0, 0, boxWidth, boxHeight)
+    gapBox.endFill()
+
+    const originSprite = new Sprite(texture)
+    originSprite.width = size.width
+    originSprite.height = size.height
+
+    if (originSprite.width > boxWidth) {
+      // cut texture
+      originSprite.texture = new Texture(
+        texture,
+        new Rectangle((size.width - boxWidth) / 2, 0, boxWidth, size.height)
+      )
+      originSprite.width = boxWidth
+    }
+    gapBox.addChild(originSprite)
+
+    return gapBox.generateCanvasTexture()
   }
 }
 

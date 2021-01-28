@@ -32,8 +32,14 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = composeConfig(
-  withSass,
   withLess,
+  withOtherParam(withSass, {
+    cssModules: true,
+    cssLoaderOptions: {
+      importLoaders: 1,
+      localIdentName: '[local]___[hash:base64:5]',
+    },
+  }),
   withOtherParam(withCSS, {
     cssModules: true,
     cssLoaderOptions: {
@@ -78,6 +84,7 @@ module.exports = composeConfig(
   publicRuntimeConfig: {
     ...config,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID || '',
+    IMAGE_CDN: process.env.IMAGE_CDN || '',
     localeSubpaths,
     isProd,
   },

@@ -71,13 +71,13 @@ class Minimap extends Container {
     this.$button = new Graphics()
     this.$button.interactive = true
     this.$button.buttonMode = true
-    this.$button.beginFill(0x0000000)
+    this.$button.beginFill(0xc1c8f1)
     this.$button.drawPolygon(ButtonPath)
     this.$button.beginFill()
     const buttonTextStyle = new TextStyle({
       fontFamily: 'Arial',
       fontSize: 18,
-      fill: 0xffffff,
+      fill: 0x111111,
     })
     const buttonText = new Text('Minimap', buttonTextStyle)
     buttonText.x = 18
@@ -102,14 +102,15 @@ class Minimap extends Container {
     this.$minimap.endFill()
 
     this.$viewable.clear()
-    this.$viewable.beginFill(0xffffff)
+    this.$viewable.beginFill(0xffffff, 0.5)
+    this.$viewable.lineStyle(1, 0xffffff)
     const viewable = this.$viewable.drawRect(
       0,
       0,
       this.multipleRate(visibleRect.width),
       this.multipleRate(visibleRect.height)
     )
-    viewable.alpha = 0.3
+    viewable.alpha = 0.5
     this.$viewable.beginFill()
     this.$viewable.position.set(
       this.multipleRate(visibleRect.x),

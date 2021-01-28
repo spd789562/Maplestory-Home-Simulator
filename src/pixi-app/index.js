@@ -38,6 +38,7 @@ import {
 
 /* utils */
 import { getMapObjectImagePath } from '@utils/get-image-path'
+import { entries } from '@utils/ramda'
 
 /* mapping */
 import MapTheme from '@mapping/map-theme'
@@ -74,14 +75,18 @@ class PixiAPP {
       antialias: true,
     })
     this.showGrid = true
-    this.app.loaderManager = new PixiLoaderManager(this.app)
     this.app.layers = {}
+
+    this.viewZoom = 1
   }
   /**
    * @param {string} selectId
    */
   changeHomeMap(selectId) {
     this.selectedMapTheme = MapTheme[selectId]
+    if (this.mapId === this.selectedMapTheme.templateMapID) return
+
+    this.clearMap()
     this.mapId = this.selectedMapTheme.templateMapID
     this.mapData = Maps[this.mapId]
     this.defaultTheme = '0'
@@ -116,11 +121,15 @@ class PixiAPP {
       worldWidth: this.world.width,
       worldHeight: this.world.height,
       interaction: this.app.renderer.plugins.interaction,
+      divWheel: this.app.view,
     })
+    const maxZoomWidthScale = this.world.width / this.canvas.width
+    const maxZoomHeightScale = this.world.height / this.canvas.height
+    const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
     // limit zoom range
     this.viewport
       .clampZoom({
-        maxWidth: this.world.width,
+        maxWidth: this.canvas.width * maxZoomScale,
       })
       .clamp({
         left: this.edge.left,
@@ -133,7 +142,11 @@ class PixiAPP {
       .drag()
       .pinch()
       .wheel()
+      .setZoom(Math.min(maxZoomScale, this.viewZoom))
       .on('moved', this.setVisibleRect)
+      .on('zoomed-end', (event) => {
+        this.viewZoom = event.lastViewport.scaleX
+      })
 
     this.setVisibleRect()
 
@@ -162,6 +175,16 @@ class PixiAPP {
     this.showGrid = !this.showGrid
     this.renderGrid()
   }
+  clearMap() {
+    // clear task
+    this.app.loaderManager && this.app.loaderManager.reset()
+    // create new loader
+    this.app.loaderManager = new PixiLoaderManager(this.app)
+    this.viewport && this.app.stage.removeChild(this.viewport)
+    this.$minimap && this.app.stage.removeChild(this.$minimap)
+    this.$gridLayer = null
+    this.app.layers = {}
+  }
   renderMap() {
     this.$map = new Container()
     this.$map.position.set(this.center.x, this.center.y)
@@ -176,6 +199,12 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
+  }
+  applyHomeTheme(themes) {
+    entries(([key, value]) => {
+      const themeType = +value === 0 ? value : `s${value}`
+      this.changeHomeTheme(key, themeType)
+    }, themes)
   }
   changeHomeTheme(objectType, theme) {
     if (!this.homeObject[objectType]) return
@@ -218,9 +247,6 @@ class PixiAPP {
     if (this.$gridLayer) {
       this.$gridLayer.alpha = +this.showGrid
     } else {
-      /* remove previous layer */
-      this.$gridLayer && this.$map.removeChild(this.$gridLayer)
-
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
       this.$map.addChild(this.$gridLayer)

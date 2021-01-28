@@ -17,7 +17,18 @@ const ChangeMap = ({ t, mapList, currentId, handleChange }) => {
       }`}
       key={`map-preview-${templateMapID}`}
     >
-      <Popover content={() => <div style={{ maxWidth: 200 }}>{desc}</div>}>
+      <Popover
+        content={() => (
+          <div style={{ maxWidth: 200 }}>
+            {desc.split(/\\r\\n/).map((str, index) => (
+              <span>
+                {index !== 0 && <br />}
+                {str}
+              </span>
+            ))}
+          </div>
+        )}
+      >
         <h4 className={styles['map-title']}>
           {t(`home_type_${getType(templateMapID)}`)}
         </h4>

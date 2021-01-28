@@ -9,9 +9,11 @@
   border: 3px solid #ccc;
   border-radius: 10px;
   cursor: pointer;
+  transition: box-shadow linear 0.3s, border-color linear 0.3s;
   &__active {
     border-width: 4px;
     border-color: #6373ca;
+    box-shadow: 0 0 10px 1px #aab7ff;
     cursor: unset;
   }
 

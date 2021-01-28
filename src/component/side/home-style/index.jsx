@@ -17,6 +17,7 @@ import { entries } from '@utils/ramda'
 import getInitTheme from '@utils/get-init-theme'
 import { getTheme } from '@mapping/map-theme/name'
 import { assoc, assocPath, evolve, keys, pipe, values } from 'ramda'
+import Home from '@modules/home'
 
 /* mapping */
 import { ParsedTheme } from '@mapping/map-theme'
@@ -47,12 +48,17 @@ const HomeStyle = ({ t }) => {
   }
   const handleChangeMap = (id) => () => {
     const selectTheme = getTheme(id)
-    let updateFuncs = [assoc('selectId', id)]
-    selectTheme !== theme && updateFuncs.push(assoc('theme', getInitTheme(id)))
-    dispatch({
-      type: HOUSE_UPDATE,
-      payload: pipe(...updateFuncs)(currentHomeData),
-    })
+    if (selectTheme !== theme) {
+      dispatch({
+        type: HOUSE_UPDATE,
+        payload: new Home(id),
+      })
+    } else {
+      dispatch({
+        type: HOUSE_UPDATE,
+        payload: assoc('selectId', id)(currentHomeData),
+      })
+    }
   }
   const mapList = ParsedTheme[currentTheme]
 

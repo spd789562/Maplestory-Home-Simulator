@@ -1,3 +1,5 @@
+import { withTranslation } from '@i18n'
+
 /* components */
 import { Popover, Row, Col } from 'antd'
 
@@ -10,12 +12,12 @@ import StringMapping from '@mapping/furniture-string'
 
 import styles from './change-object.module.scss'
 
-const ChangeObject = ({ type, themes, handleChange, currentThemeData }) => {
+const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
   const currentSelectFields = keys(currentThemeData)
   return (
     <div className={styles.container}>
-      <h4 className={styles.title}>{type}</h4>
-      <Row gutter={[4, 4]}>
+      <h4 className={styles.title}>{t(`home_deco_${type}`)}</h4>
+      <Row gutter={[8, 8]}>
         {entries(([key, { info, itemID, ...applyObjs }]) => {
           const mappedString = StringMapping[+itemID] || {}
           const needFields = values(applyObjs)
@@ -55,4 +57,8 @@ const ChangeObject = ({ type, themes, handleChange, currentThemeData }) => {
   )
 }
 
-export default ChangeObject
+ChangeObject.getInitialProps = async () => ({
+  namespacesRequired: ['index'],
+})
+
+export default withTranslation('index')(ChangeObject)

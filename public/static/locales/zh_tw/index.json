@@ -27,6 +27,18 @@
   "home_type_hidden_stair": "隱藏樓梯型",
   "home_type_ladder": "簡潔樓梯型",
 
+  "home_deco_roof": "屋頂", 
+  "home_deco_tile": "地面", 
+  "home_deco_window": "窗戶", 
+  "home_deco_wall": "牆壁", 
+  "home_deco_wallFront": "外牆", 
+  "home_deco_wallBack": "壁紙", 
+  "home_deco_roofDeco": "外牆裝飾", 
+  "home_deco_exteriorDeco": "室外裝飾", 
+  "home_deco_parasol": "室外裝飾", 
+  "home_deco_door": "門", 
+  "home_deco_chimney": "煙囪", 
+
   "other_tools": "其他工具",
   "web_arcane_symbol_calculator": "秘法符文計算機",
   "web_boss_crystal_calculator": "力量結晶計算機",

@@ -1,3 +1,3 @@
-import StringWZ from './Consume.img.json'
+import StringWZ from './String.img.json'
 
 export default StringWZ

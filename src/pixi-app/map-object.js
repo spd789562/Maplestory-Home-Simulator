@@ -86,13 +86,16 @@ class MapObject {
   }
   render() {
     const isAnimation = this.frames.length > 1
+    const renderTheme = this.theme
     if (this.sprite) {
       this.sprite.alpha = !this.frames.length ? 0 : 1
     }
     const { x, y, size } = this.frames[0] || {}
     this.app.loaderManager.load(this.framesSrc, () => {
       if (
-        !this.framesSrc.filter((src) => this.app.loader.resources[src]).length
+        !this.framesSrc.filter((src) => this.app.loader.resources[src])
+          .length ||
+        this.theme !== renderTheme
       ) {
         return
       }

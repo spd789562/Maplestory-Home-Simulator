@@ -77,6 +77,8 @@ class PixiAPP {
     this.showGrid = true
     this.app.loaderManager = new PixiLoaderManager(this.app)
     this.app.layers = {}
+
+    this.viewZoom = 1
   }
   /**
    * @param {string} selectId
@@ -84,6 +86,8 @@ class PixiAPP {
   changeHomeMap(selectId) {
     this.selectedMapTheme = MapTheme[selectId]
     if (this.mapId === this.selectedMapTheme.templateMapID) return
+
+    this.clearMap()
     this.mapId = this.selectedMapTheme.templateMapID
     this.mapData = Maps[this.mapId]
     this.defaultTheme = '0'
@@ -139,7 +143,11 @@ class PixiAPP {
       .drag()
       .pinch()
       .wheel()
+      .setZoom(Math.min(maxZoomScale, this.viewZoom))
       .on('moved', this.setVisibleRect)
+      .on('zoomed-end', (event) => {
+        this.viewZoom = event.lastViewport.scaleX
+      })
 
     this.setVisibleRect()
 
@@ -167,6 +175,13 @@ class PixiAPP {
   toggleGrid() {
     this.showGrid = !this.showGrid
     this.renderGrid()
+  }
+  clearMap() {
+    this.app.loaderManager.reset()
+    this.viewport && this.app.stage.removeChild(this.viewport)
+    this.$minimap && this.app.stage.removeChild(this.$minimap)
+    this.$gridLayer = null
+    this.app.layers = {}
   }
   renderMap() {
     this.$map = new Container()
@@ -230,9 +245,6 @@ class PixiAPP {
     if (this.$gridLayer) {
       this.$gridLayer.alpha = +this.showGrid
     } else {
-      /* remove previous layer */
-      this.$gridLayer && this.$map.removeChild(this.$gridLayer)
-
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
       this.$map.addChild(this.$gridLayer)

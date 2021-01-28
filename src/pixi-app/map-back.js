@@ -106,6 +106,11 @@ class MapBack {
   render() {
     const { x, y, size } = this.frames[0]
     this.app.loaderManager.load(this.framesSrc, () => {
+      if (
+        !this.framesSrc.filter((src) => this.app.loader.resources[src]).length
+      ) {
+        return
+      }
       // only repeat place 0 or negitive gep back
       if (this.type > 0 && this.type < 4) {
         this.sprite = new GapTilingSprite({

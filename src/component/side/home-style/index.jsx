@@ -29,15 +29,17 @@ const HomeStyle = () => {
   const [currentTheme, setCurrentTheme] = useState(theme)
   useEffect(() => setCurrentTheme(theme), [theme])
 
-  const handleChange = ({ info, itemID, ...applyObj }) => () => {
-    dispatch({
-      type: HOUSE_UPDATE,
-      payload: pipe(
-        ...values(applyObj).map(({ name, state }) =>
-          assocPath(['theme', name], state)
-        )
-      )(currentHomeData),
-    })
+  const handleChange = (applyObjs) => () => {
+    if (currentTheme === theme) {
+      dispatch({
+        type: HOUSE_UPDATE,
+        payload: pipe(
+          ...applyObjs.map(({ name, state }) =>
+            assocPath(['theme', name], state)
+          )
+        )(currentHomeData),
+      })
+    }
   }
   const handleChangeMap = (id) => () => {
     const selectTheme = getTheme(id)
@@ -71,6 +73,7 @@ const HomeStyle = () => {
             type={type}
             themes={themes}
             handleChange={handleChange}
+            currentThemeData={currentHomeData.theme}
           />
         ),
         mapList[0].themeable

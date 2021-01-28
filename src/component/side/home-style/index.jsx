@@ -4,25 +4,29 @@ import { useEffect, useState } from 'react'
 import { useStore } from '@store'
 import { HOUSE_UPDATE } from '@store/house'
 
+/* i18n */
+import { withTranslation } from '@i18n'
+
 /* components */
-import { Select } from 'antd'
+import { Select, Form } from 'antd'
 import ChangeObject from './change-object'
+import ChangeMap from './change-map'
 
 /* utils */
 import { entries } from '@utils/ramda'
 import getInitTheme from '@utils/get-init-theme'
 import { getTheme } from '@mapping/map-theme/name'
-import { assoc, assocPath, keys, pipe, values } from 'ramda'
+import { assoc, assocPath, evolve, keys, pipe, values } from 'ramda'
 
 /* mapping */
 import { ParsedTheme } from '@mapping/map-theme'
 
 const selectOptions = keys(ParsedTheme).map((value) => ({
-  label: value,
+  label: `home_theme_${value}`,
   value,
 }))
 
-const HomeStyle = () => {
+const HomeStyle = ({ t }) => {
   const [currentIndex, dispatch] = useStore('house.current')
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const theme = getTheme(currentHomeData.selectId)
@@ -54,18 +58,18 @@ const HomeStyle = () => {
 
   return (
     <div>
-      <Select
-        options={selectOptions}
-        value={currentTheme}
-        onChange={setCurrentTheme}
-      />
-      {mapList.map(({ id }) => (
-        <img
-          src={`/home-thumbnail/${id}.png`}
-          alt=""
-          onClick={handleChangeMap(id)}
+      <Form.Item label={t('home_theme')}>
+        <Select
+          options={selectOptions.map(evolve({ label: t }))}
+          value={currentTheme}
+          onChange={setCurrentTheme}
         />
-      ))}
+      </Form.Item>
+      <ChangeMap
+        mapList={mapList}
+        currentId={currentHomeData.selectId}
+        handleChange={handleChangeMap}
+      />
       {entries(
         ([type, themes]) => (
           <ChangeObject
@@ -82,4 +86,8 @@ const HomeStyle = () => {
   )
 }
 
-export default HomeStyle
+HomeStyle.getInitialProps = async () => ({
+  namespacesRequired: ['index'],
+})
+
+export default withTranslation('index')(HomeStyle)

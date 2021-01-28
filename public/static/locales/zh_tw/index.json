@@ -7,6 +7,7 @@
   "reset":"重置",
   "comma": ", ",
 
+  "home_theme": "房屋樣式",
 
   "home_theme_toturial": "迷你菇菇屋",
   "home_theme_henesys": "舒適的菇菇屋",
@@ -14,7 +15,7 @@
   "home_theme_halloween": "月夜的萬聖節住宅",
   "home_theme_newyear": "蓮花池庭院瓦屋",
   "home_theme_lithharbor": "海邊的露臺小屋",
-  "home_theme_christmas": "聖誕雙層房屋",
+  "home_theme_christmax": "聖誕雙層房屋",
 
   "home_type_basic": "基本型",
   "home_type_stair": "階梯型",

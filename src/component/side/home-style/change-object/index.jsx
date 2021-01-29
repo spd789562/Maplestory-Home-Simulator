@@ -2,6 +2,7 @@ import { withTranslation } from '@i18n'
 
 /* components */
 import { Popover, Row, Col } from 'antd'
+import { InfoOutlined } from '@ant-design/icons'
 
 /* utils */
 import { entries } from '@utils/ramda'
@@ -30,25 +31,31 @@ const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
               .length > 0
           return (
             <Col span={6} key={itemID}>
-              <Popover
-                title={mappedString.name}
-                content={() => (
-                  <div style={{ maxWidth: 200 }}>{mappedString.desc}</div>
-                )}
+              <div
+                className={`${styles['list-item']} ${
+                  hasTheme ? styles['list-item__active'] : ''
+                }`}
               >
-                <div
-                  className={`${styles['list-item']} ${
-                    hasTheme ? styles['list-item__active'] : ''
-                  }`}
+                <Popover
+                  title={mappedString.name}
+                  content={() => (
+                    <div style={{ maxWidth: 200 }}>{mappedString.desc}</div>
+                  )}
+                  mouseEnterDelay={0.7}
+                  arrowPointAtCenter
+                  placement="left"
                 >
-                  <img
-                    src={`/theme-ui/Item-Consume-0267.img-0${itemID}-info-preview.png`}
-                    alt=""
-                    onClick={handleChange(needFields)}
-                    key={`home-obj-${itemID}`}
-                  />
-                </div>
-              </Popover>
+                  <div className={`${styles['list-item-info']}`}>
+                    <InfoOutlined />
+                  </div>
+                </Popover>
+                <img
+                  src={`/theme-ui/Item-Consume-0267.img-0${itemID}-info-preview.png`}
+                  alt=""
+                  onClick={handleChange(needFields)}
+                  key={`home-obj-${itemID}`}
+                />
+              </div>
             </Col>
           )
         }, values(themes))}

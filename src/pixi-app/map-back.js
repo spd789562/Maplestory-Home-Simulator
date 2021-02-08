@@ -136,7 +136,7 @@ class MapBack {
         if (this.animated) {
           this.sprite.animationSpeed = 1 / ((this.frames[0].delay || 80) / 16)
           this.sprite.play()
-          this.app.ticker.add(this.animationTicker)
+          this.sprite.onFrameChange = this.animationTicker
         }
         this.sprite.x = x
         this.sprite.y = y

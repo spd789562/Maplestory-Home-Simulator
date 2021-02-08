@@ -58,7 +58,7 @@ class PixiLoaderManager {
       )
       .load((ld, resources) => {
         this.addResource(resources)
-        if (!this.task[taskId].loader.cancel) {
+        if (!this.task[taskId].cancel) {
           currentTask.callback()
         }
         delete this.task[taskId]

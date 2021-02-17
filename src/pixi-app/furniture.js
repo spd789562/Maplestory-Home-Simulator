@@ -1,24 +1,18 @@
 /* components */
 import { AnimatedSprite, Container } from 'pixi.js-legacy'
+import Loading from './component/loading'
 
 /* utils */
 import {
-  clone,
   flatten,
-  has,
   includes,
-  is,
-  isNil,
   keys,
-  last,
   map,
+  multiply,
   path,
   pickBy,
   pipe,
   prop,
-  tap,
-  toPairs,
-  uniq,
   values,
   __,
 } from 'ramda'
@@ -44,6 +38,7 @@ class Furniture {
       x: +this.wz.info.gridX,
       y: +this.wz.info.gridY,
     }
+    this.gridSize = map(multiply(GRID_WIDTH), this.grid)
     this.offset = {
       x: (this.grid.x * GRID_WIDTH) / 2,
       y: this.grid.y * GRID_WIDTH,
@@ -54,6 +49,11 @@ class Furniture {
       z: 1,
       floor: furnitureData.position?.floor || 0,
     }
+    this.floorBasic = {
+      x: +pixiApp.mapData.housingGrid['1stFloor'].left,
+      y: +pixiApp.mapData.housingGrid['1stFloor'].top,
+    }
+
     this.statesData = this.wz.states
       ? this.wz.states
       : { 0: { loop: getLayers(this.wz) } }
@@ -65,17 +65,21 @@ class Furniture {
     this.components = {}
 
     this.$container = new Container()
+    this.$furniture = new Container()
+    this.$furniture.sortableChildren = true
 
-    this.$container.x =
-      +pixiApp.mapData.housingGrid['1stFloor'].left +
-      GRID_WIDTH * 5 +
-      this.offset.x
-    this.$container.y =
-      +pixiApp.mapData.housingGrid['1stFloor'].top + this.offset.y
+    this.$container.x = this.floorBasic.x + GRID_WIDTH * 5 + this.offset.x
+    this.$container.y = this.floorBasic.y + this.offset.y
     this.$container.sortableChildren = true
+    this.$container.addChild(this.$furniture)
+
     this.app.layers[4].addChild(this.$container)
 
     this.isActive = false
+
+    this.$loading = new Loading(this.gridSize.x, this.gridSize.y)
+    this.$loading.y = -this.offset.y / 2
+    this.$container.addChild(this.$loading)
 
     this.render()
   }
@@ -178,14 +182,7 @@ class Furniture {
     })
   }
   clearPreviousFrame() {
-    this.$container.removeChildren()
-    // map(({ name }) => {
-    //   const componentKey = `${this.state}-${this.stateStage}-${name}`
-    //   if (this.components[componentKey]) {
-    //     this.components[componentKey].stop()
-    //     this.$container.removeChild(this.components[componentKey])
-    //   }
-    // })(this.currentFrames)
+    this.$furniture.removeChildren()
   }
   playStart() {
     if (!this.frames[this.state]?.start) {
@@ -216,7 +213,7 @@ class Furniture {
       }
       this.isPlaying = true
       this.components[componentKey] = aniSprite
-      this.$container.addChild(this.components[componentKey])
+      this.$furniture.addChild(this.components[componentKey])
       aniSprite.play()
     })(this.currentFrames)
   }
@@ -234,7 +231,7 @@ class Furniture {
       onFrameChange()
       aniSprite.onFrameChange = onFrameChange
       this.components[componentKey] = aniSprite
-      this.$container.addChild(this.components[componentKey])
+      this.$furniture.addChild(this.components[componentKey])
       aniSprite.play()
     })(this.currentFrames)
   }
@@ -268,7 +265,7 @@ class Furniture {
       }
       this.isPlaying = true
       this.components[componentKey] = aniSprite
-      this.$container.addChild(this.components[componentKey])
+      this.$furniture.addChild(this.components[componentKey])
       aniSprite.play()
     })(this.currentFrames)
   }
@@ -280,9 +277,11 @@ class Furniture {
     // }
     // const { x, y, size } = this.frames[0] || {}
     this.app.loaderManager.load(this.allLayerSrc, () => {
-      this.$container.interactive = true
-      this.$container.buttonMode = true
-      this.$container.on('pointerdown', this.changeState)
+      this.$loading.destroy()
+
+      this.$furniture.interactive = true
+      this.$furniture.buttonMode = true
+      this.$furniture.on('pointerdown', this.changeState)
       this.playStart()
     })
   }

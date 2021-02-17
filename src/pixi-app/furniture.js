@@ -75,7 +75,9 @@ class Furniture {
 
     this.app.layers[4].addChild(this.$container)
 
-    this.isActive = false
+    this.canMove = true
+    this.canPlace = false
+    this.isDrag = false
 
     this.$loading = new Loading(this.gridSize.x, this.gridSize.y)
     this.$loading.y = -this.offset.y / 2
@@ -244,7 +246,6 @@ class Furniture {
     this.stateStage = 'end'
     let doneCount = 0
     const maxFrame = values(this.currentFrames).length
-    console.log(maxFrame)
     map(({ name, z, delay, frames }) => {
       const componentKey = `${this.state}-end-${name}`
       const aniSprite = new AnimatedSprite(
@@ -281,10 +282,49 @@ class Furniture {
 
       this.$furniture.interactive = true
       this.$furniture.buttonMode = true
-      this.$furniture.on('pointerdown', this.changeState)
+      this.$furniture
+        .on('pointerdown', (e) => {
+          if (this.isDrag && this.canPlace) {
+            this.isDrag = false
+            this.placeFurniture()
+          } else if (this.canMove) {
+            this.startDragFurniture(e)
+          } else {
+            this.changeState()
+          }
+        })
+        .on('pointermove', this.dragFurniture)
       this.playStart()
     })
   }
+
+  checkPlaceable() {
+    return true
+  }
+
+  startDragFurniture = (event) => {
+    this.isDrag = true
+    this.dragEvent = event
+  }
+  dragFurniture = () => {
+    if (this.isDrag && this.dragEvent) {
+      this.canPlace = this.checkPlaceable()
+      const mapPosition = this.dragEvent.data.getLocalPosition(
+        this.app.layers[4]
+      )
+      this.$container.position.set(
+        mapPosition.x,
+        mapPosition.y + this.gridSize.y / 2
+      )
+    }
+  }
+  placeFurniture = () => {
+    if (this.canPlace) {
+      this.isDrag = false
+      this.eventData = null
+    }
+  }
+
   static onFrameChange(sprite, frames) {
     const data = frames[sprite.currentFrame]
     sprite.animationSpeed = 1 / ((+data.delay || 80) / 16)

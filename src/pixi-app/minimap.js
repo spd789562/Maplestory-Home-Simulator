@@ -111,7 +111,7 @@ class Minimap extends Container {
       this.multipleRate(visibleRect.height)
     )
     viewable.alpha = 0.5
-    this.$viewable.beginFill()
+    this.$viewable.endFill()
     this.$viewable.position.set(
       this.multipleRate(visibleRect.x),
       this.multipleRate(visibleRect.y)

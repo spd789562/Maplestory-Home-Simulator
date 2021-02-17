@@ -12,6 +12,7 @@ import PixiLoaderManager from './pixi-loader-manager'
 import MapObject from './map-object'
 import MapBack from './map-back'
 import Minimap from './minimap'
+import Furniture from './furniture'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -35,10 +36,8 @@ import {
   uniq,
   values,
 } from 'ramda'
-
-/* utils */
-import { getMapObjectImagePath } from '@utils/get-image-path'
 import { entries } from '@utils/ramda'
+import { GRID_WIDTH } from './constant'
 
 /* mapping */
 import MapTheme from '@mapping/map-theme'
@@ -199,6 +198,9 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
+
+    /* test furniture */
+    const test = new Furniture(this, { id: '02672024' })
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
@@ -250,31 +252,62 @@ class PixiAPP {
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
       this.$map.addChild(this.$gridLayer)
+      this.gridPlaced = {}
 
       /* house grid */
-      values(this.mapData.housingGrid).forEach((grids) => {
+      entries(([key, grids]) => {
+        const wellKey = `${key}-well`
+        this.gridPlaced[wellKey] = []
+        this.gridPlaced[key] = []
         const gridLine = new Graphics()
-        gridLine.lineStyle(2, 0x333333, 1)
+        gridLine.lineStyle(2, 0x333333, 0.5)
         gridLine.zIndex = 990
-        const gridUnit = 30
         const row = +grids.row
         const col = +grids.col
         const startX = +grids.left
         const startY = +grids.top
-        const endX = startX + col * gridUnit
-        const endY = startY + row * gridUnit
+        const endX = startX + col * GRID_WIDTH
+        const endY = startY + row * GRID_WIDTH
+        gridLine.moveTo(startX, startY)
+        gridLine.lineTo(endX, startY)
+        gridLine.moveTo(startX, startY)
+        gridLine.lineTo(startX, endY)
         times((index) => {
-          const currentY = startY + index * gridUnit
-          gridLine.moveTo(startX, currentY)
-          gridLine.lineTo(endX, currentY)
-        }, row + 1)
-        times((index) => {
-          const currentX = startX + index * gridUnit
+          this.gridPlaced[wellKey].push([])
+          this.gridPlaced[key].push([])
+          const currentX = startX + (index + 1) * GRID_WIDTH
           gridLine.moveTo(currentX, startY)
           gridLine.lineTo(currentX, endY)
-        }, col + 1)
+        }, col)
+        times((index) => {
+          const currentY = startY + (index + 1) * GRID_WIDTH
+          gridLine.moveTo(startX, currentY)
+          gridLine.lineTo(endX, currentY)
+          times((x) => {
+            this.gridPlaced[wellKey][x][index] = 0
+            this.gridPlaced[key][x][index] = 0
+          }, col)
+        }, row)
         this.$gridLayer.addChild(gridLine)
-      })
+
+        /* set disabled */
+        grids.disabled &&
+          keys(grids.disabled).forEach((position) => {
+            const [x, y] = position.split(',').map(Number)
+            this.gridPlaced[wellKey][x][y] = 1
+            this.gridPlaced[key][x][y] = 1
+            gridLine.beginFill(0xff0000, 0.3)
+            gridLine.drawRect(
+              startX + x * GRID_WIDTH,
+              startY + y * GRID_WIDTH,
+              GRID_WIDTH,
+              GRID_WIDTH
+            )
+            gridLine.endFill()
+          })
+
+        console.log(this.gridPlaced)
+      }, this.mapData.housingGrid)
     }
   }
   renderMask() {

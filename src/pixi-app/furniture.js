@@ -31,6 +31,7 @@ const keyIsStage = includes(__, ['start', 'loop', 'end'])
 
 class Furniture {
   constructor(pixiApp, furnitureData) {
+    this.pixiApp = pixiApp
     this.app = pixiApp.app
     this.id = furnitureData.id
     this.wz = FurnitureMapping[furnitureData.id]
@@ -42,6 +43,10 @@ class Furniture {
     this.offset = {
       x: (this.grid.x * GRID_WIDTH) / 2,
       y: this.grid.y * GRID_WIDTH,
+    }
+    this.vertexOffset = {
+      x: -this.offset.x,
+      y: -this.offset.y / 2,
     }
     this.position = {
       x: furnitureData.position?.x || 0,
@@ -298,6 +303,38 @@ class Furniture {
     })
   }
 
+  autoStickGrid(mousePoint) {
+    let nearest = null
+    entries(([floor, points]) => {
+      entries(([pos, point]) => {
+        if (
+          Math.abs(mousePoint.x + this.vertexOffset.x - point.x) <
+            GRID_WIDTH / 2 &&
+          Math.abs(mousePoint.y + this.vertexOffset.y - point.y) <
+            GRID_WIDTH / 2
+        ) {
+          nearest = point
+          const [x, y] = pos.split(',')
+          this.position.floor = floor
+          this.position.x = +x
+          this.position.y = +y
+        }
+      }, points)
+    }, this.pixiApp.gridPoints)
+    if (nearest) {
+      this.$container.position.set(
+        nearest.x + this.offset.x,
+        nearest.y + this.offset.y
+      )
+    } else {
+      this.isOut = true
+      this.$container.position.set(
+        mousePoint.x,
+        mousePoint.y + this.gridSize.y / 2
+      )
+    }
+  }
+
   checkPlaceable() {
     return true
   }
@@ -308,14 +345,11 @@ class Furniture {
   }
   dragFurniture = () => {
     if (this.isDrag && this.dragEvent) {
-      this.canPlace = this.checkPlaceable()
       const mapPosition = this.dragEvent.data.getLocalPosition(
         this.app.layers[4]
       )
-      this.$container.position.set(
-        mapPosition.x,
-        mapPosition.y + this.gridSize.y / 2
-      )
+      this.autoStickGrid(mapPosition)
+      this.canPlace = this.checkPlaceable()
     }
   }
   placeFurniture = () => {

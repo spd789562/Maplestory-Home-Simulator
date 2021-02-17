@@ -6,6 +6,7 @@ import {
   Sprite,
   Rectangle,
   Graphics,
+  Point,
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
 import PixiLoaderManager from './pixi-loader-manager'
@@ -253,12 +254,14 @@ class PixiAPP {
       this.$gridLayer.zIndex = 999
       this.$map.addChild(this.$gridLayer)
       this.gridPlaced = {}
+      this.gridPoints = {}
 
       /* house grid */
       entries(([key, grids]) => {
         const wellKey = `${key}-well`
         this.gridPlaced[wellKey] = []
         this.gridPlaced[key] = []
+        this.gridPoints[key] = {}
         const gridLine = new Graphics()
         gridLine.lineStyle(2, 0x333333, 0.5)
         gridLine.zIndex = 990
@@ -286,6 +289,10 @@ class PixiAPP {
           times((x) => {
             this.gridPlaced[wellKey][x][index] = 0
             this.gridPlaced[key][x][index] = 0
+            this.gridPoints[key][`${x},${index}`] = new Point(
+              startX + x * GRID_WIDTH,
+              startY + index * GRID_WIDTH
+            )
           }, col)
         }, row)
         this.$gridLayer.addChild(gridLine)
@@ -305,8 +312,6 @@ class PixiAPP {
             )
             gridLine.endFill()
           })
-
-        console.log(this.gridPlaced)
       }, this.mapData.housingGrid)
     }
   }

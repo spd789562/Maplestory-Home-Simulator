@@ -1,11 +1,14 @@
 /* components */
-import { AnimatedSprite, Container } from 'pixi.js-legacy'
+import { AnimatedSprite, Container, Graphics } from 'pixi.js-legacy'
 import Loading from './component/loading'
 
 /* utils */
 import {
+  any,
   flatten,
+  identity,
   includes,
+  isNil,
   keys,
   map,
   multiply,
@@ -13,6 +16,7 @@ import {
   pickBy,
   pipe,
   prop,
+  times,
   values,
   __,
 } from 'ramda'
@@ -28,6 +32,7 @@ const FURNITURE_ID = '02672080'
 const getLayers = pickBy((_, key) => includes('layer', key))
 const getFrames = pickBy((_, key) => !Number.isNaN(+key))
 const keyIsStage = includes(__, ['start', 'loop', 'end'])
+const isWall = pipe(values, any(includes(__, ['window', 'walldeco'])))
 
 class Furniture {
   constructor(pixiApp, furnitureData) {
@@ -59,6 +64,8 @@ class Furniture {
       y: +pixiApp.mapData.housingGrid['1stFloor'].top,
     }
 
+    this.isWall = isWall(this.wz.info.tag)
+
     this.statesData = this.wz.states
       ? this.wz.states
       : { 0: { loop: getLayers(this.wz) } }
@@ -76,12 +83,13 @@ class Furniture {
     this.$container.x = this.floorBasic.x + GRID_WIDTH * 5 + this.offset.x
     this.$container.y = this.floorBasic.y + this.offset.y
     this.$container.sortableChildren = true
+    this.$container.zIndex = this.position.z
     this.$container.addChild(this.$furniture)
 
     this.app.layers[4].addChild(this.$container)
 
     this.canMove = true
-    this.canPlace = false
+    this.canPlace = true
     this.isDrag = false
 
     this.$loading = new Loading(this.gridSize.x, this.gridSize.y)
@@ -89,6 +97,7 @@ class Furniture {
     this.$container.addChild(this.$loading)
 
     this.render()
+    this.renderRestrict()
   }
   parseFrames() {
     const isState = this.stateCount !== 1
@@ -302,6 +311,24 @@ class Furniture {
       this.playStart()
     })
   }
+  renderRestrict() {
+    if (this.$restrict) {
+      this.$restrict.alpha = this.canPlace ? 0 : 1
+    } else {
+      this.$restrict = new Graphics()
+      this.$restrict.beginFill(0xff0000, 0.6)
+      this.$restrict.drawRect(
+        -this.offset.x,
+        -this.offset.y,
+        this.gridSize.x,
+        this.gridSize.y
+      )
+      this.$restrict.endFill()
+      this.$restrict.zIndex = 999
+      this.$restrict.alpha = 1
+      this.$container.addChild(this.$restrict)
+    }
+  }
 
   autoStickGrid(mousePoint) {
     let nearest = null
@@ -322,6 +349,7 @@ class Furniture {
       }, points)
     }, this.pixiApp.gridPoints)
     if (nearest) {
+      this.isOut = false
       this.$container.position.set(
         nearest.x + this.offset.x,
         nearest.y + this.offset.y
@@ -335,8 +363,41 @@ class Furniture {
     }
   }
 
+  checkGridInteraction(gridPlaced) {
+    return (
+      this.isOut ||
+      any((x) => {
+        const pos_x = this.position.x + x
+        return (
+          !gridPlaced[pos_x] ||
+          any((y) => {
+            const pos_y = this.position.y + y
+            return gridPlaced[pos_x][pos_y] === 1
+          }, times(identity, this.grid.y))
+        )
+      }, times(identity, this.grid.x))
+    )
+  }
+
   checkPlaceable() {
-    return true
+    const floor = `${this.position.floor}${this.isWall ? '-wall' : ''}`
+    if (!this.isWall) {
+      const bottom_x = this.position.x + this.grid.x
+      const bottom_y = this.position.y + this.grid.y
+      const gridPlaced = this.pixiApp.gridPlaced[floor]
+      const gridPlacedX = gridPlaced[bottom_x - 1]
+      if (
+        !gridPlacedX ||
+        isNil(gridPlacedX[bottom_y - 1]) ||
+        bottom_y < gridPlacedX.length
+      ) {
+        return false
+      }
+    }
+    const hasInteraction = this.checkGridInteraction(
+      this.pixiApp.gridPlaced[floor]
+    )
+    return !hasInteraction
   }
 
   startDragFurniture = (event) => {
@@ -350,12 +411,22 @@ class Furniture {
       )
       this.autoStickGrid(mapPosition)
       this.canPlace = this.checkPlaceable()
+      this.renderRestrict()
     }
   }
   placeFurniture = () => {
     if (this.canPlace) {
       this.isDrag = false
       this.eventData = null
+      const { floor, x: offsetX, y: offsetY } = this.position
+      const _floor = `${floor}${this.isWall ? '-wall' : ''}`
+      this.pixiApp.updateGridPlaced(
+        _floor,
+        offsetX,
+        offsetY,
+        this.grid.x,
+        this.grid.y
+      )
     }
   }
 

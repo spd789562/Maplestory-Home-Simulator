@@ -201,7 +201,8 @@ class PixiAPP {
     this.app.stage.addChild(this.$minimap)
 
     /* test furniture */
-    const test = new Furniture(this, { id: '02672024' })
+    const test = new Furniture(this, { id: '02671122' })
+    const test1 = new Furniture(this, { id: '02671122' })
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
@@ -253,13 +254,15 @@ class PixiAPP {
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
       this.$map.addChild(this.$gridLayer)
+      /* grid placeable */
       this.gridPlaced = {}
+      /* grid position points */
       this.gridPoints = {}
 
       /* house grid */
       entries(([key, grids]) => {
-        const wellKey = `${key}-well`
-        this.gridPlaced[wellKey] = []
+        const wallKey = `${key}-wall`
+        this.gridPlaced[wallKey] = []
         this.gridPlaced[key] = []
         this.gridPoints[key] = {}
         const gridLine = new Graphics()
@@ -276,7 +279,7 @@ class PixiAPP {
         gridLine.moveTo(startX, startY)
         gridLine.lineTo(startX, endY)
         times((index) => {
-          this.gridPlaced[wellKey].push([])
+          this.gridPlaced[wallKey].push([])
           this.gridPlaced[key].push([])
           const currentX = startX + (index + 1) * GRID_WIDTH
           gridLine.moveTo(currentX, startY)
@@ -287,7 +290,7 @@ class PixiAPP {
           gridLine.moveTo(startX, currentY)
           gridLine.lineTo(endX, currentY)
           times((x) => {
-            this.gridPlaced[wellKey][x][index] = 0
+            this.gridPlaced[wallKey][x][index] = 0
             this.gridPlaced[key][x][index] = 0
             this.gridPoints[key][`${x},${index}`] = new Point(
               startX + x * GRID_WIDTH,
@@ -301,7 +304,7 @@ class PixiAPP {
         grids.disabled &&
           keys(grids.disabled).forEach((position) => {
             const [x, y] = position.split(',').map(Number)
-            this.gridPlaced[wellKey][x][y] = 1
+            this.gridPlaced[wallKey][x][y] = 1
             this.gridPlaced[key][x][y] = 1
             gridLine.beginFill(0xff0000, 0.3)
             gridLine.drawRect(
@@ -315,6 +318,13 @@ class PixiAPP {
       }, this.mapData.housingGrid)
     }
   }
+  updateGridPlaced = (floor, offsetX, offsetY, width, height) => {
+    times((x) => {
+      times((y) => {
+        this.gridPlaced[floor][x + offsetX][y + offsetY] = 1
+      }, height)
+    }, width)
+  }
   renderMask() {
     const mask = new Graphics()
     mask.beginFill(0xffffff)
@@ -327,11 +337,14 @@ class PixiAPP {
     this.$map.addChild(mask)
     this.$map.mask = mask
   }
-
   destory() {
     this.app.stop()
     this.app.destroy()
   }
+
+  // get gridPlaced() {
+  //   return this._gridPlaced
+  // }
 }
 
 export default PixiAPP

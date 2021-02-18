@@ -5,6 +5,7 @@ import Loading from './component/loading'
 /* utils */
 import {
   any,
+  clone,
   flatten,
   identity,
   includes,
@@ -53,12 +54,14 @@ class Furniture {
       x: -this.offset.x,
       y: -this.offset.y / 2,
     }
+
     this.position = {
       x: furnitureData.position?.x || 0,
       y: furnitureData.position?.y || 0,
       z: 1,
       floor: furnitureData.position?.floor || 0,
     }
+    this.prevPosition = clone(this.position)
     this.floorBasic = {
       x: +pixiApp.mapData.housingGrid['1stFloor'].left,
       y: +pixiApp.mapData.housingGrid['1stFloor'].top,
@@ -80,8 +83,10 @@ class Furniture {
     this.$furniture = new Container()
     this.$furniture.sortableChildren = true
 
-    this.$container.x = this.floorBasic.x + GRID_WIDTH * 5 + this.offset.x
-    this.$container.y = this.floorBasic.y + this.offset.y
+    this.$container.x =
+      this.floorBasic.x + GRID_WIDTH * this.position.x + this.offset.x
+    this.$container.y =
+      this.floorBasic.y + GRID_WIDTH * this.position.y + this.offset.y
     this.$container.sortableChildren = true
     this.$container.zIndex = this.position.z
     this.$container.addChild(this.$furniture)
@@ -403,6 +408,8 @@ class Furniture {
   startDragFurniture = (event) => {
     this.isDrag = true
     this.dragEvent = event
+    /* clear placed */
+    this.updateGrid(this.prevPosition, 0)
   }
   dragFurniture = () => {
     if (this.isDrag && this.dragEvent) {
@@ -418,16 +425,22 @@ class Furniture {
     if (this.canPlace) {
       this.isDrag = false
       this.eventData = null
-      const { floor, x: offsetX, y: offsetY } = this.position
-      const _floor = `${floor}${this.isWall ? '-wall' : ''}`
-      this.pixiApp.updateGridPlaced(
-        _floor,
-        offsetX,
-        offsetY,
-        this.grid.x,
-        this.grid.y
-      )
+      this.updateGrid(this.position, 1)
+      /* resetPrevious */
+      this.prevPosition = clone(this.position)
     }
+  }
+  updateGrid = (position, mode) => {
+    const { floor, x: offsetX, y: offsetY } = position
+    const _floor = `${floor}${this.isWall ? '-wall' : ''}`
+    this.pixiApp.updateGridPlaced(
+      _floor,
+      offsetX,
+      offsetY,
+      this.grid.x,
+      this.grid.y,
+      mode
+    )
   }
 
   static onFrameChange(sprite, frames) {

@@ -201,8 +201,14 @@ class PixiAPP {
     this.app.stage.addChild(this.$minimap)
 
     /* test furniture */
-    const test = new Furniture(this, { id: '02671122' })
-    const test1 = new Furniture(this, { id: '02671122' })
+    const test = new Furniture(this, {
+      id: '02671122',
+      position: { floor: '1stFloor' },
+    })
+    const test1 = new Furniture(this, {
+      id: '02671122',
+      position: { floor: '1stFloor' },
+    })
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
@@ -318,10 +324,10 @@ class PixiAPP {
       }, this.mapData.housingGrid)
     }
   }
-  updateGridPlaced = (floor, offsetX, offsetY, width, height) => {
+  updateGridPlaced = (floor, offsetX, offsetY, width, height, mode = 0) => {
     times((x) => {
       times((y) => {
-        this.gridPlaced[floor][x + offsetX][y + offsetY] = 1
+        this.gridPlaced[floor][x + offsetX][y + offsetY] = mode
       }, height)
     }, width)
   }

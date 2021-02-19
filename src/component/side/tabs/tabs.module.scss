@@ -1,26 +1,21 @@
-$tab-width: 30px;
+$tab-width: 33.5px;
 $tab-border-height: 7.5px;
 
 .tabs {
   position: absolute;
   top: 56px;
   left: $tab-width * -1;
-
   padding: 0;
 }
 
 .tabs-tab {
   position: relative;
-
   margin: 0;
   margin-top: $tab-border-height*2;
   padding: 15px 8px;
-
-  list-style: none;
-
-  cursor: pointer;
-
   background-color: #fff;
+  list-style: none;
+  cursor: pointer;
 
   &__arrow {
     padding-top: 8px;
@@ -28,24 +23,19 @@ $tab-border-height: 7.5px;
   }
 
   &::before, &::after {
+    content: '';
     position: absolute;
     right: 0;
-
     display: block;
-
-    content: '';
-
     border-width: $tab-border-height $tab-width 0 0;
     border-style: solid;
     border-color: transparent #fff;
-    
   }
   &::before {
     top: -7.5px;
   }
   &::after {
     bottom: -7.5px;
-
     transform: rotateX(180deg);
   }
 }

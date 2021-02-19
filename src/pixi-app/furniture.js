@@ -342,7 +342,7 @@ class Furniture {
           if (this.isDrag && this.canPlace) {
             this.isDrag = false
             this.placeFurniture()
-          } else if (this.canMove) {
+          } else if (this.pixiApp.isEdit) {
             this.startDragFurniture(e)
           } else {
             this.changeState()
@@ -366,7 +366,7 @@ class Furniture {
       )
       this.$restrict.endFill()
       this.$restrict.zIndex = 999
-      this.$restrict.alpha = 1
+      this.$restrict.alpha = this.canPlace ? 0 : 1
       this.$container.addChild(this.$restrict)
     }
   }

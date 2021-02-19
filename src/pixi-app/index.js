@@ -75,6 +75,7 @@ class PixiAPP {
       antialias: true,
     })
     this.showGrid = true
+    this._isEdit = false
     this.app.layers = {}
 
     this.viewZoom = 1
@@ -122,6 +123,7 @@ class PixiAPP {
       worldHeight: this.world.height,
       interaction: this.app.renderer.plugins.interaction,
       divWheel: this.app.view,
+      disableOnContextMenu: true,
     })
     const maxZoomWidthScale = this.world.width / this.canvas.width
     const maxZoomHeightScale = this.world.height / this.canvas.height
@@ -191,6 +193,9 @@ class PixiAPP {
     this.$map.sortableChildren = true
     this.viewport.addChild(this.$map)
 
+    times((index) => {
+      this.createLayer(index)
+    }, 12)
     this.renderMask()
     this.renderBack()
     this.renderObject()
@@ -206,7 +211,7 @@ class PixiAPP {
       position: { floor: '1stFloor' },
     })
     const test1 = new Furniture(this, {
-      id: '02671122',
+      id: '02671089',
       position: { floor: '1stFloor' },
     })
   }
@@ -348,9 +353,14 @@ class PixiAPP {
     this.app.destroy()
   }
 
-  // get gridPlaced() {
-  //   return this._gridPlaced
-  // }
+  get isEdit() {
+    return this._isEdit
+  }
+  set isEdit(isEdit) {
+    this._isEdit = isEdit
+    this.showGrid = isEdit
+    this.renderGrid()
+  }
 }
 
 export default PixiAPP

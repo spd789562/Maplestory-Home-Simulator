@@ -11,6 +11,7 @@ const appRef = createRef()
 
 const Home = () => {
   const [currentIndex] = useStore('house.current')
+  const [edit] = useStore('meta.edit')
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
 
   useEffect(() => {
@@ -28,6 +29,13 @@ const Home = () => {
       app.applyHomeTheme(currentHomeData.theme)
     }
   }, [appRef.current, currentHomeData])
+
+  useEffect(() => {
+    const app = appRef.current
+    if (app) {
+      app.isEdit = edit
+    }
+  }, [appRef.current, edit])
 
   return <canvas ref={canvasRef} />
 }

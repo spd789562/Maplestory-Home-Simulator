@@ -8,13 +8,14 @@ import { CHANGE_SIDE_OPEN } from '@store/meta'
 import { Drawer } from 'antd'
 import Tabs from './tabs'
 import HomeStyle from './home-style'
+import Setting from './setting'
 
 import isClient from '@utils/is-client'
 
 const TabMapping = [
   { id: 0, title: 'tab_home_style', component: <HomeStyle /> },
   { id: 1, title: 'tab_furniture' },
-  { id: 2, title: 'tab_setting' },
+  { id: 2, title: 'tab_setting', component: <Setting /> },
 ]
 
 const Side = () => {

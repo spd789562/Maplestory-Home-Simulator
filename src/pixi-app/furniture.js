@@ -1,5 +1,5 @@
 /* components */
-import { AnimatedSprite, Container, Graphics } from 'pixi.js-legacy'
+import { AnimatedSprite, Container, Graphics, Point } from 'pixi.js-legacy'
 import Loading from './component/loading'
 
 /* utils */
@@ -41,33 +41,57 @@ class Furniture {
     this.app = pixiApp.app
     this.id = furnitureData.id
     this.wz = FurnitureMapping[furnitureData.id]
+    /**
+     * grid count
+     * @type {Point}
+     */
     this.grid = {
       x: +this.wz.info.gridX,
       y: +this.wz.info.gridY,
     }
+    /**
+     * grid actual width
+     * @type {Point}
+     */
     this.gridSize = map(multiply(GRID_WIDTH), this.grid)
+    /**
+     * furniture place offset
+     * @type {Point}
+     */
     this.offset = {
       x: (this.grid.x * GRID_WIDTH) / 2,
       y: this.grid.y * GRID_WIDTH,
     }
+    /**
+     * furniture vertex offset
+     * @type {Point}
+     */
     this.vertexOffset = {
       x: -this.offset.x,
       y: -this.offset.y / 2,
     }
-
     this.position = {
       x: furnitureData.position?.x || 0,
       y: furnitureData.position?.y || 0,
       z: 1,
-      floor: furnitureData.position?.floor || 0,
+      floor:
+        (furnitureData.position?.floor &&
+          pixiApp.mapData.housingGrid[furnitureData.position.floor] &&
+          furnitureData.position.floor) ||
+        keys(pixiApp.mapData.housingGrid)[0],
     }
     this.prevPosition = clone(this.position)
+    /**
+     * current floor vertex position
+     * @type {Point}
+     */
     this.floorBasic = {
-      x: +pixiApp.mapData.housingGrid['1stFloor'].left,
-      y: +pixiApp.mapData.housingGrid['1stFloor'].top,
+      x: +pixiApp.mapData.housingGrid[this.position.floor].left,
+      y: +pixiApp.mapData.housingGrid[this.position.floor].top,
     }
 
     this.isWall = isWall(this.wz.info.tag)
+    this.layerIndex = this.isWall ? 3 : 4
 
     this.statesData = this.wz.states
       ? this.wz.states
@@ -79,10 +103,22 @@ class Furniture {
     this.frames = this.parseFrames()
     this.components = {}
 
+    /**
+     * Whole Furniture Layer
+     * @type {Container}
+     */
     this.$container = new Container()
+    /**
+     * Furniture Frames Layer
+     * @type {Container}
+     */
     this.$furniture = new Container()
     this.$furniture.sortableChildren = true
 
+    /**
+     * Initialize position
+     * @type {Container}
+     */
     this.$container.x =
       this.floorBasic.x + GRID_WIDTH * this.position.x + this.offset.x
     this.$container.y =
@@ -91,7 +127,7 @@ class Furniture {
     this.$container.zIndex = this.position.z
     this.$container.addChild(this.$furniture)
 
-    this.app.layers[4].addChild(this.$container)
+    this.app.layers[this.layerIndex].addChild(this.$container)
 
     this.canMove = true
     this.canPlace = true
@@ -410,11 +446,13 @@ class Furniture {
     this.dragEvent = event
     /* clear placed */
     this.updateGrid(this.prevPosition, 0)
+    this.app.layers[this.layerIndex].removeChild(this.$container)
+    this.app.layers.front.addChild(this.$container)
   }
   dragFurniture = () => {
     if (this.isDrag && this.dragEvent) {
       const mapPosition = this.dragEvent.data.getLocalPosition(
-        this.app.layers[4]
+        this.app.layers[this.layerIndex]
       )
       this.autoStickGrid(mapPosition)
       this.canPlace = this.checkPlaceable()
@@ -425,6 +463,7 @@ class Furniture {
     if (this.canPlace) {
       this.isDrag = false
       this.eventData = null
+      this.app.layers[this.layerIndex].addChild(this.$container)
       this.updateGrid(this.position, 1)
       /* resetPrevious */
       this.prevPosition = clone(this.position)

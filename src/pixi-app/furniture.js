@@ -39,8 +39,10 @@ class Furniture {
   constructor(pixiApp, furnitureData) {
     this.pixiApp = pixiApp
     this.app = pixiApp.app
-    this.id = furnitureData.id
+    if (!furnitureData.id) return null
+    this.id = furnitureData.id.toString().padStart(8, '0')
     this.wz = FurnitureMapping[furnitureData.id]
+    if (!this.wz) return null
     /**
      * grid count
      * @type {Point}
@@ -90,7 +92,7 @@ class Furniture {
       y: +pixiApp.mapData.housingGrid[this.position.floor].top,
     }
 
-    this.isWall = isWall(this.wz.info.tag)
+    this.isWall = this.id.startsWith('02671')
     this.layerIndex = this.isWall ? 3 : 4
 
     this.statesData = this.wz.states
@@ -231,7 +233,7 @@ class Furniture {
     return next > this.stateCount - 1 ? 0 : next
   }
   changeState = (state) => {
-    if (this.isPlaying) return
+    if (this.isPlaying && this.stateCount === 1) return
     const _state = this.nextState
     this.playEnd(() => {
       this.state = _state

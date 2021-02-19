@@ -37,7 +37,7 @@ const Home = () => {
     }
   }, [appRef.current, edit])
 
-  return <canvas ref={canvasRef} />
+  return <canvas ref={canvasRef} style={{ userSelect: 'none' }} />
 }
 
 export default Home

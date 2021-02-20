@@ -281,8 +281,7 @@ class Furniture {
       this.$furniture.buttonMode = true
       this.$furniture
         .on('pointerdown', (e) => {
-          if (this.isDrag && this.canPlace) {
-            this.isDrag = false
+          if (this.isDrag) {
             this.placeFurniture()
           } else if (this.pixiApp.isEdit) {
             this.startDragFurniture(e)
@@ -408,7 +407,10 @@ class Furniture {
     this.app.layers[this.layerIndex].removeChild(this.$container)
     this.app.layers.front.addChild(this.$container)
   }
-  dragFurniture = () => {
+  dragFurniture = (event) => {
+    if (this.isDrag) {
+      this.startDragFurniture(event)
+    }
     if (this.isDrag && this.dragEvent) {
       const mapPosition = this.dragEvent.data.getLocalPosition(
         this.app.layers[this.layerIndex]
@@ -428,6 +430,11 @@ class Furniture {
       /* resetPrevious */
       this.prevPosition = clone(this.position)
 
+      this.pixiApp._activeFurniture = null
+    } else if (this.isFirst) {
+      this.isDrag = false
+      this.eventData = null
+      this.app.layers.front.removeChild(this.$container)
       this.pixiApp._activeFurniture = null
     }
   }

@@ -33,7 +33,6 @@ const FURNITURE_ID = '02672080'
 const getLayers = pickBy((_, key) => includes('layer', key))
 const getFrames = pickBy((_, key) => !Number.isNaN(+key))
 const keyIsStage = includes(__, ['start', 'loop', 'end'])
-const isWall = pipe(values, any(includes(__, ['window', 'walldeco'])))
 
 class Furniture {
   constructor(pixiApp, furnitureData) {
@@ -83,14 +82,6 @@ class Furniture {
         keys(pixiApp.mapData.housingGrid)[0],
     }
     this.prevPosition = clone(this.position)
-    /**
-     * current floor vertex position
-     * @type {Point}
-     */
-    this.floorBasic = {
-      x: +pixiApp.mapData.housingGrid[this.position.floor].left,
-      y: +pixiApp.mapData.housingGrid[this.position.floor].top,
-    }
 
     this.isWall = this.id.startsWith('02671')
     this.layerIndex = this.isWall ? 3 : 4
@@ -410,6 +401,7 @@ class Furniture {
   startDragFurniture = (event) => {
     this.isDrag = true
     this.dragEvent = event
+    this.pixiApp._activeFurniture = this
     this.renderRestrict()
     /* clear placed */
     this.updateGrid(this.prevPosition, 0)
@@ -435,8 +427,31 @@ class Furniture {
       this.updateGrid(this.position, 1)
       /* resetPrevious */
       this.prevPosition = clone(this.position)
+
+      this.pixiApp._activeFurniture = null
     }
   }
+  cancelDrag = () => {
+    if (this.pixiApp.isEdit && this.isDrag && this.dragEvent) {
+      this.isDrag = false
+      this.eventData = null
+      this.renderRestrict()
+      this.updateGrid(this.prevPosition, 1)
+      this.position = clone(this.prevPosition)
+
+      /* restore position */
+      this.isOut = false
+      this.$container.position.set(
+        this.floorBasic.x + this.position.x * GRID_WIDTH + this.offset.x,
+        this.floorBasic.y + this.position.y * GRID_WIDTH + this.offset.y
+      )
+
+      this.app.layers[this.layerIndex].addChild(this.$container)
+
+      this.pixiApp._activeFurniture = null
+    }
+  }
+
   updateGrid = (position, mode) => {
     const { floor, x: offsetX, y: offsetY } = position
     const _floor = `${floor}${this.isWall ? '-wall' : ''}`
@@ -457,6 +472,17 @@ class Furniture {
     sprite.height = +data.size.height || sprite.height
     sprite.x = data.x || sprite.x
     sprite.y = data.y || sprite.y
+  }
+
+  /**
+   * current floor vertex position
+   * @type {Point}
+   */
+  get floorBasic() {
+    return {
+      x: +this.pixiApp.mapData.housingGrid[this.position.floor].left,
+      y: +this.pixiApp.mapData.housingGrid[this.position.floor].top,
+    }
   }
 }
 

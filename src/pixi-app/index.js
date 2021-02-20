@@ -361,6 +361,12 @@ class PixiAPP {
     this.showGrid = isEdit
     this.renderGrid()
   }
+  get activeFurniture() {
+    return this._activeFurniture
+  }
+  set activeFurniture(activeFurniture) {
+    this._activeFurniture = activeFurniture
+  }
 }
 
 export default PixiAPP

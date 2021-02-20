@@ -357,6 +357,8 @@ class Furniture {
   renderRestrict() {
     if (this.$restrict) {
       this.$restrict.alpha = this.canPlace ? 0 : 1
+      this.$allowance.alpha =
+        this.canPlace && this.pixiApp.isEdit && this.isDrag ? 1 : 0
     } else {
       this.$restrict = new Graphics()
       this.$restrict.beginFill(0xff0000, 0.6)
@@ -369,7 +371,19 @@ class Furniture {
       this.$restrict.endFill()
       this.$restrict.zIndex = 999
       this.$restrict.alpha = this.canPlace ? 0 : 1
+      this.$allowance = new Graphics()
+      this.$allowance.beginFill(0x44cc44, 0.3)
+      this.$allowance.drawRect(
+        -this.offset.x,
+        -this.offset.y,
+        this.gridSize.x,
+        this.gridSize.y
+      )
+      this.$allowance.endFill()
+      this.$allowance.zIndex = 999
+      this.$allowance.alpha = this.canPlace && this.pixiApp.isEdit ? 1 : 0
       this.$container.addChild(this.$restrict)
+      this.$container.addChild(this.$allowance)
     }
   }
 
@@ -446,6 +460,7 @@ class Furniture {
   startDragFurniture = (event) => {
     this.isDrag = true
     this.dragEvent = event
+    this.renderRestrict()
     /* clear placed */
     this.updateGrid(this.prevPosition, 0)
     this.app.layers[this.layerIndex].removeChild(this.$container)
@@ -465,6 +480,7 @@ class Furniture {
     if (this.canPlace) {
       this.isDrag = false
       this.eventData = null
+      this.renderRestrict()
       this.app.layers[this.layerIndex].addChild(this.$container)
       this.updateGrid(this.position, 1)
       /* resetPrevious */

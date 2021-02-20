@@ -429,7 +429,8 @@ class Furniture {
           !gridPlaced[pos_x] ||
           any((y) => {
             const pos_y = this.position.y + y
-            return gridPlaced[pos_x][pos_y] === 1
+            const occupied = gridPlaced[pos_x][pos_y]
+            return isNil(occupied) || occupied === 1
           }, times(identity, this.grid.y))
         )
       }, times(identity, this.grid.x))

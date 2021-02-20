@@ -233,9 +233,10 @@ class Furniture {
     return next > this.stateCount - 1 ? 0 : next
   }
   changeState = (state) => {
-    if (this.isPlaying && this.stateCount === 1) return
+    if ((this.stateStage !== 'loop' && this.isPlaying) || this.stateCount === 1)
+      return
     const _state = this.nextState
-    this.playEnd(() => {
+    this.play('end', () => {
       this.state = _state
       this.playStart()
     })
@@ -243,74 +244,23 @@ class Furniture {
   clearPreviousFrame() {
     this.$furniture.removeChildren()
   }
-  playStart() {
-    if (!this.frames[this.state]?.start) {
-      this.playLoop()
-      return
-    }
-    this.clearPreviousFrame()
-    this.stateStage = 'start'
-    let doneCount = 0
-    const maxFrame = values(this.currentFrames).length
-    map(({ name, z, delay, frames }) => {
-      const componentKey = `${this.state}-start-${name}`
-      const aniSprite = new AnimatedSprite(
-        frames.map(({ src }) => this.app.loader.resources[src].texture)
-      )
-      aniSprite.animationSpeed = 1 / ((delay || 80) / 16)
-      aniSprite.zIndex = z
-      aniSprite.loop = false
-      const onFrameChange = () => Furniture.onFrameChange(aniSprite, frames)
-      onFrameChange()
-      aniSprite.onFrameChange = onFrameChange
-      aniSprite.onComplete = () => {
-        doneCount += 1
-        if (doneCount >= maxFrame) {
-          this.isPlaying = false
-          this.playLoop()
-        }
-      }
-      this.isPlaying = true
-      this.components[componentKey] = aniSprite
-      this.$furniture.addChild(this.components[componentKey])
-      aniSprite.play()
-    })(this.currentFrames)
-  }
-  playLoop() {
-    this.clearPreviousFrame()
-    this.stateStage = 'loop'
-    map(({ name, z, delay, frames }) => {
-      const componentKey = `${this.state}-loop-${name}`
-      const aniSprite = new AnimatedSprite(
-        frames.map(({ src }) => this.app.loader.resources[src].texture)
-      )
-      aniSprite.animationSpeed = 1 / ((delay || 80) / 16)
-      aniSprite.zIndex = z
-      const onFrameChange = () => Furniture.onFrameChange(aniSprite, frames)
-      onFrameChange()
-      aniSprite.onFrameChange = onFrameChange
-      this.components[componentKey] = aniSprite
-      this.$furniture.addChild(this.components[componentKey])
-      aniSprite.play()
-    })(this.currentFrames)
-  }
-  playEnd(cb = identity) {
-    if (!this.frames[this.state]?.end) {
+  play(stage, cb = identity) {
+    if (!path([this.state, stage], this.frames)) {
       cb()
       return
     }
     this.clearPreviousFrame()
-    this.stateStage = 'end'
+    this.stateStage = stage
     let doneCount = 0
     const maxFrame = values(this.currentFrames).length
     map(({ name, z, delay, frames }) => {
-      const componentKey = `${this.state}-end-${name}`
+      const componentKey = `${this.state}-${stage}-${name}`
       const aniSprite = new AnimatedSprite(
         frames.map(({ src }) => this.app.loader.resources[src].texture)
       )
       aniSprite.animationSpeed = 1 / ((delay || 80) / 16)
       aniSprite.zIndex = z
-      aniSprite.loop = false
+      aniSprite.loop = stage === 'loop'
       const onFrameChange = () => Furniture.onFrameChange(aniSprite, frames)
       onFrameChange()
       aniSprite.onFrameChange = onFrameChange
@@ -327,13 +277,12 @@ class Furniture {
       aniSprite.play()
     })(this.currentFrames)
   }
+  playStart() {
+    this.play('start', () => {
+      this.play('loop')
+    })
+  }
   render() {
-    // const isAnimation = this.frames.length > 1
-    // const renderTheme = this.theme
-    // if (this.sprite) {
-    //   this.sprite.alpha = !this.frames.length ? 0 : 1
-    // }
-    // const { x, y, size } = this.frames[0] || {}
     this.app.loaderManager.load(this.allLayerSrc, () => {
       this.$loading.destroy()
 

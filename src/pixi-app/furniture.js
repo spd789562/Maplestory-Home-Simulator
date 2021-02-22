@@ -400,7 +400,7 @@ class Furniture {
   startDragFurniture = (event) => {
     this.isDrag = true
     this.dragEvent = event
-    this.pixiApp._activeFurniture = this
+    this.pixiApp.activeFurniture = this
     this.renderRestrict()
     /* clear placed */
     this.updateGrid(this.prevPosition, 0)
@@ -409,15 +409,16 @@ class Furniture {
   }
   dragFurniture = (event) => {
     if (this.isDrag) {
-      this.startDragFurniture(event)
-    }
-    if (this.isDrag && this.dragEvent) {
-      const mapPosition = this.dragEvent.data.getLocalPosition(
-        this.app.layers[this.layerIndex]
-      )
-      this.autoStickGrid(mapPosition)
-      this.canPlace = this.checkPlaceable()
-      this.renderRestrict()
+      if (this.dragEvent) {
+        const mapPosition = this.dragEvent.data.getLocalPosition(
+          this.app.layers[this.layerIndex]
+        )
+        this.autoStickGrid(mapPosition)
+        this.canPlace = this.checkPlaceable()
+        this.renderRestrict()
+      } else {
+        this.startDragFurniture(event)
+      }
     }
   }
   placeFurniture = () => {
@@ -430,18 +431,27 @@ class Furniture {
       /* resetPrevious */
       this.prevPosition = clone(this.position)
 
-      this.pixiApp._activeFurniture = null
+      this.pixiApp.activeFurniture = null
+      this.isFirst = false
     } else if (this.isFirst) {
-      this.isDrag = false
-      this.eventData = null
-      this.app.layers.front.removeChild(this.$container)
-      this.pixiApp._activeFurniture = null
+      this.destoryWhenDrag()
     }
+  }
+  destoryWhenDrag = () => {
+    this.isDrag = false
+    this.eventData = null
+    this.app.layers.front.removeChild(this.$container)
+    this.pixiApp.activeFurniture = null
   }
   cancelDrag = () => {
     if (this.pixiApp.isEdit && this.isDrag && this.dragEvent) {
       this.isDrag = false
       this.eventData = null
+      this.canPlace = true
+      if (this.isFirst) {
+        this.destoryWhenDrag()
+        return
+      }
       this.renderRestrict()
       this.updateGrid(this.prevPosition, 1)
       this.position = clone(this.prevPosition)
@@ -455,7 +465,7 @@ class Furniture {
 
       this.app.layers[this.layerIndex].addChild(this.$container)
 
-      this.pixiApp._activeFurniture = null
+      this.pixiApp.activeFurniture = null
     }
   }
 

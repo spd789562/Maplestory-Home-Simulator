@@ -17,6 +17,7 @@ const Home = () => {
   const [edit] = useStore('meta.edit')
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const [activeFurnitureID] = useStore('active-furniture')
+  const [sideIsOpen] = useStore('meta.side.open')
   const onEsc = ({ keyCode }) => {
     if (keyCode === ESC_KEY_CODE) {
       appRef.current &&
@@ -59,6 +60,15 @@ const Home = () => {
       app.placeNewFurniture(activeFurnitureID)
     }
   }, [appRef.current, activeFurnitureID])
+  useEffect(() => {
+    const app = appRef.current
+    if (app) {
+      const sideWidth = Math.min(window.innerWidth - 30, 300)
+      appRef.current.updateAPPWidth(
+        window.innerWidth - (sideIsOpen ? sideWidth : 0)
+      )
+    }
+  }, [appRef.current, sideIsOpen])
 
   return <canvas ref={canvasRef} style={{ userSelect: 'none' }} />
 }

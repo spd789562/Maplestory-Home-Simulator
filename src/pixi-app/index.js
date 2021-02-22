@@ -161,6 +161,15 @@ class PixiAPP {
     /* start render */
     this.renderMap()
   }
+  updateAPPWidth(width) {
+    this.viewport.screenWidth = width
+    const maxZoomWidthScale = this.world.width / width
+    const maxZoomHeightScale = this.world.height / this.canvas.height
+    const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
+    this.viewport.clampZoom({
+      maxWidth: width * maxZoomScale,
+    })
+  }
   setVisibleRect = () => {
     this.visibleRect = this.viewport.getVisibleBounds()
     this.$minimap && this.$minimap.update()

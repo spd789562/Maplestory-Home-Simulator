@@ -118,7 +118,7 @@ class MapObject {
       if (isAnimation) {
         this.sprite.animationSpeed = 1 / ((this.frames[0].delay || 80) / 16)
         this.sprite.play()
-        this.app.ticker.add(this.animationTicker)
+        this.sprite.onFrameChange = this.animationTicker
       } else {
         this.app.ticker.remove(this.animationTicker)
         this.sprite.stop()

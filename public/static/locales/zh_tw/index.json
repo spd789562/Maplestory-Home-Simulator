@@ -39,6 +39,11 @@
   "home_deco_door": "門", 
   "home_deco_chimney": "煙囪", 
 
+
+  "setting_edit": "編輯模式",
+  "setting_edit_open": "開啟",
+  "setting_edit_close": "關閉",
+
   "other_tools": "其他工具",
   "web_arcane_symbol_calculator": "秘法符文計算機",
   "web_boss_crystal_calculator": "力量結晶計算機",

@@ -9,6 +9,7 @@ import {
 import { combineReducer } from './_helper'
 import metaReducer from './meta'
 import houseReducer from './house'
+import activeFurnitureReducer from './active-furniture'
 
 import { isNil, prop, curry, path, pickAll } from 'ramda'
 
@@ -17,6 +18,7 @@ const GlobalStore = createContext({})
 const [combinedReducers, initialState] = combineReducer({
   meta: metaReducer,
   house: houseReducer,
+  'active-furniture': activeFurnitureReducer,
 })
 
 export const Provider = ({ children }) => {

@@ -204,16 +204,6 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
-
-    /* test furniture */
-    const test = new Furniture(this, {
-      id: '02671122',
-      position: { floor: '1stFloor' },
-    })
-    const test1 = new Furniture(this, {
-      id: '02671089',
-      position: { floor: '1stFloor' },
-    })
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
@@ -225,6 +215,16 @@ class PixiAPP {
     if (!this.homeObject[objectType]) return
     const objects = values(this.homeObject[objectType])
     objects.forEach((object) => object.changeTheme(theme))
+  }
+  placeNewFurniture(id) {
+    if (this.activeFurniture && this.activeFurniture.id === id) return
+    /* cancel drag current moving furniture before change */
+    this.activeFurniture && this.activeFurniture.cancelDrag()
+
+    const _furniture = new Furniture(this, { id })
+    _furniture.isFirst = true
+    _furniture.isDrag = true
+    this.activeFurniture = _furniture
   }
   renderObject() {
     const allHomeObject = getMapObjects(this.mapData).map(
@@ -353,6 +353,9 @@ class PixiAPP {
     this.app.destroy()
   }
 
+  onPlaceFurniture() {}
+  cancelPlaceFurniture() {}
+
   get isEdit() {
     return this._isEdit
   }
@@ -366,6 +369,9 @@ class PixiAPP {
   }
   set activeFurniture(activeFurniture) {
     this._activeFurniture = activeFurniture
+    if (!activeFurniture) {
+      this.cancelPlaceFurniture()
+    }
   }
 }
 

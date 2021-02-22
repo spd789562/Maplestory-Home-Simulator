@@ -37,6 +37,7 @@ const keyIsStage = includes(__, ['start', 'loop', 'end'])
 class Furniture {
   constructor(pixiApp, furnitureData) {
     this.pixiApp = pixiApp
+    this.onPlace = pixiApp.onPlaceFurniture
     this.app = pixiApp.app
     if (!furnitureData.id) return null
     this.id = furnitureData.id.toString().padStart(8, '0')
@@ -433,6 +434,7 @@ class Furniture {
 
       this.pixiApp.activeFurniture = null
       this.isFirst = false
+      this.onPlace(this)
     } else if (this.isFirst) {
       this.destoryWhenDrag()
     }
@@ -442,6 +444,7 @@ class Furniture {
     this.eventData = null
     this.app.layers.front.removeChild(this.$container)
     this.pixiApp.activeFurniture = null
+    this.$container.destroy()
   }
   cancelDrag = () => {
     if (this.pixiApp.isEdit && this.isDrag && this.dragEvent) {

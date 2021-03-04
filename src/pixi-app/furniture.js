@@ -1,6 +1,7 @@
 /* components */
 import { AnimatedSprite, Container, Graphics, Point } from 'pixi.js-legacy'
 import Loading from './component/loading'
+import FurniturePlacement from './component/furniture-placement'
 
 /* utils */
 import {
@@ -96,6 +97,10 @@ class Furniture {
 
     this.frames = this.parseFrames()
     this.components = {}
+
+    this.$placement = new FurniturePlacement()
+    this.$placement.x = -this.offset.x
+    this.$placement.y = -this.offset.y - 42
 
     /**
      * Whole Furniture Layer
@@ -274,12 +279,18 @@ class Furniture {
       this.play('loop')
     })
   }
+  toggleEdit = (isEdit) => {
+    this.canMove = isEdit
+    this.$container.interactive = isEdit
+    this.$container.buttonMode = isEdit
+    this.$furniture.interactive = this.stateCount > 1 || isEdit
+    this.$furniture.buttonMode = this.stateCount > 1 || isEdit
+  }
   render() {
     this.app.loaderManager.load(this.allLayerSrc, () => {
       this.$loading.destroy()
-
-      this.$furniture.interactive = true
-      this.$furniture.buttonMode = true
+      this.toggleEdit(this.pixiApp.isEdit)
+      this.pixiApp.event.on('editChange', this.toggleEdit)
       this.$furniture
         .on('pointerdown', (e) => {
           if (this.isDrag) {
@@ -291,6 +302,14 @@ class Furniture {
           }
         })
         .on('pointermove', this.dragFurniture)
+      this.$container
+        .on('pointerover', () => {
+          !this.$placement.parent && this.$container.addChild(this.$placement)
+        })
+        .on('pointerout', () => {
+          this.$placement.parent && this.$container.removeChild(this.$placement)
+        })
+
       this.playStart()
     })
   }

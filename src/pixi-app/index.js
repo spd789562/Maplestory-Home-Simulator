@@ -7,6 +7,7 @@ import {
   Rectangle,
   Graphics,
   Point,
+  utils,
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
 import PixiLoaderManager from './pixi-loader-manager'
@@ -45,6 +46,8 @@ import MapTheme from '@mapping/map-theme'
 import MapObjectMapping from '@mapping/map-object'
 import Maps from '@mapping/map'
 
+const { EventEmitter } = utils
+
 const getMapObjects = pipe(
   // filter non obj or null obj
   pickBy((val, key) => !Number.isNaN(+key) && val && val.obj),
@@ -79,6 +82,8 @@ class PixiAPP {
     this.app.layers = {}
 
     this.viewZoom = 1
+
+    this.event = new EventEmitter()
   }
   /**
    * @param {string} selectId
@@ -372,6 +377,7 @@ class PixiAPP {
     this._isEdit = isEdit
     this.showGrid = isEdit
     this.renderGrid()
+    this.event.emit('editChange', isEdit)
   }
   get activeFurniture() {
     return this._activeFurniture

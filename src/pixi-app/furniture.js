@@ -1,5 +1,11 @@
 /* components */
-import { AnimatedSprite, Container, Graphics, Point } from 'pixi.js-legacy'
+import {
+  AnimatedSprite,
+  Container,
+  Graphics,
+  Point,
+  Rectangle,
+} from 'pixi.js-legacy'
 import Loading from './component/loading'
 import FurniturePlacement from './component/furniture-placement'
 
@@ -101,12 +107,14 @@ class Furniture {
     this.$placement = new FurniturePlacement()
     this.$placement.x = -this.offset.x
     this.$placement.y = -this.offset.y - 42
+    this.$placement.parentGroup = pixiApp.group.drag
 
     /**
      * Whole Furniture Layer
      * @type {Container}
      */
     this.$container = new Container()
+
     /**
      * Furniture Frames Layer
      * @type {Container}
@@ -291,6 +299,22 @@ class Furniture {
       this.$loading.destroy()
       this.toggleEdit(this.pixiApp.isEdit)
       this.pixiApp.event.on('editChange', this.toggleEdit)
+      this.$container
+        .on('pointerover', () => {
+          !this.$placement.parent && this.$container.addChild(this.$placement)
+        })
+        .on('pointerdown', (e) => {
+          const points = (this.dragEvent || e).data.getLocalPosition(
+            this.app.layers[this.layerIndex]
+          )
+          if (this.furnitureArea.contains(points.x, points.y)) {
+            this.$furniture.emit('pointerdown', e)
+          }
+        })
+        .on('pointerout', () => {
+          this.$placement.parent && this.$container.removeChild(this.$placement)
+        })
+
       this.$furniture
         .on('pointerdown', (e) => {
           if (this.isDrag) {
@@ -302,14 +326,6 @@ class Furniture {
           }
         })
         .on('pointermove', this.dragFurniture)
-      this.$container
-        .on('pointerover', () => {
-          !this.$placement.parent && this.$container.addChild(this.$placement)
-        })
-        .on('pointerout', () => {
-          this.$placement.parent && this.$container.removeChild(this.$placement)
-        })
-
       this.playStart()
     })
   }
@@ -421,11 +437,11 @@ class Furniture {
     this.isDrag = true
     this.dragEvent = event
     this.pixiApp.activeFurniture = this
+    // add furniture to drag group
+    this.$container.parentGroup = this.pixiApp.group.drag
     this.renderRestrict()
     /* clear placed */
     this.updateGrid(this.prevPosition, 0)
-    this.app.layers[this.layerIndex].removeChild(this.$container)
-    this.app.layers.front.addChild(this.$container)
   }
   dragFurniture = (event) => {
     if (this.isDrag) {
@@ -445,8 +461,10 @@ class Furniture {
     if (this.canPlace) {
       this.isDrag = false
       this.eventData = null
+      // remove furniture from drag group
+      this.$container.parentGroup = null
+      this.$container._activeParentLayer = null
       this.renderRestrict()
-      this.app.layers[this.layerIndex].addChild(this.$container)
       this.updateGrid(this.position, 1)
       /* resetPrevious */
       this.prevPosition = clone(this.position)
@@ -461,7 +479,6 @@ class Furniture {
   destoryWhenDrag = () => {
     this.isDrag = false
     this.eventData = null
-    this.app.layers.front.removeChild(this.$container)
     this.pixiApp.activeFurniture = null
     this.$container.destroy()
   }
@@ -484,8 +501,6 @@ class Furniture {
         this.floorBasic.x + this.position.x * GRID_WIDTH + this.offset.x,
         this.floorBasic.y + this.position.y * GRID_WIDTH + this.offset.y
       )
-
-      this.app.layers[this.layerIndex].addChild(this.$container)
 
       this.pixiApp.activeFurniture = null
     }
@@ -522,6 +537,15 @@ class Furniture {
       x: +this.pixiApp.mapData.housingGrid[this.position.floor].left,
       y: +this.pixiApp.mapData.housingGrid[this.position.floor].top,
     }
+  }
+
+  get furnitureArea() {
+    return new Rectangle(
+      this.$container.position.x - this.offset.x,
+      this.$container.position.y - this.offset.y,
+      this.gridSize.x,
+      this.gridSize.y
+    )
   }
 }
 

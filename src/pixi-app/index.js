@@ -1,4 +1,7 @@
 /* components */
+import * as PIXI from 'pixi.js-legacy'
+window.PIXI = PIXI
+require('pixi-layers')
 import {
   Application,
   Container,
@@ -46,6 +49,7 @@ import MapTheme from '@mapping/map-theme'
 import MapObjectMapping from '@mapping/map-object'
 import Maps from '@mapping/map'
 
+const { Stage, Group, Layer } = window.PIXI.display
 const { EventEmitter } = utils
 
 const getMapObjects = pipe(
@@ -80,6 +84,15 @@ class PixiAPP {
     this.showGrid = true
     this._isEdit = false
     this.app.layers = {}
+    this.app.stage = new Stage()
+    this.group = {
+      normal: new Group(1),
+      map: new Group(2),
+      drag: new Group(3),
+    }
+    this.app.stage.addChild(new Layer(this.group.normal))
+    this.app.stage.addChild(new Layer(this.group.map))
+    this.app.stage.addChild(new Layer(this.group.drag))
 
     this.viewZoom = 1
 
@@ -154,6 +167,7 @@ class PixiAPP {
       .on('zoomed-end', (event) => {
         this.viewZoom = event.lastViewport.scaleX
       })
+    this.viewport.parentGroup = this.group.normal
 
     this.setVisibleRect()
 

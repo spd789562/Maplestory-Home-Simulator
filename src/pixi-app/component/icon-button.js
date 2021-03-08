@@ -1,4 +1,5 @@
 import { Graphics } from 'pixi.js-legacy'
+import { identity } from 'ramda'
 import PIXIFontAwesome from './fontawesome'
 
 class IconButton extends Graphics {
@@ -10,6 +11,7 @@ class IconButton extends Graphics {
       bgColor = 0x666666,
       iconColor = 0xffffff,
       radius = 10,
+      handleClick,
     } = {}
   ) {
     super()
@@ -34,7 +36,7 @@ class IconButton extends Graphics {
     )
 
     this.addChild(this.$icon)
-    this.on('pointerdown', this.onClick)
+    this.on('pointerdown', handleClick || identity)
       .on('pointerover', this.onHover)
       .on('pointerout', this.onOut)
     this._render_()
@@ -53,7 +55,6 @@ class IconButton extends Graphics {
     // this.isHover = false
     this.alpha = 1
   }
-  onClick() {}
   set isHover(isHover) {
     if (isHover !== this._isHover) {
       this._isHover = isHover

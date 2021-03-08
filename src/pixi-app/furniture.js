@@ -104,7 +104,10 @@ class Furniture {
     this.frames = this.parseFrames()
     this.components = {}
 
-    this.$placement = new FurniturePlacement()
+    this.$placement = new FurniturePlacement({
+      handleFlip: this.handleFlip,
+      handleDelete: this.handleDelete,
+    })
     this.$placement.x = -this.offset.x
     this.$placement.y = -this.offset.y - 42
     this.$placement.parentGroup = pixiApp.group.drag
@@ -139,6 +142,7 @@ class Furniture {
     this.canMove = true
     this.canPlace = true
     this.isDrag = false
+    this.flip = !furnitureData.flip
 
     this.$loading = new Loading(this.gridSize.x, this.gridSize.y)
     this.$loading.y = -this.offset.y / 2
@@ -519,6 +523,15 @@ class Furniture {
     )
   }
 
+  handleFlip = () => {
+    this.flip = !this.flip
+  }
+  handleDelete = () => {
+    /* clear placed */
+    this.updateGrid(this.position, 0)
+    this.$container.destroy()
+  }
+
   static onFrameChange(sprite, frames) {
     const data = frames[sprite.currentFrame]
     sprite.animationSpeed = 1 / ((+data.delay || 80) / 16)
@@ -546,6 +559,14 @@ class Furniture {
       this.gridSize.x,
       this.gridSize.y
     )
+  }
+
+  get flip() {
+    return this._flip
+  }
+  set flip(isFlip) {
+    this.$furniture.scale.x *= this._flip !== isFlip ? -1 : 1
+    this._flip = isFlip
   }
 }
 

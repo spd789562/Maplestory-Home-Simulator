@@ -32,7 +32,11 @@ import { entries, mapObject } from '@utils/ramda'
 import { getFurnitureImagePath } from '@utils/get-image-path'
 
 /* mapping */
-import { GRID_WIDTH } from './constant'
+import {
+  GRID_WIDTH,
+  FURNITURE_RESTRICT_BACKGROUND,
+  FURNITURE_ALLOWABLE_BACKGROUND,
+} from './constant'
 import FurnitureMapping from '@mapping/furniture'
 
 const FURNITURE_ID = '02672080'
@@ -142,7 +146,7 @@ class Furniture {
     this.canMove = true
     this.canPlace = true
     this.isDrag = false
-    this.flip = !furnitureData.flip
+    this.flip = !!furnitureData.flip
 
     this.$loading = new Loading(this.gridSize.x, this.gridSize.y)
     this.$loading.y = -this.offset.y / 2
@@ -340,7 +344,7 @@ class Furniture {
         this.canPlace && this.pixiApp.isEdit && this.isDrag ? 1 : 0
     } else {
       this.$restrict = new Graphics()
-      this.$restrict.beginFill(0xff0000, 0.6)
+      this.$restrict.beginFill(FURNITURE_RESTRICT_BACKGROUND, 0.6)
       this.$restrict.drawRect(
         -this.offset.x,
         -this.offset.y,
@@ -351,7 +355,7 @@ class Furniture {
       this.$restrict.zIndex = 999
       this.$restrict.alpha = this.canPlace ? 0 : 1
       this.$allowance = new Graphics()
-      this.$allowance.beginFill(0x44cc44, 0.3)
+      this.$allowance.beginFill(FURNITURE_ALLOWABLE_BACKGROUND, 0.3)
       this.$allowance.drawRect(
         -this.offset.x,
         -this.offset.y,

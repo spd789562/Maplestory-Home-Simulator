@@ -3,6 +3,7 @@ import { useEffect, createRef, useRef } from 'react'
 /* store */
 import { useStore } from '@store'
 import { CLEAR_ACTIVE_FURNITURE } from '@store/active-furniture'
+import { ENTER_EDIT } from '@store/meta'
 
 /* components */
 import PixiAPP from '../../pixi-app'
@@ -56,7 +57,7 @@ const Home = () => {
   useEffect(() => {
     const app = appRef.current
     if (app && activeFurnitureID) {
-      app.isEdit = true
+      dispatch({ type: ENTER_EDIT })
       app.placeNewFurniture(activeFurnitureID)
     }
   }, [appRef.current, activeFurnitureID])

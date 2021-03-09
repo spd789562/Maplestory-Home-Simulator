@@ -42,7 +42,13 @@ import {
   values,
 } from 'ramda'
 import { entries } from '@utils/ramda'
-import { GRID_WIDTH } from './constant'
+import {
+  GRID_WIDTH,
+  GRID_LINE_STROKE,
+  GRID_LINE_WIDTH,
+  GRID_LINE_OPACITY,
+  GRID_RESTRICT_BACKGROUND,
+} from './constant'
 
 /* mapping */
 import MapTheme from '@mapping/map-theme'
@@ -305,7 +311,7 @@ class PixiAPP {
         this.gridPlaced[key] = []
         this.gridPoints[key] = {}
         const gridLine = new Graphics()
-        gridLine.lineStyle(2, 0x333333, 0.5)
+        gridLine.lineStyle(GRID_LINE_WIDTH, GRID_LINE_STROKE, GRID_LINE_OPACITY)
         gridLine.zIndex = 990
         const row = +grids.row
         const col = +grids.col
@@ -317,6 +323,7 @@ class PixiAPP {
         gridLine.lineTo(endX, startY)
         gridLine.moveTo(startX, startY)
         gridLine.lineTo(startX, endY)
+        /* draw grid and initialize gird placed together */
         times((index) => {
           this.gridPlaced[wallKey].push([])
           this.gridPlaced[key].push([])
@@ -345,7 +352,7 @@ class PixiAPP {
             const [x, y] = position.split(',').map(Number)
             this.gridPlaced[wallKey][x][y] = 1
             this.gridPlaced[key][x][y] = 1
-            gridLine.beginFill(0xff0000, 0.3)
+            gridLine.beginFill(GRID_RESTRICT_BACKGROUND, 0.3)
             gridLine.drawRect(
               startX + x * GRID_WIDTH,
               startY + y * GRID_WIDTH,

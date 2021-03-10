@@ -3,10 +3,14 @@ import { useEffect, createRef, useRef } from 'react'
 /* store */
 import { useStore } from '@store'
 import { CLEAR_ACTIVE_FURNITURE } from '@store/active-furniture'
+import { HOUSE_UPDATE_FURNITURE, HOUSE_DELETE_FURNITURE } from '@store/house'
 import { ENTER_EDIT } from '@store/meta'
 
 /* components */
 import PixiAPP from '../../pixi-app'
+
+/* uitls */
+import { pickAll } from 'ramda'
 
 const canvasRef = createRef()
 const appRef = createRef()
@@ -29,10 +33,21 @@ const Home = () => {
   const onCancelFurniture = () => {
     dispatch({ type: CLEAR_ACTIVE_FURNITURE })
   }
+  const onUpdateFurniture = (furniture) => {
+    dispatch({
+      type: HOUSE_UPDATE_FURNITURE,
+      payload: pickAll(['id', 'furnitureID', 'position', 'flip'], furniture),
+    })
+  }
+  const onDeleteFurniture = (furniture) => {
+    dispatch({ type: HOUSE_DELETE_FURNITURE, payload: furniture.id })
+  }
   useEffect(() => {
     if (canvasRef.current) {
       appRef.current = new PixiAPP(canvasRef.current)
       appRef.current.cancelPlaceFurniture = onCancelFurniture
+      appRef.current.event.addListener('furnitureUpdate', onUpdateFurniture)
+      appRef.current.event.addListener('furnitureDelete', onDeleteFurniture)
       window.addEventListener('keydown', onEsc)
     }
     return () => {
@@ -65,9 +80,7 @@ const Home = () => {
     const app = appRef.current
     if (app) {
       const sideWidth = Math.min(window.innerWidth - 30, 300)
-      appRef.current.updateAPPWidth(
-        window.innerWidth - (sideIsOpen ? sideWidth : 0)
-      )
+      app.updateAPPWidth(window.innerWidth - (sideIsOpen ? sideWidth : 0))
     }
   }, [appRef.current, sideIsOpen])
 

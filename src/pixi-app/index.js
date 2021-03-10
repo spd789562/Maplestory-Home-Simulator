@@ -404,9 +404,6 @@ class PixiAPP {
     const idx = this.furnitures.findIndex((f) => f.id === id)
     idx !== -1 && this.furnitures.splice(idx, 1)
   }
-  cancelPlaceFurniture() {}
-  updateFurniture() {}
-  deleteFurniture() {}
 
   get isEdit() {
     return this._isEdit
@@ -423,7 +420,7 @@ class PixiAPP {
   set activeFurniture(activeFurniture) {
     this._activeFurniture = activeFurniture
     if (!activeFurniture) {
-      this.cancelPlaceFurniture()
+      this.event.emit('furnitureCancelPlace')
     }
   }
 

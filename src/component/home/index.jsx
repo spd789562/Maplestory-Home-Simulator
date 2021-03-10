@@ -45,9 +45,12 @@ const Home = () => {
   useEffect(() => {
     if (canvasRef.current) {
       appRef.current = new PixiAPP(canvasRef.current)
-      appRef.current.cancelPlaceFurniture = onCancelFurniture
       appRef.current.event.addListener('furnitureUpdate', onUpdateFurniture)
       appRef.current.event.addListener('furnitureDelete', onDeleteFurniture)
+      appRef.current.event.addListener(
+        'furnitureCancelPlace',
+        onCancelFurniture
+      )
       window.addEventListener('keydown', onEsc)
     }
     return () => {

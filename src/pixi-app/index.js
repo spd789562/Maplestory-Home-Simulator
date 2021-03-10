@@ -102,7 +102,10 @@ class PixiAPP {
 
     this.viewZoom = 1
 
+    this.furnitures = []
     this.event = new EventEmitter()
+    this.event.addListener('furnitureUpdate', this.handleUpdateFurniture)
+    this.event.addListener('furnitureDelete', this.handleDeleteFurniture)
   }
   /**
    * @param {string} selectId
@@ -255,7 +258,10 @@ class PixiAPP {
     /* cancel drag current moving furniture before change */
     this.activeFurniture && this.activeFurniture.cancelDrag()
 
-    const _furniture = new Furniture(this, { id })
+    const _furniture = new Furniture(this, {
+      id: `f${new Date().getTime()}${Math.random().toString(16)}`,
+      furnitureID: id,
+    })
     _furniture.isFirst = true
     _furniture.isDrag = true
     this.activeFurniture = _furniture
@@ -388,8 +394,19 @@ class PixiAPP {
     this.app.destroy()
   }
 
-  onPlaceFurniture() {}
+  handleUpdateFurniture = (e) => {
+    const idx = this.furnitures.findIndex((f) => f.id === e.id)
+    if (idx === -1) {
+      this.furnitures.push(e)
+    }
+  }
+  handleDeleteFurniture = ({ id }) => {
+    const idx = this.furnitures.findIndex((f) => f.id === id)
+    idx !== -1 && this.furnitures.splice(idx, 1)
+  }
   cancelPlaceFurniture() {}
+  updateFurniture() {}
+  deleteFurniture() {}
 
   get isEdit() {
     return this._isEdit
@@ -409,6 +426,9 @@ class PixiAPP {
       this.cancelPlaceFurniture()
     }
   }
+
+  get maxZIndex() {}
+  get minZIndex() {}
 }
 
 export default PixiAPP

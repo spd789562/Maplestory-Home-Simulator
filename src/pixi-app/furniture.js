@@ -48,11 +48,12 @@ const keyIsStage = includes(__, ['start', 'loop', 'end'])
 class Furniture {
   constructor(pixiApp, furnitureData) {
     this.pixiApp = pixiApp
-    this.onPlace = pixiApp.onPlaceFurniture
     this.app = pixiApp.app
-    if (!furnitureData.id) return null
-    this.id = furnitureData.id.toString().padStart(8, '0')
-    this.wz = FurnitureMapping[furnitureData.id]
+    if (!furnitureData.furnitureID) return null
+    this.id = furnitureData.id
+    this.furnitureID = furnitureData.furnitureID.toString().padStart(8, '0')
+
+    this.wz = FurnitureMapping[this.furnitureID]
     if (!this.wz) return null
     /**
      * grid count
@@ -94,8 +95,7 @@ class Furniture {
         keys(pixiApp.mapData.housingGrid)[0],
     }
     this.prevPosition = clone(this.position)
-
-    this.isWall = this.id.startsWith('02671')
+    this.isWall = this.furnitureID.startsWith('02671')
     this.layerIndex = this.isWall ? 3 : 4
 
     this.statesData = this.wz.states
@@ -174,7 +174,7 @@ class Furniture {
                   const linkObj = _inlink
                     ? path(_inlink.split('/'), FurnitureMapping)
                     : null
-                  let _id = this.id
+                  let _id = this.furnitureID
                   let _state = state
                   let _stage = stage
                   let _layer = layer
@@ -479,7 +479,7 @@ class Furniture {
 
       this.pixiApp.activeFurniture = null
       this.isFirst = false
-      this.onPlace(this)
+      this.pixiApp.event.emit('furnitureUpdate', this)
     } else if (this.isFirst) {
       this.destoryWhenDrag()
     }
@@ -529,10 +529,12 @@ class Furniture {
 
   handleFlip = () => {
     this.flip = !this.flip
+    this.pixiApp.event.emit('furnitureUpdate', this)
   }
   handleDelete = () => {
     /* clear placed */
     this.updateGrid(this.position, 0)
+    this.pixiApp.event.emit('furnitureDelete', this)
     this.$container.destroy()
   }
 

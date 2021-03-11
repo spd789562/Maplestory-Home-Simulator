@@ -110,6 +110,8 @@ class Furniture {
 
     this.$placement = new FurniturePlacement({
       handleFlip: this.handleFlip,
+      handleUpIndex: this.handleUpIndex,
+      handleDownIndex: this.handleDownIndex,
       handleDelete: this.handleDelete,
     })
     this.$placement.x = -this.offset.x
@@ -531,6 +533,36 @@ class Furniture {
     this.flip = !this.flip
     this.pixiApp.event.emit('furnitureUpdate', this)
   }
+  handleUpIndex = () => {
+    const maxIndex = this.pixiApp.maxZIndex
+    const nextIndex = this.zIndex + 1
+    const maxIndexFurnitureCount = this.pixiApp.getZIndexCount(maxIndex)
+    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
+    if (
+      nextIndex === maxIndex &&
+      currentIndexCount === 1 &&
+      maxIndexFurnitureCount === 1
+    ) {
+      this.pixiApp.swapFurnituresIndex(this.zIndex, maxIndex)
+    } else if (nextIndex < maxIndex || maxIndexFurnitureCount > 1) {
+      this.zIndex = nextIndex
+    }
+  }
+  handleDownIndex = () => {
+    const minIndex = this.pixiApp.minZIndex
+    const nextIndex = this.zIndex - 1
+    const minIndexFurnitureCount = this.pixiApp.getZIndexCount(minIndex)
+    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
+    if (
+      nextIndex === minIndex &&
+      currentIndexCount === 1 &&
+      minIndexFurnitureCount === 1
+    ) {
+      this.pixiApp.swapFurnituresIndex(this.zIndex, minIndex)
+    } else if (nextIndex > minIndex || minIndexFurnitureCount > 1) {
+      this.zIndex = nextIndex
+    }
+  }
   handleDelete = () => {
     /* clear placed */
     this.updateGrid(this.position, 0)
@@ -573,6 +605,21 @@ class Furniture {
   set flip(isFlip) {
     this.$furniture.scale.x *= this._flip !== isFlip ? -1 : 1
     this._flip = isFlip
+  }
+
+  get zIndex() {
+    return this.position.z
+  }
+  set zIndex(index) {
+    this.position.z = index
+    this.$container.zIndex = index
+    if (index > this.zIndex) {
+      this.app.layers[this.layerIndex].addChild(this.$container)
+    } else {
+      this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
+    }
+    this.pixiApp.event.emit('furnitureUpdate', this)
+    this.pixiApp.event.emit('zIndexUpdate', this.pixiApp.furnitures)
   }
 }
 

@@ -31,6 +31,7 @@ import {
   keys,
   map,
   path,
+  pathEq,
   pick,
   pickBy,
   pipe,
@@ -423,9 +424,32 @@ class PixiAPP {
       this.event.emit('furnitureCancelPlace')
     }
   }
-
-  get maxZIndex() {}
-  get minZIndex() {}
+  get maxZIndex() {
+    return Math.max.apply(null, this.furnitures.map(path(['position', 'z'])))
+  }
+  get minZIndex() {
+    return Math.min.apply(null, this.furnitures.map(path(['position', 'z'])))
+  }
+  getZIndexCount(index) {
+    return this.furnitures.filter(pathEq(['position', 'z'], index)).length
+  }
+  swapFurnituresIndex(firstZIndex, secondZIndex) {
+    const firstZindexCount = this.getZIndexCount(firstZIndex)
+    const secondZindexCount = this.getZIndexCount(secondZIndex)
+    // only both zindex count is one can switch zIndex
+    if (firstZindexCount + secondZindexCount === 2) {
+      const firstFurniture = this.furnitures.find(
+        pathEq(['position', 'z'], firstZIndex)
+      )
+      const secondFurniture = this.furnitures.find(
+        pathEq(['position', 'z'], secondZIndex)
+      )
+      ;[firstFurniture.zIndex, secondFurniture.zIndex] = [
+        secondFurniture.zIndex,
+        firstFurniture.zIndex,
+      ]
+    }
+  }
 }
 
 export default PixiAPP

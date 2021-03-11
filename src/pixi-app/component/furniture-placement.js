@@ -11,12 +11,14 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 class FurniturePlacement extends Container {
-  constructor({ handleFlip, handleDelete }) {
+  constructor({ handleFlip, handleUpIndex, handleDownIndex, handleDelete }) {
     super()
     this.$move = new IconButton(faArrowsAlt)
     this.$flip = new IconButton(faExchangeAlt, { handleClick: handleFlip })
-    this.$indexUp = new IconButton(faAngleUp)
-    this.$indexDown = new IconButton(faAngleDown)
+    this.$indexUp = new IconButton(faAngleUp, { handleClick: handleUpIndex })
+    this.$indexDown = new IconButton(faAngleDown, {
+      handleClick: handleDownIndex,
+    })
     // this.$indexTop = new IconButton(faAngleDoubleUp)
     // this.$indexBottom = new IconButton(faAngleDoubleDown)
     this.$delete = new IconButton(faTrashAlt, {

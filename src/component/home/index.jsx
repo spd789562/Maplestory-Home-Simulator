@@ -28,10 +28,12 @@ const Home = () => {
     appRef.current &&
     appRef.current.activeFurniture &&
     appRef.current.activeFurniture.cancelDrag()
-  const handleDelete = () =>
-    appRef.current &&
-    appRef.current.activeFurniture &&
-    appRef.current.activeFurniture.handleDelete()
+  const handleDelete = () => {
+    if (appRef.current && appRef.current.activeFurniture) {
+      appRef.current.activeFurniture.cancelDrag()
+      appRef.current.activeFurniture.handleDelete()
+    }
+  }
   const onKeydown = ({ keyCode }) => {
     switch (keyCode) {
       case ESC_KEY_CODE:

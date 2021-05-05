@@ -16,6 +16,7 @@ const canvasRef = createRef()
 const appRef = createRef()
 
 const ESC_KEY_CODE = 27
+const DELETE_KEY_CODE = 46
 
 const Home = () => {
   const [currentIndex, dispatch] = useStore('house.current')
@@ -23,11 +24,22 @@ const Home = () => {
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const [activeFurnitureID] = useStore('active-furniture')
   const [sideIsOpen] = useStore('meta.side.open')
-  const onEsc = ({ keyCode }) => {
-    if (keyCode === ESC_KEY_CODE) {
-      appRef.current &&
-        appRef.current.activeFurniture &&
-        appRef.current.activeFurniture.cancelDrag()
+  const handleEsc = () =>
+    appRef.current &&
+    appRef.current.activeFurniture &&
+    appRef.current.activeFurniture.cancelDrag()
+  const handleDelete = () =>
+    appRef.current &&
+    appRef.current.activeFurniture &&
+    appRef.current.activeFurniture.handleDelete()
+  const onKeydown = ({ keyCode }) => {
+    switch (keyCode) {
+      case ESC_KEY_CODE:
+        handleEsc()
+        break
+      case DELETE_KEY_CODE:
+        handleDelete()
+        break
     }
   }
   const onCancelFurniture = () => {
@@ -51,11 +63,11 @@ const Home = () => {
         'furnitureCancelPlace',
         onCancelFurniture
       )
-      window.addEventListener('keydown', onEsc)
+      window.addEventListener('keydown', onKeydown)
     }
     return () => {
       appRef.current && appRef.current.destory()
-      window.removeEventListener('keydown', onEsc)
+      window.removeEventListener('keydown', onKeydown)
     }
   }, [])
   useEffect(() => {

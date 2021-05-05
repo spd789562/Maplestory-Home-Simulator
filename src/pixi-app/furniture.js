@@ -46,6 +46,7 @@ const getFrames = pickBy((_, key) => !Number.isNaN(+key))
 const keyIsStage = includes(__, ['start', 'loop', 'end'])
 
 class Furniture {
+  _flip = false
   constructor(pixiApp, furnitureData) {
     this.pixiApp = pixiApp
     this.app = pixiApp.app

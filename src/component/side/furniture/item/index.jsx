@@ -17,10 +17,12 @@ const Item = ({ t, id }) => {
   return (
     <DetailPopover id={id}>
       <div className={styles['item']}>
-        <img
-          src={`/furniture/Item-Consume-0267.img-${id}-info-icon.png`}
+        <div
+          className={styles['item-image']}
+          style={{
+            backgroundImage: `url(/furniture/Item-Consume-0267.img-${id}-info-icon.png)`,
+          }}
           onClick={handleClick}
-          alt=""
         />
       </div>
     </DetailPopover>

@@ -15,14 +15,15 @@ const Item = ({ t, id }) => {
     dispatch({ type: CHANGE_ACTIVE_FURNITURE, payload: id })
   }
   return (
-    <div className={styles['item']}>
-      <DetailPopover id={id} />
-      <img
-        src={`/furniture/Item-Consume-0267.img-${id}-info-icon.png`}
-        onClick={handleClick}
-        alt=""
-      />
-    </div>
+    <DetailPopover id={id}>
+      <div className={styles['item']}>
+        <img
+          src={`/furniture/Item-Consume-0267.img-${id}-info-icon.png`}
+          onClick={handleClick}
+          alt=""
+        />
+      </div>
+    </DetailPopover>
   )
 }
 

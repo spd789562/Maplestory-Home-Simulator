@@ -1,0 +1,30 @@
+.item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #6373ca;
+  border-radius: 10px;
+  color: #6373ca;
+  cursor: pointer;
+  transition: box-shadow linear 0.3s, border-color linear 0.3s;
+  
+
+  &-info {
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    width: 18px;
+    height: 24px;
+    border-bottom-left-radius: 10px;
+    background-color: currentColor;
+    text-align: center;
+    cursor: pointer;
+
+    > span {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+  > img {
+    width: 100%;
+  }
+}

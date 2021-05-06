@@ -2,7 +2,7 @@ import { withTranslation } from '@i18n'
 
 /* components */
 import { Popover, Divider, Tag } from 'antd'
-
+import Favorite from '../favorite'
 /* utils */
 import { values, map } from 'ramda'
 
@@ -16,9 +16,22 @@ const DetailPopover = ({ t, id, children }) => {
   const furniture = FurnitureMapping[id]
   return (
     <Popover
-      title={mappedString.name}
+      title={
+        <div style={{ position: 'relative' }}>
+          {mappedString.name}
+          <Favorite
+            id={id}
+            buttonStyle={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              fontSize: 18,
+            }}
+          />
+        </div>
+      }
       content={() => (
-        <div style={{ maxWidth: 200 }}>
+        <div style={{ maxWidth: 200, whiteSpace: 'pre-wrap' }}>
           {mappedString.desc}
           {furniture.info.tag && (
             <>

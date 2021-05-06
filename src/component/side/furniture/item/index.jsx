@@ -6,6 +6,7 @@ import { CHANGE_ACTIVE_FURNITURE } from '@store/active-furniture'
 
 /* components */
 import DetailPopover from './detail-popover'
+import Favorite from './favorite'
 
 import styles from './item.scss'
 
@@ -15,8 +16,18 @@ const Item = ({ t, id }) => {
     dispatch({ type: CHANGE_ACTIVE_FURNITURE, payload: id })
   }
   return (
-    <DetailPopover id={id}>
-      <div className={styles['item']}>
+    <div className={styles['item']}>
+      <Favorite
+        id={id}
+        buttonStyle={{
+          position: 'absolute',
+          top: -8,
+          right: -8,
+          fontSize: 20,
+          zIndex: 1,
+        }}
+      />
+      <DetailPopover id={id}>
         <div
           className={styles['item-image']}
           style={{
@@ -24,8 +35,8 @@ const Item = ({ t, id }) => {
           }}
           onClick={handleClick}
         />
-      </div>
-    </DetailPopover>
+      </DetailPopover>
+    </div>
   )
 }
 

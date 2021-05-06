@@ -1,0 +1,16 @@
+.info-button {
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  width: 18px;
+  height: 24px;
+  border-bottom-left-radius: 10px;
+  background-color: currentColor;
+  text-align: center;
+  cursor: pointer;
+
+  > span {
+    color: #fff;
+    font-size: 12px;
+  }
+}

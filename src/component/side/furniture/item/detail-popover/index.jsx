@@ -2,6 +2,7 @@ import { withTranslation } from '@i18n'
 
 /* components */
 import { Popover, Divider, Tag } from 'antd'
+import { InfoOutlined } from '@ant-design/icons'
 
 /* utils */
 import { values, map } from 'ramda'
@@ -11,7 +12,9 @@ import FurnitureMapping from '@mapping/furniture'
 import StringMapping from '@mapping/furniture-string'
 import TagColorMapping from '@mapping/tag/color'
 
-const DetailPopover = ({ t, children, id }) => {
+import styles from './detail-popover.scss'
+
+const DetailPopover = ({ t, id }) => {
   const mappedString = StringMapping[+id]
   const furniture = FurnitureMapping[id]
   return (
@@ -47,7 +50,9 @@ const DetailPopover = ({ t, children, id }) => {
       arrowPointAtCenter
       placement="left"
     >
-      {children}
+      <div className={styles['info-button']}>
+        <InfoOutlined />
+      </div>
     </Popover>
   )
 }

@@ -307,7 +307,7 @@ class Furniture {
   }
   render() {
     this.app.loaderManager.load(this.allLayerSrc, () => {
-      this.$loading.destroy()
+      this.$loading?.destroy()
       this.toggleEdit(this.pixiApp.isEdit)
       this.pixiApp.event.on('editChange', this.toggleEdit)
       this.$container
@@ -491,7 +491,7 @@ class Furniture {
     this.isDrag = false
     this.eventData = null
     this.pixiApp.activeFurniture = null
-    this.$container.destroy()
+    this.$container?.destroy()
   }
   cancelDrag = () => {
     if (this.pixiApp.isEdit && this.isDrag && this.dragEvent) {
@@ -568,7 +568,7 @@ class Furniture {
     /* clear placed */
     this.updateGrid(this.position, 0)
     this.pixiApp.event.emit('furnitureDelete', this)
-    this.$container.destroy()
+    this.$container?.destroy()
   }
 
   static onFrameChange(sprite, frames) {

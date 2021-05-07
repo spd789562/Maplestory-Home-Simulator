@@ -183,7 +183,7 @@ class PixiAPP {
 
     // binding destory event
     this.app.renderer.runners['destroy'].add({
-      destroy: this.viewport.destroy.bind(this.viewport),
+      destroy: this.viewport?.destroy.bind(this.viewport),
     })
     this.app.stage.addChild(this.viewport)
 
@@ -392,7 +392,7 @@ class PixiAPP {
   }
   destory() {
     this.app.stop()
-    this.app.destroy()
+    this.app && this.app.destroy()
   }
 
   handleUpdateFurniture = (e) => {

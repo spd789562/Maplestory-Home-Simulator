@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { withTranslation } from '@i18n'
 
 /* components */
@@ -86,4 +87,4 @@ const DetailPopover = ({ t, id, children }) => {
   )
 }
 
-export default withTranslation('furniture')(DetailPopover)
+export default withTranslation('furniture')(memo(DetailPopover))

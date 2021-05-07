@@ -13,6 +13,7 @@ import activeFurnitureReducer from './active-furniture'
 import favoriteFurnitureReducer from './favorite-furniture'
 
 import { isNil, prop, curry, path, pipe } from 'ramda'
+import { createSelector } from 'reselect'
 
 const GlobalStore = createContext({})
 
@@ -41,8 +42,10 @@ export const Provider = ({ children }) => {
 export const useDispatch = () =>
   useContextSelector(GlobalStore, prop('dispatch'))
 
-export const useStoreSelector = (field, selector) =>
-  useContextSelector(GlobalStore, pipe(prop(field), selector))
+export const useStoreSelector = (field, selector) => {
+  const getData = createSelector(prop(field), selector)
+  return useContextSelector(GlobalStore, getData)
+}
 
 export const useStore = (keyPath, initialValue = null) => {
   const dispatch = useDispatch()

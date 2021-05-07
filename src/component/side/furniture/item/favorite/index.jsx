@@ -1,7 +1,6 @@
-import { useCallback } from 'react'
+import { useCallback, memo } from 'react'
 import { withTranslation } from '@i18n'
 import { useStoreSelector, useDispatch } from '@store'
-
 /* components */
 import { Badge, Tooltip } from 'antd'
 import { StarFilled } from '@ant-design/icons'
@@ -45,4 +44,4 @@ const Favorite = ({ t, id, buttonStyle = {} }) => {
   )
 }
 
-export default withTranslation()(Favorite)
+export default withTranslation()(memo(Favorite))

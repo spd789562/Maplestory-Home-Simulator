@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { withTranslation } from '@i18n'
 
 /* store */
@@ -44,4 +45,4 @@ Item.getInitialProps = async () => ({
   namespacesRequired: ['index'],
 })
 
-export default withTranslation('index')(Item)
+export default withTranslation('index')(memo(Item))

@@ -39,6 +39,7 @@
     "ramda": "^0.27.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "reselect": "^4.0.0",
     "sass": "^1.32.4",
     "throttle-debounce": "^2.3.0",
     "use-context-selector": "^1.2.10",

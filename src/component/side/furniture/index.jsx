@@ -14,10 +14,20 @@ import { flatten, keys, map, path, pipe, tap, uniq, values } from 'ramda'
 /* mapping */
 import FurnitureMapping from '@mapping/furniture'
 
-console.log(pipe(values, map(path(['info', 'type'])), uniq)(FurnitureMapping))
+const FavoriteTab = () => {
+  const [favoritesFurniture] = useStore('favorite-furniture')
+  return (
+    <Row gutter={[8, 8]} style={{ paddingRight: 6 }}>
+      {favoritesFurniture.map((id) => (
+        <Col span={6} key={`furniture-select-${id}`}>
+          <Item id={id} />
+        </Col>
+      ))}
+    </Row>
+  )
+}
 
 const Furniture = ({ t }) => {
-  const [favoritesFurniture] = useStore('favorite-furniture')
   return (
     <Row style={{ marginTop: -20 }}>
       <Col flex="1">
@@ -33,13 +43,7 @@ const Furniture = ({ t }) => {
             </Row>
           </Tabs.TabPane>
           <Tabs.TabPane tab={t('tab_favorite')} key="2">
-            <Row gutter={[8, 8]} style={{ paddingRight: 6 }}>
-              {favoritesFurniture.map((id) => (
-                <Col span={6} key={`furniture-select-${id}`}>
-                  <Item id={id} />
-                </Col>
-              ))}
-            </Row>
+            <FavoriteTab />
           </Tabs.TabPane>
         </Tabs>
       </Col>

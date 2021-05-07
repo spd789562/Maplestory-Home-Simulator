@@ -14,6 +14,8 @@ import { flatten, keys, map, path, pipe, tap, uniq, values } from 'ramda'
 /* mapping */
 import FurnitureMapping from '@mapping/furniture'
 
+console.log(pipe(values, map(path(['info', 'type'])), uniq)(FurnitureMapping))
+
 const Furniture = ({ t }) => {
   const [favoritesFurniture] = useStore('favorite-furniture')
   return (

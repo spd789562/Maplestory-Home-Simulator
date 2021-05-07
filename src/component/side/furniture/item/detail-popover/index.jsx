@@ -33,10 +33,31 @@ const DetailPopover = ({ t, id, children }) => {
       content={() => (
         <div style={{ maxWidth: 200, whiteSpace: 'pre-wrap' }}>
           {mappedString.desc}
+          {furniture.info.type && (
+            <>
+              <div style={{ margin: '0 -14px' }}>
+                <Divider
+                  orientation="left"
+                  style={{ fontSize: 12, color: '#6373ca' }}
+                >
+                  {t('furniture_function')}：{t(`title_${furniture.info.type}`)}
+                </Divider>
+              </div>
+              <div>
+                {t(`desc_${furniture.info.type}`)}
+                {furniture.info.interact === 'animate' ? t('desc_animate') : ''}
+              </div>
+            </>
+          )}
           {furniture.info.tag && (
             <>
               <div style={{ margin: '0 -14px' }}>
-                <Divider />
+                <Divider
+                  orientation="left"
+                  style={{ fontSize: 12, color: '#6373ca' }}
+                >
+                  {t('furniture_tag')}
+                </Divider>
               </div>
               <div style={{ marginTop: -12, marginBottom: -8 }}>
                 {map(
@@ -65,4 +86,4 @@ const DetailPopover = ({ t, id, children }) => {
   )
 }
 
-export default withTranslation()(DetailPopover)
+export default withTranslation('furniture')(DetailPopover)

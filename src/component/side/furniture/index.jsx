@@ -1,31 +1,10 @@
-/* store */
-import { useStore } from '@store'
-
 /* i18n */
 import { withTranslation } from '@i18n'
 
 /* components */
 import { Row, Col, Tabs } from 'antd'
-import Item from './item'
-
-/* utils */
-import { flatten, keys, map, path, pipe, tap, uniq, values } from 'ramda'
-
-/* mapping */
-import FurnitureMapping from '@mapping/furniture'
-
-const FavoriteTab = () => {
-  const [favoritesFurniture] = useStore('favorite-furniture')
-  return (
-    <Row gutter={[8, 8]} style={{ paddingRight: 6 }}>
-      {favoritesFurniture.map((id) => (
-        <Col span={6} key={`furniture-select-${id}`}>
-          <Item id={id} />
-        </Col>
-      ))}
-    </Row>
-  )
-}
+import FavoriteTab from './favorite-tab'
+import FurnitureTab from './furniture-tab'
 
 const Furniture = ({ t }) => {
   return (
@@ -33,14 +12,7 @@ const Furniture = ({ t }) => {
       <Col flex="1">
         <Tabs defaultActiveKey="1">
           <Tabs.TabPane tab={t('tab_all')} key="1">
-            {/* add padding prevent TabPane overflow hidden overlay favorite star */}
-            <Row gutter={[8, 8]} style={{ paddingRight: 6 }}>
-              {keys(FurnitureMapping).map((id) => (
-                <Col span={6} key={`furniture-select-${id}`}>
-                  <Item id={id} />
-                </Col>
-              ))}
-            </Row>
+            <FurnitureTab />
           </Tabs.TabPane>
           <Tabs.TabPane tab={t('tab_favorite')} key="2">
             <FavoriteTab />

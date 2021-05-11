@@ -38,6 +38,6 @@ const NeedFilter = [
   '02672057',
 ]
 
-const filteredFurniture = omit(NeedFilter, Furnitures)
+export const filteredFurniture = omit(NeedFilter, Furnitures)
 
-export default filteredFurniture
+export default Furnitures

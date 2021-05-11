@@ -5,16 +5,31 @@ import { withTranslation } from '@i18n'
 import { Popover, Divider, Tag } from 'antd'
 import Favorite from '../favorite'
 /* utils */
-import { values, map } from 'ramda'
+import { values, map, pipe, path, defaultTo, findIndex, equals } from 'ramda'
 
 /* mapping */
 import FurnitureMapping from '@mapping/furniture'
 import StringMapping from '@mapping/furniture-string'
 import TagColorMapping from '@mapping/tag/color'
 
+const typeIsRest = (furniture) =>
+  pipe(path(['info', 'type']), equals('rest'))(furniture)
+const tagHasChair = (furniture) =>
+  pipe(
+    path(['info', 'tag']),
+    defaultTo({}),
+    values,
+    findIndex(equals('chair')),
+    (index) => index !== -1
+  )(furniture)
+
 const DetailPopover = ({ t, id, children }) => {
   const mappedString = StringMapping[+id]
   const furniture = FurnitureMapping[id]
+  const isRest = typeIsRest(furniture)
+  const isChair = tagHasChair(furniture)
+  /* if type is rest, add 'chair' suffix by tag has chair, 'bed' suffix of other */
+  const descSuffix = isRest ? `_${isChair ? 'chair' : 'bed'}` : ''
   return (
     <Popover
       title={
@@ -41,11 +56,12 @@ const DetailPopover = ({ t, id, children }) => {
                   orientation="left"
                   style={{ fontSize: 12, color: '#6373ca' }}
                 >
-                  {t('furniture_function')}：{t(`title_${furniture.info.type}`)}
+                  {t('furniture_function')}：
+                  {t(`title_${furniture.info.type}${descSuffix}`)}
                 </Divider>
               </div>
               <div>
-                {t(`desc_${furniture.info.type}`)}
+                {t(`desc_${furniture.info.type}${descSuffix}`)}
                 {furniture.info.interact === 'animate' ? t('desc_animate') : ''}
               </div>
             </>

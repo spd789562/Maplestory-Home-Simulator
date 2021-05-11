@@ -36,6 +36,7 @@ const Favorite = ({ t, id, buttonStyle = {} }) => {
       <StarFilled
         style={{
           color: isFavorite ? '#ffbe00' : '#999',
+          transition: 'color .1s linear',
           ...buttonStyle,
         }}
         onClick={handleClick}

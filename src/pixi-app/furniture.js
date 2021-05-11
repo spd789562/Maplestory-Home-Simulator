@@ -484,10 +484,10 @@ class Furniture {
       this.isFirst = false
       this.pixiApp.event.emit('furnitureUpdate', this)
     } else if (this.isFirst) {
-      this.destoryWhenDrag()
+      this.destroyWhenDrag()
     }
   }
-  destoryWhenDrag = () => {
+  destroyWhenDrag = () => {
     this.isDrag = false
     this.eventData = null
     this.pixiApp.activeFurniture = null
@@ -499,7 +499,7 @@ class Furniture {
       this.eventData = null
       this.canPlace = true
       if (this.isFirst) {
-        this.destoryWhenDrag()
+        this.destroyWhenDrag()
         return
       }
       this.renderRestrict()

@@ -181,7 +181,7 @@ class PixiAPP {
 
     this.setVisibleRect()
 
-    // binding destory event
+    // binding destroy event
     this.app.renderer.runners['destroy'].add({
       destroy: this.viewport?.destroy.bind(this.viewport),
     })
@@ -390,7 +390,7 @@ class PixiAPP {
     this.$map.addChild(mask)
     this.$map.mask = mask
   }
-  destory() {
+  destroy() {
     this.app.stop()
     this.app && this.app.destroy()
   }

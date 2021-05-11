@@ -68,7 +68,7 @@ const Home = () => {
       window.addEventListener('keydown', onKeydown)
     }
     return () => {
-      appRef.current && appRef.current.destory()
+      appRef.current && appRef.current.destroy()
       window.removeEventListener('keydown', onKeydown)
     }
   }, [])

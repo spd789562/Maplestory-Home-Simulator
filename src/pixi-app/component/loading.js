@@ -1,9 +1,11 @@
 /* components */
-import { Graphics, Ticker } from 'pixi.js-legacy'
+import { Graphics, Ticker, GRAPHICS_CURVES } from 'pixi.js-legacy'
 
 const LOADING_LINE_WIDTH = 7
 const ROTATE_STEP = Math.PI / 60
 const FULL_DEGREE = Math.PI * 2
+
+GRAPHICS_CURVES.adaptive = true
 
 class Loading extends Graphics {
   constructor(width = 100, height = 100) {

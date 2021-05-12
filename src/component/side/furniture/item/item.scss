@@ -1,0 +1,18 @@
+.item {
+  position: relative;
+  border: 3px solid #6373ca;
+  border-radius: 10px;
+  color: #6373ca;
+  cursor: pointer;
+  transition: box-shadow linear 0.3s, border-color linear 0.3s;
+
+  &-image {
+    position: relative;
+    margin: 2px;
+    width: calc(100% - 4px);
+    padding-bottom: calc(100% - 4px);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}

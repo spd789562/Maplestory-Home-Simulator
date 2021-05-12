@@ -30,6 +30,8 @@ export const HOUSE_REORDER = 'HOUSE_REORDER'
 export const HOUSE_INITIAL = 'HOUSE_INITIAL'
 export const HOUSE_APPEND = 'HOUSE_APPEND'
 export const HOUSE_UPDATE = 'HOUSE_UPDATE'
+export const HOUSE_UPDATE_FURNITURE = 'HOUSE_UPDATE_FURNITURE'
+export const HOUSE_DELETE_FURNITURE = 'HOUSE_DELETE_FURNITURE'
 export const HOUSE_DUPLICATE = 'HOUSE_DUPLICATE'
 export const HOUSE_DELETE = 'HOUSE_DELETE'
 
@@ -79,6 +81,44 @@ const reducer = reducerCreator(initialState, {
     pipe(
       evolve({
         houses: update(state.current, payload),
+      }),
+      SaveToStorage
+    )(state),
+  [HOUSE_UPDATE_FURNITURE]: (state, payload) =>
+    pipe(
+      evolve({
+        houses: update(
+          state.current,
+          evolve(
+            {
+              furnitures: (furnitures) => {
+                const idx = findIndex(propEq('id', payload.id), furnitures)
+                if (idx !== -1) {
+                  return update(idx, payload, furnitures)
+                } else {
+                  return append(payload, furnitures)
+                }
+              },
+            },
+            state.houses[state.current]
+          )
+        ),
+      }),
+      SaveToStorage
+    )(state),
+  [HOUSE_DELETE_FURNITURE]: (state, id) =>
+    pipe(
+      evolve({
+        houses: update(
+          state.current,
+          evolve(
+            {
+              furnitures: (furnitures) =>
+                remove(findIndex(propEq('id', id), furnitures), 1, furnitures),
+            },
+            state.houses[state.current]
+          )
+        ),
       }),
       SaveToStorage
     )(state),

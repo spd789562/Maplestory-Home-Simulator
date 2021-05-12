@@ -1,4 +1,7 @@
 /* components */
+import * as PIXI from 'pixi.js-legacy'
+window.PIXI = PIXI
+require('pixi-layers')
 import {
   Application,
   Container,
@@ -7,6 +10,7 @@ import {
   Rectangle,
   Graphics,
   Point,
+  utils,
 } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
 import PixiLoaderManager from './pixi-loader-manager'
@@ -27,6 +31,7 @@ import {
   keys,
   map,
   path,
+  pathEq,
   pick,
   pickBy,
   pipe,
@@ -38,12 +43,21 @@ import {
   values,
 } from 'ramda'
 import { entries } from '@utils/ramda'
-import { GRID_WIDTH } from './constant'
+import {
+  GRID_WIDTH,
+  GRID_LINE_STROKE,
+  GRID_LINE_WIDTH,
+  GRID_LINE_OPACITY,
+  GRID_RESTRICT_BACKGROUND,
+} from './constant'
 
 /* mapping */
 import MapTheme from '@mapping/map-theme'
 import MapObjectMapping from '@mapping/map-object'
 import Maps from '@mapping/map'
+
+const { Stage, Group, Layer } = window.PIXI.display
+const { EventEmitter } = utils
 
 const getMapObjects = pipe(
   // filter non obj or null obj
@@ -77,8 +91,22 @@ class PixiAPP {
     this.showGrid = true
     this._isEdit = false
     this.app.layers = {}
+    this.app.stage = new Stage()
+    this.group = {
+      normal: new Group(1),
+      map: new Group(2),
+      drag: new Group(3),
+    }
+    this.app.stage.addChild(new Layer(this.group.normal))
+    this.app.stage.addChild(new Layer(this.group.map))
+    this.app.stage.addChild(new Layer(this.group.drag))
 
     this.viewZoom = 1
+
+    this.furnitures = []
+    this.event = new EventEmitter()
+    this.event.addListener('furnitureUpdate', this.handleUpdateFurniture)
+    this.event.addListener('furnitureDelete', this.handleDeleteFurniture)
   }
   /**
    * @param {string} selectId
@@ -149,12 +177,13 @@ class PixiAPP {
       .on('zoomed-end', (event) => {
         this.viewZoom = event.lastViewport.scaleX
       })
+    this.viewport.parentGroup = this.group.normal
 
     this.setVisibleRect()
 
-    // binding destory event
+    // binding destroy event
     this.app.renderer.runners['destroy'].add({
-      destroy: this.viewport.destroy.bind(this.viewport),
+      destroy: this.viewport?.destroy.bind(this.viewport),
     })
     this.app.stage.addChild(this.viewport)
 
@@ -230,7 +259,10 @@ class PixiAPP {
     /* cancel drag current moving furniture before change */
     this.activeFurniture && this.activeFurniture.cancelDrag()
 
-    const _furniture = new Furniture(this, { id })
+    const _furniture = new Furniture(this, {
+      id: `f${new Date().getTime()}${Math.random().toString(16)}`,
+      furnitureID: id,
+    })
     _furniture.isFirst = true
     _furniture.isDrag = true
     this.activeFurniture = _furniture
@@ -286,7 +318,7 @@ class PixiAPP {
         this.gridPlaced[key] = []
         this.gridPoints[key] = {}
         const gridLine = new Graphics()
-        gridLine.lineStyle(2, 0x333333, 0.5)
+        gridLine.lineStyle(GRID_LINE_WIDTH, GRID_LINE_STROKE, GRID_LINE_OPACITY)
         gridLine.zIndex = 990
         const row = +grids.row
         const col = +grids.col
@@ -298,6 +330,7 @@ class PixiAPP {
         gridLine.lineTo(endX, startY)
         gridLine.moveTo(startX, startY)
         gridLine.lineTo(startX, endY)
+        /* draw grid and initialize gird placed together */
         times((index) => {
           this.gridPlaced[wallKey].push([])
           this.gridPlaced[key].push([])
@@ -326,7 +359,7 @@ class PixiAPP {
             const [x, y] = position.split(',').map(Number)
             this.gridPlaced[wallKey][x][y] = 1
             this.gridPlaced[key][x][y] = 1
-            gridLine.beginFill(0xff0000, 0.3)
+            gridLine.beginFill(GRID_RESTRICT_BACKGROUND, 0.3)
             gridLine.drawRect(
               startX + x * GRID_WIDTH,
               startY + y * GRID_WIDTH,
@@ -357,13 +390,21 @@ class PixiAPP {
     this.$map.addChild(mask)
     this.$map.mask = mask
   }
-  destory() {
+  destroy() {
     this.app.stop()
-    this.app.destroy()
+    this.app && this.app.destroy()
   }
 
-  onPlaceFurniture() {}
-  cancelPlaceFurniture() {}
+  handleUpdateFurniture = (e) => {
+    const idx = this.furnitures.findIndex((f) => f.id === e.id)
+    if (idx === -1) {
+      this.furnitures.push(e)
+    }
+  }
+  handleDeleteFurniture = ({ id }) => {
+    const idx = this.furnitures.findIndex((f) => f.id === id)
+    idx !== -1 && this.furnitures.splice(idx, 1)
+  }
 
   get isEdit() {
     return this._isEdit
@@ -372,6 +413,7 @@ class PixiAPP {
     this._isEdit = isEdit
     this.showGrid = isEdit
     this.renderGrid()
+    this.event.emit('editChange', isEdit)
   }
   get activeFurniture() {
     return this._activeFurniture
@@ -379,7 +421,33 @@ class PixiAPP {
   set activeFurniture(activeFurniture) {
     this._activeFurniture = activeFurniture
     if (!activeFurniture) {
-      this.cancelPlaceFurniture()
+      this.event.emit('furnitureCancelPlace')
+    }
+  }
+  get maxZIndex() {
+    return Math.max.apply(null, this.furnitures.map(path(['position', 'z'])))
+  }
+  get minZIndex() {
+    return Math.min.apply(null, this.furnitures.map(path(['position', 'z'])))
+  }
+  getZIndexCount(index) {
+    return this.furnitures.filter(pathEq(['position', 'z'], index)).length
+  }
+  swapFurnituresIndex(firstZIndex, secondZIndex) {
+    const firstZindexCount = this.getZIndexCount(firstZIndex)
+    const secondZindexCount = this.getZIndexCount(secondZIndex)
+    // only both zindex count is one can switch zIndex
+    if (firstZindexCount + secondZindexCount === 2) {
+      const firstFurniture = this.furnitures.find(
+        pathEq(['position', 'z'], firstZIndex)
+      )
+      const secondFurniture = this.furnitures.find(
+        pathEq(['position', 'z'], secondZIndex)
+      )
+      ;[firstFurniture.zIndex, secondFurniture.zIndex] = [
+        secondFurniture.zIndex,
+        firstFurniture.zIndex,
+      ]
     }
   }
 }

@@ -10,8 +10,10 @@ import { combineReducer } from './_helper'
 import metaReducer from './meta'
 import houseReducer from './house'
 import activeFurnitureReducer from './active-furniture'
+import favoriteFurnitureReducer from './favorite-furniture'
 
-import { isNil, prop, curry, path, pickAll } from 'ramda'
+import { isNil, prop, curry, path, pipe } from 'ramda'
+import { createSelector } from 'reselect'
 
 const GlobalStore = createContext({})
 
@@ -19,6 +21,7 @@ const [combinedReducers, initialState] = combineReducer({
   meta: metaReducer,
   house: houseReducer,
   'active-furniture': activeFurnitureReducer,
+  'favorite-furniture': favoriteFurnitureReducer,
 })
 
 export const Provider = ({ children }) => {
@@ -39,8 +42,10 @@ export const Provider = ({ children }) => {
 export const useDispatch = () =>
   useContextSelector(GlobalStore, prop('dispatch'))
 
-export const useStroeSelector = (field, selector) =>
-  useContextSelector(GlobalStore, pipe(prop(field), selector))
+export const useStoreSelector = (field, selector) => {
+  const getData = createSelector(prop(field), selector)
+  return useContextSelector(GlobalStore, getData)
+}
 
 export const useStore = (keyPath, initialValue = null) => {
   const dispatch = useDispatch()

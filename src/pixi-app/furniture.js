@@ -1,6 +1,13 @@
 /* components */
-import { AnimatedSprite, Container, Graphics, Point } from 'pixi.js-legacy'
+import {
+  AnimatedSprite,
+  Container,
+  Graphics,
+  Point,
+  Rectangle,
+} from 'pixi.js-legacy'
 import Loading from './component/loading'
+import FurniturePlacement from './component/furniture-placement'
 
 /* utils */
 import {
@@ -25,7 +32,11 @@ import { entries, mapObject } from '@utils/ramda'
 import { getFurnitureImagePath } from '@utils/get-image-path'
 
 /* mapping */
-import { GRID_WIDTH } from './constant'
+import {
+  GRID_WIDTH,
+  FURNITURE_RESTRICT_BACKGROUND,
+  FURNITURE_ALLOWABLE_BACKGROUND,
+} from './constant'
 import FurnitureMapping from '@mapping/furniture'
 
 const FURNITURE_ID = '02672080'
@@ -35,13 +46,15 @@ const getFrames = pickBy((_, key) => !Number.isNaN(+key))
 const keyIsStage = includes(__, ['start', 'loop', 'end'])
 
 class Furniture {
+  _flip = false
   constructor(pixiApp, furnitureData) {
     this.pixiApp = pixiApp
-    this.onPlace = pixiApp.onPlaceFurniture
     this.app = pixiApp.app
-    if (!furnitureData.id) return null
-    this.id = furnitureData.id.toString().padStart(8, '0')
-    this.wz = FurnitureMapping[furnitureData.id]
+    if (!furnitureData.furnitureID) return null
+    this.id = furnitureData.id
+    this.furnitureID = furnitureData.furnitureID.toString().padStart(8, '0')
+
+    this.wz = FurnitureMapping[this.furnitureID]
     if (!this.wz) return null
     /**
      * grid count
@@ -83,8 +96,7 @@ class Furniture {
         keys(pixiApp.mapData.housingGrid)[0],
     }
     this.prevPosition = clone(this.position)
-
-    this.isWall = this.id.startsWith('02671')
+    this.isWall = this.furnitureID.startsWith('02671')
     this.layerIndex = this.isWall ? 3 : 4
 
     this.statesData = this.wz.states
@@ -97,11 +109,22 @@ class Furniture {
     this.frames = this.parseFrames()
     this.components = {}
 
+    this.$placement = new FurniturePlacement({
+      handleFlip: this.handleFlip,
+      handleUpIndex: this.handleUpIndex,
+      handleDownIndex: this.handleDownIndex,
+      handleDelete: this.handleDelete,
+    })
+    this.$placement.x = -this.offset.x
+    this.$placement.y = -this.offset.y - 42
+    this.$placement.parentGroup = pixiApp.group.drag
+
     /**
      * Whole Furniture Layer
      * @type {Container}
      */
     this.$container = new Container()
+
     /**
      * Furniture Frames Layer
      * @type {Container}
@@ -126,6 +149,7 @@ class Furniture {
     this.canMove = true
     this.canPlace = true
     this.isDrag = false
+    this.flip = !!furnitureData.flip
 
     this.$loading = new Loading(this.gridSize.x, this.gridSize.y)
     this.$loading.y = -this.offset.y / 2
@@ -153,7 +177,7 @@ class Furniture {
                   const linkObj = _inlink
                     ? path(_inlink.split('/'), FurnitureMapping)
                     : null
-                  let _id = this.id
+                  let _id = this.furnitureID
                   let _state = state
                   let _stage = stage
                   let _layer = layer
@@ -274,12 +298,34 @@ class Furniture {
       this.play('loop')
     })
   }
+  toggleEdit = (isEdit) => {
+    this.canMove = isEdit
+    this.$container.interactive = isEdit
+    this.$container.buttonMode = isEdit
+    this.$furniture.interactive = this.stateCount > 1 || isEdit
+    this.$furniture.buttonMode = this.stateCount > 1 || isEdit
+  }
   render() {
     this.app.loaderManager.load(this.allLayerSrc, () => {
-      this.$loading.destroy()
+      this.$loading?.destroy()
+      this.toggleEdit(this.pixiApp.isEdit)
+      this.pixiApp.event.on('editChange', this.toggleEdit)
+      this.$container
+        .on('pointerover', () => {
+          !this.$placement.parent && this.$container.addChild(this.$placement)
+        })
+        .on('pointerdown', (e) => {
+          const points = (this.dragEvent || e).data.getLocalPosition(
+            this.app.layers[this.layerIndex]
+          )
+          if (this.furnitureArea.contains(points.x, points.y)) {
+            this.$furniture.emit('pointerdown', e)
+          }
+        })
+        .on('pointerout', () => {
+          this.$placement.parent && this.$container.removeChild(this.$placement)
+        })
 
-      this.$furniture.interactive = true
-      this.$furniture.buttonMode = true
       this.$furniture
         .on('pointerdown', (e) => {
           if (this.isDrag) {
@@ -301,7 +347,7 @@ class Furniture {
         this.canPlace && this.pixiApp.isEdit && this.isDrag ? 1 : 0
     } else {
       this.$restrict = new Graphics()
-      this.$restrict.beginFill(0xff0000, 0.6)
+      this.$restrict.beginFill(FURNITURE_RESTRICT_BACKGROUND, 0.6)
       this.$restrict.drawRect(
         -this.offset.x,
         -this.offset.y,
@@ -312,7 +358,7 @@ class Furniture {
       this.$restrict.zIndex = 999
       this.$restrict.alpha = this.canPlace ? 0 : 1
       this.$allowance = new Graphics()
-      this.$allowance.beginFill(0x44cc44, 0.3)
+      this.$allowance.beginFill(FURNITURE_ALLOWABLE_BACKGROUND, 0.3)
       this.$allowance.drawRect(
         -this.offset.x,
         -this.offset.y,
@@ -402,11 +448,11 @@ class Furniture {
     this.isDrag = true
     this.dragEvent = event
     this.pixiApp.activeFurniture = this
+    // add furniture to drag group
+    this.$container.parentGroup = this.pixiApp.group.drag
     this.renderRestrict()
     /* clear placed */
     this.updateGrid(this.prevPosition, 0)
-    this.app.layers[this.layerIndex].removeChild(this.$container)
-    this.app.layers.front.addChild(this.$container)
   }
   dragFurniture = (event) => {
     if (this.isDrag) {
@@ -426,25 +472,26 @@ class Furniture {
     if (this.canPlace) {
       this.isDrag = false
       this.eventData = null
+      // remove furniture from drag group
+      this.$container.parentGroup = null
+      this.$container._activeParentLayer = null
       this.renderRestrict()
-      this.app.layers[this.layerIndex].addChild(this.$container)
       this.updateGrid(this.position, 1)
       /* resetPrevious */
       this.prevPosition = clone(this.position)
 
       this.pixiApp.activeFurniture = null
       this.isFirst = false
-      this.onPlace(this)
+      this.pixiApp.event.emit('furnitureUpdate', this)
     } else if (this.isFirst) {
-      this.destoryWhenDrag()
+      this.destroyWhenDrag()
     }
   }
-  destoryWhenDrag = () => {
+  destroyWhenDrag = () => {
     this.isDrag = false
     this.eventData = null
-    this.app.layers.front.removeChild(this.$container)
     this.pixiApp.activeFurniture = null
-    this.$container.destroy()
+    this.$container?.destroy()
   }
   cancelDrag = () => {
     if (this.pixiApp.isEdit && this.isDrag && this.dragEvent) {
@@ -452,7 +499,7 @@ class Furniture {
       this.eventData = null
       this.canPlace = true
       if (this.isFirst) {
-        this.destoryWhenDrag()
+        this.destroyWhenDrag()
         return
       }
       this.renderRestrict()
@@ -465,8 +512,6 @@ class Furniture {
         this.floorBasic.x + this.position.x * GRID_WIDTH + this.offset.x,
         this.floorBasic.y + this.position.y * GRID_WIDTH + this.offset.y
       )
-
-      this.app.layers[this.layerIndex].addChild(this.$container)
 
       this.pixiApp.activeFurniture = null
     }
@@ -483,6 +528,47 @@ class Furniture {
       this.grid.y,
       mode
     )
+  }
+
+  handleFlip = () => {
+    this.flip = !this.flip
+    this.pixiApp.event.emit('furnitureUpdate', this)
+  }
+  handleUpIndex = () => {
+    const maxIndex = this.pixiApp.maxZIndex
+    const nextIndex = this.zIndex + 1
+    const maxIndexFurnitureCount = this.pixiApp.getZIndexCount(maxIndex)
+    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
+    if (
+      nextIndex === maxIndex &&
+      currentIndexCount === 1 &&
+      maxIndexFurnitureCount === 1
+    ) {
+      this.pixiApp.swapFurnituresIndex(this.zIndex, maxIndex)
+    } else if (nextIndex < maxIndex || maxIndexFurnitureCount > 1) {
+      this.zIndex = nextIndex
+    }
+  }
+  handleDownIndex = () => {
+    const minIndex = this.pixiApp.minZIndex
+    const nextIndex = this.zIndex - 1
+    const minIndexFurnitureCount = this.pixiApp.getZIndexCount(minIndex)
+    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
+    if (
+      nextIndex === minIndex &&
+      currentIndexCount === 1 &&
+      minIndexFurnitureCount === 1
+    ) {
+      this.pixiApp.swapFurnituresIndex(this.zIndex, minIndex)
+    } else if (nextIndex > minIndex || minIndexFurnitureCount > 1) {
+      this.zIndex = nextIndex
+    }
+  }
+  handleDelete = () => {
+    /* clear placed */
+    this.updateGrid(this.position, 0)
+    this.pixiApp.event.emit('furnitureDelete', this)
+    this.$container?.destroy()
   }
 
   static onFrameChange(sprite, frames) {
@@ -503,6 +589,38 @@ class Furniture {
       x: +this.pixiApp.mapData.housingGrid[this.position.floor].left,
       y: +this.pixiApp.mapData.housingGrid[this.position.floor].top,
     }
+  }
+
+  get furnitureArea() {
+    return new Rectangle(
+      this.$container.position.x - this.offset.x,
+      this.$container.position.y - this.offset.y,
+      this.gridSize.x,
+      this.gridSize.y
+    )
+  }
+
+  get flip() {
+    return this._flip
+  }
+  set flip(isFlip) {
+    this.$furniture.scale.x *= this._flip !== isFlip ? -1 : 1
+    this._flip = isFlip
+  }
+
+  get zIndex() {
+    return this.position.z
+  }
+  set zIndex(index) {
+    this.position.z = index
+    this.$container.zIndex = index
+    if (index > this.zIndex) {
+      this.app.layers[this.layerIndex].addChild(this.$container)
+    } else {
+      this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
+    }
+    this.pixiApp.event.emit('furnitureUpdate', this)
+    this.pixiApp.event.emit('zIndexUpdate', this.pixiApp.furnitures)
   }
 }
 

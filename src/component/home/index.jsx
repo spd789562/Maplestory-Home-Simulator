@@ -24,16 +24,8 @@ const Home = () => {
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const [activeFurnitureID] = useStore('active-furniture')
   const [sideIsOpen] = useStore('meta.side.open')
-  const handleEsc = () =>
-    appRef.current &&
-    appRef.current.activeFurniture &&
-    appRef.current.activeFurniture.cancelDrag()
-  const handleDelete = () => {
-    if (appRef.current && appRef.current.activeFurniture) {
-      appRef.current.activeFurniture.cancelDrag()
-      appRef.current.activeFurniture.handleDelete()
-    }
-  }
+  const handleEsc = () => appRef.current?.activeFurniture?.cancelDrag()
+  const handleDelete = () => appRef.current?.activeFurniture?.handleDelete()
   const onKeydown = ({ keyCode }) => {
     switch (keyCode) {
       case ESC_KEY_CODE:

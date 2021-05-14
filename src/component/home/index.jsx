@@ -4,7 +4,7 @@ import { useEffect, createRef, useRef } from 'react'
 import { useStore } from '@store'
 import { CLEAR_ACTIVE_FURNITURE } from '@store/active-furniture'
 import { HOUSE_UPDATE_FURNITURE, HOUSE_DELETE_FURNITURE } from '@store/house'
-import { ENTER_EDIT } from '@store/meta'
+import { ENTER_EDIT, UPDATE_ZOOM_RANGE, UPDATE_ZOOM_VALUE } from '@store/meta'
 
 /* components */
 import PixiAPP from '../../pixi-app'
@@ -18,7 +18,7 @@ const appRef = createRef()
 const ESC_KEY_CODE = 27
 const DELETE_KEY_CODE = 46
 
-const Home = () => {
+const Home = ({ zoom }) => {
   const [currentIndex, dispatch] = useStore('house.current')
   const [edit] = useStore('meta.edit')
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
@@ -48,6 +48,12 @@ const Home = () => {
   const onDeleteFurniture = (furniture) => {
     dispatch({ type: HOUSE_DELETE_FURNITURE, payload: furniture.id })
   }
+  const onZoom = (zoom) => {
+    dispatch({ type: UPDATE_ZOOM_VALUE, payload: zoom })
+  }
+  const onZoomRange = (min, max) => {
+    dispatch({ type: UPDATE_ZOOM_RANGE, payload: { min, max } })
+  }
   useEffect(() => {
     if (canvasRef.current) {
       appRef.current = new PixiAPP(canvasRef.current)
@@ -57,6 +63,8 @@ const Home = () => {
         'furnitureCancelPlace',
         onCancelFurniture
       )
+      appRef.current.event.addListener('zoom', onZoom)
+      appRef.current.event.addListener('zoomRange', onZoomRange)
       window.addEventListener('keydown', onKeydown)
     }
     return () => {
@@ -78,6 +86,12 @@ const Home = () => {
       app.isEdit = edit
     }
   }, [appRef.current, edit])
+  useEffect(() => {
+    const app = appRef.current
+    if (app) {
+      app.zoom = zoom
+    }
+  }, [appRef.current, zoom])
   useEffect(() => {
     const app = appRef.current
     if (app && activeFurnitureID) {

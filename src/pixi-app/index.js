@@ -156,10 +156,12 @@ class PixiAPP {
     const maxZoomWidthScale = this.world.width / this.canvas.width
     const maxZoomHeightScale = this.world.height / this.canvas.height
     const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
+    this.event.emit('zoomRange', 1 / maxZoomScale, 3)
     // limit zoom range
     this.viewport
       .clampZoom({
         maxWidth: this.canvas.width * maxZoomScale,
+        minWidth: this.canvas.width / 3,
       })
       .clamp({
         left: this.edge.left,
@@ -174,6 +176,9 @@ class PixiAPP {
       .wheel()
       .setZoom(Math.min(maxZoomScale, this.viewZoom))
       .on('moved', this.setVisibleRect)
+      .on('wheel', (event) =>
+        this.event.emit('zoom', event.viewport.lastViewport.scaleX)
+      )
       .on('zoomed-end', (event) => {
         this.viewZoom = event.lastViewport.scaleX
       })
@@ -195,8 +200,10 @@ class PixiAPP {
     const maxZoomWidthScale = this.world.width / width
     const maxZoomHeightScale = this.world.height / this.canvas.height
     const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
+    this.event.emit('zoomRange', 1 / maxZoomScale, 3)
     this.viewport.clampZoom({
       maxWidth: width * maxZoomScale,
+      minWidth: width / 3,
     })
   }
   setVisibleRect = () => {
@@ -414,6 +421,13 @@ class PixiAPP {
     this.showGrid = isEdit
     this.renderGrid()
     this.event.emit('editChange', isEdit)
+  }
+  get zoom() {
+    return this.viewport.scaled
+  }
+  set zoom(scale) {
+    this.setVisibleRect()
+    return this.viewport.setZoom(scale, true)
   }
   get activeFurniture() {
     return this._activeFurniture

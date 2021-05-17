@@ -23,6 +23,7 @@ import {
   values,
 } from 'ramda'
 import { getMapBackImagePath } from '@utils/get-image-path'
+import deltaMoveStep from '@utils/delta-move-step'
 
 /* mapping */
 import MapBackMapping from '@mapping/map-back'
@@ -153,10 +154,10 @@ class MapBack {
     this.sprite.x = data.x || this.sprite.x
     this.sprite.y = data.y || this.sprite.y
   }
-  moveTicker = () => {
+  moveTicker = (delta) => {
     if (!this.sprite) return
-    this.sprite.tilePosition.x += this.move.x
-    this.sprite.tilePosition.y += this.move.y
+    this.sprite.tilePosition.x += this.move.x / 4
+    this.sprite.tilePosition.y += this.move.y / 4
   }
 }
 

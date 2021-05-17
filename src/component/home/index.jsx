@@ -107,7 +107,12 @@ const Home = ({ zoom }) => {
     }
   }, [appRef.current, sideIsOpen])
 
-  return <canvas ref={canvasRef} style={{ userSelect: 'none' }} />
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ userSelect: 'none', backgroundColor: '#000' }}
+    />
+  )
 }
 
 export default Home

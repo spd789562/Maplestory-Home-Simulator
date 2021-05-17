@@ -18,6 +18,7 @@ import MapObject from './map-object'
 import MapBack from './map-back'
 import Minimap from './minimap'
 import Furniture from './furniture'
+import Capture from './component/capture'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -84,7 +85,9 @@ class PixiAPP {
     this.app = new Application({
       width: this.canvas.width,
       height: this.canvas.height,
-      transparent: true,
+      backgroundColor: 0x666666,
+      backgroundAlpha: 0.5,
+      transparent: false,
       view: canvasRef,
       antialias: true,
     })
@@ -249,6 +252,10 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
+
+    this.$capture = new Capture(this)
+    this.$capture.position.set(0, this.canvas.height - 80)
+    this.app.stage.addChild(this.$capture)
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {

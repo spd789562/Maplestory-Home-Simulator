@@ -110,7 +110,9 @@ class Furniture {
     this.components = {}
 
     this.$placement = new FurniturePlacement({
+      handleMove: this.handleMove,
       handleFlip: this.handleFlip,
+      handleDuplicate: this.handleDuplicate,
       handleUpIndex: this.handleUpIndex,
       handleDownIndex: this.handleDownIndex,
       handleDelete: this.handleDelete,
@@ -530,9 +532,16 @@ class Furniture {
     )
   }
 
+  handleMove = () => {
+    console.log(123)
+    this.startDragFurniture()
+  }
   handleFlip = () => {
     this.flip = !this.flip
     this.pixiApp.event.emit('furnitureUpdate', this)
+  }
+  handleDuplicate = () => {
+    this.pixiApp.placeNewFurniture(this.furnitureID)
   }
   handleUpIndex = () => {
     const maxIndex = this.pixiApp.maxZIndex

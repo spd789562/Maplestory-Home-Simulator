@@ -6,7 +6,7 @@ import { InfoOutlined } from '@ant-design/icons'
 
 /* utils */
 import { entries } from '@utils/ramda'
-import { __, includes, keys, prop, values, map } from 'ramda'
+import { __, includes, keys, prop, values, map, uniq, indexBy } from 'ramda'
 
 /* mapping */
 import StringMapping from '@mapping/furniture-string'
@@ -22,13 +22,15 @@ const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
         {entries(([key, { info, itemID, ...applyObjs }]) => {
           const mappedString = StringMapping[+itemID] || {}
           const needFields = values(applyObjs)
-          const changeFileds = [type, ...map(prop('name'), needFields)]
+          const applyObj = indexBy(prop('name'), needFields)
+          const changeFileds = uniq([type, ...map(prop('name'), needFields)])
           const matchFileds = currentSelectFields.filter(
             includes(__, changeFileds)
           )
           const hasTheme =
-            matchFileds.filter((field) => currentThemeData[field] === key)
-              .length > 0
+            matchFileds.filter(
+              (field) => currentThemeData[field] === applyObj[field]?.state
+            ).length >= needFields.length
           return (
             <Col span={6} key={itemID}>
               <div

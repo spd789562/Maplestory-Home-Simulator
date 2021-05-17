@@ -21,7 +21,7 @@ class Capture extends Graphics {
     this._iconScale = this._iconLimitSize / this._iconSize
     this.$icon = new PIXIFontAwesome(faCameraRetro, { fill: this._iconColor })
 
-    this.alpha = 0.7
+    this.alpha = 0.5
     this.$icon.scale.set(this._iconScale)
     // this.$icon.pivot.set(0.5, 0.5)
     this.$icon.position.set(

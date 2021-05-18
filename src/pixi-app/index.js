@@ -72,7 +72,7 @@ const getMapObjects = pipe(
   flatten
 )
 
-const HF_HEIGHT = 180
+const HF_HEIGHT = 160
 const fakeTheme = 's1'
 const defaultTheme = '0'
 

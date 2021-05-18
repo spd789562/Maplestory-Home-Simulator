@@ -268,7 +268,7 @@ class PixiAPP {
     const objects = values(this.homeObject[objectType])
     objects.forEach((object) => object.changeTheme(theme))
   }
-  placeNewFurniture(id) {
+  placeNewFurniture(id, flip = false) {
     if (this.activeFurniture && this.activeFurniture.id === id) return
     /* cancel drag current moving furniture before change */
     this.activeFurniture && this.activeFurniture.cancelDrag()
@@ -276,6 +276,7 @@ class PixiAPP {
     const _furniture = new Furniture(this, {
       id: `f${new Date().getTime()}${Math.random().toString(16)}`,
       furnitureID: id,
+      flip: !!flip,
     })
     _furniture.isFirst = true
     _furniture.isDrag = true

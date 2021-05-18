@@ -317,6 +317,7 @@ class Furniture {
           !this.$placement.parent && this.$container.addChild(this.$placement)
         })
         .on('pointerdown', (e) => {
+          !this.$placement.parent && this.$container.addChild(this.$placement)
           const points = (this.dragEvent || e).data.getLocalPosition(
             this.app.layers[this.layerIndex]
           )
@@ -324,7 +325,11 @@ class Furniture {
             this.$furniture.emit('pointerdown', e)
           }
         })
+        .on('pointermove', (event) => {
+          this.isDrag && event.stopPropagation()
+        })
         .on('pointerout', () => {
+          console.log('out')
           this.$placement.parent && this.$container.removeChild(this.$placement)
         })
 
@@ -485,6 +490,8 @@ class Furniture {
       this.pixiApp.activeFurniture = null
       this.isFirst = false
       this.pixiApp.event.emit('furnitureUpdate', this)
+
+      this.$placement.parent && this.$container.removeChild(this.$placement)
     } else if (this.isFirst) {
       this.destroyWhenDrag()
     }
@@ -533,7 +540,6 @@ class Furniture {
   }
 
   handleMove = () => {
-    console.log(123)
     this.startDragFurniture()
   }
   handleFlip = () => {
@@ -541,7 +547,8 @@ class Furniture {
     this.pixiApp.event.emit('furnitureUpdate', this)
   }
   handleDuplicate = () => {
-    this.pixiApp.placeNewFurniture(this.furnitureID)
+    this.pixiApp.placeNewFurniture(this.furnitureID, this.flip)
+    this.$container.emit('pointerout')
   }
   handleUpIndex = () => {
     const maxIndex = this.pixiApp.maxZIndex

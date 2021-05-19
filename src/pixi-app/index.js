@@ -215,7 +215,7 @@ class PixiAPP {
     })
   }
   setVisibleRect = () => {
-    this.visibleRect = this.viewport.getVisibleBounds()
+    this.visibleRect = this.viewport?.getVisibleBounds()
     this.$minimap && this.$minimap.update()
   }
   createLayer(index) {

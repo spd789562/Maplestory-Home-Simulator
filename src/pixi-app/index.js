@@ -110,6 +110,11 @@ class PixiAPP {
     this.event = new EventEmitter()
     this.event.addListener('furnitureUpdate', this.handleUpdateFurniture)
     this.event.addListener('furnitureDelete', this.handleDeleteFurniture)
+
+    /* capture button */
+    this.$capture = new Capture(this)
+    this.$capture.position.set(0, this.canvas.height - 80)
+    this.app.stage.addChild(this.$capture)
   }
   /**
    * @param {string} selectId
@@ -252,10 +257,9 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
-
-    this.$capture = new Capture(this)
-    this.$capture.position.set(0, this.canvas.height - 80)
-    this.app.stage.addChild(this.$capture)
+  }
+  initialFurniture(furnitures) {
+    furnitures.forEach((furniture) => new Furniture(this, furniture))
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
@@ -315,6 +319,9 @@ class PixiAPP {
     allMapBack.forEach((back) => back.render())
   }
   renderGrid() {
+    if (!this.$map) {
+      return
+    }
     if (this.$gridLayer) {
       this.$gridLayer.alpha = +this.showGrid
     } else {

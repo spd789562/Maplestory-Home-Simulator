@@ -329,7 +329,6 @@ class Furniture {
           this.isDrag && event.stopPropagation()
         })
         .on('pointerout', () => {
-          console.log('out')
           this.$placement.parent && this.$container.removeChild(this.$placement)
         })
 

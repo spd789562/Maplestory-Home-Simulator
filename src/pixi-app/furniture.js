@@ -133,6 +133,7 @@ class Furniture {
      */
     this.$furniture = new Container()
     this.$furniture.sortableChildren = true
+    this.$furniture.hitArea = this.furnitureArea
 
     /**
      * Initialize position

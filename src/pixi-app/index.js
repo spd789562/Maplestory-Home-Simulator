@@ -140,16 +140,12 @@ class PixiAPP {
       map(Number)
     )(this.mapData.info)
     this.center = {
-      x: +this.mapData.miniMap.centerX || Math.abs(this.edge.left),
-      y: +this.mapData.miniMap.centerY || Math.abs(this.edge.top),
+      x: Math.abs(this.edge.left),
+      y: Math.abs(this.edge.top),
     }
     this.world = {
-      width:
-        +this.mapData.miniMap.width ||
-        Math.abs(this.edge.right) + Math.abs(this.edge.left),
-      height:
-        +this.mapData.miniMap.height ||
-        Math.abs(this.edge.top) + Math.abs(this.edge.bottom),
+      width: Math.abs(this.edge.right) + Math.abs(this.edge.left),
+      height: Math.abs(this.edge.top) + Math.abs(this.edge.bottom),
     }
 
     this.viewport = new Viewport({

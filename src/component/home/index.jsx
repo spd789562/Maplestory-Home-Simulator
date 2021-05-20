@@ -8,7 +8,12 @@ import {
   HOUSE_UPDATE_FURNITURE,
   HOUSE_DELETE_FURNITURE,
 } from '@store/house'
-import { ENTER_EDIT, UPDATE_ZOOM_RANGE, UPDATE_ZOOM_VALUE } from '@store/meta'
+import {
+  ENTER_EDIT,
+  EXIT_EDIT,
+  UPDATE_ZOOM_RANGE,
+  UPDATE_ZOOM_VALUE,
+} from '@store/meta'
 
 /* components */
 import PixiAPP from '../../pixi-app'
@@ -31,7 +36,13 @@ const Home = ({ zoom }) => {
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const [activeFurnitureID] = useStore('active-furniture')
   const [sideIsOpen] = useStore('meta.side.open')
-  const handleEsc = () => appRef.current?.activeFurniture?.cancelDrag()
+  const handleEsc = () => {
+    if (appRef.current?.activeFurniture) {
+      appRef.current.activeFurniture.cancelDrag()
+    } else {
+      dispatch({ type: EXIT_EDIT })
+    }
+  }
   const handleDelete = () => appRef.current?.activeFurniture?.handleDelete()
   const onKeydown = ({ keyCode }) => {
     switch (keyCode) {

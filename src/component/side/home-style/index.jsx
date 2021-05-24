@@ -29,10 +29,12 @@ const selectOptions = keys(ParsedTheme).map((value) => ({
 
 const HomeStyle = ({ t }) => {
   const [currentIndex, dispatch] = useStore('house.current')
-  const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
+  const [currentHomeData = {}] = useStore(`house.houses.${currentIndex}`)
   const theme = getTheme(currentHomeData.selectId)
-  const [currentTheme, setCurrentTheme] = useState(theme)
-  useEffect(() => setCurrentTheme(theme), [theme])
+  const [currentTheme, setCurrentTheme] = useState('christmax')
+  useEffect(() => {
+    theme && setCurrentTheme(theme)
+  }, [theme])
 
   const handleChange = (applyObjs) => () => {
     if (currentTheme === theme) {

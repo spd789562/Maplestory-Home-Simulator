@@ -18,6 +18,7 @@ import MapObject from './map-object'
 import MapBack from './map-back'
 import Minimap from './minimap'
 import Furniture from './furniture'
+import Capture from './component/capture'
 
 /* utils */
 import isClient from '@utils/is-client'
@@ -71,7 +72,7 @@ const getMapObjects = pipe(
   flatten
 )
 
-const HF_HEIGHT = 180
+const HF_HEIGHT = 160
 const fakeTheme = 's1'
 const defaultTheme = '0'
 
@@ -84,7 +85,9 @@ class PixiAPP {
     this.app = new Application({
       width: this.canvas.width,
       height: this.canvas.height,
-      transparent: true,
+      backgroundColor: 0x666666,
+      backgroundAlpha: 0.5,
+      transparent: false,
       view: canvasRef,
       antialias: true,
     })
@@ -107,6 +110,11 @@ class PixiAPP {
     this.event = new EventEmitter()
     this.event.addListener('furnitureUpdate', this.handleUpdateFurniture)
     this.event.addListener('furnitureDelete', this.handleDeleteFurniture)
+
+    /* capture button */
+    this.$capture = new Capture(this)
+    this.$capture.position.set(0, this.canvas.height - 80)
+    this.app.stage.addChild(this.$capture)
   }
   /**
    * @param {string} selectId
@@ -132,16 +140,12 @@ class PixiAPP {
       map(Number)
     )(this.mapData.info)
     this.center = {
-      x: +this.mapData.miniMap.centerX || Math.abs(this.edge.left),
-      y: +this.mapData.miniMap.centerY || Math.abs(this.edge.top),
+      x: Math.abs(this.edge.left),
+      y: Math.abs(this.edge.top),
     }
     this.world = {
-      width:
-        +this.mapData.miniMap.width ||
-        Math.abs(this.edge.right) + Math.abs(this.edge.left),
-      height:
-        +this.mapData.miniMap.height ||
-        Math.abs(this.edge.top) + Math.abs(this.edge.bottom),
+      width: Math.abs(this.edge.right) + Math.abs(this.edge.left),
+      height: Math.abs(this.edge.top) + Math.abs(this.edge.bottom),
     }
 
     this.viewport = new Viewport({
@@ -156,10 +160,12 @@ class PixiAPP {
     const maxZoomWidthScale = this.world.width / this.canvas.width
     const maxZoomHeightScale = this.world.height / this.canvas.height
     const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
+    this.event.emit('zoomRange', 1 / maxZoomScale, 3)
     // limit zoom range
     this.viewport
       .clampZoom({
         maxWidth: this.canvas.width * maxZoomScale,
+        minWidth: this.canvas.width / 3,
       })
       .clamp({
         left: this.edge.left,
@@ -174,6 +180,9 @@ class PixiAPP {
       .wheel()
       .setZoom(Math.min(maxZoomScale, this.viewZoom))
       .on('moved', this.setVisibleRect)
+      .on('wheel', (event) =>
+        this.event.emit('zoom', event.viewport.lastViewport.scaleX)
+      )
       .on('zoomed-end', (event) => {
         this.viewZoom = event.lastViewport.scaleX
       })
@@ -191,16 +200,21 @@ class PixiAPP {
     this.renderMap()
   }
   updateAPPWidth(width) {
+    if (!this.viewport) {
+      return
+    }
     this.viewport.screenWidth = width
     const maxZoomWidthScale = this.world.width / width
     const maxZoomHeightScale = this.world.height / this.canvas.height
     const maxZoomScale = Math.max(maxZoomWidthScale, maxZoomHeightScale)
+    this.event.emit('zoomRange', 1 / maxZoomScale, 3)
     this.viewport.clampZoom({
       maxWidth: width * maxZoomScale,
+      minWidth: width / 3,
     })
   }
   setVisibleRect = () => {
-    this.visibleRect = this.viewport.getVisibleBounds()
+    this.visibleRect = this.viewport?.getVisibleBounds()
     this.$minimap && this.$minimap.update()
   }
   createLayer(index) {
@@ -243,6 +257,9 @@ class PixiAPP {
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
   }
+  initialFurniture(furnitures) {
+    furnitures.forEach((furniture) => new Furniture(this, furniture))
+  }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
       const themeType = +value === 0 ? value : `s${value}`
@@ -254,7 +271,7 @@ class PixiAPP {
     const objects = values(this.homeObject[objectType])
     objects.forEach((object) => object.changeTheme(theme))
   }
-  placeNewFurniture(id) {
+  placeNewFurniture(id, flip = false) {
     if (this.activeFurniture && this.activeFurniture.id === id) return
     /* cancel drag current moving furniture before change */
     this.activeFurniture && this.activeFurniture.cancelDrag()
@@ -262,6 +279,7 @@ class PixiAPP {
     const _furniture = new Furniture(this, {
       id: `f${new Date().getTime()}${Math.random().toString(16)}`,
       furnitureID: id,
+      flip: !!flip,
     })
     _furniture.isFirst = true
     _furniture.isDrag = true
@@ -300,6 +318,9 @@ class PixiAPP {
     allMapBack.forEach((back) => back.render())
   }
   renderGrid() {
+    if (!this.$map) {
+      return
+    }
     if (this.$gridLayer) {
       this.$gridLayer.alpha = +this.showGrid
     } else {
@@ -391,8 +412,10 @@ class PixiAPP {
     this.$map.mask = mask
   }
   destroy() {
-    this.app.stop()
-    this.app && this.app.destroy()
+    if (this.app) {
+      this.app.stop()
+      this.app.destroy()
+    }
   }
 
   handleUpdateFurniture = (e) => {
@@ -414,6 +437,13 @@ class PixiAPP {
     this.showGrid = isEdit
     this.renderGrid()
     this.event.emit('editChange', isEdit)
+  }
+  get zoom() {
+    return this.viewport ? this.viewport.scaled : 1
+  }
+  set zoom(scale) {
+    this.setVisibleRect()
+    this.viewport?.setZoom(scale, true)
   }
   get activeFurniture() {
     return this._activeFurniture

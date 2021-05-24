@@ -23,8 +23,6 @@ import {
   equals,
 } from 'ramda'
 
-import Home from '@modules/home'
-
 export const HOUSE_CHANGE = 'HOUSE_CHANGE'
 export const HOUSE_REORDER = 'HOUSE_REORDER'
 export const HOUSE_INITIAL = 'HOUSE_INITIAL'
@@ -36,7 +34,7 @@ export const HOUSE_DUPLICATE = 'HOUSE_DUPLICATE'
 export const HOUSE_DELETE = 'HOUSE_DELETE'
 
 const initialState = {
-  houses: [new Home('017')],
+  houses: [],
   current: 0,
   lastId: 1000000,
 }
@@ -54,12 +52,7 @@ const reducer = reducerCreator(initialState, {
   [HOUSE_INITIAL]: (state, payload) =>
     evolve(
       {
-        houses: concat(
-          __,
-          (Array.isArray(payload) ? payload : [payload]).map((c, index) =>
-            assoc('id', state.lastId + 1 + index, c)
-          )
-        ),
+        houses: () => (Array.isArray(payload) ? payload : [payload]),
         lastId: add((Array.isArray(payload) ? payload : [payload]).length),
       },
       state

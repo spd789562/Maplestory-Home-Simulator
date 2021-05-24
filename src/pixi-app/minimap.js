@@ -38,8 +38,20 @@ class Minimap extends Container {
       this.multipleRate(visibleRect.x),
       this.multipleRate(visibleRect.y)
     )
-    this.$viewable.width = this.multipleRate(visibleRect.width)
-    this.$viewable.height = this.multipleRate(visibleRect.height)
+    // this.$viewable.width = this.multipleRate(visibleRect.width)
+    // this.$viewable.height = this.multipleRate(visibleRect.height)
+
+    this.$viewable.clear()
+    this.$viewable.beginFill(0xffffff, 0.5)
+    this.$viewable.lineStyle(1, 0xffffff)
+    const viewable = this.$viewable.drawRect(
+      0,
+      0,
+      this.multipleRate(visibleRect.width),
+      this.multipleRate(visibleRect.height)
+    )
+    viewable.alpha = 0.5
+    this.$viewable.endFill()
   }
   moveVisible = (event) => {
     const mapPosition = event.data.getLocalPosition(this.$minimap)

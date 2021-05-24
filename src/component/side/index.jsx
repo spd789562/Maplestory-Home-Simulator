@@ -1,4 +1,5 @@
 import { useMemo, useCallback } from 'react'
+import { withTranslation } from '@i18n'
 
 /* store */
 import { useStore } from '@store'
@@ -19,7 +20,7 @@ const TabMapping = [
   { id: 2, title: 'tab_setting', component: <Setting /> },
 ]
 
-const Side = () => {
+const Side = ({ t }) => {
   const [{ open, current: currentId }, dispatch] = useStore('meta.side')
   const currentTab = useMemo(() => TabMapping[currentId] || {}, [currentId])
   const width = Math.min(isClient() ? window.innerWidth - 30 : 300, 300)
@@ -29,7 +30,7 @@ const Side = () => {
   )
   return (
     <Drawer
-      title={currentTab.title}
+      title={t(currentTab.title)}
       placement="right"
       mask={false}
       visible={open}
@@ -43,4 +44,4 @@ const Side = () => {
   )
 }
 
-export default Side
+export default withTranslation()(Side)

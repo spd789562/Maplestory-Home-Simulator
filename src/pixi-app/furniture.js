@@ -110,7 +110,9 @@ class Furniture {
     this.components = {}
 
     this.$placement = new FurniturePlacement({
+      handleMove: this.handleMove,
       handleFlip: this.handleFlip,
+      handleDuplicate: this.handleDuplicate,
       handleUpIndex: this.handleUpIndex,
       handleDownIndex: this.handleDownIndex,
       handleDelete: this.handleDelete,
@@ -131,6 +133,7 @@ class Furniture {
      */
     this.$furniture = new Container()
     this.$furniture.sortableChildren = true
+    this.$furniture.hitArea = this.furnitureArea
 
     /**
      * Initialize position
@@ -315,12 +318,16 @@ class Furniture {
           !this.$placement.parent && this.$container.addChild(this.$placement)
         })
         .on('pointerdown', (e) => {
+          !this.$placement.parent && this.$container.addChild(this.$placement)
           const points = (this.dragEvent || e).data.getLocalPosition(
             this.app.layers[this.layerIndex]
           )
           if (this.furnitureArea.contains(points.x, points.y)) {
             this.$furniture.emit('pointerdown', e)
           }
+        })
+        .on('pointermove', (event) => {
+          this.isDrag && event.stopPropagation()
         })
         .on('pointerout', () => {
           this.$placement.parent && this.$container.removeChild(this.$placement)
@@ -483,6 +490,8 @@ class Furniture {
       this.pixiApp.activeFurniture = null
       this.isFirst = false
       this.pixiApp.event.emit('furnitureUpdate', this)
+
+      this.$placement.parent && this.$container.removeChild(this.$placement)
     } else if (this.isFirst) {
       this.destroyWhenDrag()
     }
@@ -530,9 +539,16 @@ class Furniture {
     )
   }
 
+  handleMove = () => {
+    this.startDragFurniture()
+  }
   handleFlip = () => {
     this.flip = !this.flip
     this.pixiApp.event.emit('furnitureUpdate', this)
+  }
+  handleDuplicate = () => {
+    this.pixiApp.placeNewFurniture(this.furnitureID, this.flip)
+    this.$container.emit('pointerout')
   }
   handleUpIndex = () => {
     const maxIndex = this.pixiApp.maxZIndex

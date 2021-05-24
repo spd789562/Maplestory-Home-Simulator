@@ -6,19 +6,28 @@ import {
   faAngleDown,
   faAngleDoubleUp,
   faAngleDoubleDown,
+  faCopy,
   faExchangeAlt,
   faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons'
 
 class FurniturePlacement extends Container {
-  constructor({ handleFlip, handleUpIndex, handleDownIndex, handleDelete }) {
+  constructor({
+    handleMove,
+    handleFlip,
+    handleDuplicate,
+    handleUpIndex,
+    handleDownIndex,
+    handleDelete,
+  }) {
     super()
-    this.$move = new IconButton(faArrowsAlt)
+    this.$move = new IconButton(faArrowsAlt, { handleClick: handleMove })
     this.$flip = new IconButton(faExchangeAlt, { handleClick: handleFlip })
     this.$indexUp = new IconButton(faAngleUp, { handleClick: handleUpIndex })
     this.$indexDown = new IconButton(faAngleDown, {
       handleClick: handleDownIndex,
     })
+    this.$dupicate = new IconButton(faCopy, { handleClick: handleDuplicate })
     // this.$indexTop = new IconButton(faAngleDoubleUp)
     // this.$indexBottom = new IconButton(faAngleDoubleDown)
     this.$delete = new IconButton(faTrashAlt, {
@@ -30,6 +39,7 @@ class FurniturePlacement extends Container {
     const elements = [
       this.$move,
       this.$flip,
+      this.$dupicate,
       this.$indexUp,
       this.$indexDown,
       // this.$indexTop,

@@ -1,6 +1,7 @@
 import { reducerCreator } from './_helper'
 import { append, equals, find, identity, ifElse, pipe, without } from 'ramda'
 
+export const INITIAL_FAVORITE_FURNITURE = 'INITIAL_FAVORITE_FURNITURE'
 export const ADD_FAVORITE_FURNITURE = 'ADD_FAVORITE_FURNITURE'
 export const REMOVE_FAVORITE_FURNITURE = 'REMOVE_FAVORITE_FURNITURE'
 export const CLEAR_FAVORITE_FURNITURE = 'CLEAR_FAVORITE_FURNITURE'
@@ -13,6 +14,7 @@ const SaveToStorage = (state) => {
 }
 
 const reducer = reducerCreator(initialState, {
+  [INITIAL_FAVORITE_FURNITURE]: (_, furnitures) => furnitures,
   [ADD_FAVORITE_FURNITURE]: (state, id) =>
     pipe(ifElse(find(equals(id)), identity, append(id)), SaveToStorage)(state),
   [REMOVE_FAVORITE_FURNITURE]: (state, id) =>

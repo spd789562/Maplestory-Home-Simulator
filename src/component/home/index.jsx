@@ -1,16 +1,26 @@
-import { useEffect, createRef, useRef } from 'react'
+import { useEffect, createRef, useRef, memo } from 'react'
 
 /* store */
 import { useStore } from '@store'
 import { CLEAR_ACTIVE_FURNITURE } from '@store/active-furniture'
-import { HOUSE_UPDATE_FURNITURE, HOUSE_DELETE_FURNITURE } from '@store/house'
-import { ENTER_EDIT } from '@store/meta'
+import {
+  HOUSE_INITIAL,
+  HOUSE_UPDATE_FURNITURE,
+  HOUSE_DELETE_FURNITURE,
+} from '@store/house'
+import {
+  ENTER_EDIT,
+  EXIT_EDIT,
+  UPDATE_ZOOM_RANGE,
+  UPDATE_ZOOM_VALUE,
+} from '@store/meta'
 
 /* components */
 import PixiAPP from '../../pixi-app'
 
 /* uitls */
 import { pickAll } from 'ramda'
+import HomeModule from '@modules/home'
 
 const canvasRef = createRef()
 const appRef = createRef()
@@ -18,13 +28,21 @@ const appRef = createRef()
 const ESC_KEY_CODE = 27
 const DELETE_KEY_CODE = 46
 
-const Home = () => {
+let _isInit = false
+
+const Home = ({ zoom }) => {
   const [currentIndex, dispatch] = useStore('house.current')
   const [edit] = useStore('meta.edit')
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const [activeFurnitureID] = useStore('active-furniture')
   const [sideIsOpen] = useStore('meta.side.open')
-  const handleEsc = () => appRef.current?.activeFurniture?.cancelDrag()
+  const handleEsc = () => {
+    if (appRef.current?.activeFurniture) {
+      appRef.current.activeFurniture.cancelDrag()
+    } else {
+      dispatch({ type: EXIT_EDIT })
+    }
+  }
   const handleDelete = () => appRef.current?.activeFurniture?.handleDelete()
   const onKeydown = ({ keyCode }) => {
     switch (keyCode) {
@@ -48,6 +66,12 @@ const Home = () => {
   const onDeleteFurniture = (furniture) => {
     dispatch({ type: HOUSE_DELETE_FURNITURE, payload: furniture.id })
   }
+  const onZoom = (zoom) => {
+    dispatch({ type: UPDATE_ZOOM_VALUE, payload: zoom })
+  }
+  const onZoomRange = (min, max) => {
+    dispatch({ type: UPDATE_ZOOM_RANGE, payload: { min, max } })
+  }
   useEffect(() => {
     if (canvasRef.current) {
       appRef.current = new PixiAPP(canvasRef.current)
@@ -57,6 +81,8 @@ const Home = () => {
         'furnitureCancelPlace',
         onCancelFurniture
       )
+      appRef.current.event.addListener('zoom', onZoom)
+      appRef.current.event.addListener('zoomRange', onZoomRange)
       window.addEventListener('keydown', onKeydown)
     }
     return () => {
@@ -67,8 +93,23 @@ const Home = () => {
   useEffect(() => {
     const app = appRef.current
     if (app) {
-      app.changeHomeMap(currentHomeData.selectId)
-      app.applyHomeTheme(currentHomeData.theme)
+      let _data = currentHomeData
+      const _localData = window.localStorage.getItem('HOUSE_SIMULATOR_houses')
+      const localData =
+        _localData && JSON.parse(_localData)[0]
+          ? JSON.parse(_localData)
+          : [new HomeModule('017')]
+      if (!_isInit && localData && localData[0]) {
+        dispatch({ type: HOUSE_INITIAL, payload: localData })
+        _data = localData[0]
+      }
+      if (_data) {
+        app.changeHomeMap(_data.selectId)
+        app.applyHomeTheme(_data.theme)
+        !_isInit && app.initialFurniture(_data.furnitures)
+
+        _isInit = true
+      }
     }
   }, [appRef.current, currentHomeData])
 
@@ -78,6 +119,12 @@ const Home = () => {
       app.isEdit = edit
     }
   }, [appRef.current, edit])
+  useEffect(() => {
+    const app = appRef.current
+    if (app) {
+      app.zoom = zoom
+    }
+  }, [appRef.current, zoom])
   useEffect(() => {
     const app = appRef.current
     if (app && activeFurnitureID) {
@@ -93,7 +140,12 @@ const Home = () => {
     }
   }, [appRef.current, sideIsOpen])
 
-  return <canvas ref={canvasRef} style={{ userSelect: 'none' }} />
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ userSelect: 'none', backgroundColor: '#000' }}
+    />
+  )
 }
 
-export default Home
+export default memo(Home)

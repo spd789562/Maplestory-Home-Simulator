@@ -200,6 +200,9 @@ class PixiAPP {
     this.renderMap()
   }
   updateAPPWidth(width) {
+    if (!this.viewport) {
+      return
+    }
     this.viewport.screenWidth = width
     const maxZoomWidthScale = this.world.width / width
     const maxZoomHeightScale = this.world.height / this.canvas.height
@@ -409,8 +412,10 @@ class PixiAPP {
     this.$map.mask = mask
   }
   destroy() {
-    this.app.stop()
-    this.app && this.app.destroy()
+    if (this.app) {
+      this.app.stop()
+      this.app.destroy()
+    }
   }
 
   handleUpdateFurniture = (e) => {
@@ -434,11 +439,11 @@ class PixiAPP {
     this.event.emit('editChange', isEdit)
   }
   get zoom() {
-    return this.viewport.scaled
+    return this.viewport ? this.viewport.scaled : 1
   }
   set zoom(scale) {
     this.setVisibleRect()
-    return this.viewport.setZoom(scale, true)
+    this.viewport?.setZoom(scale, true)
   }
   get activeFurniture() {
     return this._activeFurniture

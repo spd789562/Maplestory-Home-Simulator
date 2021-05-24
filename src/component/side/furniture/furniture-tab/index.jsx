@@ -4,6 +4,7 @@ import { memo, useCallback, useState, useMemo } from 'react'
 import { Row, Col } from 'antd'
 import Item from '../item'
 import { Grid, AutoSizer } from 'react-virtualized'
+import FilterSelect from './filter-select'
 
 /* utils */
 import {
@@ -48,22 +49,26 @@ const FurnitureTab = () => {
     }
   )
   return (
-    <div style={{ height: 'calc(100vh - 150px)', paddingRight: 6 }}>
-      <AutoSizer>
-        {({ height, width }) => {
-          return (
-            <Grid
-              cellRenderer={cellRenderer}
-              columnCount={COLUMN_COUNT}
-              columnWidth={width / COLUMN_COUNT}
-              height={height}
-              rowCount={Math.ceil(filteredFurniture.length / COLUMN_COUNT)}
-              rowHeight={width / COLUMN_COUNT}
-              width={width}
-            />
-          )
-        }}
-      </AutoSizer>
+    <div>
+      <FilterSelect onChange={setFilterCallback} />
+      <div style={{ height: 'calc(100vh - 200px)', paddingRight: 6 }}>
+        <AutoSizer>
+          {({ height, width }) => {
+            return (
+              <Grid
+                cellRenderer={cellRenderer}
+                columnCount={COLUMN_COUNT}
+                columnWidth={width / COLUMN_COUNT}
+                height={height}
+                rowCount={Math.ceil(filteredFurniture.length / COLUMN_COUNT)}
+                rowHeight={width / COLUMN_COUNT}
+                width={width}
+                style={{ outline: 'none' }}
+              />
+            )
+          }}
+        </AutoSizer>
+      </div>
     </div>
   )
 }

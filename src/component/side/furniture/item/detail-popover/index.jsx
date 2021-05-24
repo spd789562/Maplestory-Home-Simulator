@@ -48,7 +48,7 @@ const DetailPopover = ({ t, id, children }) => {
       }
       content={() => (
         <div style={{ maxWidth: 200, whiteSpace: 'pre-wrap' }}>
-          {mappedString.desc}
+          {mappedString.desc.replace(/\\r\\n/g, '\r\n')}
           {furniture.info.type && (
             <>
               <div style={{ margin: '0 -14px' }}>

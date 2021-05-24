@@ -4,9 +4,9 @@ import Head from 'next/head'
 import { Layout, Select, BackTop } from 'antd'
 import { appWithTranslation, withTranslation, Link } from '../src/i18n'
 import { Provider } from '../src/store'
+import 'react-virtualized/styles.css'
 import '../styles/antd.less'
 import '../styles/globals.css'
-import 'react-virtualized/styles.css'
 
 import styles from '../styles/Home.module.css'
 

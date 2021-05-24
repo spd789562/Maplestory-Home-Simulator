@@ -16,3 +16,7 @@ a {
 ::-webkit-scrollbar {
   display: none;
 }
+
+.ReactVirtualized__Grid {
+  outline: none;
+}

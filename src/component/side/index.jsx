@@ -10,6 +10,7 @@ import { Drawer } from 'antd'
 import Tabs from './tabs'
 import HomeStyle from './home-style'
 import FurnitureList from './furniture'
+import Layer from './layer'
 import Setting from './setting'
 
 import isClient from '@utils/is-client'
@@ -17,7 +18,8 @@ import isClient from '@utils/is-client'
 const TabMapping = [
   { id: 0, title: 'tab_home_style', component: <HomeStyle /> },
   { id: 1, title: 'tab_furniture', component: <FurnitureList /> },
-  { id: 2, title: 'tab_setting', component: <Setting /> },
+  { id: 2, title: 'tab_layer', component: <Layer /> },
+  { id: 3, title: 'tab_setting', component: <Setting /> },
 ]
 
 const Side = ({ t }) => {

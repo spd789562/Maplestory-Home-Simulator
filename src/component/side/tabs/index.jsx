@@ -8,6 +8,7 @@ import {
   faPlay,
   faHome,
   faCouch,
+  faLayerGroup,
   faCog,
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +18,8 @@ import styles from './tabs.module.scss'
 const TabMapping = [
   { id: 0, icon: faHome },
   { id: 1, icon: faCouch },
-  { id: 2, icon: faCog },
+  { id: 2, icon: faLayerGroup },
+  { id: 3, icon: faCog },
 ]
 
 const Tabs = () => {

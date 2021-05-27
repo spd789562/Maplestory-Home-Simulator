@@ -6,6 +6,7 @@ import { CLEAR_ACTIVE_FURNITURE } from '@store/active-furniture'
 import {
   HOUSE_INITIAL,
   HOUSE_UPDATE_FURNITURE,
+  HOUSE_UPDATE_FURNITURE_INDEX,
   HOUSE_DELETE_FURNITURE,
 } from '@store/house'
 import {
@@ -63,6 +64,12 @@ const Home = ({ zoom }) => {
       payload: pickAll(['id', 'furnitureID', 'position', 'flip'], furniture),
     })
   }
+  const onUpdateFurnitureZindex = (payload) => {
+    dispatch({
+      type: HOUSE_UPDATE_FURNITURE_INDEX,
+      payload: payload,
+    })
+  }
   const onDeleteFurniture = (furniture) => {
     dispatch({ type: HOUSE_DELETE_FURNITURE, payload: furniture.id })
   }
@@ -83,6 +90,7 @@ const Home = ({ zoom }) => {
       )
       appRef.current.event.addListener('zoom', onZoom)
       appRef.current.event.addListener('zoomRange', onZoomRange)
+      appRef.current.event.addListener('zIndexUpdate', onUpdateFurnitureZindex)
       window.addEventListener('keydown', onKeydown)
     }
     return () => {

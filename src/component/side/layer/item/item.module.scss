@@ -1,0 +1,30 @@
+.item {
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color: #fff;
+  // border-radius: 8px;
+  // &:not(:last-child) {
+  //   border-bottom-left-radius: 0;
+  //   border-bottom-right-radius: 0;
+  //   border-bottom: 1px solid #ccc;
+  // }
+  // &:not(:first-of-type) {
+  //   border-top-left-radius: 0;
+  //   border-top-right-radius: 0;
+  // }
+  &:last-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  &:first-of-type {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px dashed #ddd;
+  }
+  &__drag {
+    border-radius: 8px;
+    box-shadow: 0 0 10px #333;
+  }
+}

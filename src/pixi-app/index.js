@@ -258,7 +258,11 @@ class PixiAPP {
     this.app.stage.addChild(this.$minimap)
   }
   initialFurniture(furnitures) {
-    furnitures.forEach((furniture) => new Furniture(this, furniture))
+    furnitures.forEach((furniture) => {
+      const f = new Furniture(this, furniture)
+      f.updateGrid(f.position, 1)
+      this.furnitures.push(f)
+    })
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {

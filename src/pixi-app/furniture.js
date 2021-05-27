@@ -88,7 +88,7 @@ class Furniture {
     this.position = {
       x: furnitureData.position?.x || 0,
       y: furnitureData.position?.y || 0,
-      z: 1,
+      z: furnitureData.position?.z || 1,
       floor:
         (furnitureData.position?.floor &&
           pixiApp.mapData.housingGrid[furnitureData.position.floor] &&
@@ -576,7 +576,7 @@ class Furniture {
       minIndexFurnitureCount === 1
     ) {
       this.pixiApp.swapFurnituresIndex(this.zIndex, minIndex)
-    } else if (nextIndex > minIndex || minIndexFurnitureCount > 1) {
+    } else if (nextIndex >= minIndex || minIndexFurnitureCount > 1) {
       this.zIndex = nextIndex
     }
   }
@@ -635,8 +635,15 @@ class Furniture {
     } else {
       this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
     }
-    this.pixiApp.event.emit('furnitureUpdate', this)
-    this.pixiApp.event.emit('zIndexUpdate', this.pixiApp.furnitures)
+    const itemIndex = this.app.layers[this.layerIndex].getChildIndex(
+      this.$container
+    )
+    // this.pixiApp.event.emit('furnitureUpdate', this)
+    this.pixiApp.event.emit('zIndexUpdate', {
+      id: this.id,
+      z: index,
+      index: itemIndex,
+    })
   }
 }
 

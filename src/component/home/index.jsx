@@ -2,6 +2,7 @@ import { useEffect, createRef, useRef, memo } from 'react'
 
 /* store */
 import { useStore } from '@store'
+import { INIT_APP_REF } from '@store/app'
 import { CLEAR_ACTIVE_FURNITURE } from '@store/active-furniture'
 import {
   HOUSE_INITIAL,
@@ -82,6 +83,7 @@ const Home = ({ zoom }) => {
   useEffect(() => {
     if (canvasRef.current) {
       appRef.current = new PixiAPP(canvasRef.current)
+      dispatch({ type: INIT_APP_REF, payload: appRef })
       appRef.current.event.addListener('furnitureUpdate', onUpdateFurniture)
       appRef.current.event.addListener('furnitureDelete', onDeleteFurniture)
       appRef.current.event.addListener(

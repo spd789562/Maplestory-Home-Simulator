@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom'
 import { List, Avatar, Typography } from 'antd'
 import { Draggable } from 'react-beautiful-dnd'
 import { CloseOutlined } from '@ant-design/icons'
+import Delete from './delete'
 
 /* utils */
 import { isPoster } from '@utils/furniture'
@@ -31,7 +32,7 @@ const Item = ({ id, furnitureID, index }) => {
               snapshot.isDragging ? styles.item__drag : ''
             }`}
           >
-            <List.Item actions={[<CloseOutlined size="lg" />]}>
+            <List.Item actions={[<Delete id={id} />]}>
               <List.Item.Meta
                 avatar={
                   <Avatar

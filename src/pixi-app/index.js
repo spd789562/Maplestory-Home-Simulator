@@ -430,7 +430,13 @@ class PixiAPP {
   }
   handleDeleteFurniture = ({ id }) => {
     const idx = this.furnitures.findIndex((f) => f.id === id)
-    idx !== -1 && this.furnitures.splice(idx, 1)
+    if (id !== -1) {
+      const furniture = this.furnitures[idx]
+      /* clear placement */
+      furniture.updateGrid(furniture.position, 0)
+      furniture.destroyWhenDrag()
+      this.furnitures.splice(idx, 1)
+    }
   }
 
   get isEdit() {

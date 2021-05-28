@@ -22,7 +22,6 @@ const IndexBlock = ({ index, furnitures }) => {
           <div ref={provided.innerRef} {...provided.droppableProps}>
             {furnitures.map(({ id, furnitureID }, mapIndex) => {
               const _isPoster = isPoster(FurnitureMapping[furnitureID] || {})
-
               return <Item id={id} index={mapIndex} furnitureID={furnitureID} />
             })}
             {provided.placeholder}

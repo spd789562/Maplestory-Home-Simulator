@@ -581,10 +581,7 @@ class Furniture {
     }
   }
   handleDelete = () => {
-    /* clear placed */
-    this.updateGrid(this.position, 0)
     this.pixiApp.event.emit('furnitureDelete', this)
-    this.destroyWhenDrag()
   }
 
   static onFrameChange(sprite, frames) {

@@ -19,6 +19,7 @@ import {
 
 /* components */
 import PixiAPP from '../../pixi-app'
+import EditChange from './edit-change'
 
 /* uitls */
 import { pickAll } from 'ramda'
@@ -34,7 +35,6 @@ let _isInit = false
 
 const Home = ({ zoom }) => {
   const [currentIndex, dispatch] = useStore('house.current')
-  const [edit] = useStore('meta.edit')
   const [currentHomeData] = useStore(`house.houses.${currentIndex}`)
   const [activeFurnitureID] = useStore('active-furniture')
   const [sideIsOpen] = useStore('meta.side.open')
@@ -123,38 +123,14 @@ const Home = ({ zoom }) => {
     }
   }, [appRef.current, currentHomeData])
 
-  useEffect(() => {
-    const app = appRef.current
-    if (app) {
-      app.isEdit = edit
-    }
-  }, [appRef.current, edit])
-  useEffect(() => {
-    const app = appRef.current
-    if (app) {
-      app.zoom = zoom
-    }
-  }, [appRef.current, zoom])
-  useEffect(() => {
-    const app = appRef.current
-    if (app && activeFurnitureID) {
-      dispatch({ type: ENTER_EDIT })
-      app.placeNewFurniture(activeFurnitureID)
-    }
-  }, [appRef.current, activeFurnitureID])
-  useEffect(() => {
-    const app = appRef.current
-    if (app) {
-      const sideWidth = Math.min(window.innerWidth - 30, 300)
-      app.updateAPPWidth(window.innerWidth - (sideIsOpen ? sideWidth : 0))
-    }
-  }, [appRef.current, sideIsOpen])
-
   return (
-    <canvas
-      ref={canvasRef}
-      style={{ userSelect: 'none', backgroundColor: '#000' }}
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        style={{ userSelect: 'none', backgroundColor: '#000' }}
+      />
+      <EditChange />
+    </>
   )
 }
 

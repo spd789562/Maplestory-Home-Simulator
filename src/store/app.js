@@ -22,18 +22,18 @@ const reducer = reducerCreator(initialState, {
   [UPDATE_APP_EDIT]: creactFlow((app, isEdit) => {
     app.isEdit = isEdit
   }),
-  [UPDATE_APP_ZOOM]: creactFlow((app, isEdit) => {
-    app.zoom = zoom
+  [UPDATE_APP_ZOOM]: creactFlow((app, zoom) => {
+    app.zoom = zoom || 1
   }),
-  [UPDATE_APP_ACTIVE_FURNITURE]: creactFlow((app, activeFurnitureID) => {
-    activeFurnitureID && app.placeNewFurniture(activeFurnitureID)
+  [UPDATE_APP_ACTIVE_FURNITURE]: creactFlow((app, furnitureId) => {
+    furnitureId && app.placeNewFurniture(furnitureId)
   }),
   [UPDATE_APP_WIDTH_BY_SIDE]: creactFlow((app, sideIsOpen) => {
     const sideWidth = Math.min(window.innerWidth - 30, 300)
     app.updateAPPWidth(window.innerWidth - (sideIsOpen ? sideWidth : 0))
   }),
   [DELETE_APP_FURNITURE]: creactFlow((app, id) => {
-    app.event.emit('furnitureDelete', { id })
+    id && app.event.emit('furnitureDelete', { id })
   }),
   [DESTROY_APP]: () => {
     return null

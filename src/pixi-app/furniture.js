@@ -459,7 +459,7 @@ class Furniture {
     this.$container.parentGroup = this.pixiApp.group.drag
     this.renderRestrict()
     /* clear placed */
-    this.updateGrid(this.prevPosition, 0)
+    !this.isFirst && this.updateGrid(this.prevPosition, 0)
   }
   dragFurniture = (event) => {
     if (this.isDrag) {

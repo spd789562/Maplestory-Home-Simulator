@@ -91,7 +91,7 @@ class PixiAPP {
       view: canvasRef,
       antialias: true,
     })
-    this.showGrid = true
+    this.showGrid = false
     this._isEdit = false
     this.app.layers = {}
     this.app.stage = new Stage()
@@ -330,6 +330,7 @@ class PixiAPP {
     } else {
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
+      this.$gridLayer.alpha = +this.showGrid
       this.$map.addChild(this.$gridLayer)
       /* grid placeable */
       this.gridPlaced = {}

@@ -8,3 +8,5 @@ export const isPoster = (furniture) =>
     findIndex(equals('poster')),
     (index) => index !== -1
   )(furniture)
+
+export const isWallDeco = (furnitureId) => furnitureId.startsWith('02671')

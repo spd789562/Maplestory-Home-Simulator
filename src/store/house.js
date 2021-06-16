@@ -24,6 +24,7 @@ import {
   equals,
   adjust,
   identity,
+  map,
 } from 'ramda'
 
 export const HOUSE_CHANGE = 'HOUSE_CHANGE'
@@ -32,6 +33,7 @@ export const HOUSE_INITIAL = 'HOUSE_INITIAL'
 export const HOUSE_APPEND = 'HOUSE_APPEND'
 export const HOUSE_UPDATE = 'HOUSE_UPDATE'
 export const HOUSE_UPDATE_FURNITURE = 'HOUSE_UPDATE_FURNITURE'
+export const HOUSE_REORDER_FURNITURE = 'HOUSE_REORDER_FURNITURE'
 export const HOUSE_UPDATE_FURNITURE_INDEX = 'HOUSE_UPDATE_FURNITURE_INDEX'
 export const HOUSE_DELETE_FURNITURE = 'HOUSE_DELETE_FURNITURE'
 export const HOUSE_DUPLICATE = 'HOUSE_DUPLICATE'
@@ -121,6 +123,35 @@ const reducer = reducerCreator(initialState, {
                   )(furnitures)
                 }
                 return furnitures
+              },
+            },
+            state.houses[state.current]
+          )
+        ),
+      }),
+      SaveToStorage
+    )(state),
+  [HOUSE_REORDER_FURNITURE]: (state, payload) =>
+    pipe(
+      evolve({
+        houses: update(
+          state.current,
+          evolve(
+            {
+              furnitures: (furnitures) => {
+                return pipe(
+                  map((f) => {
+                    const correspondFurniture = payload.find(propEq('id', f.id))
+                    if (correspondFurniture) {
+                      return assocPath(
+                        ['position', 'z'],
+                        correspondFurniture.z,
+                        f
+                      )
+                    }
+                    return f
+                  })
+                )(furnitures)
               },
             },
             state.houses[state.current]

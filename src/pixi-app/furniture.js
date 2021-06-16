@@ -315,7 +315,10 @@ class Furniture {
       this.pixiApp.event.on('editChange', this.toggleEdit)
       this.$container
         .on('pointerover', () => {
-          !this.$placement.parent && this.$container.addChild(this.$placement)
+          ;(this.pixiApp.activeFurniture?.id === this.id ||
+            !this.pixiApp.activeFurniture) &&
+            !this.$placement.parent &&
+            this.$container.addChild(this.$placement)
         })
         .on('pointerdown', (e) => {
           !this.$placement.parent && this.$container.addChild(this.$placement)
@@ -551,37 +554,23 @@ class Furniture {
     this.$container.emit('pointerout')
   }
   handleUpIndex = () => {
-    const maxIndex = this.pixiApp.maxZIndex
     const nextIndex = this.zIndex + 1
-    const maxIndexFurnitureCount = this.pixiApp.getZIndexCount(maxIndex)
-    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
-    if (
-      nextIndex === maxIndex &&
-      currentIndexCount === 1 &&
-      maxIndexFurnitureCount === 1
-    ) {
-      this.pixiApp.swapFurnituresIndex(this.zIndex, maxIndex)
-    } else if (nextIndex < maxIndex || maxIndexFurnitureCount > 1) {
-      this.zIndex = nextIndex
-    }
+    nextIndex <= this.pixiApp.maxZIndex &&
+      this.pixiApp.swapFurnituresIndex(this.zIndex, nextIndex)
   }
   handleDownIndex = () => {
-    const minIndex = this.pixiApp.minZIndex
     const nextIndex = this.zIndex - 1
-    const minIndexFurnitureCount = this.pixiApp.getZIndexCount(minIndex)
-    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
-    if (
-      nextIndex === minIndex &&
-      currentIndexCount === 1 &&
-      minIndexFurnitureCount === 1
-    ) {
-      this.pixiApp.swapFurnituresIndex(this.zIndex, minIndex)
-    } else if (nextIndex >= minIndex || minIndexFurnitureCount > 1) {
-      this.zIndex = nextIndex
-    }
+    nextIndex >= this.pixiApp.minZIndex &&
+      this.pixiApp.swapFurnituresIndex(this.zIndex, nextIndex)
   }
   handleDelete = () => {
     this.pixiApp.event.emit('furnitureDelete', this)
+  }
+
+  moveAt = (index) => {
+    this.zIndex = index
+    // const _index = Math.min(index, this.pixiApp.furnitures.length - 1)
+    // this.app.layers[this.layerIndex].addChildAt(this.$container, _index)
   }
 
   static onFrameChange(sprite, frames) {
@@ -625,21 +614,23 @@ class Furniture {
     return this.position.z
   }
   set zIndex(index) {
+    const prevIndex = this.zIndex
     this.position.z = index
     this.$container.zIndex = index
-    if (index > this.zIndex) {
-      this.app.layers[this.layerIndex].addChild(this.$container)
-    } else {
-      this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
-    }
-    const itemIndex = this.app.layers[this.layerIndex].getChildIndex(
-      this.$container
-    )
+    // if (index > prevIndex) {
+    //   this.app.layers[this.layerIndex].addChild(this.$container)
+    // } else {
+    //   this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
+    // }
+    // const itemIndex = this.app.layers[this.layerIndex].getChildIndex(
+    //   this.$container
+    // )
     // this.pixiApp.event.emit('furnitureUpdate', this)
+    console.log(index)
     this.pixiApp.event.emit('zIndexUpdate', {
       id: this.id,
       z: index,
-      index: itemIndex,
+      index: index,
     })
   }
 }

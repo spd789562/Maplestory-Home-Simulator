@@ -4,7 +4,7 @@ import { withTranslation } from '@i18n'
 /* store */
 import { useDispatch } from '@store'
 import { CHANGE_ACTIVE_FURNITURE } from '@store/active-furniture'
-import { UPDATE_APP_ACTIVE_FURNITURE } from '@store/app'
+import { UPDATE_APP_ACTIVE_FURNITURE, UPDATE_APP_EDIT } from '@store/app'
 import { ENTER_EDIT } from '@store/meta'
 
 /* components */
@@ -32,6 +32,7 @@ const Item = ({ t, id }) => {
   const dispatch = useDispatch()
   const handleClick = () => {
     dispatch({ type: ENTER_EDIT })
+    dispatch({ type: UPDATE_APP_EDIT, payload: true })
     dispatch({ type: CHANGE_ACTIVE_FURNITURE, payload: id })
     dispatch({ type: UPDATE_APP_ACTIVE_FURNITURE, payload: id })
   }

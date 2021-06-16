@@ -43,12 +43,12 @@ const filterOptions = [
     value: identity,
   },
   {
-    title: 'furniture_filter_wall',
-    value: pipe(keys, filter(startsWith('02671'))),
-  },
-  {
     title: 'furniture_filter_ground',
     value: pipe(keys, filter(startsWith('02672'))),
+  },
+  {
+    title: 'furniture_filter_wall',
+    value: pipe(keys, filter(startsWith('02671'))),
   },
   {
     title: 'furniture_filter_poster',

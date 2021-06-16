@@ -45,7 +45,6 @@ const reducer = reducerCreator(initialState, {
     id && app.handleUpdateFurnitureZIndex({ id, index: z })
   }),
   [REORDER_APP_FURNITURE]: creactFlow((app, furnitures) => {
-    console.log(furnitures)
     furnitures.length &&
       furnitures.map(({ id, z }) =>
         app.handleUpdateFurnitureZIndex({ id, index: z })

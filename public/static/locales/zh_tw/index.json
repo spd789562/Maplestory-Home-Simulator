@@ -10,6 +10,7 @@
   "tab_home_style": "房屋",
   "tab_furniture": "傢俱",
   "tab_setting": "設定",
+  "tab_layer": "圖層管理",
 
   "home_theme": "房屋樣式",
 
@@ -45,6 +46,8 @@
 
   "tab_all": "全部",
   "tab_favorite": "收藏",
+  "tab_layer_ground": "地板裝飾",
+  "tab_layer_wall": "牆壁裝飾",
 
   "add_favorite": "加入收藏",
 

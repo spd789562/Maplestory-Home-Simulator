@@ -1585,10 +1585,10 @@
   resolved "https://registry.yarnpkg.com/@pixi/filter-dot/-/filter-dot-4.1.0.tgz#466eb7bac8161ba95b64efffea6aebd8ca269f77"
   integrity sha512-qFfIlebAhKagCWLX4raeDigjtZ2CQBrIkRB0ocLI5W8mNz2RhudEm21pVUi6nw55IqrbQqmyYWo+PBqOBTwLuQ==
 
-"@pixi/filter-drop-shadow@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@pixi/filter-drop-shadow/-/filter-drop-shadow-4.1.0.tgz#55a7eec6f5c8b773819cc5bc9d3507f1ba148f73"
-  integrity sha512-yC1XCimqpo6qPc/uYDYoHtQSYV+jNTMB2O2QNO6MRbGjqffZBtcuAkDKWXOmxBKjEAdAM0pqqLs0I7adcWCfqg==
+"@pixi/filter-drop-shadow@4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-drop-shadow/-/filter-drop-shadow-4.1.2.tgz#b5ecabe4cf63fd1b2d731b32b914cbaf2b4e4c13"
+  integrity sha512-AVnlrJSh7TbHnYlncwUkLlj7z5MLpLvx6mKxvFO3xAJdRy0WJ+5OWadbi6wGvGgumvsh11prKJ7Ct5JceUDgcg==
   dependencies:
     "@pixi/filter-kawase-blur" "4.1.0"
 
@@ -1604,10 +1604,10 @@
   dependencies:
     "@pixi/core" "5.3.7"
 
-"@pixi/filter-glitch@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@pixi/filter-glitch/-/filter-glitch-4.1.0.tgz#f42f0384adf9e79ecc4ff4b15bdebc075093cb75"
-  integrity sha512-vOg0QI/u/JJeumepy2QUpJPl/f43CsS60alm0b5O+zvYQqtqUd1WvO8hq6O5Eg1n16lqzcmVZ5MZVxXpKlFvkw==
+"@pixi/filter-glitch@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@pixi/filter-glitch/-/filter-glitch-4.1.1.tgz#cb008a2678e197bd54ac0b0590073415389805ef"
+  integrity sha512-rFkBvzNcZJt+65fQNzq4DQcZSnfR2ZGsNTt85OF055nEHDvgVkdgYR31qiKdfQhRXqVtApYWl0M49pMszTxpXQ==
 
 "@pixi/filter-glow@4.1.0":
   version "4.1.0"
@@ -6254,10 +6254,10 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
-pixi-filters@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/pixi-filters/-/pixi-filters-4.1.0.tgz#f4545aaacaff714d791418d6a604170685b833ff"
-  integrity sha512-FH+6M6vQr5ZmwtZ92DWpaVuGEi/e8dBMik6Bo0YZppUxWq8iW+CZkd/evE3IoGqQgI4CvdgCaLgrGAyPilKicg==
+pixi-filters@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/pixi-filters/-/pixi-filters-4.1.2.tgz#3b947c610f244a77f219d16787d83550d9733e3d"
+  integrity sha512-OG/d86ajdA9N2Nz35bNI3zig02g9aEtbW+Vdfb+89s08XXjvV30N0a4i5Atu7/SsMqZ4Cm5RfZzfp8ScqmrjBg==
   dependencies:
     "@pixi/filter-adjustment" "4.1.0"
     "@pixi/filter-advanced-bloom" "4.1.0"
@@ -6272,9 +6272,9 @@ pixi-filters@^4.1.0:
     "@pixi/filter-cross-hatch" "4.1.0"
     "@pixi/filter-crt" "4.1.0"
     "@pixi/filter-dot" "4.1.0"
-    "@pixi/filter-drop-shadow" "4.1.0"
+    "@pixi/filter-drop-shadow" "4.1.2"
     "@pixi/filter-emboss" "4.1.0"
-    "@pixi/filter-glitch" "4.1.0"
+    "@pixi/filter-glitch" "4.1.1"
     "@pixi/filter-glow" "4.1.0"
     "@pixi/filter-godray" "4.1.0"
     "@pixi/filter-kawase-blur" "4.1.0"

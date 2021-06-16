@@ -1,5 +1,9 @@
-import { memo } from 'react'
+import { memo, useCallback } from 'react'
 import ReactDOM from 'react-dom'
+
+/* store */
+import { useDispatch } from '@store'
+import { UPDATE_APP_FURNITURE_HOVER } from '@store/app'
 
 /* components */
 import { List, Avatar, Typography } from 'antd'
@@ -18,7 +22,19 @@ import styles from './item.module.scss'
 
 const Item = ({ id, furnitureID, index }) => {
   const _isPoster = isPoster(FurnitureMapping[furnitureID] || {})
-
+  const dispatch = useDispatch()
+  const handleHoverItem = useCallback(
+    (isHover) => () => {
+      dispatch({
+        type: UPDATE_APP_FURNITURE_HOVER,
+        payload: {
+          id,
+          isHover,
+        },
+      })
+    },
+    []
+  )
   return (
     <Draggable draggableId={id} index={index}>
       {(provided, snapshot) => {
@@ -32,7 +48,11 @@ const Item = ({ id, furnitureID, index }) => {
               snapshot.isDragging ? styles.item__drag : ''
             }`}
           >
-            <List.Item actions={[<Delete id={id} />]}>
+            <List.Item
+              actions={[<Delete id={id} />]}
+              onMouseEnter={handleHoverItem(true)}
+              onMouseLeave={handleHoverItem(false)}
+            >
               <List.Item.Meta
                 avatar={
                   <Avatar

@@ -1,4 +1,5 @@
 /* components */
+import * as filters from 'pixi-filters'
 import {
   AnimatedSprite,
   Container,
@@ -610,6 +611,16 @@ class Furniture {
     this._flip = isFlip
   }
 
+  get isHover() {
+    return this._isHover
+  }
+  set isHover(isHover) {
+    this.$furniture.filters = isHover
+      ? [new filters.GlowFilter({ color: 0xffff66 })]
+      : []
+    this._isHover = isHover
+  }
+
   get zIndex() {
     return this.position.z
   }
@@ -626,7 +637,6 @@ class Furniture {
     //   this.$container
     // )
     // this.pixiApp.event.emit('furnitureUpdate', this)
-    console.log(index)
     this.pixiApp.event.emit('zIndexUpdate', {
       id: this.id,
       z: index,

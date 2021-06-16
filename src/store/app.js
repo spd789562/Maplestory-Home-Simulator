@@ -5,6 +5,7 @@ export const UPDATE_APP_EDIT = 'UPDATE_APP_EDIT'
 export const UPDATE_APP_ZOOM = 'UPDATE_APP_ZOOM'
 export const UPDATE_APP_ACTIVE_FURNITURE = 'UPDATE_APP_ACTIVE_FURNITURE'
 export const UPDATE_APP_WIDTH_BY_SIDE = 'UPDATE_APP_WIDTH_BY_SIDE'
+export const UPDATE_APP_FURNITURE_HOVER = 'UPDATE_APP_FURNITURE_HOVER'
 export const UPDATE_APP_FURNITURE_INDEX = 'UPDATE_APP_FURNITURE_INDEX'
 export const REORDER_APP_FURNITURE = 'REORDER_APP_FURNITURE'
 export const DELETE_APP_FURNITURE = 'DELETE_APP_FURNITURE'
@@ -33,6 +34,12 @@ const reducer = reducerCreator(initialState, {
   [UPDATE_APP_WIDTH_BY_SIDE]: creactFlow((app, sideIsOpen) => {
     const sideWidth = Math.min(window.innerWidth - 30, 300)
     app.updateAPPWidth(window.innerWidth - (sideIsOpen ? sideWidth : 0))
+  }),
+  [UPDATE_APP_FURNITURE_HOVER]: creactFlow((app, { id, isHover }) => {
+    const targetFurniture = app.getFurniture(id)
+    if (targetFurniture) {
+      targetFurniture.isHover = isHover
+    }
   }),
   [UPDATE_APP_FURNITURE_INDEX]: creactFlow((app, { id, z }) => {
     id && app.handleUpdateFurnitureZIndex({ id, index: z })

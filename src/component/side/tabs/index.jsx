@@ -1,6 +1,7 @@
 /* store */
 import { useStore } from '@store'
 import { CHANGE_SIDE_OPEN, CHANGE_SIDE_CURRENT } from '@store/meta'
+import { UPDATE_APP_WIDTH_BY_SIDE } from '@store/app'
 
 /* components */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -8,6 +9,7 @@ import {
   faPlay,
   faHome,
   faCouch,
+  faLayerGroup,
   faCog,
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,7 +19,8 @@ import styles from './tabs.module.scss'
 const TabMapping = [
   { id: 0, icon: faHome },
   { id: 1, icon: faCouch },
-  { id: 2, icon: faCog },
+  { id: 2, icon: faLayerGroup },
+  { id: 3, icon: faCog },
 ]
 
 const Tabs = () => {
@@ -25,9 +28,11 @@ const Tabs = () => {
 
   const handleToggle = () => {
     dispatch({ type: CHANGE_SIDE_OPEN, payload: !open })
+    dispatch({ type: UPDATE_APP_WIDTH_BY_SIDE, payload: !open })
   }
   const handleChangeTab = (id) => () => {
     dispatch({ type: CHANGE_SIDE_CURRENT, payload: id })
+    dispatch({ type: UPDATE_APP_WIDTH_BY_SIDE, payload: true })
   }
 
   return (

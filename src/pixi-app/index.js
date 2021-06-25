@@ -91,7 +91,7 @@ class PixiAPP {
       view: canvasRef,
       antialias: true,
     })
-    this.showGrid = true
+    this.showGrid = false
     this._isEdit = false
     this.app.layers = {}
     this.app.stage = new Stage()
@@ -258,7 +258,11 @@ class PixiAPP {
     this.app.stage.addChild(this.$minimap)
   }
   initialFurniture(furnitures) {
-    furnitures.forEach((furniture) => new Furniture(this, furniture))
+    furnitures.forEach((furniture) => {
+      const f = new Furniture(this, furniture)
+      f.updateGrid(f.position, 1)
+      this.furnitures.push(f)
+    })
   }
   applyHomeTheme(themes) {
     entries(([key, value]) => {
@@ -280,6 +284,9 @@ class PixiAPP {
       id: `f${new Date().getTime()}${Math.random().toString(16)}`,
       furnitureID: id,
       flip: !!flip,
+      position: {
+        z: this.maxZIndex + 1,
+      },
     })
     _furniture.isFirst = true
     _furniture.isDrag = true
@@ -326,6 +333,7 @@ class PixiAPP {
     } else {
       this.$gridLayer = new Container()
       this.$gridLayer.zIndex = 999
+      this.$gridLayer.alpha = +this.showGrid
       this.$map.addChild(this.$gridLayer)
       /* grid placeable */
       this.gridPlaced = {}
@@ -417,7 +425,13 @@ class PixiAPP {
       this.app.destroy()
     }
   }
-
+  getFurniture(id) {
+    return this.furnitures.find((f) => f.id === id)
+  }
+  handleUpdateFurnitureZIndex = ({ id, index }) => {
+    const furniture = this.getFurniture(id)
+    furniture && furniture.moveAt(index)
+  }
   handleUpdateFurniture = (e) => {
     const idx = this.furnitures.findIndex((f) => f.id === e.id)
     if (idx === -1) {
@@ -426,7 +440,13 @@ class PixiAPP {
   }
   handleDeleteFurniture = ({ id }) => {
     const idx = this.furnitures.findIndex((f) => f.id === id)
-    idx !== -1 && this.furnitures.splice(idx, 1)
+    if (id !== -1) {
+      const furniture = this.furnitures[idx]
+      /* clear placement */
+      furniture.updateGrid(furniture.position, 0)
+      furniture.destroyWhenDrag()
+      this.furnitures.splice(idx, 1)
+    }
   }
 
   get isEdit() {
@@ -455,30 +475,29 @@ class PixiAPP {
     }
   }
   get maxZIndex() {
-    return Math.max.apply(null, this.furnitures.map(path(['position', 'z'])))
+    return this.furnitures.length
+      ? Math.max.apply(null, this.furnitures.map(path(['position', 'z'])))
+      : 0
   }
   get minZIndex() {
-    return Math.min.apply(null, this.furnitures.map(path(['position', 'z'])))
+    return this.furnitures.length
+      ? Math.min.apply(null, this.furnitures.map(path(['position', 'z'])))
+      : 0
   }
   getZIndexCount(index) {
     return this.furnitures.filter(pathEq(['position', 'z'], index)).length
   }
   swapFurnituresIndex(firstZIndex, secondZIndex) {
-    const firstZindexCount = this.getZIndexCount(firstZIndex)
-    const secondZindexCount = this.getZIndexCount(secondZIndex)
-    // only both zindex count is one can switch zIndex
-    if (firstZindexCount + secondZindexCount === 2) {
-      const firstFurniture = this.furnitures.find(
-        pathEq(['position', 'z'], firstZIndex)
-      )
-      const secondFurniture = this.furnitures.find(
-        pathEq(['position', 'z'], secondZIndex)
-      )
-      ;[firstFurniture.zIndex, secondFurniture.zIndex] = [
-        secondFurniture.zIndex,
-        firstFurniture.zIndex,
-      ]
-    }
+    const firstFurniture = this.furnitures.find(
+      pathEq(['position', 'z'], firstZIndex)
+    )
+    const secondFurniture = this.furnitures.find(
+      pathEq(['position', 'z'], secondZIndex)
+    )
+    ;[firstFurniture.zIndex, secondFurniture.zIndex] = [
+      secondFurniture.zIndex,
+      firstFurniture.zIndex,
+    ]
   }
 }
 

@@ -10,6 +10,7 @@
   "tab_home_style": "房屋",
   "tab_furniture": "傢俱",
   "tab_setting": "設定",
+  "tab_layer": "圖層管理",
 
   "home_theme": "房屋樣式",
 
@@ -45,6 +46,8 @@
 
   "tab_all": "全部",
   "tab_favorite": "收藏",
+  "tab_layer_ground": "地板裝飾",
+  "tab_layer_wall": "牆壁裝飾",
 
   "add_favorite": "加入收藏",
 
@@ -66,7 +69,8 @@
   "other_tools": "其他工具",
   "web_arcane_symbol_calculator": "秘法符文計算機",
   "web_boss_crystal_calculator": "力量結晶計算機",
-
+  "web_maplesalon": "楓沙龍",
+  
   "page_not_found": "無此頁面",
   "error_with_status": "A {{statusCode}} error occurred on server",
   "error_without_status": "An error occurred on the server"

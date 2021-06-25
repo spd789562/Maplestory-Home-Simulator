@@ -1,4 +1,5 @@
 /* components */
+import * as filters from 'pixi-filters'
 import {
   AnimatedSprite,
   Container,
@@ -88,7 +89,7 @@ class Furniture {
     this.position = {
       x: furnitureData.position?.x || 0,
       y: furnitureData.position?.y || 0,
-      z: 1,
+      z: furnitureData.position?.z || 1,
       floor:
         (furnitureData.position?.floor &&
           pixiApp.mapData.housingGrid[furnitureData.position.floor] &&
@@ -315,7 +316,10 @@ class Furniture {
       this.pixiApp.event.on('editChange', this.toggleEdit)
       this.$container
         .on('pointerover', () => {
-          !this.$placement.parent && this.$container.addChild(this.$placement)
+          ;(this.pixiApp.activeFurniture?.id === this.id ||
+            !this.pixiApp.activeFurniture) &&
+            !this.$placement.parent &&
+            this.$container.addChild(this.$placement)
         })
         .on('pointerdown', (e) => {
           !this.$placement.parent && this.$container.addChild(this.$placement)
@@ -459,7 +463,7 @@ class Furniture {
     this.$container.parentGroup = this.pixiApp.group.drag
     this.renderRestrict()
     /* clear placed */
-    this.updateGrid(this.prevPosition, 0)
+    !this.isFirst && this.updateGrid(this.prevPosition, 0)
   }
   dragFurniture = (event) => {
     if (this.isDrag) {
@@ -551,40 +555,23 @@ class Furniture {
     this.$container.emit('pointerout')
   }
   handleUpIndex = () => {
-    const maxIndex = this.pixiApp.maxZIndex
     const nextIndex = this.zIndex + 1
-    const maxIndexFurnitureCount = this.pixiApp.getZIndexCount(maxIndex)
-    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
-    if (
-      nextIndex === maxIndex &&
-      currentIndexCount === 1 &&
-      maxIndexFurnitureCount === 1
-    ) {
-      this.pixiApp.swapFurnituresIndex(this.zIndex, maxIndex)
-    } else if (nextIndex < maxIndex || maxIndexFurnitureCount > 1) {
-      this.zIndex = nextIndex
-    }
+    nextIndex <= this.pixiApp.maxZIndex &&
+      this.pixiApp.swapFurnituresIndex(this.zIndex, nextIndex)
   }
   handleDownIndex = () => {
-    const minIndex = this.pixiApp.minZIndex
     const nextIndex = this.zIndex - 1
-    const minIndexFurnitureCount = this.pixiApp.getZIndexCount(minIndex)
-    const currentIndexCount = this.pixiApp.getZIndexCount(this.zIndex)
-    if (
-      nextIndex === minIndex &&
-      currentIndexCount === 1 &&
-      minIndexFurnitureCount === 1
-    ) {
-      this.pixiApp.swapFurnituresIndex(this.zIndex, minIndex)
-    } else if (nextIndex > minIndex || minIndexFurnitureCount > 1) {
-      this.zIndex = nextIndex
-    }
+    nextIndex >= this.pixiApp.minZIndex &&
+      this.pixiApp.swapFurnituresIndex(this.zIndex, nextIndex)
   }
   handleDelete = () => {
-    /* clear placed */
-    this.updateGrid(this.position, 0)
     this.pixiApp.event.emit('furnitureDelete', this)
-    this.destroyWhenDrag()
+  }
+
+  moveAt = (index) => {
+    this.zIndex = index
+    // const _index = Math.min(index, this.pixiApp.furnitures.length - 1)
+    // this.app.layers[this.layerIndex].addChildAt(this.$container, _index)
   }
 
   static onFrameChange(sprite, frames) {
@@ -624,19 +611,37 @@ class Furniture {
     this._flip = isFlip
   }
 
+  get isHover() {
+    return this._isHover
+  }
+  set isHover(isHover) {
+    this.$furniture.filters = isHover
+      ? [new filters.GlowFilter({ color: 0xffff66 })]
+      : []
+    this._isHover = isHover
+  }
+
   get zIndex() {
     return this.position.z
   }
   set zIndex(index) {
+    const prevIndex = this.zIndex
     this.position.z = index
     this.$container.zIndex = index
-    if (index > this.zIndex) {
-      this.app.layers[this.layerIndex].addChild(this.$container)
-    } else {
-      this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
-    }
-    this.pixiApp.event.emit('furnitureUpdate', this)
-    this.pixiApp.event.emit('zIndexUpdate', this.pixiApp.furnitures)
+    // if (index > prevIndex) {
+    //   this.app.layers[this.layerIndex].addChild(this.$container)
+    // } else {
+    //   this.app.layers[this.layerIndex].addChildAt(this.$container, 0)
+    // }
+    // const itemIndex = this.app.layers[this.layerIndex].getChildIndex(
+    //   this.$container
+    // )
+    // this.pixiApp.event.emit('furnitureUpdate', this)
+    this.pixiApp.event.emit('zIndexUpdate', {
+      id: this.id,
+      z: index,
+      index: index,
+    })
   }
 }
 

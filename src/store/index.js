@@ -9,6 +9,7 @@ import {
 import { combineReducer } from './_helper'
 import metaReducer from './meta'
 import houseReducer from './house'
+import appReducer from './app'
 import activeFurnitureReducer from './active-furniture'
 import favoriteFurnitureReducer from './favorite-furniture'
 
@@ -18,6 +19,7 @@ import { createSelector } from 'reselect'
 const GlobalStore = createContext({})
 
 const [combinedReducers, initialState] = combineReducer({
+  app: appReducer,
   meta: metaReducer,
   house: houseReducer,
   'active-furniture': activeFurnitureReducer,

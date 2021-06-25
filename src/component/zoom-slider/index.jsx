@@ -3,6 +3,7 @@ import { memo } from 'react'
 /* store */
 import { useStore } from '@store'
 import { UPDATE_ZOOM_VALUE } from '@store/meta'
+import { UPDATE_APP_ZOOM } from '@store/app'
 
 /* component */
 import { Slider } from 'antd'
@@ -24,6 +25,7 @@ const ZoomSlider = ({ setZoom }) => {
   const handleChange = (value) => {
     setZoom(value)
     dispatch({ type: UPDATE_ZOOM_VALUE, payload: value })
+    dispatch({ type: UPDATE_APP_ZOOM, payload: value })
   }
   return (
     <div style={sliderContainerStyle}>

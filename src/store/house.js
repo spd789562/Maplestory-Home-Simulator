@@ -14,6 +14,7 @@ import {
   prop,
   max,
   assoc,
+  assocPath,
   add,
   __,
   ifElse,
@@ -21,6 +22,9 @@ import {
   append,
   curry,
   equals,
+  adjust,
+  identity,
+  map,
 } from 'ramda'
 
 export const HOUSE_CHANGE = 'HOUSE_CHANGE'
@@ -29,6 +33,8 @@ export const HOUSE_INITIAL = 'HOUSE_INITIAL'
 export const HOUSE_APPEND = 'HOUSE_APPEND'
 export const HOUSE_UPDATE = 'HOUSE_UPDATE'
 export const HOUSE_UPDATE_FURNITURE = 'HOUSE_UPDATE_FURNITURE'
+export const HOUSE_REORDER_FURNITURE = 'HOUSE_REORDER_FURNITURE'
+export const HOUSE_UPDATE_FURNITURE_INDEX = 'HOUSE_UPDATE_FURNITURE_INDEX'
 export const HOUSE_DELETE_FURNITURE = 'HOUSE_DELETE_FURNITURE'
 export const HOUSE_DUPLICATE = 'HOUSE_DUPLICATE'
 export const HOUSE_DELETE = 'HOUSE_DELETE'
@@ -91,6 +97,61 @@ const reducer = reducerCreator(initialState, {
                 } else {
                   return append(payload, furnitures)
                 }
+              },
+            },
+            state.houses[state.current]
+          )
+        ),
+      }),
+      SaveToStorage
+    )(state),
+  [HOUSE_UPDATE_FURNITURE_INDEX]: (state, payload) =>
+    pipe(
+      evolve({
+        houses: update(
+          state.current,
+          evolve(
+            {
+              furnitures: (furnitures) => {
+                const idx = findIndex(propEq('id', payload.id), furnitures)
+                if (idx !== -1) {
+                  return pipe(
+                    adjust(idx, assocPath(['position', 'z'], payload.z)),
+                    payload.index !== undefined
+                      ? move(idx, payload.index)
+                      : identity
+                  )(furnitures)
+                }
+                return furnitures
+              },
+            },
+            state.houses[state.current]
+          )
+        ),
+      }),
+      SaveToStorage
+    )(state),
+  [HOUSE_REORDER_FURNITURE]: (state, payload) =>
+    pipe(
+      evolve({
+        houses: update(
+          state.current,
+          evolve(
+            {
+              furnitures: (furnitures) => {
+                return pipe(
+                  map((f) => {
+                    const correspondFurniture = payload.find(propEq('id', f.id))
+                    if (correspondFurniture) {
+                      return assocPath(
+                        ['position', 'z'],
+                        correspondFurniture.z,
+                        f
+                      )
+                    }
+                    return f
+                  })
+                )(furnitures)
               },
             },
             state.houses[state.current]

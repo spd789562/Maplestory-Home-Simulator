@@ -2,82 +2,59 @@ import { reducerCreator } from './_helper'
 
 import { assoc, evolve } from 'ramda'
 
-export const INITIAL_WZ = 'INITIAL_WZ'
-export const UPDATE_CHARACTER = 'UPDATE_CHARACTER'
-export const CHANGE_REGION = 'CHANGE_REGION'
-export const CHANGE_DATA_REGION = 'CHANGE_DATA_REGION'
+export const CHANGE_SIDE_OPEN = 'CHANGE_SIDE_OPEN'
+export const CHANGE_SIDE_CURRENT = 'CHANGE_SIDE_CURRENT'
+export const UPDATE_ZOOM_VALUE = 'UPDATE_ZOOM_VALUE'
+export const UPDATE_ZOOM_RANGE = 'UPDATE_ZOOM_RANGE'
+export const ENTER_EDIT = 'ENTER_EDIT'
+export const EXIT_EDIT = 'EXIT_EDIT'
 
 const isClient = typeof window !== 'undefined'
 
 const initialState = {
-  region: {
-    region: (isClient && localStorage.getItem('region')) || '',
-    version: (isClient && localStorage.getItem('version')) || '',
-    hair: '',
-    face: '',
-    overall: '',
-    hat: '',
+  side: {
+    open: false,
+    current: 0,
   },
-  character: {
-    skin: {
-      id: '',
-      region: '',
-      version: '',
-    },
-    hat: {
-      id: '',
-      region: '',
-      version: '',
-    },
-    overall: {
-      id: '',
-      region: '',
-      version: '',
-    },
-    hair: {
-      id: '',
-      colorId: '0',
-      region: '',
-      version: '',
-    },
-    face: {
-      id: '',
-      colorId: '0',
-      region: '',
-      version: '',
-    },
-    earsType: '0',
-    skinId: '',
-    hairId: '',
-    hairColorId: '0',
-    faceId: '',
-    faceColorId: '0',
-    mixHairColorId: '',
-    mixHairOpacity: 0.5,
-    mixFaceColorId: '',
-    mixFaceOpacity: 0.5,
-    items: {},
+  zoom: {
+    min: 0.1,
+    value: 1,
+    max: 4,
   },
-  wz: {},
+  edit: false,
 }
 const reducer = reducerCreator(initialState, {
-  [CHANGE_REGION]: (state, payload) => {
-    let { region, version } =
-      typeof payload === 'string' ? state.wz[payload] : payload
-    localStorage.setItem('region', region)
-    localStorage.setItem('version', version)
-    return { ...state, region: { ...state.region, region, version } }
+  [CHANGE_SIDE_OPEN]: (state, payload) => {
+    return { ...state, side: { open: payload, current: state.side.current } }
   },
-  [CHANGE_DATA_REGION]: (state, payload) => {
+  [CHANGE_SIDE_CURRENT]: (state, payload) => {
+    return { ...state, side: { open: true, current: payload } }
+  },
+  [UPDATE_ZOOM_VALUE]: (state, zoom) => {
     return {
       ...state,
-      region: assoc(payload.field, payload.region, state.region),
+      zoom: {
+        ...state.zoom,
+        value: zoom,
+      },
     }
   },
-  [UPDATE_CHARACTER]: (state, payload) => {
-    return { ...state, character: { ...state.character, ...payload } }
+  [UPDATE_ZOOM_RANGE]: (state, payload) => {
+    return {
+      ...state,
+      zoom: {
+        ...state.zoom,
+        min: payload.min || state.zoom.min,
+        max: payload.max || state.zoom.max,
+      },
+    }
   },
-  [INITIAL_WZ]: (state, payload) => ({ ...state, wz: payload }),
+  [ENTER_EDIT]: (state, _) => {
+    return { ...state, edit: true }
+  },
+  [EXIT_EDIT]: (state, _) => {
+    return { ...state, edit: false }
+  },
 })
 
 export default {

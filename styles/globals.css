@@ -12,3 +12,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ReactVirtualized__Grid {
+  outline: none;
+}

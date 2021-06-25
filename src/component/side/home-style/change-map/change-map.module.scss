@@ -1,0 +1,36 @@
+.map {
+  position: relative;
+  overflow: hidden;
+  margin-top: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 250px;
+  width: 100%;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: box-shadow linear 0.3s, border-color linear 0.3s;
+  &__active {
+    border-width: 4px;
+    border-color: #6373ca;
+    box-shadow: 0 0 10px 1px #aab7ff;
+    cursor: unset;
+  }
+
+  &-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.125rem 0.5rem;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+  }
+
+  > img {
+    width: 100%;
+  }
+}

@@ -1,9 +1,9 @@
 const has = (maps) => (type) => !!maps[type]
 
-export const reducerCreator = (initState, actionMaps) => (
-  state = initState,
-  { type, payload }
-) => (has(actionMaps)(type) ? actionMaps[type](state, payload) : state)
+export const reducerCreator =
+  (initState, actionMaps) =>
+  (state = initState, { type, payload }) =>
+    has(actionMaps)(type) ? actionMaps[type](state, payload) : state
 
 export const combineReducer = (reducers) => {
   const keys = Object.keys(reducers)

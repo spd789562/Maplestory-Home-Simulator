@@ -1,0 +1,47 @@
+.container {
+  margin-top: 12px;
+}
+
+.title {
+  margin-bottom: 8px;
+  padding: 0.125rem 0.5rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-image: linear-gradient(to right,#c1c8f1, #e8ebfc);
+  font-size: 1.125rem;
+}
+
+.list-item {
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  color: #ccc;
+  cursor: pointer;
+  transition: box-shadow linear 0.3s, border-color linear 0.3s;
+  &__active {
+    border-color: #6373ca;
+    box-shadow: 0 0 10px 1px #aab7ff;
+    color: #6373ca;
+    cursor: unset;
+  }
+  &-info {
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    width: 18px;
+    height: 24px;
+    border-bottom-left-radius: 10px;
+    background-color: currentColor;
+    text-align: center;
+    cursor: pointer;
+
+    > span {
+      color: #fff;
+      font-size: 12px;
+    }
+  }
+  > img {
+    width: 100%;
+  }
+}

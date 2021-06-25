@@ -32,8 +32,14 @@ if (typeof require !== 'undefined') {
 }
 
 module.exports = composeConfig(
-  withSass,
   withLess,
+  withOtherParam(withSass, {
+    cssModules: true,
+    cssLoaderOptions: {
+      importLoaders: 1,
+      localIdentName: '[local]___[hash:base64:5]',
+    },
+  }),
   withOtherParam(withCSS, {
     cssModules: true,
     cssLoaderOptions: {
@@ -59,12 +65,26 @@ module.exports = composeConfig(
     config.plugins.push(new MomentLocalesPlugin())
     config.resolve.modules.push(path.resolve('./'))
 
+    /* remove pixi warn */
+    config.module.rules.push({
+      test: '/.[js|ts]/',
+      use: [
+        {
+          loader: 'webpack-preprocessor-loader',
+          options: {
+            debug: false,
+          },
+        },
+      ],
+    })
+
     return config
   },
   rewrites: async () => nextI18NextRewrites(localeSubpaths),
   publicRuntimeConfig: {
     ...config,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID || '',
+    IMAGE_CDN: process.env.IMAGE_CDN || '',
     localeSubpaths,
     isProd,
   },

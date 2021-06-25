@@ -7,28 +7,23 @@ import {
 } from 'use-context-selector'
 
 import { combineReducer } from './_helper'
-import hairReducer from './hair'
-import faceReducer from './face'
-import hsitoryReducer from './history'
-import searchReducer from './search'
 import metaReducer from './meta'
-import characterReducer from './character'
-import hatReducer from './hat'
-import overallReducer from './overall'
+import houseReducer from './house'
+import appReducer from './app'
+import activeFurnitureReducer from './active-furniture'
+import favoriteFurnitureReducer from './favorite-furniture'
 
-import { isNil, prop, curry, path, pickAll } from 'ramda'
+import { isNil, prop, curry, path, pipe } from 'ramda'
+import { createSelector } from 'reselect'
 
 const GlobalStore = createContext({})
 
 const [combinedReducers, initialState] = combineReducer({
-  hair: hairReducer,
+  app: appReducer,
   meta: metaReducer,
-  character: characterReducer,
-  face: faceReducer,
-  search: searchReducer,
-  hat: hatReducer,
-  overall: overallReducer,
-  history: hsitoryReducer,
+  house: houseReducer,
+  'active-furniture': activeFurnitureReducer,
+  'favorite-furniture': favoriteFurnitureReducer,
 })
 
 export const Provider = ({ children }) => {
@@ -49,8 +44,10 @@ export const Provider = ({ children }) => {
 export const useDispatch = () =>
   useContextSelector(GlobalStore, prop('dispatch'))
 
-export const useStroeSelector = (field, selector) =>
-  useContextSelector(GlobalStore, pipe(prop(field), selector))
+export const useStoreSelector = (field, selector) => {
+  const getData = createSelector(prop(field), selector)
+  return useContextSelector(GlobalStore, getData)
+}
 
 export const useStore = (keyPath, initialValue = null) => {
   const dispatch = useDispatch()

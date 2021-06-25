@@ -1,7 +1,9 @@
-import React, { memo } from 'react'
+import React, { Fragment, memo, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 /* component */
+import Side from '@components/side'
+import ZoomSlider from '@components/zoom-slider'
 
 /* helper */
 import { withTranslation } from '@i18n'
@@ -9,7 +11,14 @@ import { withTranslation } from '@i18n'
 const HomeCanvas = dynamic(() => import('@components/home'), { ssr: false })
 
 function Home({ t }) {
-  return <HomeCanvas />
+  const [zoom, setZoom] = useState(1)
+  return (
+    <div style={{ position: 'relative' }}>
+      <HomeCanvas zoom={zoom} />
+      <ZoomSlider setZoom={setZoom} />
+      <Side />
+    </div>
+  )
 }
 
 Home.getInitialProps = async () => ({

@@ -4,14 +4,73 @@
 
   "seo_desc": "我的小屋模擬器",
 
-  "reset":"重置",
+  "reset": "重置",
   "comma": ", ",
 
+  "tab_home_style": "房屋",
+  "tab_furniture": "傢俱",
+  "tab_setting": "設定",
+  "tab_layer": "圖層管理",
+
+  "home_theme": "房屋樣式",
+
+  "home_theme_toturial": "迷你菇菇屋",
+  "home_theme_henesys": "舒適的菇菇屋",
+  "home_theme_commerz": "精緻的洋房",
+  "home_theme_halloween": "月夜的萬聖節住宅",
+  "home_theme_newyear": "蓮花池庭院瓦屋",
+  "home_theme_lithharbor": "海邊的露臺小屋",
+  "home_theme_christmax": "聖誕雙層房屋",
+
+  "home_type_basic": "基本型",
+  "home_type_stair": "階梯型",
+  "home_type_right_curve_stair": "右側彎曲階梯型",
+  "home_type_left_curve_stair": "右側彎曲階梯型",
+  "home_type_right_stair": "右側側斜角階梯型",
+  "home_type_left_stair": "左側斜角階梯型",
+  "home_type_center_stair": "中央住家階梯型",
+  "home_type_hidden_stair": "隱藏樓梯型",
+  "home_type_ladder": "簡潔樓梯型",
+
+  "home_deco_roof": "屋頂",
+  "home_deco_tile": "地面",
+  "home_deco_window": "窗戶",
+  "home_deco_wall": "牆壁",
+  "home_deco_wallFront": "外牆",
+  "home_deco_wallBack": "壁紙",
+  "home_deco_roofDeco": "外牆裝飾",
+  "home_deco_exteriorDeco": "室外裝飾",
+  "home_deco_parasol": "室外裝飾",
+  "home_deco_door": "門",
+  "home_deco_chimney": "煙囪",
+
+  "tab_all": "全部",
+  "tab_favorite": "收藏",
+  "tab_layer_ground": "地板裝飾",
+  "tab_layer_wall": "牆壁裝飾",
+
+  "add_favorite": "加入收藏",
+
+  "furniture_filter": "篩選",
+  "furniture_filter_all": "全部",
+  "furniture_filter_wall": "牆壁裝飾",
+  "furniture_filter_ground": "地板裝飾",
+  "furniture_filter_poster": "海報",
+  "furniture_filter_boss": "BOSS",
+  "furniture_filter_plant": "植物",
+  "furniture_filter_light": "燈",
+  "furniture_filter_rest": "可坐",
+  "furniture_filter_interable": "可互動",
+
+  "setting_edit": "編輯模式",
+  "setting_edit_open": "開啟",
+  "setting_edit_close": "關閉",
 
   "other_tools": "其他工具",
   "web_arcane_symbol_calculator": "秘法符文計算機",
   "web_boss_crystal_calculator": "力量結晶計算機",
-
+  "web_maplesalon": "楓沙龍",
+  
   "page_not_found": "無此頁面",
   "error_with_status": "A {{statusCode}} error occurred on server",
   "error_without_status": "An error occurred on the server"

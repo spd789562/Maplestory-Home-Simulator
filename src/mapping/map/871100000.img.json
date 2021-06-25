@@ -873,7 +873,13 @@
     "height": "825",
     "centerX": "928",
     "centerY": "550",
-    "mag": "4"
+    "mag": "4",
+    "canvas": {
+      "_imageData": {
+        "width": "84",
+        "height": "51"
+      }
+    }
   },
   "portal": {
     "0": {

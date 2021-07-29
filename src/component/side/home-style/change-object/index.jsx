@@ -37,6 +37,7 @@ const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
                 className={`${styles['list-item']} ${
                   hasTheme ? styles['list-item__active'] : ''
                 }`}
+                onClick={handleChange(needFields)}
               >
                 <Popover
                   title={mappedString.name}
@@ -54,7 +55,6 @@ const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
                 <img
                   src={`/theme-ui/Item-Consume-0267.img-0${itemID}-info-preview.png`}
                   alt=""
-                  onClick={handleChange(needFields)}
                   key={`home-obj-${itemID}`}
                 />
               </div>

@@ -1,4 +1,5 @@
 {
+
   "001": {
     "templateMapID": "871100000",
     "info": "tutorial_type",
@@ -1914,8 +1915,8 @@
     "info": "halloween_Ctype",
     "category": "halloween_normal",
     "type": "ladder",
-    "name": "简易爬梯型",
-    "desc": "散发着阴森气息，与明亮的满月十分相称的古典3层宅邸。层间安装的梯子大大提高了空间利用率。\\r\\n如果你既想和朋友享受派对，同时还希望拥有独立的个人空间，这栋宅邸将是你的不二之选！",
+    "name": "簡潔樓梯型",
+    "desc": "這是跟明亮的滿月非常搭的陰森森的傳統3層樓住宅。安裝梯子後增加了空間的使用程度。\\r\\n如果你想跟朋友開派對，又想擁有自己專屬的空間，那這棟住宅是最佳的選擇！",
     "roof": {
       "0": {
         "0": {
@@ -2198,8 +2199,8 @@
     "info": "NewYear_DefaultType",
     "category": "NewYear_normal",
     "type": "default",
-    "name": "荷塘庭院瓦屋房 - 基础型",
-    "desc": "林中情趣与静谧荷塘营造出平静气氛的美丽东洋风住宅。瓦屋倒映在荷塘中，别具雅致。\\r\\n可以漫步湖面的小桥，给人一种漫步云端的感觉。",
+    "name": "蓮花池庭園瓦屋 - 基本型",
+    "desc": "展現山林情趣與蓮花池平靜氛圍的絢麗東洋風住家，映照在蓮花池內的瓦屋給人靜謐氣氛。\\r\\n湖水上橫越的小橋，讓人感受猶如漫步雲端的心情。",
     "roof": {
       "0": {
         "0": {
@@ -2400,7 +2401,7 @@
     "info": "해변의 테라스하우스 - 사선계단형",
     "category": "terrace_normal",
     "type": "diagonal",
-    "name": "右侧斜线阶梯型",
+    "name": "右側斜角階梯型",
     "desc": "寂靜的海浪聲默默帶給人安穩與悠閒氛圍的2層住宅樣式，在屋頂上撐起遮陽傘感受遠處吹來的海風吧！更配置著能夠感受空間分化妙用的斜樓梯。",
     "roof": {
       "0": {
@@ -2414,6 +2415,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "0"
+        },
+        "3": {
+          "name": "roof4",
           "state": "0"
         },
         "info": "리스 바닷가 돔지붕",
@@ -2432,6 +2437,10 @@
           "name": "roof3",
           "state": "1"
         },
+        "3": {
+          "name": "roof4",
+          "state": "1"
+        },
         "info": "윔그레이 돔지붕",
         "itemID": "2670089"
       },
@@ -2446,6 +2455,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "2"
+        },
+        "3": {
+          "name": "roof4",
           "state": "2"
         },
         "info": "카페 풍차 지붕",
@@ -2464,6 +2477,10 @@
           "name": "roof3",
           "state": "3"
         },
+        "3": {
+          "name": "roof4",
+          "state": "3"
+        },
         "info": "바닷바람 풍차 지붕",
         "itemID": "2670091"
       },
@@ -2480,6 +2497,10 @@
           "name": "roof3",
           "state": "4"
         },
+        "3": {
+          "name": "roof4",
+          "state": "4"
+        },
         "info": "청량한 종탑 지붕",
         "itemID": "2670092"
       },
@@ -2494,6 +2515,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "5"
+        },
+        "3": {
+          "name": "roof4",
           "state": "5"
         },
         "info": "시원한 종탑 지붕",
@@ -2553,7 +2578,15 @@
     "wallBack": {
       "0": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "0"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "0"
         },
         "info": "백사장 벽지",
@@ -2561,7 +2594,15 @@
       },
       "1": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "1"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "1"
         },
         "info": "원목 패널 벽지",
@@ -2569,7 +2610,15 @@
       },
       "2": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "2"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "2"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "2"
         },
         "info": "보통의 일상 벽지",
@@ -2715,7 +2764,7 @@
   },
   "013": {
     "templateMapID": "871100012",
-    "info": "리스항구 양식 - 꺾인 계단형",
+    "info": "해변의 테라스하우스 - 꺾인 계단형",
     "category": "terrace_normal",
     "type": "curved",
     "name": "右側彎曲階梯型",
@@ -2734,6 +2783,10 @@
           "name": "roof3",
           "state": "0"
         },
+        "3": {
+          "name": "roof4",
+          "state": "0"
+        },
         "info": "리스 바닷가 돔지붕",
         "itemID": "2670088"
       },
@@ -2748,6 +2801,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "1"
+        },
+        "3": {
+          "name": "roof4",
           "state": "1"
         },
         "info": "윔그레이 돔지붕",
@@ -2766,6 +2823,10 @@
           "name": "roof3",
           "state": "2"
         },
+        "3": {
+          "name": "roof4",
+          "state": "2"
+        },
         "info": "카페 풍차 지붕",
         "itemID": "2670090"
       },
@@ -2780,6 +2841,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "3"
+        },
+        "3": {
+          "name": "roof4",
           "state": "3"
         },
         "info": "바닷바람 풍차 지붕",
@@ -2798,6 +2863,10 @@
           "name": "roof3",
           "state": "4"
         },
+        "3": {
+          "name": "roof4",
+          "state": "4"
+        },
         "info": "청량한 종탑 지붕",
         "itemID": "2670092"
       },
@@ -2812,6 +2881,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "5"
+        },
+        "3": {
+          "name": "roof4",
           "state": "5"
         },
         "info": "시원한 종탑 지붕",
@@ -2871,7 +2944,15 @@
     "wallBack": {
       "0": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "0"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "0"
         },
         "info": "백사장 벽지",
@@ -2879,7 +2960,15 @@
       },
       "1": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "1"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "1"
         },
         "info": "원목 패널 벽지",
@@ -2887,7 +2976,15 @@
       },
       "2": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "2"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "2"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "2"
         },
         "info": "보통의 일상 벽지",
@@ -3033,7 +3130,7 @@
   },
   "014": {
     "templateMapID": "871100013",
-    "info": "리스항구 양식 - 사다리형",
+    "info": "해변의 테라스하우스 - 사다리형",
     "category": "terrace_normal",
     "type": "ladder",
     "name": "簡潔樓梯型",
@@ -3052,6 +3149,10 @@
           "name": "roof3",
           "state": "0"
         },
+        "3": {
+          "name": "roof4",
+          "state": "0"
+        },
         "info": "리스 바닷가 돔지붕",
         "itemID": "2670088"
       },
@@ -3066,6 +3167,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "1"
+        },
+        "3": {
+          "name": "roof4",
           "state": "1"
         },
         "info": "윔그레이 돔지붕",
@@ -3084,6 +3189,10 @@
           "name": "roof3",
           "state": "2"
         },
+        "3": {
+          "name": "roof4",
+          "state": "2"
+        },
         "info": "카페 풍차 지붕",
         "itemID": "2670090"
       },
@@ -3098,6 +3207,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "3"
+        },
+        "3": {
+          "name": "roof4",
           "state": "3"
         },
         "info": "바닷바람 풍차 지붕",
@@ -3116,6 +3229,10 @@
           "name": "roof3",
           "state": "4"
         },
+        "3": {
+          "name": "roof4",
+          "state": "4"
+        },
         "info": "청량한 종탑 지붕",
         "itemID": "2670092"
       },
@@ -3130,6 +3247,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "5"
+        },
+        "3": {
+          "name": "roof4",
           "state": "5"
         },
         "info": "시원한 종탑 지붕",
@@ -3189,7 +3310,15 @@
     "wallBack": {
       "0": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "0"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "0"
         },
         "info": "백사장 벽지",
@@ -3197,7 +3326,15 @@
       },
       "1": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "1"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "1"
         },
         "info": "원목 패널 벽지",
@@ -3205,7 +3342,15 @@
       },
       "2": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "2"
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": "2"
+        },
+        "2": {
+          "name": "wallBack3",
           "state": "2"
         },
         "info": "보통의 일상 벽지",
@@ -3507,7 +3652,11 @@
     "wallBack": {
       "0": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "0"
         },
         "info": "따스한 나무 내벽",
@@ -3515,7 +3664,11 @@
       },
       "1": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "1"
         },
         "info": "심플 화이트 벽지",
@@ -3523,7 +3676,11 @@
       },
       "2": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "2"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "2"
         },
         "info": "클래식 몰딩 벽지",
@@ -3815,7 +3972,11 @@
     "wallBack": {
       "0": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "0"
         },
         "info": "따스한 나무 내벽",
@@ -3823,7 +3984,11 @@
       },
       "1": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "1"
         },
         "info": "심플 화이트 벽지",
@@ -3831,7 +3996,11 @@
       },
       "2": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "2"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "2"
         },
         "info": "클래식 몰딩 벽지",
@@ -4123,7 +4292,11 @@
     "wallBack": {
       "0": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "0"
         },
         "info": "따스한 나무 내벽",
@@ -4131,7 +4304,11 @@
       },
       "1": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "1"
         },
         "info": "심플 화이트 벽지",
@@ -4139,7 +4316,11 @@
       },
       "2": {
         "0": {
-          "name": "wallBack",
+          "name": "wallBack1",
+          "state": "2"
+        },
+        "1": {
+          "name": "wallBack2",
           "state": "2"
         },
         "info": "클래식 몰딩 벽지",
@@ -4278,8 +4459,8 @@
     "info": "버섯집 확장형 A타입 - 꺾인 계단형",
     "category": "mushroom_expanded",
     "type": "curved",
-    "name": "安樂蘑菇屋擴建型：轉彎樓梯型",
-    "desc": "蘑菇屋擴建至3層，室內空間更大。小巧的蘑菇屋頂增添了舒適感和均衡感。放置轉彎樓梯後，平添了幾分美感。",
+    "name": "舒適的菇菇小屋擴充型：L型樓梯型",
+    "desc": "擴建為三層後，確保了更寬敞的室內空間的菇菇小屋。小巧可愛的菇菇屋頂們增添舒適感和均衡感。配置了L型樓梯凸顯帥氣。",
     "roof": {
       "0": {
         "0": {
@@ -4479,7 +4660,7 @@
     "tile": {
       "0": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "0"
         },
         "info": "버섯집확장_기본바닥",
@@ -4487,7 +4668,7 @@
       },
       "1": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "1"
         },
         "info": "버섯집확장_벽돌바닥",
@@ -4495,7 +4676,7 @@
       },
       "2": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "2"
         },
         "info": "버섯집확장_풀바닥",
@@ -4582,8 +4763,8 @@
     "info": "버섯집 확장형 B타입 - 사선 계단형",
     "category": "mushroom_expanded",
     "type": "diagonal",
-    "name": "安樂蘑菇屋擴建型：傾斜臺階型",
-    "desc": "蘑菇屋擴建至3層，室內空間更大。小巧的蘑菇屋頂增添了舒適感和均衡感。將傾斜臺階放置在側邊，提升了安全係數。",
+    "name": "舒適的菇菇小屋擴充型：斜樓梯型",
+    "desc": "擴建為三層後，確保了更寬敞的室內空間的菇菇小屋。小巧可愛的菇菇屋頂們增添舒適感和均衡感。將斜樓梯配置在邊邊，增添安穩的感覺。",
     "roof": {
       "0": {
         "0": {
@@ -4783,7 +4964,7 @@
     "tile": {
       "0": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "0"
         },
         "info": "버섯집확장_기본바닥",
@@ -4791,7 +4972,7 @@
       },
       "1": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "1"
         },
         "info": "버섯집확장_벽돌바닥",
@@ -4799,7 +4980,7 @@
       },
       "2": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "2"
         },
         "info": "버섯집확장_풀바닥",
@@ -4886,8 +5067,8 @@
     "info": "버섯집 확장형 C타입 - 심플 사다리형",
     "category": "mushroom_expanded",
     "type": "ladder",
-    "name": "安樂蘑菇屋擴建型：簡約梯子型",
-    "desc": "蘑菇屋擴建至3層，室內空間更大。小巧的蘑菇屋頂增添了舒適感和均衡感。放置了小型梯子，提高了空間利用率。",
+    "name": "舒適的菇菇小屋擴充型：簡易梯子型",
+    "desc": "擴建為三層後，確保了更寬敞的室內空間的菇菇小屋。小巧可愛的菇菇屋頂們增添舒適感和均衡感。配置小梯子來提高空間活用度，",
     "roof": {
       "0": {
         "0": {
@@ -5087,7 +5268,7 @@
     "tile": {
       "0": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "0"
         },
         "info": "버섯집확장_기본바닥",
@@ -5095,7 +5276,7 @@
       },
       "1": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "1"
         },
         "info": "버섯집확장_벽돌바닥",
@@ -5103,7 +5284,7 @@
       },
       "2": {
         "0": {
-          "name": "tile1",
+          "name": "tile",
           "state": "2"
         },
         "info": "버섯집확장_풀바닥",
@@ -5190,8 +5371,8 @@
     "info": "양옥집 확장형 A타입 - 사선 계단형",
     "category": "mansion_expanded",
     "type": "diagonal",
-    "name": "整潔的洋房擴建型：傾斜臺階型",
-    "desc": "整潔的西式住宅擴建了三層額外空間，平添了幾分雄偉。豪華的傾斜臺階讓人印象深刻。",
+    "name": "精緻的洋房擴充型：斜樓梯型",
+    "desc": "在新穎的西式住宅中擴展三樓追加空間增添雄偉。豪華的斜樓梯令人印象深刻。",
     "roof": {
       "0": {
         "0": {
@@ -5412,8 +5593,8 @@
     "info": "양옥집 확장형 B타입 - 꺾인 계단형",
     "category": "mansion_expanded",
     "type": "curved",
-    "name": "整潔的洋房擴建型：轉彎樓梯型",
-    "desc": "整潔的西式住宅擴建了三層額外空間，平添了幾分雄偉。現代轉彎樓梯極具美感。",
+    "name": "精緻的洋房擴充型：L型樓梯型",
+    "desc": "在新穎的西式住宅中擴展三樓追加空間增添雄偉。摩登的L型樓梯相當帥氣。",
     "roof": {
       "0": {
         "0": {
@@ -5634,8 +5815,8 @@
     "info": "양옥집 확장형 C타입 - 심플 사다리형",
     "category": "mansion_expanded",
     "type": "ladder",
-    "name": "整潔的洋房擴建型：簡約梯子型",
-    "desc": "整潔的西式住宅擴建了三層額外空間，平添了幾分雄偉。簡約的梯子提高了空間利用率。",
+    "name": "精緻的洋房擴充型：簡易梯子型",
+    "desc": "在新穎的西式住宅中擴展三樓追加空間增添雄偉。簡潔的梯子提高空間的活用度。",
     "roof": {
       "0": {
         "0": {
@@ -5856,8 +6037,8 @@
     "info": "해변테라스하우스 확장형 사선계단형",
     "category": "terrace_expanded",
     "type": "diagonal",
-    "name": "海濱露臺小屋擴建型：傾斜臺階型",
-    "desc": "可以盡享魅力海邊浪漫風情的住宅。擴建樓層，提供悠然自得的休息空間。放置了漂亮的傾斜臺階。",
+    "name": "海岸邊的陽台房屋擴充型：斜樓梯型",
+    "desc": "美麗海邊的可以盡情享受浪漫的住宅。擴展下面樓層提供更溫馨悠閒的休息空間。配置了帥氣的斜樓梯。",
     "roof": {
       "0": {
         "0": {
@@ -5870,6 +6051,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "0"
+        },
+        "3": {
+          "name": "roof4",
           "state": "0"
         },
         "info": "리스확장형_파란돔지붕",
@@ -5888,6 +6073,10 @@
           "name": "roof3",
           "state": "1"
         },
+        "3": {
+          "name": "roof4",
+          "state": "1"
+        },
         "info": "리스확장형_윔그레이 돔지붕",
         "itemID": "2670189"
       },
@@ -5902,6 +6091,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "2"
+        },
+        "3": {
+          "name": "roof4",
           "state": "2"
         },
         "info": "리스확장형_카페 풍차 지붕",
@@ -5920,6 +6113,10 @@
           "name": "roof3",
           "state": "3"
         },
+        "3": {
+          "name": "roof4",
+          "state": "3"
+        },
         "info": "리스확장형_바닷바람 풍차 지붕",
         "itemID": "2670191"
       },
@@ -5936,6 +6133,10 @@
           "name": "roof3",
           "state": "4"
         },
+        "3": {
+          "name": "roof4",
+          "state": "4"
+        },
         "info": "리스확장형_청량한 종탑 지붕",
         "itemID": "2670192"
       },
@@ -5950,6 +6151,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "5"
+        },
+        "3": {
+          "name": "roof4",
           "state": "5"
         },
         "info": "리스확장형_시원한 종탑 지붕",
@@ -6052,6 +6257,18 @@
           "name": "wallBack2",
           "state": "0"
         },
+        "2": {
+          "name": "wallBack3",
+          "state": "0"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "0"
+        },
+        "4": {
+          "name": "wallBack5",
+          "state": "0"
+        },
         "info": "리스확장형_백사장 벽지",
         "itemID": "2670197"
       },
@@ -6064,6 +6281,18 @@
           "name": "wallBack2",
           "state": "1"
         },
+        "2": {
+          "name": "wallBack3",
+          "state": "1"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "1"
+        },
+        "4": {
+          "name": "wallBack5",
+          "state": "1"
+        },
         "info": "리스확장형_원목 패널 벽지",
         "itemID": "2670198"
       },
@@ -6074,6 +6303,18 @@
         },
         "1": {
           "name": "wallBack2",
+          "state": "2"
+        },
+        "2": {
+          "name": "wallBack3",
+          "state": "2"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "2"
+        },
+        "4": {
+          "name": "wallBack5",
           "state": "2"
         },
         "info": "리스확장형_보통의 일상 벽지",
@@ -6132,6 +6373,10 @@
           "name": "door3",
           "state": "0"
         },
+        "3": {
+          "name": "door4",
+          "state": "0"
+        },
         "info": "리스확장형_컬러 에너지 문",
         "itemID": "2670210"
       },
@@ -6148,6 +6393,10 @@
           "name": "door3",
           "state": "1"
         },
+        "3": {
+          "name": "door4",
+          "state": "1"
+        },
         "info": "리스확장형_로맨틱 부겐빌레아 문",
         "itemID": "2670211"
       },
@@ -6162,6 +6411,10 @@
         },
         "2": {
           "name": "door3",
+          "state": "2"
+        },
+        "3": {
+          "name": "door4",
           "state": "2"
         },
         "info": "리스확장형_6월의 여름 문",
@@ -6221,32 +6474,48 @@
     "parasol": {
       "0": {
         "0": {
-          "name": "parasol",
-          "state": "3"
+          "name": "parasol1",
+          "state": "0"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "0"
         },
         "info": "리스확장형_파라솔 - 없음",
         "itemID": "2670209"
       },
       "1": {
         "0": {
-          "name": "parasol",
-          "state": "0"
+          "name": "parasol1",
+          "state": "1"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "1"
         },
         "info": "리스확장형_비치 스트라이프 파라솔",
         "itemID": "2670206"
       },
       "2": {
         "0": {
-          "name": "parasol",
-          "state": "1"
+          "name": "parasol1",
+          "state": "2"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "2"
         },
         "info": "리스확장형_네츄럴 파라솔",
         "itemID": "2670207"
       },
       "3": {
         "0": {
-          "name": "parasol",
-          "state": "2"
+          "name": "parasol1",
+          "state": "3"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "3"
         },
         "info": "리스확장형_하얀 캔버스 파라솔",
         "itemID": "2670208"
@@ -6292,8 +6561,8 @@
     "info": "해변테라스하우스 확장형 꺾인계단형",
     "category": "terrace_expanded",
     "type": "curved",
-    "name": "海濱露臺小屋擴建型：轉彎樓梯型",
-    "desc": "可以盡享魅力海邊浪漫風情的住宅。擴建樓層，提供悠然自得的休息空間。樸素的轉彎樓梯使人獲得內心安寧。",
+    "name": "海岸邊的陽台房屋擴充型：L型樓梯型",
+    "desc": "美麗海邊的可以盡情享受浪漫的住宅。擴展下面樓層提供更溫馨悠閒的休息空間。簡樸的L型樓梯讓心情平穩。",
     "roof": {
       "0": {
         "0": {
@@ -6306,6 +6575,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "0"
+        },
+        "3": {
+          "name": "roof4",
           "state": "0"
         },
         "info": "리스확장형_파란돔지붕",
@@ -6324,6 +6597,10 @@
           "name": "roof3",
           "state": "1"
         },
+        "3": {
+          "name": "roof4",
+          "state": "1"
+        },
         "info": "리스확장형_윔그레이 돔지붕",
         "itemID": "2670189"
       },
@@ -6338,6 +6615,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "2"
+        },
+        "3": {
+          "name": "roof4",
           "state": "2"
         },
         "info": "리스확장형_카페 풍차 지붕",
@@ -6356,6 +6637,10 @@
           "name": "roof3",
           "state": "3"
         },
+        "3": {
+          "name": "roof4",
+          "state": "3"
+        },
         "info": "리스확장형_바닷바람 풍차 지붕",
         "itemID": "2670191"
       },
@@ -6372,6 +6657,10 @@
           "name": "roof3",
           "state": "4"
         },
+        "3": {
+          "name": "roof4",
+          "state": "4"
+        },
         "info": "리스확장형_청량한 종탑 지붕",
         "itemID": "2670192"
       },
@@ -6386,6 +6675,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "5"
+        },
+        "3": {
+          "name": "roof4",
           "state": "5"
         },
         "info": "리스확장형_시원한 종탑 지붕",
@@ -6488,6 +6781,18 @@
           "name": "wallBack2",
           "state": "0"
         },
+        "2": {
+          "name": "wallBack3",
+          "state": "0"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "0"
+        },
+        "4": {
+          "name": "wallBack5",
+          "state": "0"
+        },
         "info": "리스확장형_백사장 벽지",
         "itemID": "2670197"
       },
@@ -6500,6 +6805,18 @@
           "name": "wallBack2",
           "state": "1"
         },
+        "2": {
+          "name": "wallBack3",
+          "state": "1"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "1"
+        },
+        "4": {
+          "name": "wallBack5",
+          "state": "1"
+        },
         "info": "리스확장형_원목 패널 벽지",
         "itemID": "2670198"
       },
@@ -6510,6 +6827,18 @@
         },
         "1": {
           "name": "wallBack2",
+          "state": "2"
+        },
+        "2": {
+          "name": "wallBack3",
+          "state": "2"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "2"
+        },
+        "4": {
+          "name": "wallBack5",
           "state": "2"
         },
         "info": "리스확장형_보통의 일상 벽지",
@@ -6568,6 +6897,10 @@
           "name": "door3",
           "state": "0"
         },
+        "3": {
+          "name": "door4",
+          "state": "0"
+        },
         "info": "리스확장형_컬러 에너지 문",
         "itemID": "2670210"
       },
@@ -6584,6 +6917,10 @@
           "name": "door3",
           "state": "1"
         },
+        "3": {
+          "name": "door4",
+          "state": "1"
+        },
         "info": "리스확장형_로맨틱 부겐빌레아 문",
         "itemID": "2670211"
       },
@@ -6598,6 +6935,10 @@
         },
         "2": {
           "name": "door3",
+          "state": "2"
+        },
+        "3": {
+          "name": "door4",
           "state": "2"
         },
         "info": "리스확장형_6월의 여름 문",
@@ -6657,32 +6998,48 @@
     "parasol": {
       "0": {
         "0": {
-          "name": "parasol",
-          "state": "3"
+          "name": "parasol1",
+          "state": "0"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "0"
         },
         "info": "리스확장형_파라솔 - 없음",
         "itemID": "2670209"
       },
       "1": {
         "0": {
-          "name": "parasol",
-          "state": "0"
+          "name": "parasol1",
+          "state": "1"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "1"
         },
         "info": "리스확장형_비치 스트라이프 파라솔",
         "itemID": "2670206"
       },
       "2": {
         "0": {
-          "name": "parasol",
-          "state": "1"
+          "name": "parasol1",
+          "state": "2"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "2"
         },
         "info": "리스확장형_네츄럴 파라솔",
         "itemID": "2670207"
       },
       "3": {
         "0": {
-          "name": "parasol",
-          "state": "2"
+          "name": "parasol1",
+          "state": "3"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "3"
         },
         "info": "리스확장형_하얀 캔버스 파라솔",
         "itemID": "2670208"
@@ -6728,8 +7085,8 @@
     "info": "해변테라스하우스 확장형 사다리형",
     "category": "terrace_expanded",
     "type": "ladder",
-    "name": "海濱露臺小屋擴建型：簡約梯子型",
-    "desc": "可以盡享魅力海邊浪漫風情的住宅。擴建樓層，提供悠然自得的休息空間。簡約的梯子不僅提高了空間利用率，還將房子襯托得更加華麗。",
+    "name": "海岸邊的陽台房屋擴充型：簡易梯子型",
+    "desc": "美麗海邊的可以盡情享受浪漫的住宅。擴展下面樓層提供更溫馨悠閒的休息空間。簡約的梯子提高空間的活用度來襯托房子",
     "roof": {
       "0": {
         "0": {
@@ -6742,6 +7099,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "0"
+        },
+        "3": {
+          "name": "roof4",
           "state": "0"
         },
         "info": "리스확장형_파란돔지붕",
@@ -6760,6 +7121,10 @@
           "name": "roof3",
           "state": "1"
         },
+        "3": {
+          "name": "roof4",
+          "state": "1"
+        },
         "info": "리스확장형_윔그레이 돔지붕",
         "itemID": "2670189"
       },
@@ -6774,6 +7139,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "2"
+        },
+        "3": {
+          "name": "roof4",
           "state": "2"
         },
         "info": "리스확장형_카페 풍차 지붕",
@@ -6792,6 +7161,10 @@
           "name": "roof3",
           "state": "3"
         },
+        "3": {
+          "name": "roof4",
+          "state": "3"
+        },
         "info": "리스확장형_바닷바람 풍차 지붕",
         "itemID": "2670191"
       },
@@ -6808,6 +7181,10 @@
           "name": "roof3",
           "state": "4"
         },
+        "3": {
+          "name": "roof4",
+          "state": "4"
+        },
         "info": "리스확장형_청량한 종탑 지붕",
         "itemID": "2670192"
       },
@@ -6822,6 +7199,10 @@
         },
         "2": {
           "name": "roof3",
+          "state": "5"
+        },
+        "3": {
+          "name": "roof4",
           "state": "5"
         },
         "info": "리스확장형_시원한 종탑 지붕",
@@ -6924,6 +7305,18 @@
           "name": "wallBack2",
           "state": "0"
         },
+        "2": {
+          "name": "wallBack3",
+          "state": "0"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "0"
+        },
+        "4": {
+          "name": "wallBack5",
+          "state": "0"
+        },
         "info": "리스확장형_백사장 벽지",
         "itemID": "2670197"
       },
@@ -6936,6 +7329,18 @@
           "name": "wallBack2",
           "state": "1"
         },
+        "2": {
+          "name": "wallBack3",
+          "state": "1"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "1"
+        },
+        "4": {
+          "name": "wallBack5",
+          "state": "1"
+        },
         "info": "리스확장형_원목 패널 벽지",
         "itemID": "2670198"
       },
@@ -6946,6 +7351,18 @@
         },
         "1": {
           "name": "wallBack2",
+          "state": "2"
+        },
+        "2": {
+          "name": "wallBack3",
+          "state": "2"
+        },
+        "3": {
+          "name": "wallBack4",
+          "state": "2"
+        },
+        "4": {
+          "name": "wallBack5",
           "state": "2"
         },
         "info": "리스확장형_보통의 일상 벽지",
@@ -7004,6 +7421,10 @@
           "name": "door3",
           "state": "0"
         },
+        "3": {
+          "name": "door4",
+          "state": "0"
+        },
         "info": "리스확장형_컬러 에너지 문",
         "itemID": "2670210"
       },
@@ -7020,6 +7441,10 @@
           "name": "door3",
           "state": "1"
         },
+        "3": {
+          "name": "door4",
+          "state": "1"
+        },
         "info": "리스확장형_로맨틱 부겐빌레아 문",
         "itemID": "2670211"
       },
@@ -7034,6 +7459,10 @@
         },
         "2": {
           "name": "door3",
+          "state": "2"
+        },
+        "3": {
+          "name": "door4",
           "state": "2"
         },
         "info": "리스확장형_6월의 여름 문",
@@ -7093,32 +7522,48 @@
     "parasol": {
       "0": {
         "0": {
-          "name": "parasol",
-          "state": "3"
+          "name": "parasol1",
+          "state": "0"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "0"
         },
         "info": "리스확장형_파라솔 - 없음",
         "itemID": "2670209"
       },
       "1": {
         "0": {
-          "name": "parasol",
-          "state": "0"
+          "name": "parasol1",
+          "state": "1"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "1"
         },
         "info": "리스확장형_비치 스트라이프 파라솔",
         "itemID": "2670206"
       },
       "2": {
         "0": {
-          "name": "parasol",
-          "state": "1"
+          "name": "parasol1",
+          "state": "2"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "2"
         },
         "info": "리스확장형_네츄럴 파라솔",
         "itemID": "2670207"
       },
       "3": {
         "0": {
-          "name": "parasol",
-          "state": "2"
+          "name": "parasol1",
+          "state": "3"
+        },
+        "1": {
+          "name": "parasol2",
+          "state": "3"
         },
         "info": "리스확장형_하얀 캔버스 파라솔",
         "itemID": "2670208"

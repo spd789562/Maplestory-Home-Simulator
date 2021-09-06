@@ -37,6 +37,7 @@ class MapObject {
     this.theme = '0'
     this.objectType = name || objectType
     this.objectIndex = objectIndex
+    objectType === 'tile' && console.log(this)
   }
   get frames() {
     const currentObject = this.themeData[this.theme]
@@ -53,8 +54,8 @@ class MapObject {
                 MapObjectMapping
               )
             : null
-          const originX = linkObj?.origin?.x || origin.x
-          const originY = linkObj?.origin?.y || origin.y
+          const originX = origin?.x || linkObj?.origin?.x
+          const originY = origin?.y || linkObj?.origin?.y
           return {
             frame,
             x: +originX * -1 + this.position.x,

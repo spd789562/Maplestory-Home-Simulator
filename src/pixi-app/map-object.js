@@ -37,7 +37,6 @@ class MapObject {
     this.theme = '0'
     this.objectType = name || objectType
     this.objectIndex = objectIndex
-    objectType === 'tile' && console.log(this)
   }
   get frames() {
     const currentObject = this.themeData[this.theme]

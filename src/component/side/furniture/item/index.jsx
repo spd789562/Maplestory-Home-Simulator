@@ -55,7 +55,7 @@ const Item = ({ t, id }) => {
           className={styles['item-image']}
           style={{
             backgroundImage: `url(/furniture/Item-Consume-0267.img-${id}${
-              _isPoster ? '-layer1-0' : '-info-icon'
+              _isPoster ? '-info-avatar' : '-info-icon'
             }.png)`,
           }}
           onClick={handleClick}

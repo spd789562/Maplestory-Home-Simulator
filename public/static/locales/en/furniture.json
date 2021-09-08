@@ -46,6 +46,10 @@
   "desc_weather":"",
   "title_donation":"Donation",
   "desc_donation":"",
+  "title_punchingGame":"Punching Game",
+  "desc_punchingGame":"Just do it",
+  "title_passwordGame":"Password Game",
+  "desc_passwordGame":"Guess password and get free stuff",
 
   "desc_animate": ", click can change",
 
@@ -86,5 +90,6 @@
   "tag_bathroom": "Bathroom",
   "tag_partition": "Partition",
   "tag_instrument": "Instrument",
-  "tag_living": "Living"
+  "tag_living": "Living",
+  "tag_neoCastle": "NEO Castle"
 }

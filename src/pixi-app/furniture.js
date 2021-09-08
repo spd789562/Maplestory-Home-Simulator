@@ -30,7 +30,10 @@ import {
   __,
 } from 'ramda'
 import { entries, mapObject } from '@utils/ramda'
-import { getFurnitureImagePath } from '@utils/get-image-path'
+import {
+  getFurnitureImagePath,
+  getFurnitureAvatarPath,
+} from '@utils/get-image-path'
 
 /* mapping */
 import {
@@ -101,13 +104,12 @@ class Furniture {
     this.layerIndex = this.isWall ? 3 : 4
 
     this.statesData = this.wz.states
-      ? this.wz.states
-      : { 0: { loop: getLayers(this.wz) } }
     this.stateCount = keys(this.statesData).length
     this.state = 0
     this.stateStage = 'loop'
 
     this.frames = this.parseFrames()
+    this.stageMap = this.parserStageName()
     this.components = {}
 
     this.$placement = new FurniturePlacement({
@@ -162,84 +164,98 @@ class Furniture {
     this.render()
     this.renderRestrict()
   }
-  parseFrames() {
-    const isState = this.stateCount !== 1
-    return mapObject(([state, stateData]) => {
-      const hasStage = !!keys(stateData).find(keyIsStage)
-      return mapObject(
-        ([stage, stageData]) =>
-          mapObject(
-            ([layer, layerData]) => ({
-              name: layer,
-              z: +layerData.z || 0,
-              delay: +layerData.delay || 0,
-              frames: entries(
-                ([
-                  frame,
-                  { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
-                ]) => {
-                  const linkObj = _inlink
-                    ? path(_inlink.split('/'), FurnitureMapping)
-                    : null
-                  let _id = this.furnitureID
-                  let _state = state
-                  let _stage = stage
-                  let _layer = layer
-                  let _frame = frame
-                  let _isState = isState
-                  let _hasStage = hasStage
-                  if (_inlink) {
-                    const linkpath = _inlink.split('/')
-                    const lastIndex = linkpath.length - 1
-                    _id = linkpath[0]
-                    _isState = linkpath[1] === 'states'
-                    _state = _isState ? linkpath[2] : 0
-                    _hasStage = keyIsStage(linkpath[3])
-                    _stage = _hasStage ? linkpath[3] : null
-                    _layer = linkpath[lastIndex - 1]
-                    _frame = linkpath[lastIndex]
-                  }
-                  const originX = linkObj?.origin?.x || origin.x
-                  const originY = linkObj?.origin?.y || origin.y
-
-                  return {
-                    frame,
-                    x: +originX * -1,
-                    y: +originY * -1,
-                    size: linkObj?._imageData || _imageData,
-                    src: getFurnitureImagePath({
-                      id: _id,
-                      state: _state,
-                      stage: _stage,
-                      layer: _layer,
-                      frame: _frame,
-                      isState: _isState,
-                      hasStage: _hasStage,
-                    }),
-                    delay,
-                  }
-                },
-                getFrames(layerData)
-              ),
-            }),
-            getLayers(stageData)
-          ),
-        hasStage ? stateData : { loop: stateData }
-      )
+  parserStageName() {
+    /* current state and stage corresponding index */
+    /* [state]: { [start|loop|end]: number } */
+    return map(({ Sections }) => {
+      return keys(Sections).reduce((keyMap, key, index) => {
+        keyMap[key.toLowerCase()] = index
+        return keyMap
+      }, {})
     }, this.statesData)
   }
-  get currentFrames() {
-    return this.frames[this.state][this.stateStage]
+  parseFrames() {
+    /* map state */
+    return mapObject(
+      ([state, { LayerSlots }]) =>
+        /* map layers */
+        mapObject(
+          ([layer, layerData]) =>
+            /* map layers */
+            mapObject(([stage, stageData]) => {
+              const framsCount = keys(stageData.AnimReference).length
+              /* prevent all frame dont have delay, use generic delay count by total time */
+              const defaultDelay =
+                (+(stageData.EndPos || 0) - +(stageData.StartPos || 0)) /
+                framsCount
+              return {
+                name: layer,
+                z: +layerData.z || 0,
+                delay: 0,
+                /* map frames */
+                frames: entries(
+                  ([
+                    frame,
+                    { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
+                  ]) => {
+                    const linkObj = _inlink
+                      ? path(_inlink.split('/'), FurnitureMapping)
+                      : null
+                    let _id = this.furnitureID
+                    let _state = state
+                    let _stage = stage
+                    let _layer = layer
+                    let _frame = frame
+                    let _isAvatar = _inlink && _inlink.includes('info/avatar')
+                    if (_inlink && !_isAvatar) {
+                      /* ${furnitureID}/states/${state}/LayerSlots/${layer}/${stage}/AnimReference/${frame} */
+                      const linkpath = _inlink.split('/')
+                      _id = linkpath[0]
+                      _state = linkpath[2]
+                      _layer = linkpath[4]
+                      _stage = linkpath[5]
+                      _frame = linkpath[7]
+                    }
+                    const originX = origin?.x || linkObj?.origin?.x || 0
+                    const originY = origin?.y || linkObj?.origin?.y || 0
+                    return {
+                      frame,
+                      x: +originX * -1,
+                      y: +originY * -1,
+                      size: linkObj?._imageData || _imageData,
+                      src: _isAvatar
+                        ? getFurnitureAvatarPath({ id: _id })
+                        : getFurnitureImagePath({
+                            id: _id,
+                            state: _state,
+                            stage: _stage,
+                            layer: _layer,
+                            frame: _frame,
+                          }),
+                      delay: delay || defaultDelay,
+                    }
+                  },
+                  stageData.AnimReference
+                ),
+              }
+            }, layerData),
+          LayerSlots
+        ),
+      this.statesData
+    )
+  }
+  get currentStateLayers() {
+    return this.frames[this.state]
   }
   get allLayerSrc() {
     return pipe(
       values, // state
       map(
         pipe(
-          values, // stage
+          values, // layer
           map(
             pipe(
-              values, // layer
+              values, // stage
               map(pipe(prop('frames'), map(prop('src'))))
             )
           )
@@ -265,16 +281,22 @@ class Furniture {
     this.$furniture.removeChildren()
   }
   play(stage, cb = identity) {
-    if (!path([this.state, stage], this.frames)) {
+    const stageIndex = path([this.state, stage], this.stageMap)
+    if (stageIndex === undefined) {
       cb()
       return
     }
     this.clearPreviousFrame()
     this.stateStage = stage
     let doneCount = 0
-    const maxFrame = values(this.currentFrames).length
-    map(({ name, z, delay, frames }) => {
-      const componentKey = `${this.state}-${stage}-${name}`
+    let maxLayer = values(this.currentStateLayers).length
+    map(({ name, z, delay, frames } = {}) => {
+      /* current stage of layer doesn't have any frames */
+      if (!frames || !frames.length) {
+        maxLayer -= 1
+        return
+      }
+      const componentKey = `${this.state}-${stageIndex}-${name}`
       const aniSprite = new AnimatedSprite(
         frames.map(({ src }) => this.app.loader.resources[src].texture)
       )
@@ -286,7 +308,7 @@ class Furniture {
       aniSprite.onFrameChange = onFrameChange
       aniSprite.onComplete = () => {
         doneCount += 1
-        if (doneCount >= maxFrame) {
+        if (doneCount >= maxLayer) {
           this.isPlaying = false
           cb()
         }
@@ -295,7 +317,7 @@ class Furniture {
       this.components[componentKey] = aniSprite
       this.$furniture.addChild(this.components[componentKey])
       aniSprite.play()
-    })(this.currentFrames)
+    })(map(prop(stageIndex), this.currentStateLayers))
   }
   playStart() {
     this.play('start', () => {

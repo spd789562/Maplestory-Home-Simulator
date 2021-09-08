@@ -46,6 +46,10 @@
   "desc_weather":"讓房子開始下雪吧",
   "title_donation":"捐款",
   "desc_donation":"克蘭西亞捐獻王",
+  "title_punchingGame":"拳擊遊戲",
+  "desc_punchingGame":"反正就打他，我想不到介紹要寫啥，ㄅ歉",
+  "title_passwordGame":"密碼遊戲",
+  "desc_passwordGame":"猜對密碼即可獲得獎勵",
 
   "desc_animate": "，點他他會動",
 
@@ -86,5 +90,7 @@
   "tag_bathroom": "浴室",
   "tag_partition": "分隔",
   "tag_instrument": "樂器",
-  "tag_living": "生活"
+  "tag_living": "生活",
+  "tag_minigame": "小遊戲",
+  "tag_neoCastle": "NEO 城堡"
 }

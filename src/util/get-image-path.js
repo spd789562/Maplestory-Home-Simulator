@@ -17,15 +17,11 @@ export const getMapBackImagePath = ({ homeType, backType, backIndex, frame }) =>
     !isNil(frame) ? `-${frame}` : ''
   }.png`
 
-export const getFurnitureImagePath = ({
-  id,
-  state,
-  stage,
-  isState,
-  hasStage,
-  layer,
-  frame,
-}) =>
-  `/furniture/Item-Consume-0267.img-${id.padStart(8, '0')}${
-    isState ? `-states-${state}${hasStage ? `-${stage}` : ''}` : ''
-  }-${layer}-${frame}.png`
+export const getFurnitureImagePath = ({ id, state, stage, layer, frame }) =>
+  `/furniture/Item-Consume-0267.img-${id.padStart(
+    8,
+    '0'
+  )}-states-${state}-LayerSlots-${layer}-${stage}-AnimReference-${frame}.png`
+
+export const getFurnitureAvatarPath = ({ id }) =>
+  `/furniture/Item-Consume-0267.img-${id.padStart(8, '0')}-info-avatar.png`

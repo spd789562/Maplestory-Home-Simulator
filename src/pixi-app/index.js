@@ -191,7 +191,7 @@ class PixiAPP {
     this.setVisibleRect()
 
     // binding destroy event
-    this.app.renderer.runners['destroy'].add({
+    this.app.renderer?.runners['destroy']?.add({
       destroy: this.viewport?.destroy.bind(this.viewport),
     })
     this.app.stage.addChild(this.viewport)

@@ -2,11 +2,38 @@
 import { AnimatedSprite } from 'pixi.js-legacy'
 
 /* utils */
-import { clone, has, map, path, pickBy, pipe, prop, toPairs, uniq } from 'ramda'
+import {
+  clone,
+  has,
+  map,
+  path,
+  pickBy,
+  pipe,
+  prop,
+  toPairs,
+  match,
+} from 'ramda'
 import { getMapObjectImagePath } from '@utils/get-image-path'
 
 /* mapping */
 import MapObjectMapping from '@mapping/map-object'
+
+const recursiveGetObject = (obj, wzType) => {
+  const link = obj._inlink || obj._outlink
+  if (link) {
+    const _wzType = match(/\/(\w+)\.img\//, link)[1] || wzType
+    let arrPath = link.replace(/^Map\/Obj\/myHome2?\.img\//, '').split('/')
+    arrPath = [_wzType, ...arrPath]
+    const linkObj = path(arrPath)(MapObjectMapping)
+    const insideObj = recursiveGetObject(linkObj, _wzType)
+    if (insideObj) {
+      return insideObj
+    } else {
+      return linkObj
+    }
+  }
+  return null
+}
 
 class MapObject {
   constructor(app, objectData) {
@@ -45,14 +72,12 @@ class MapObject {
       map(
         ([
           frame,
-          { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
+          { origin = {}, _imageData = {}, delay = 0, _inlink, _outlink } = {},
         ]) => {
-          const linkObj = _inlink
-            ? path(
-                [this.dataPath.wzType, ..._inlink.split('/')],
-                MapObjectMapping
-              )
-            : null
+          const linkObj = recursiveGetObject(
+            { _inlink, _outlink },
+            this.dataPath.wzType
+          )
           const originX = origin?.x || linkObj?.origin?.x
           const originY = origin?.y || linkObj?.origin?.y
           return {

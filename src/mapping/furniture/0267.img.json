@@ -31671,8 +31671,7 @@
                     "x": "45",
                     "y": "155"
                   },
-                  "z": "-1",
-                  "_inlink": "02672172/info/avatar"
+                  "z": "-1"
                 }
               }
             },
@@ -33142,6 +33141,138 @@
           },
           "Loop": {
             "StartTime": "1050",
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672179": {
+    "info": {
+      "2232": {
+        "_imageData": {
+          "width": "151",
+          "height": "126"
+        },
+        "origin": {
+          "name": "origin",
+          "x": "72",
+          "y": "125"
+        },
+        "z": "0"
+      },
+      "tradeBlock": "1",
+      "notSale": "1",
+      "slotMax": "99",
+      "gridX": "6",
+      "gridY": "4",
+      "refundPrice": "1",
+      "sitRandom": "1",
+      "type": "rest",
+      "interact": "chair",
+      "avatar": {
+        "_imageData": {
+          "width": "151",
+          "height": "126"
+        },
+        "origin": {
+          "name": "origin",
+          "x": "72",
+          "y": "125"
+        },
+        "z": "0"
+      },
+      "tag": {
+        "0": "bed",
+        "1": "bedroom",
+        "2": "beach"
+      },
+      "sitSlots": {
+        "0": {
+          "sitAction": "sit",
+          "bodyRelMove": {
+            "name": "bodyRelMove",
+            "x": "-22",
+            "y": "-28"
+          },
+          "bodyZ": "2",
+          "invisibleWeapon": "1",
+          "removeEffect": "1",
+          "sitEmotion": {
+            "0": "0",
+            "1": "14",
+            "2": "16",
+            "3": "17"
+          }
+        },
+        "1": {
+          "sitAction": "sit",
+          "bodyRelMove": {
+            "name": "bodyRelMove",
+            "x": "23",
+            "y": "-28"
+          },
+          "bodyZ": "2",
+          "invisibleWeapon": "1",
+          "removeEffect": "1",
+          "sitEmotion": {
+            "0": "0",
+            "1": "14",
+            "2": "16",
+            "3": "17"
+          }
+        }
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": "0",
+              "EndPos": "150",
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": "134",
+                    "height": "34"
+                  },
+                  "origin": {
+                    "name": "origin",
+                    "x": "69",
+                    "y": "55"
+                  },
+                  "delay": "150",
+                  "z": "3"
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": "0",
+              "EndPos": "150",
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": "151",
+                    "height": "126"
+                  },
+                  "origin": {
+                    "name": "origin",
+                    "x": "72",
+                    "y": "125"
+                  },
+                  "delay": "150",
+                  "z": "1"
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": "0",
             "NextSectionName": "Loop"
           }
         }

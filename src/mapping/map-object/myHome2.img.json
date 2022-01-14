@@ -2467,6 +2467,110 @@
             "z": "0",
             "_inlink": "ChristmasType/chimney/1/s1/0"
           },
+          "8": {
+            "_imageData": {
+              "width": "97",
+              "height": "164"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/0"
+          },
+          "9": {
+            "_imageData": {
+              "width": "97",
+              "height": "164"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/1"
+          },
+          "10": {
+            "_imageData": {
+              "width": "97",
+              "height": "164"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/2"
+          },
+          "11": {
+            "_imageData": {
+              "width": "1",
+              "height": "1"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/0"
+          },
+          "12": {
+            "_imageData": {
+              "width": "1",
+              "height": "1"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/0"
+          },
+          "13": {
+            "_imageData": {
+              "width": "1",
+              "height": "1"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/2"
+          },
+          "14": {
+            "_imageData": {
+              "width": "1",
+              "height": "1"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/1"
+          },
+          "15": {
+            "_imageData": {
+              "width": "1",
+              "height": "1"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "47",
+              "y": "328"
+            },
+            "z": "0",
+            "_inlink": "ChristmasType/chimney/1/s1/0"
+          },
           "16": {
             "_imageData": {
               "width": "1",
@@ -2826,7 +2930,7 @@
         "0": {
           "_imageData": {
             "width": "125",
-            "height": "239"
+            "height": "247"
           },
           "origin": {
             "name": "origin",
@@ -2841,7 +2945,7 @@
         "0": {
           "_imageData": {
             "width": "38",
-            "height": "235"
+            "height": "249"
           },
           "origin": {
             "name": "origin",
@@ -3557,16 +3661,15 @@
       "2": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "56",
+            "height": "214"
           },
           "origin": {
             "name": "origin",
             "x": "22",
             "y": "69"
           },
-          "z": "0",
-          "_outlink": "Map/Obj/myHome.img/henesysType/stair/2/0"
+          "z": "0"
         }
       }
     },
@@ -3999,12 +4102,12 @@
         "0": {
           "_imageData": {
             "width": "750",
-            "height": "192"
+            "height": "179"
           },
           "origin": {
             "name": "origin",
             "x": "386",
-            "y": "223"
+            "y": "210"
           },
           "z": "0"
         }
@@ -4093,120 +4196,112 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "492",
+            "height": "468"
           },
           "origin": {
             "name": "origin",
             "x": "762",
             "y": "445"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/roof/0/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "490",
+              "height": "468"
             },
             "origin": {
               "name": "origin",
               "x": "761",
               "y": "445"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/0/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "490",
+              "height": "327"
             },
             "origin": {
               "name": "origin",
               "x": "761",
               "y": "304"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/0/s2/0"
+            "z": "0"
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "490",
+              "height": "327"
             },
             "origin": {
               "name": "origin",
               "x": "761",
               "y": "304"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/0/s3/0"
+            "z": "0"
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "491",
+              "height": "485"
             },
             "origin": {
               "name": "origin",
               "x": "761",
               "y": "467"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/0/s4/0"
+            "z": "0"
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "491",
+              "height": "485"
             },
             "origin": {
               "name": "origin",
               "x": "761",
               "y": "467"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/0/s5/0"
+            "z": "0"
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "549",
+            "height": "282"
           },
           "origin": {
             "name": "origin",
             "x": "-84",
             "y": "302"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/roof/1/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "549",
+              "height": "282"
             },
             "origin": {
               "name": "origin",
               "x": "-84",
               "y": "302"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/1/s1/0"
+            "z": "0"
           }
         },
         "s2": {
@@ -4227,46 +4322,43 @@
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "549",
+              "height": "282"
             },
             "origin": {
               "name": "origin",
               "x": "-84",
               "y": "302"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/1/s3/0"
+            "z": "0"
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "550",
+              "height": "285"
             },
             "origin": {
               "name": "origin",
               "x": "-84",
               "y": "302"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/1/s4/0"
+            "z": "0"
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "550",
+              "height": "285"
             },
             "origin": {
               "name": "origin",
               "x": "-84",
               "y": "302"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/1/s5/0"
+            "z": "0"
           }
         }
       },
@@ -4298,317 +4390,293 @@
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "403",
-              "y": "884"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/0"
-          },
-          "1": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "406",
-              "y": "892"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/1"
-          },
-          "2": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "410",
-              "y": "896"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/2"
-          },
-          "3": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "407",
-              "y": "893"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/3"
-          },
-          "4": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "397",
-              "y": "883"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/4"
-          },
-          "5": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "380",
-              "y": "867"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/5"
-          },
-          "6": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "358",
-              "y": "833"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/6"
-          },
-          "7": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "328",
-              "y": "804"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/7"
-          },
-          "8": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "352",
-              "y": "832"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/8"
-          },
-          "9": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "374",
-              "y": "856"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/9"
-          },
-          "10": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "391",
-              "y": "873"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/10"
-          },
-          "11": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
-            },
-            "origin": {
-              "name": "origin",
-              "x": "401",
-              "y": "883"
-            },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s2/11"
-          }
-        },
-        "s3": {
-          "0": {
-            "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "817",
+              "height": "820"
             },
             "origin": {
               "name": "origin",
               "x": "403",
               "y": "886"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/0"
+            "z": "0"
           },
           "1": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "823",
+              "height": "829"
             },
             "origin": {
               "name": "origin",
               "x": "406",
               "y": "892"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/1"
+            "z": "0"
           },
           "2": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "831",
+              "height": "836"
             },
             "origin": {
               "name": "origin",
               "x": "410",
               "y": "896"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/2"
+            "z": "0"
           },
           "3": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "825",
+              "height": "829"
             },
             "origin": {
               "name": "origin",
               "x": "407",
               "y": "893"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/3"
+            "z": "0"
           },
           "4": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "804",
+              "height": "808"
             },
             "origin": {
               "name": "origin",
               "x": "397",
               "y": "883"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/4"
+            "z": "0"
           },
           "5": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "769",
+              "height": "775"
             },
             "origin": {
               "name": "origin",
               "x": "380",
               "y": "867"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/5"
+            "z": "0"
           },
           "6": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "725",
+              "height": "722"
             },
             "origin": {
               "name": "origin",
               "x": "358",
               "y": "833"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/6"
+            "z": "0"
           },
           "7": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "665",
+              "height": "662"
             },
             "origin": {
               "name": "origin",
               "x": "328",
               "y": "804"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/7"
+            "z": "0"
           },
           "8": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "713",
+              "height": "716"
             },
             "origin": {
               "name": "origin",
               "x": "352",
               "y": "832"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/8"
+            "z": "0"
           },
           "9": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "758",
+              "height": "763"
             },
             "origin": {
               "name": "origin",
               "x": "374",
               "y": "856"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/9"
+            "z": "0"
           },
           "10": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "792",
+              "height": "796"
             },
             "origin": {
               "name": "origin",
               "x": "391",
               "y": "873"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/10"
+            "z": "0"
           },
           "11": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "812",
+              "height": "815"
             },
             "origin": {
               "name": "origin",
               "x": "401",
               "y": "883"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/roof/2/s3/11"
+            "z": "0"
+          }
+        },
+        "s3": {
+          "0": {
+            "_imageData": {
+              "width": "817",
+              "height": "820"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "403",
+              "y": "886"
+            },
+            "z": "0"
+          },
+          "1": {
+            "_imageData": {
+              "width": "823",
+              "height": "829"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "406",
+              "y": "892"
+            },
+            "z": "0"
+          },
+          "2": {
+            "_imageData": {
+              "width": "831",
+              "height": "836"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "410",
+              "y": "896"
+            },
+            "z": "0"
+          },
+          "3": {
+            "_imageData": {
+              "width": "825",
+              "height": "829"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "407",
+              "y": "893"
+            },
+            "z": "0"
+          },
+          "4": {
+            "_imageData": {
+              "width": "804",
+              "height": "808"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "397",
+              "y": "883"
+            },
+            "z": "0"
+          },
+          "5": {
+            "_imageData": {
+              "width": "769",
+              "height": "775"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "380",
+              "y": "867"
+            },
+            "z": "0"
+          },
+          "6": {
+            "_imageData": {
+              "width": "725",
+              "height": "722"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "358",
+              "y": "833"
+            },
+            "z": "0"
+          },
+          "7": {
+            "_imageData": {
+              "width": "665",
+              "height": "662"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "328",
+              "y": "804"
+            },
+            "z": "0"
+          },
+          "8": {
+            "_imageData": {
+              "width": "713",
+              "height": "716"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "352",
+              "y": "832"
+            },
+            "z": "0"
+          },
+          "9": {
+            "_imageData": {
+              "width": "758",
+              "height": "763"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "374",
+              "y": "856"
+            },
+            "z": "0"
+          },
+          "10": {
+            "_imageData": {
+              "width": "792",
+              "height": "796"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "391",
+              "y": "873"
+            },
+            "z": "0"
+          },
+          "11": {
+            "_imageData": {
+              "width": "812",
+              "height": "815"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "401",
+              "y": "883"
+            },
+            "z": "0"
           }
         },
         "s4": {
@@ -4727,135 +4795,126 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "599",
+            "height": "622"
           },
           "origin": {
             "name": "origin",
             "x": "886",
             "y": "364"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/wallFront/0/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "600",
+              "height": "623"
             },
             "origin": {
               "name": "origin",
               "x": "886",
               "y": "365"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallFront/0/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "597",
+              "height": "622"
             },
             "origin": {
               "name": "origin",
               "x": "886",
               "y": "364"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallFront/0/s2/0"
+            "z": "0"
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "1143",
+            "height": "534"
           },
           "origin": {
             "name": "origin",
             "x": "419",
             "y": "472"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/wallFront/1/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1142",
+              "height": "534"
             },
             "origin": {
               "name": "origin",
               "x": "418",
               "y": "472"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallFront/1/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1148",
+              "height": "534"
             },
             "origin": {
               "name": "origin",
               "x": "423",
               "y": "472"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallFront/1/s2/0"
+            "z": "0"
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "958",
+            "height": "210"
           },
           "origin": {
             "name": "origin",
             "x": "318",
             "y": "420"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/wallFront/2/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "958",
+              "height": "212"
             },
             "origin": {
               "name": "origin",
               "x": "318",
               "y": "422"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallFront/2/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "958",
+              "height": "217"
             },
             "origin": {
               "name": "origin",
               "x": "318",
               "y": "427"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallFront/2/s2/0"
+            "z": "0"
           }
         }
       },
@@ -4871,7 +4930,7 @@
             "y": "125"
           },
           "z": "0"
-        },  
+        },
         "s1": {
           "0": {
             "_imageData": {
@@ -4992,90 +5051,84 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "1113",
+            "height": "425"
           },
           "origin": {
             "name": "origin",
             "x": "414",
             "y": "167"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/wallBack/0/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1113",
+              "height": "425"
             },
             "origin": {
               "name": "origin",
               "x": "414",
               "y": "167"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallBack/0/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1113",
+              "height": "425"
             },
             "origin": {
               "name": "origin",
               "x": "414",
               "y": "167"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallBack/0/s2/0"
+            "z": "0"
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "755",
+            "height": "230"
           },
           "origin": {
             "name": "origin",
             "x": "414",
             "y": "-27"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/wallBack/1/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "755",
+              "height": "230"
             },
             "origin": {
               "name": "origin",
               "x": "414",
               "y": "-27"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallBack/1/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "755",
+              "height": "230"
             },
             "origin": {
               "name": "origin",
               "x": "414",
               "y": "-27"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallBack/1/s2/0"
+            "z": "0"
           }
         }
       },
@@ -5090,13 +5143,12 @@
             "x": "371",
             "y": "167"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/wallBack/2/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1061",
+              "width": "712",
               "height": "203"
             },
             "origin": {
@@ -5104,8 +5156,7 @@
               "x": "371",
               "y": "167"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallBack/2/s1/0"
+            "z": "0"
           }
         },
         "s2": {
@@ -5119,8 +5170,7 @@
               "x": "371",
               "y": "167"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/wallBack/2/s2/0"
+            "z": "0"
           }
         }
       },
@@ -5343,12 +5393,12 @@
         "0": {
           "_imageData": {
             "width": "755",
-            "height": "30"
+            "height": "33"
           },
           "origin": {
             "name": "origin",
             "x": "74",
-            "y": "14"
+            "y": "17"
           },
           "z": "0"
         },
@@ -5370,12 +5420,12 @@
           "0": {
             "_imageData": {
               "width": "755",
-              "height": "33"
+              "height": "30"
             },
             "origin": {
               "name": "origin",
               "x": "74",
-              "y": "17"
+              "y": "14"
             },
             "z": "0"
           }
@@ -5386,90 +5436,84 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "1371",
+            "height": "241"
           },
           "origin": {
             "name": "origin",
             "x": "705",
             "y": "170"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/window/0/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1366",
+              "height": "227"
             },
             "origin": {
               "name": "origin",
               "x": "690",
               "y": "179"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/window/0/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1350",
+              "height": "245"
             },
             "origin": {
               "name": "origin",
               "x": "683",
               "y": "183"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/window/0/s2/0"
+            "z": "0"
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "291",
+            "height": "196"
           },
           "origin": {
             "name": "origin",
             "x": "147",
             "y": "89"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/window/1/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "300",
+              "height": "155"
             },
             "origin": {
               "name": "origin",
               "x": "151",
               "y": "48"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/window/1/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "340",
+              "height": "159"
             },
             "origin": {
               "name": "origin",
               "x": "170",
               "y": "52"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/window/1/s2/0"
+            "z": "0"
           }
         }
       },
@@ -5520,90 +5564,84 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "1561",
+            "height": "374"
           },
           "origin": {
             "name": "origin",
             "x": "797",
             "y": "116"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/door/0/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1584",
+              "height": "373"
             },
             "origin": {
               "name": "origin",
               "x": "792",
               "y": "115"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/door/0/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "1563",
+              "height": "410"
             },
             "origin": {
               "name": "origin",
               "x": "796",
               "y": "152"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/door/0/s2/0"
+            "z": "0"
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": "114",
+            "height": "184"
           },
           "origin": {
             "name": "origin",
             "x": "57",
             "y": "102"
           },
-          "z": "0",
-          "_inlink": "LithCafeType/door/1/0"
+          "z": "0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "114",
+              "height": "184"
             },
             "origin": {
               "name": "origin",
               "x": "57",
               "y": "102"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/door/1/s1/0"
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": "114",
+              "height": "184"
             },
             "origin": {
               "name": "origin",
               "x": "57",
               "y": "102"
             },
-            "z": "0",
-            "_inlink": "LithCafeType/door/1/s2/0"
+            "z": "0"
           }
         }
       },
@@ -5890,6 +5928,527 @@
             "name": "origin",
             "x": "400",
             "y": "150"
+          },
+          "z": "0"
+        }
+      }
+    }
+  },
+  "NewYearExpandType": {
+    "roof": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "1526",
+            "height": "1052"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "767",
+            "y": "1267"
+          },
+          "z": "0"
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "1526",
+              "height": "1052"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "767",
+              "y": "1267"
+            },
+            "z": "0"
+          }
+        },
+        "s2": {
+          "0": {
+            "_imageData": {
+              "width": "1526",
+              "height": "1052"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "767",
+              "y": "1267"
+            },
+            "z": "0"
+          }
+        },
+        "s3": {
+          "0": {
+            "_imageData": {
+              "width": "1526",
+              "height": "1052"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "767",
+              "y": "1267"
+            },
+            "z": "0"
+          }
+        },
+        "s4": {
+          "0": {
+            "_imageData": {
+              "width": "1535",
+              "height": "1128"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "760",
+              "y": "1343"
+            },
+            "z": "0"
+          }
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "600",
+            "height": "312"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-968",
+            "y": "598"
+          },
+          "z": "0"
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "600",
+              "height": "312"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "-968",
+              "y": "598"
+            },
+            "z": "0"
+          }
+        },
+        "s2": {
+          "0": {
+            "_imageData": {
+              "width": "600",
+              "height": "312"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "-968",
+              "y": "598"
+            },
+            "z": "0"
+          }
+        },
+        "s3": {
+          "0": {
+            "_imageData": {
+              "width": "600",
+              "height": "312"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "-968",
+              "y": "598"
+            },
+            "z": "0"
+          }
+        },
+        "s4": {
+          "0": {
+            "_imageData": {
+              "width": "612",
+              "height": "365"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "-963",
+              "y": "646"
+            },
+            "z": "0"
+          }
+        }
+      },
+      "2": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-215",
+            "y": "573"
+          }
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "1114",
+              "height": "543"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "570",
+              "y": "978"
+            },
+            "z": "0"
+          }
+        }
+      },
+      "3": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-215",
+            "y": "573"
+          }
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "587",
+              "height": "116"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "301",
+              "y": "1267"
+            },
+            "z": "0"
+          }
+        }
+      }
+    },
+    "wall": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "906",
+            "height": "897"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "437",
+            "y": "912"
+          },
+          "z": "0"
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "906",
+              "height": "897"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "437",
+              "y": "912"
+            },
+            "z": "0"
+          }
+        },
+        "s2": {
+          "0": {
+            "_imageData": {
+              "width": "906",
+              "height": "897"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "437",
+              "y": "912"
+            },
+            "z": "0"
+          }
+        },
+        "s3": {
+          "0": {
+            "_imageData": {
+              "width": "906",
+              "height": "897"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "437",
+              "y": "912"
+            },
+            "z": "0"
+          }
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "1415",
+            "height": "1131"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "758",
+            "y": "1135"
+          },
+          "z": "0"
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "1415",
+              "height": "1132"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "758",
+              "y": "1135"
+            },
+            "z": "0"
+          }
+        }
+      },
+      "2": {
+        "0": {
+          "_imageData": {
+            "width": "414",
+            "height": "163"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "-1061",
+            "y": "303"
+          },
+          "z": "0"
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "414",
+              "height": "163"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "-1061",
+              "y": "303"
+            },
+            "z": "0"
+          }
+        }
+      },
+      "3": {
+        "0": {
+          "_imageData": {
+            "width": "761",
+            "height": "739"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "285",
+            "y": "894"
+          },
+          "z": "0"
+        }
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "980",
+            "height": "692"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "499",
+            "y": "696"
+          },
+          "z": "0",
+          "foothold": null
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "931",
+              "height": "692"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "446",
+              "y": "696"
+            },
+            "z": "0",
+            "foothold": null
+          }
+        },
+        "s2": {
+          "0": {
+            "_imageData": {
+              "width": "1233",
+              "height": "693"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "610",
+              "y": "697"
+            },
+            "z": "0",
+            "foothold": null
+          }
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "597",
+            "height": "152"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "275",
+            "y": "151"
+          },
+          "z": "0",
+          "foothold": null
+        }
+      }
+    },
+    "exteriorDeco": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "297",
+            "height": "254"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "134",
+            "y": "163"
+          }
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "318",
+              "height": "253"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "148",
+              "y": "162"
+            }
+          }
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "223",
+            "height": "134"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "180",
+            "y": "163"
+          },
+          "foothold": null
+        },
+        "s1": {
+          "0": {
+            "_imageData": {
+              "width": "251",
+              "height": "129"
+            },
+            "origin": {
+              "name": "origin",
+              "x": "180",
+              "y": "168"
+            },
+            "foothold": null
+          }
+        }
+      }
+    },
+    "ladder": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "38",
+            "height": "335"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "19",
+            "y": "168"
+          },
+          "z": "0"
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "20",
+            "y": "176"
+          },
+          "z": "0",
+          "_inlink": "NewYearExpandType/ladder/0/0"
+        }
+      },
+      "2": {
+        "0": {
+          "_imageData": {
+            "width": "240",
+            "height": "331"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "297",
+            "y": "366"
+          },
+          "z": "0",
+          "foothold": null
+        }
+      },
+      "3": {
+        "0": {
+          "_imageData": {
+            "width": "173",
+            "height": "210"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "350",
+            "y": "576"
+          },
+          "z": "0",
+          "foothold": null
+        }
+      }
+    },
+    "etc": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "440",
+            "height": "336"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "156",
+            "y": "336"
           },
           "z": "0"
         }

@@ -247,6 +247,22 @@
           "z": "0"
         }
       }
+    },
+    "shadow": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "476",
+            "height": "252"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "218",
+            "y": "109"
+          },
+          "z": "0"
+        }
+      }
     }
   },
   "henesysType": {
@@ -518,8 +534,7 @@
               "x": "375",
               "y": "245"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -533,8 +548,7 @@
               "x": "375",
               "y": "245"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -563,8 +577,7 @@
               "x": "375",
               "y": "244"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -578,8 +591,7 @@
               "x": "375",
               "y": "244"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -608,8 +620,7 @@
               "x": "375",
               "y": "245"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -623,8 +634,7 @@
               "x": "375",
               "y": "245"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -632,12 +642,12 @@
         "0": {
           "_imageData": {
             "width": "750",
-            "height": "421"
+            "height": "31"
           },
           "origin": {
             "name": "origin",
             "x": "375",
-            "y": "239"
+            "y": "30"
           },
           "z": "0",
           "foothold": null
@@ -646,30 +656,28 @@
           "0": {
             "_imageData": {
               "width": "750",
-              "height": "421"
+              "height": "31"
             },
             "origin": {
               "name": "origin",
               "x": "375",
-              "y": "239"
+              "y": "30"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
           "0": {
             "_imageData": {
               "width": "750",
-              "height": "421"
+              "height": "31"
             },
             "origin": {
               "name": "origin",
               "x": "375",
-              "y": "239"
+              "y": "30"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       }
@@ -835,15 +843,16 @@
       "2": {
         "0": {
           "_imageData": {
-            "width": "56",
-            "height": "214"
+            "width": "1",
+            "height": "1"
           },
           "origin": {
             "name": "origin",
             "x": "22",
             "y": "69"
           },
-          "z": "0"
+          "z": "0",
+          "_outlink": "Map/Obj/myHome2.img/henesysExpandType/stair/2/0"
         }
       }
     },
@@ -873,6 +882,36 @@
             "name": "origin",
             "x": "683",
             "y": "179"
+          },
+          "z": "0"
+        }
+      }
+    },
+    "shadow": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "209"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "239"
+          },
+          "z": "0"
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "750",
+            "height": "181"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "-1"
           },
           "z": "0"
         }
@@ -1120,8 +1159,7 @@
               "x": "375",
               "y": "241"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -1135,8 +1173,7 @@
               "x": "375",
               "y": "241"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -1165,8 +1202,7 @@
               "x": "396",
               "y": "243"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -1180,8 +1216,7 @@
               "x": "396",
               "y": "243"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -1210,8 +1245,7 @@
               "x": "375",
               "y": "245"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -1225,8 +1259,7 @@
               "x": "375",
               "y": "245"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -1255,8 +1288,7 @@
               "x": "375",
               "y": "239"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -1270,8 +1302,7 @@
               "x": "375",
               "y": "239"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       }
@@ -1317,6 +1348,38 @@
             },
             "z": "0"
           }
+        }
+      }
+    },
+    "shadow": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "239"
+          },
+          "z": "0",
+          "_inlink": "henesysType/shadow/0/0"
+        }
+      },
+      "1": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "375",
+            "y": "-1"
+          },
+          "z": "0",
+          "_inlink": "henesysType/shadow/1/0"
         }
       }
     }
@@ -2192,8 +2255,7 @@
               "x": "300",
               "y": "439"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -2207,8 +2269,7 @@
               "x": "300",
               "y": "437"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -2237,8 +2298,7 @@
               "x": "300",
               "y": "439"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         },
         "s2": {
@@ -2252,8 +2312,7 @@
               "x": "300",
               "y": "437"
             },
-            "z": "0",
-            "foothold": null
+            "z": "0"
           }
         }
       },
@@ -2283,9 +2342,7 @@
               "x": "300",
               "y": "441"
             },
-            "z": "0",
-            "foothold": null,
-            "ladder": null
+            "z": "0"
           }
         },
         "s2": {
@@ -2299,9 +2356,7 @@
               "x": "300",
               "y": "441"
             },
-            "z": "0",
-            "foothold": null,
-            "ladder": null
+            "z": "0"
           }
         }
       }
@@ -3046,6 +3101,22 @@
           }
         }
       }
+    },
+    "shadow": {
+      "0": {
+        "0": {
+          "_imageData": {
+            "width": "600",
+            "height": "642"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "300",
+            "y": "628"
+          },
+          "z": "0"
+        }
+      }
     }
   },
   "NewYearType": {
@@ -3411,53 +3482,57 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "297",
-            "height": "254"
+            "width": "1",
+            "height": "1"
           },
           "origin": {
             "name": "origin",
             "x": "134",
             "y": "163"
-          }
+          },
+          "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/0/0"
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "318",
-              "height": "253"
+              "width": "1",
+              "height": "1"
             },
             "origin": {
               "name": "origin",
               "x": "148",
               "y": "162"
-            }
+            },
+            "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/0/s1/0"
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "223",
-            "height": "134"
+            "width": "1",
+            "height": "1"
           },
           "origin": {
             "name": "origin",
             "x": "180",
             "y": "163"
           },
+          "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/1/0",
           "foothold": null
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "251",
-              "height": "129"
+              "width": "1",
+              "height": "1"
             },
             "origin": {
               "name": "origin",
               "x": "180",
               "y": "168"
             },
+            "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/1/s1/0",
             "foothold": null
           }
         }
@@ -3483,15 +3558,16 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "440",
-            "height": "336"
+            "width": "1",
+            "height": "1"
           },
           "origin": {
             "name": "origin",
             "x": "156",
             "y": "336"
           },
-          "z": "0"
+          "z": "0",
+          "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/etc/0/0"
         }
       }
     }
@@ -3892,7 +3968,7 @@
             "y": "134"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/0"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/0"
         },
         "1": {
           "_imageData": {
@@ -3905,7 +3981,7 @@
             "y": "130"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/1"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/1"
         },
         "2": {
           "_imageData": {
@@ -3918,7 +3994,7 @@
             "y": "123"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/2"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/2"
         },
         "3": {
           "_imageData": {
@@ -3931,7 +4007,7 @@
             "y": "125"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/3"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/3"
         },
         "4": {
           "_imageData": {
@@ -3944,7 +4020,7 @@
             "y": "130"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/4"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/4"
         },
         "5": {
           "_imageData": {
@@ -3957,7 +4033,7 @@
             "y": "130"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/5"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/5"
         },
         "6": {
           "_imageData": {
@@ -3970,7 +4046,7 @@
             "y": "126"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/6"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/6"
         },
         "7": {
           "_imageData": {
@@ -3983,7 +4059,7 @@
             "y": "130"
           },
           "z": "0",
-          "_outlink": "Map/Obj/JPZipang.img/Bamboo/scenario/33/7"
+          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/7"
         }
       }
     },
@@ -4214,6 +4290,36 @@
             "y": "2"
           },
           "z": "0"
+        }
+      },
+      "3": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "200",
+            "y": "75"
+          },
+          "z": "0",
+          "_inlink": "base/foot/1/0"
+        }
+      },
+      "4": {
+        "0": {
+          "_imageData": {
+            "width": "1",
+            "height": "1"
+          },
+          "origin": {
+            "name": "origin",
+            "x": "42",
+            "y": "2"
+          },
+          "z": "0",
+          "_inlink": "base/foot/2/0"
         }
       }
     },

@@ -1,5 +1,4 @@
 {
-
   "001": {
     "templateMapID": "871100000",
     "info": "tutorial_type",
@@ -7601,6 +7600,450 @@
         },
         "info": "리스확장형_로맨틱 티 타임 화단",
         "itemID": "2670216"
+      }
+    }
+  },
+  "027": {
+    "templateMapID": "871100026",
+    "info": "연못 정원 기와집 확장형 사다리형",
+    "category": "NewYear_expanded",
+    "type": "ladder",
+    "name": "蓮花池庭園瓦屋擴建型：梯子型",
+    "desc": "展現山林情趣與蓮花池平靜氛圍的絢麗東洋風住家，大型窗戶令人心曠神怡。\\r\\n設置簡約的梯子來加以活用空間。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof",
+          "state": "0"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "0"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "비취빛 지와 지붕",
+        "itemID": "2670219"
+      },
+      "1": {
+        "0": {
+          "name": "roof",
+          "state": "1"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "1"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "먹 향기 기와 지붕",
+        "itemID": "2670217"
+      },
+      "2": {
+        "0": {
+          "name": "roof",
+          "state": "2"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "2"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "가을 하늘 기와 지붕",
+        "itemID": "2670220"
+      },
+      "3": {
+        "0": {
+          "name": "roof",
+          "state": "3"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "3"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "1"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "1"
+        },
+        "info": "황금빛 새해 기와 지붕",
+        "itemID": "2670221"
+      },
+      "4": {
+        "0": {
+          "name": "roof",
+          "state": "4"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "4"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "황금 용마루 잿빛 기와 지붕",
+        "itemID": "2670218"
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": "0"
+        },
+        "info": "단아한 목조 마루",
+        "itemID": "2670222"
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": "1"
+        },
+        "info": "깔끔한 목조 마루",
+        "itemID": "2670223"
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": "2"
+        },
+        "info": "투박한 석조 마루",
+        "itemID": "2670224"
+      }
+    },
+    "exteriorDeco": {
+      "0": {
+        "0": {
+          "name": "exDecoBack",
+          "state": "0"
+        },
+        "1": {
+          "name": "exDecoFront",
+          "state": "0"
+        },
+        "info": "적란운 원형 다리",
+        "itemID": "2670225"
+      },
+      "1": {
+        "0": {
+          "name": "exDecoBack",
+          "state": "1"
+        },
+        "1": {
+          "name": "exDecoFront",
+          "state": "1"
+        },
+        "info": "겨울바람 다리",
+        "itemID": "2670226"
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallEx",
+          "state": "0"
+        },
+        "info": "햇살 비치는 목조 외벽",
+        "itemID": "2670227"
+      },
+      "1": {
+        "0": {
+          "name": "wallFront",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallEx",
+          "state": "1"
+        },
+        "info": "붉은 단풍 단청 외벽",
+        "itemID": "2670228"
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack",
+          "state": "0"
+        },
+        "info": "따스한 백색 벽지",
+        "itemID": "2670229"
+      },
+      "1": {
+        "0": {
+          "name": "wallBack",
+          "state": "1"
+        },
+        "info": "고풍스러운 백색 벽지",
+        "itemID": "2670230"
+      },
+      "2": {
+        "0": {
+          "name": "wallBack",
+          "state": "2"
+        },
+        "info": "싱그러운 꽃무늬 벽지",
+        "itemID": "2670231"
+      },
+      "3": {
+        "0": {
+          "name": "wallBack",
+          "state": "3"
+        },
+        "info": "황실 장식 벽지",
+        "itemID": "2670232"
+      }
+    }
+  },
+  "028": {
+    "templateMapID": "871100027",
+    "info": "연못 정원 기와집 확장형 계단 사다리형",
+    "category": "NewYear_expanded",
+    "type": "curved",
+    "name": "蓮花池庭園瓦屋擴建型：階梯型",
+    "desc": "展現山林情趣與蓮花池平靜氛圍的絢麗東洋風住家，大型窗戶令人心曠神怡。\\r\\n直覺地設置了迴旋梯與梯子。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof",
+          "state": "0"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "0"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "비취빛 지와 지붕",
+        "itemID": "2670219"
+      },
+      "1": {
+        "0": {
+          "name": "roof",
+          "state": "1"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "1"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "먹 향기 기와 지붕",
+        "itemID": "2670217"
+      },
+      "2": {
+        "0": {
+          "name": "roof",
+          "state": "2"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "2"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "가을 하늘 기와 지붕",
+        "itemID": "2670220"
+      },
+      "3": {
+        "0": {
+          "name": "roof",
+          "state": "3"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "3"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "1"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "1"
+        },
+        "info": "황금빛 새해 기와 지붕",
+        "itemID": "2670221"
+      },
+      "4": {
+        "0": {
+          "name": "roof",
+          "state": "4"
+        },
+        "1": {
+          "name": "roofEx",
+          "state": "4"
+        },
+        "2": {
+          "name": "roofDeco1",
+          "state": "0"
+        },
+        "3": {
+          "name": "roofDeco2",
+          "state": "0"
+        },
+        "info": "황금 용마루 잿빛 기와 지붕",
+        "itemID": "2670218"
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": "0"
+        },
+        "info": "단아한 목조 마루",
+        "itemID": "2670222"
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": "1"
+        },
+        "info": "깔끔한 목조 마루",
+        "itemID": "2670223"
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": "2"
+        },
+        "info": "투박한 석조 마루",
+        "itemID": "2670224"
+      }
+    },
+    "exteriorDeco": {
+      "0": {
+        "0": {
+          "name": "exDecoBack",
+          "state": "0"
+        },
+        "1": {
+          "name": "exDecoFront",
+          "state": "0"
+        },
+        "info": "적란운 원형 다리",
+        "itemID": "2670225"
+      },
+      "1": {
+        "0": {
+          "name": "exDecoBack",
+          "state": "1"
+        },
+        "1": {
+          "name": "exDecoFront",
+          "state": "1"
+        },
+        "info": "겨울바람 다리",
+        "itemID": "2670226"
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront",
+          "state": "0"
+        },
+        "1": {
+          "name": "wallEx",
+          "state": "0"
+        },
+        "info": "햇살 비치는 목조 외벽",
+        "itemID": "2670227"
+      },
+      "1": {
+        "0": {
+          "name": "wallFront",
+          "state": "1"
+        },
+        "1": {
+          "name": "wallEx",
+          "state": "1"
+        },
+        "info": "붉은 단풍 단청 외벽",
+        "itemID": "2670228"
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack",
+          "state": "0"
+        },
+        "info": "따스한 백색 벽지",
+        "itemID": "2670229"
+      },
+      "1": {
+        "0": {
+          "name": "wallBack",
+          "state": "1"
+        },
+        "info": "고풍스러운 백색 벽지",
+        "itemID": "2670230"
+      },
+      "2": {
+        "0": {
+          "name": "wallBack",
+          "state": "2"
+        },
+        "info": "싱그러운 꽃무늬 벽지",
+        "itemID": "2670231"
+      },
+      "3": {
+        "0": {
+          "name": "wallBack",
+          "state": "3"
+        },
+        "info": "황실 장식 벽지",
+        "itemID": "2670232"
       }
     }
   },

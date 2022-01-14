@@ -62,6 +62,11 @@ export const getTheme = (mapId) => {
     case '871100024':
     case '871100025':
       return 'lithharborExpand'
+    case '027':
+    case '028':
+    case '871100026':
+    case '871100027':
+      return 'newYearExpand'
     default:
       return ''
   }
@@ -96,8 +101,10 @@ export const getType = (mapId) => {
     case '871100022':
     case '871100019':
     case '871100025':
+    case '871100026':
       return 'ladder'
     case '871100007':
+    case '871100027':
       return 'center_stair'
     case '871100016':
       return 'hidden_stair'

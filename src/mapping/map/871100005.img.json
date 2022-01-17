@@ -113,6 +113,36 @@
         "move": "0",
         "dynamic": "0",
         "piece": "2"
+      },
+      "2": {
+        "oS": "myHome",
+        "l0": "commerzType",
+        "l1": "shadow",
+        "l2": "1",
+        "x": "9",
+        "y": "-73",
+        "z": "7",
+        "f": "0",
+        "zM": "6",
+        "r": "0",
+        "move": "0",
+        "dynamic": "0",
+        "piece": "2"
+      },
+      "3": {
+        "oS": "myHome",
+        "l0": "commerzType",
+        "l1": "shadow",
+        "l2": "0",
+        "x": "9",
+        "y": "-73",
+        "z": "7",
+        "f": "0",
+        "zM": "6",
+        "r": "0",
+        "move": "0",
+        "dynamic": "0",
+        "piece": "2"
       }
     }
   },
@@ -259,7 +289,7 @@
         "l1": "nature",
         "l2": "6",
         "x": "234",
-        "y": "137",
+        "y": "138",
         "z": "9",
         "f": "0",
         "zM": "5",
@@ -288,7 +318,7 @@
     "noMapCmd": "0",
     "hideMinimap": "1",
     "fieldLimit": "4718688",
-    "VRTop": "-833",
+    "VRTop": "-900",
     "VRLeft": "-1300",
     "VRBottom": "260",
     "VRRight": "683",
@@ -296,11 +326,13 @@
     "fieldLimit_tw": "0",
     "AmbientBGMv": "100",
     "MRLeft": "-1300",
-    "MRTop": "-833",
+    "MRTop": "-900",
     "MRRight": "683",
     "MRBottom": "260",
     "reviveCurField": "1",
     "shiftChannelForbidden": "1",
+    "fieldLimit2": "0",
+    "fieldType": "0",
     "mobRate": "1.0",
     "bgm": "",
     "mapMark": "myHome",
@@ -984,7 +1016,7 @@
           "x1": "384",
           "y1": "107",
           "x2": "384",
-          "y2": "-1864",
+          "y2": "-292",
           "prev": "4",
           "next": "0",
           "piece": "0"
@@ -1045,7 +1077,7 @@
         },
         "12": {
           "x1": "-365",
-          "y1": "-2073",
+          "y1": "-503",
           "x2": "-365",
           "y2": "-103",
           "prev": "0",
@@ -1065,7 +1097,7 @@
           "x1": "383",
           "y1": "-103",
           "x2": "383",
-          "y2": "-2073",
+          "y2": "-503",
           "prev": "13",
           "next": "0",
           "piece": "2"
@@ -1138,14 +1170,14 @@
   "ladderRope": null,
   "miniMap": {
     "width": "1983",
-    "height": "1093",
+    "height": "1160",
     "centerX": "1300",
-    "centerY": "833",
+    "centerY": "900",
     "mag": "4",
     "canvas": {
       "_imageData": {
         "width": "123",
-        "height": "68"
+        "height": "72"
       }
     }
   },
@@ -1173,12 +1205,12 @@
       "tn": "",
       "script": "myHome_roofTop",
       "pt": "9",
-      "x": "12",
-      "y": "-490",
+      "x": "10",
+      "y": "-500",
       "tm": "999999999",
       "horizontalImpact": "0",
       "hRange": "800",
-      "vRange": "250",
+      "vRange": "150",
       "hideTooltip": "0",
       "onlyOnce": "0",
       "delay": "0"

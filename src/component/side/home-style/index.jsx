@@ -58,7 +58,10 @@ const HomeStyle = ({ t }) => {
     } else {
       dispatch({
         type: HOUSE_UPDATE,
-        payload: assoc('selectId', id)(currentHomeData),
+        payload: pipe(
+          assoc('selectId', id),
+          assoc('furnitures', [])
+        )(currentHomeData),
       })
     }
   }

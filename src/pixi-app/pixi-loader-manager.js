@@ -38,7 +38,7 @@ class PixiLoaderManager {
   }
   addResource(resources) {
     entries(([key, res]) => {
-      if (!this.app?.loader?.resources[key]) {
+      if (this.app?.loader?.resources && !this.app?.loader?.resources[key]) {
         this.app.loader.resources[key] = res
       }
     }, resources)

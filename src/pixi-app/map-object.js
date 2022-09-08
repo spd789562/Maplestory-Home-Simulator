@@ -12,6 +12,7 @@ import {
   prop,
   toPairs,
   match,
+  defaultTo,
 } from 'ramda'
 import { getMapObjectImagePath } from '@utils/get-image-path'
 
@@ -34,6 +35,20 @@ const recursiveGetObject = (obj, wzType) => {
   }
   return null
 }
+const getOutlinkInfo = (_outlink) => {
+  const info = _outlink.split('/')
+  // like this Map/Obj/myHome.img/NewYearType/exteriorDeco/1/0
+  const theme = info[7] ? info[6] : '0'
+  const frame = info[7] ? info[7] : info[6]
+  return {
+    wzType: info[2].replace('.img', ''),
+    homeType: info[3],
+    objectType: info[4],
+    objectIndex: info[5],
+    theme,
+    frame,
+  }
+}
 
 class MapObject {
   constructor(app, objectData) {
@@ -43,6 +58,7 @@ class MapObject {
       x,
       y,
       z,
+      f, // flip
       name,
       oS: wzType,
       l0: homeType,
@@ -64,6 +80,8 @@ class MapObject {
     this.theme = '0'
     this.objectType = name || objectType
     this.objectIndex = objectIndex
+    this.flip = !!f
+    this._name = `${wzType}-${homeType}-${objectType}-${objectIndex}`
   }
   get frames() {
     const currentObject = this.themeData[this.theme]
@@ -78,21 +96,25 @@ class MapObject {
             { _inlink, _outlink },
             this.dataPath.wzType
           )
-          const originX = origin?.x || linkObj?.origin?.x
-          const originY = origin?.y || linkObj?.origin?.y
+          const originX =
+            origin?.x !== undefined ? origin.x : linkObj?.origin?.x
+          const originY =
+            origin?.y !== undefined ? origin.y : linkObj?.origin?.y
           return {
             frame,
             x: +originX * -1 + this.position.x,
             y: +originY * -1 + this.position.y,
             size: linkObj?._imageData || _imageData,
-            src: getMapObjectImagePath({
-              wzType: this.dataPath.wzType,
-              homeType: this.dataPath.homeType,
-              objectType: this.dataPath.objectType,
-              objectIndex: this.dataPath.objectIndex,
-              theme: this.theme,
-              frame,
-            }),
+            src: _outlink
+              ? getMapObjectImagePath(getOutlinkInfo(_outlink))
+              : getMapObjectImagePath({
+                  wzType: this.dataPath.wzType,
+                  homeType: this.dataPath.homeType,
+                  objectType: this.dataPath.objectType,
+                  objectIndex: this.dataPath.objectIndex,
+                  theme: this.theme,
+                  frame,
+                }),
             delay,
           }
         }
@@ -135,6 +157,7 @@ class MapObject {
           (src) => this.app.loader.resources[src].texture
         )
       }
+      this.sprite.name = this._name
       this.sprite.width = +size.width
       this.sprite.height = +size.height
       this.sprite.x = x
@@ -148,15 +171,17 @@ class MapObject {
         this.app.ticker.remove(this.animationTicker)
         this.sprite.stop()
       }
+      this.sprite.anchor.x = this.flip ? 1 : 0
+      this.sprite.scale.x *= this.flip ? -1 : 1
     })
   }
   animationTicker = () => {
     if (!this.sprite || !this.frames[this.sprite.currentFrame]) return
     const data = this.frames[this.sprite.currentFrame]
-    this.sprite.width = +data.size.width || this.sprite.width
-    this.sprite.height = +data.size.height || this.sprite.height
-    this.sprite.x = data.x || this.sprite.x
-    this.sprite.y = data.y || this.sprite.y
+    this.sprite.width = defaultTo(+data.size.width, this.sprite.width)
+    this.sprite.height = defaultTo(+data.size.height, this.sprite.height)
+    this.sprite.x = defaultTo(data.x, this.sprite.x)
+    this.sprite.y = defaultTo(data.y, this.sprite.y)
   }
 }
 

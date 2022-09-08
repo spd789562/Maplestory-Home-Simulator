@@ -2,171 +2,157 @@
   "back": {
     "0": {
       "_imageData": {
-        "width": "42",
-        "height": "404"
+        "width": 127,
+        "height": 249
       },
       "origin": {
-        "name": "origin",
-        "x": "21",
-        "y": "202"
+        "x": 63,
+        "y": 124
       },
-      "z": "0"
+      "z": 0
     },
     "1": {
       "_imageData": {
-        "width": "42",
-        "height": "1400"
+        "width": 344,
+        "height": 1400
       },
       "origin": {
-        "name": "origin",
-        "x": "21",
-        "y": "700"
+        "x": 172,
+        "y": 700
       },
-      "z": "0"
+      "z": 0
     },
     "2": {
       "_imageData": {
-        "width": "42",
-        "height": "404"
+        "width": 42,
+        "height": 404
       },
       "origin": {
-        "name": "origin",
-        "x": "21",
-        "y": "202"
+        "x": 21,
+        "y": 202
       },
-      "z": "0"
+      "z": 0
     },
     "3": {
       "_imageData": {
-        "width": "2750",
-        "height": "276"
+        "width": 2750,
+        "height": 276
       },
       "origin": {
-        "name": "origin",
-        "x": "1375",
-        "y": "138"
+        "x": 1375,
+        "y": 138
       },
-      "z": "0"
+      "z": 0
     },
     "4": {
       "_imageData": {
-        "width": "1932",
-        "height": "231"
+        "width": 1932,
+        "height": 231
       },
       "origin": {
-        "name": "origin",
-        "x": "966",
-        "y": "115"
+        "x": 966,
+        "y": 115
       },
-      "z": "0"
+      "z": 0
     },
     "5": {
       "_imageData": {
-        "width": "907",
-        "height": "1006"
+        "width": 907,
+        "height": 1006
       },
       "origin": {
-        "name": "origin",
-        "x": "453",
-        "y": "503"
+        "x": 453,
+        "y": 503
       },
-      "z": "0"
+      "z": 0
     },
     "6": {
       "_imageData": {
-        "width": "1774",
-        "height": "632"
+        "width": 1774,
+        "height": 632
       },
       "origin": {
-        "name": "origin",
-        "x": "887",
-        "y": "316"
+        "x": 887,
+        "y": 316
       },
-      "z": "0"
+      "z": 0
     },
     "7": {
       "_imageData": {
-        "width": "1967",
-        "height": "1312"
+        "width": 1967,
+        "height": 1312
       },
       "origin": {
-        "name": "origin",
-        "x": "983",
-        "y": "656"
+        "x": 983,
+        "y": 656
       },
-      "z": "0"
+      "z": 0
     },
     "8": {
       "_imageData": {
-        "width": "1455",
-        "height": "1522"
+        "width": 1455,
+        "height": 1522
       },
       "origin": {
-        "name": "origin",
-        "x": "727",
-        "y": "761"
+        "x": 727,
+        "y": 761
       },
-      "z": "0"
+      "z": 0
     },
     "9": {
       "_imageData": {
-        "width": "2935",
-        "height": "469"
+        "width": 2935,
+        "height": 469
       },
       "origin": {
-        "name": "origin",
-        "x": "1467",
-        "y": "234"
+        "x": 1467,
+        "y": 234
       },
-      "z": "0"
+      "z": 0
     },
     "10": {
       "_imageData": {
-        "width": "1182",
-        "height": "574"
+        "width": 1182,
+        "height": 574
       },
       "origin": {
-        "name": "origin",
-        "x": "591",
-        "y": "287"
+        "x": 591,
+        "y": 287
       },
-      "z": "0"
+      "z": 0
     },
     "11": {
       "_imageData": {
-        "width": "684",
-        "height": "92"
+        "width": 684,
+        "height": 92
       },
       "origin": {
-        "name": "origin",
-        "x": "342",
-        "y": "46"
+        "x": 342,
+        "y": 46
       },
-      "z": "0"
+      "z": 0
     },
     "12": {
       "_imageData": {
-        "width": "278",
-        "height": "931"
+        "width": 278,
+        "height": 931
       },
       "origin": {
-        "name": "origin",
-        "x": "139",
-        "y": "465"
+        "x": 139,
+        "y": 465
       },
-      "z": "0"
+      "z": 0
     },
     "13": {
       "_imageData": {
-        "width": "1050",
-        "height": "820"
+        "width": 1050,
+        "height": 820
       },
       "origin": {
-        "name": "origin",
-        "x": "525",
-        "y": "410"
+        "x": 525,
+        "y": 410
       },
-      "z": "0"
+      "z": 0
     }
   }
 }

@@ -4,15 +4,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "792",
-            "height": "340"
+            "width": 792,
+            "height": 340
           },
           "origin": {
-            "name": "origin",
-            "x": "396",
-            "y": "170"
+            "x": 396,
+            "y": 170
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -20,29 +19,27 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "476",
-            "height": "223"
+            "width": 476,
+            "height": 223
           },
           "origin": {
-            "name": "origin",
-            "x": "238",
-            "y": "111"
+            "x": 238,
+            "y": 111
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "780",
-            "height": "285"
+            "width": 780,
+            "height": 285
           },
           "origin": {
-            "name": "origin",
-            "x": "390",
-            "y": "142"
+            "x": 390,
+            "y": 142
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -50,15 +47,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "597",
-            "height": "32"
+            "width": 597,
+            "height": 32
           },
           "origin": {
-            "name": "origin",
-            "x": "298",
-            "y": "16"
+            "x": 298,
+            "y": 16
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -66,15 +62,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "829",
-            "height": "196"
+            "width": 829,
+            "height": 196
           },
           "origin": {
-            "name": "origin",
-            "x": "414",
-            "y": "98"
+            "x": 414,
+            "y": 98
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -82,169 +77,156 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "121",
-            "height": "62"
+            "width": 121,
+            "height": 62
           },
           "origin": {
-            "name": "origin",
-            "x": "54",
-            "y": "48"
+            "x": 54,
+            "y": 48
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "58",
-            "height": "48"
+            "width": 58,
+            "height": 48
           },
           "origin": {
-            "name": "origin",
-            "x": "57",
-            "y": "47"
+            "x": 57,
+            "y": 47
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "57",
-            "y": "47"
+            "x": 57,
+            "y": 47
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "tutorialType/direction/1/0"
         },
         "1": {
           "_imageData": {
-            "width": "68",
-            "height": "53"
+            "width": 68,
+            "height": 53
           },
           "origin": {
-            "name": "origin",
-            "x": "62",
-            "y": "51"
+            "x": 62,
+            "y": 51
           },
-          "z": "0"
+          "z": 0
         },
         "2": {
           "_imageData": {
-            "width": "74",
-            "height": "54"
+            "width": 74,
+            "height": 54
           },
           "origin": {
-            "name": "origin",
-            "x": "65",
-            "y": "52"
+            "x": 65,
+            "y": 52
           },
-          "z": "0"
+          "z": 0
         },
         "3": {
           "_imageData": {
-            "width": "83",
-            "height": "43"
+            "width": 83,
+            "height": 43
           },
           "origin": {
-            "name": "origin",
-            "x": "70",
-            "y": "41"
+            "x": 70,
+            "y": 41
           },
-          "z": "0"
+          "z": 0
         },
         "4": {
           "_imageData": {
-            "width": "87",
-            "height": "41"
+            "width": 87,
+            "height": 41
           },
           "origin": {
-            "name": "origin",
-            "x": "71",
-            "y": "38"
+            "x": 71,
+            "y": 38
           },
-          "z": "0"
+          "z": 0
         },
         "5": {
           "_imageData": {
-            "width": "87",
-            "height": "46"
+            "width": 87,
+            "height": 46
           },
           "origin": {
-            "name": "origin",
-            "x": "71",
-            "y": "43"
+            "x": 71,
+            "y": 43
           },
-          "z": "0"
+          "z": 0
         },
         "6": {
           "_imageData": {
-            "width": "87",
-            "height": "47"
+            "width": 87,
+            "height": 47
           },
           "origin": {
-            "name": "origin",
-            "x": "71",
-            "y": "44"
+            "x": 71,
+            "y": 44
           },
-          "z": "0"
+          "z": 0
         },
         "7": {
           "_imageData": {
-            "width": "87",
-            "height": "49"
+            "width": 87,
+            "height": 49
           },
           "origin": {
-            "name": "origin",
-            "x": "71",
-            "y": "46"
+            "x": 71,
+            "y": 46
           },
-          "z": "0"
+          "z": 0
         },
         "8": {
           "_imageData": {
-            "width": "87",
-            "height": "41"
+            "width": 87,
+            "height": 41
           },
           "origin": {
-            "name": "origin",
-            "x": "71",
-            "y": "38"
+            "x": 71,
+            "y": 38
           },
-          "z": "0"
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "71",
-            "y": "38"
+            "x": 71,
+            "y": 38
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "tutorialType/direction/2/8"
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "88",
-            "height": "90"
+            "width": 88,
+            "height": 90
           },
           "origin": {
-            "name": "origin",
-            "x": "44",
-            "y": "56"
+            "x": 44,
+            "y": 56
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -252,15 +234,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "476",
-            "height": "252"
+            "width": 476,
+            "height": 252
           },
           "origin": {
-            "name": "origin",
-            "x": "218",
-            "y": "109"
+            "x": 218,
+            "y": 109
           },
-          "z": "0"
+          "z": 0
         }
       }
     }
@@ -270,126 +251,117 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1195",
-            "height": "434"
+            "width": 1195,
+            "height": 434
           },
           "origin": {
-            "name": "origin",
-            "x": "650",
-            "y": "202"
+            "x": 650,
+            "y": 202
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1195",
-              "height": "434"
+              "width": 1195,
+              "height": 434
             },
             "origin": {
-              "name": "origin",
-              "x": "650",
-              "y": "202"
+              "x": 650,
+              "y": 202
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1195",
-              "height": "434"
+              "width": 1195,
+              "height": 434
             },
             "origin": {
-              "name": "origin",
-              "x": "650",
-              "y": "202"
+              "x": 650,
+              "y": 202
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1202",
-              "height": "482"
+              "width": 1202,
+              "height": 482
             },
             "origin": {
-              "name": "origin",
-              "x": "653",
-              "y": "250"
+              "x": 653,
+              "y": 250
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1202",
-              "height": "482"
+              "width": 1202,
+              "height": 482
             },
             "origin": {
-              "name": "origin",
-              "x": "653",
-              "y": "250"
+              "x": 653,
+              "y": 250
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1202",
-              "height": "482"
+              "width": 1202,
+              "height": 482
             },
             "origin": {
-              "name": "origin",
-              "x": "653",
-              "y": "250"
+              "x": 653,
+              "y": 250
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s6": {
           "0": {
             "_imageData": {
-              "width": "1299",
-              "height": "468"
+              "width": 1299,
+              "height": 468
             },
             "origin": {
-              "name": "origin",
-              "x": "709",
-              "y": "205"
+              "x": 709,
+              "y": 205
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s7": {
           "0": {
             "_imageData": {
-              "width": "1299",
-              "height": "468"
+              "width": 1299,
+              "height": 468
             },
             "origin": {
-              "name": "origin",
-              "x": "709",
-              "y": "205"
+              "x": 709,
+              "y": 205
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s8": {
           "0": {
             "_imageData": {
-              "width": "1299",
-              "height": "468"
+              "width": 1299,
+              "height": 468
             },
             "origin": {
-              "name": "origin",
-              "x": "709",
-              "y": "205"
+              "x": 709,
+              "y": 205
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -398,112 +370,104 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "421"
+            "width": 750,
+            "height": 421
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "451"
+            "x": 375,
+            "y": 451
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "752",
-              "height": "421"
+              "width": 752,
+              "height": 421
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "451"
+              "x": 375,
+              "y": 451
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "421"
+              "width": 750,
+              "height": 421
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "451"
+              "x": 375,
+              "y": 451
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "421"
+              "width": 750,
+              "height": 421
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "451"
+              "x": 375,
+              "y": 451
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1151",
-            "height": "465"
+            "width": 1151,
+            "height": 465
           },
           "origin": {
-            "name": "origin",
-            "x": "575",
-            "y": "465"
+            "x": 575,
+            "y": 465
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1151",
-              "height": "465"
+              "width": 1151,
+              "height": 465
             },
             "origin": {
-              "name": "origin",
-              "x": "575",
-              "y": "465"
+              "x": 575,
+              "y": 465
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1228",
-              "height": "465"
+              "width": 1228,
+              "height": 465
             },
             "origin": {
-              "name": "origin",
-              "x": "575",
-              "y": "465"
+              "x": 575,
+              "y": 465
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1151",
-              "height": "465"
+              "width": 1151,
+              "height": 465
             },
             "origin": {
-              "name": "origin",
-              "x": "575",
-              "y": "465"
+              "x": 575,
+              "y": 465
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -512,172 +476,156 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "814",
-            "height": "245"
+            "width": 814,
+            "height": 245
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "245"
+            "x": 375,
+            "y": 245
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "814",
-              "height": "245"
+              "width": 814,
+              "height": 245
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "245"
+              "x": 375,
+              "y": 245
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "814",
-              "height": "245"
+              "width": 814,
+              "height": 245
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "245"
+              "x": 375,
+              "y": 245
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "762",
-            "height": "244"
+            "width": 762,
+            "height": 244
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "244"
+            "x": 375,
+            "y": 244
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "762",
-              "height": "244"
+              "width": 762,
+              "height": 244
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "244"
+              "x": 375,
+              "y": 244
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "762",
-              "height": "244"
+              "width": 762,
+              "height": 244
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "244"
+              "x": 375,
+              "y": 244
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "245"
+            "width": 750,
+            "height": 245
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "245"
+            "x": 375,
+            "y": 245
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "245"
+              "width": 750,
+              "height": 245
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "245"
+              "x": 375,
+              "y": 245
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "245"
+              "width": 750,
+              "height": 245
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "245"
+              "x": 375,
+              "y": 245
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "31"
+            "width": 750,
+            "height": 31
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "30"
+            "x": 375,
+            "y": 30
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "31"
+              "width": 750,
+              "height": 31
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "30"
+              "x": 375,
+              "y": 30
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "31"
+              "width": 750,
+              "height": 31
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "30"
+              "x": 375,
+              "y": 30
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -686,126 +634,117 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1187",
-            "height": "356"
+            "width": 1187,
+            "height": 356
           },
           "origin": {
-            "name": "origin",
-            "x": "620",
-            "y": "356"
+            "x": 620,
+            "y": 356
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1187",
-              "height": "356"
+              "width": 1187,
+              "height": 356
             },
             "origin": {
-              "name": "origin",
-              "x": "620",
-              "y": "356"
+              "x": 620,
+              "y": 356
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1187",
-              "height": "356"
+              "width": 1187,
+              "height": 356
             },
             "origin": {
-              "name": "origin",
-              "x": "620",
-              "y": "356"
+              "x": 620,
+              "y": 356
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1176",
-              "height": "376"
+              "width": 1176,
+              "height": 376
             },
             "origin": {
-              "name": "origin",
-              "x": "625",
-              "y": "376"
+              "x": 625,
+              "y": 376
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1176",
-              "height": "376"
+              "width": 1176,
+              "height": 376
             },
             "origin": {
-              "name": "origin",
-              "x": "625",
-              "y": "376"
+              "x": 625,
+              "y": 376
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1176",
-              "height": "376"
+              "width": 1176,
+              "height": 376
             },
             "origin": {
-              "name": "origin",
-              "x": "625",
-              "y": "376"
+              "x": 625,
+              "y": 376
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s6": {
           "0": {
             "_imageData": {
-              "width": "1218",
-              "height": "364"
+              "width": 1218,
+              "height": 364
             },
             "origin": {
-              "name": "origin",
-              "x": "649",
-              "y": "364"
+              "x": 649,
+              "y": 364
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s7": {
           "0": {
             "_imageData": {
-              "width": "1218",
-              "height": "364"
+              "width": 1218,
+              "height": 364
             },
             "origin": {
-              "name": "origin",
-              "x": "649",
-              "y": "364"
+              "x": 649,
+              "y": 364
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s8": {
           "0": {
             "_imageData": {
-              "width": "1218",
-              "height": "364"
+              "width": 1218,
+              "height": 364
             },
             "origin": {
-              "name": "origin",
-              "x": "649",
-              "y": "364"
+              "x": 649,
+              "y": 364
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -814,45 +753,40 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "237",
-            "height": "214"
+            "width": 237,
+            "height": 214
           },
           "origin": {
-            "name": "origin",
-            "x": "120",
-            "y": "92"
+            "x": 120,
+            "y": 92
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "207",
-            "height": "213"
+            "width": 207,
+            "height": 213
           },
           "origin": {
-            "name": "origin",
-            "x": "103",
-            "y": "106"
+            "x": 103,
+            "y": 106
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 56,
+            "height": 214
           },
           "origin": {
-            "name": "origin",
-            "x": "22",
-            "y": "69"
+            "x": 22,
+            "y": 69
           },
-          "z": "0",
-          "_outlink": "Map/Obj/myHome2.img/henesysExpandType/stair/2/0"
+          "z": 0
         }
       }
     },
@@ -860,30 +794,27 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1366",
-            "height": "145"
+            "width": 1366,
+            "height": 145
           },
           "origin": {
-            "name": "origin",
-            "x": "683",
-            "y": "145"
+            "x": 683,
+            "y": 145
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1366",
-            "height": "179"
+            "width": 1366,
+            "height": 179
           },
           "origin": {
-            "name": "origin",
-            "x": "683",
-            "y": "179"
+            "x": 683,
+            "y": 179
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -891,29 +822,27 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "209"
+            "width": 750,
+            "height": 209
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "239"
+            "x": 375,
+            "y": 239
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "181"
+            "width": 750,
+            "height": 181
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "-1"
+            "x": 375,
+            "y": -1
           },
-          "z": "0"
+          "z": 0
         }
       }
     }
@@ -923,126 +852,117 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1245",
-            "height": "316"
+            "width": 1245,
+            "height": 316
           },
           "origin": {
-            "name": "origin",
-            "x": "619",
-            "y": "0"
+            "x": 619,
+            "y": 0
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1245",
-              "height": "316"
+              "width": 1245,
+              "height": 316
             },
             "origin": {
-              "name": "origin",
-              "x": "619",
-              "y": "0"
+              "x": 619,
+              "y": 0
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1245",
-              "height": "316"
+              "width": 1245,
+              "height": 316
             },
             "origin": {
-              "name": "origin",
-              "x": "619",
-              "y": "0"
+              "x": 619,
+              "y": 0
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1246",
-              "height": "546"
+              "width": 1246,
+              "height": 546
             },
             "origin": {
-              "name": "origin",
-              "x": "618",
-              "y": "230"
+              "x": 618,
+              "y": 230
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1246",
-              "height": "546"
+              "width": 1246,
+              "height": 546
             },
             "origin": {
-              "name": "origin",
-              "x": "618",
-              "y": "230"
+              "x": 618,
+              "y": 230
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1246",
-              "height": "546"
+              "width": 1246,
+              "height": 546
             },
             "origin": {
-              "name": "origin",
-              "x": "618",
-              "y": "230"
+              "x": 618,
+              "y": 230
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s6": {
           "0": {
             "_imageData": {
-              "width": "1264",
-              "height": "366"
+              "width": 1264,
+              "height": 366
             },
             "origin": {
-              "name": "origin",
-              "x": "647",
-              "y": "-4"
+              "x": 647,
+              "y": -4
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s7": {
           "0": {
             "_imageData": {
-              "width": "1264",
-              "height": "366"
+              "width": 1264,
+              "height": 366
             },
             "origin": {
-              "name": "origin",
-              "x": "647",
-              "y": "-4"
+              "x": 647,
+              "y": -4
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s8": {
           "0": {
             "_imageData": {
-              "width": "1264",
-              "height": "366"
+              "width": 1264,
+              "height": 366
             },
             "origin": {
-              "name": "origin",
-              "x": "647",
-              "y": "-4"
+              "x": 647,
+              "y": -4
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -1051,84 +971,78 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "420"
+            "width": 750,
+            "height": 420
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "450"
+            "x": 375,
+            "y": 450
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "420"
+              "width": 750,
+              "height": 420
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "450"
+              "x": 375,
+              "y": 450
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "420"
+              "width": 750,
+              "height": 420
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "450"
+              "x": 375,
+              "y": 450
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1153",
-            "height": "422"
+            "width": 1153,
+            "height": 422
           },
           "origin": {
-            "name": "origin",
-            "x": "577",
-            "y": "422"
+            "x": 577,
+            "y": 422
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1151",
-              "height": "423"
+              "width": 1151,
+              "height": 423
             },
             "origin": {
-              "name": "origin",
-              "x": "575",
-              "y": "423"
+              "x": 575,
+              "y": 423
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1172",
-              "height": "422"
+              "width": 1172,
+              "height": 422
             },
             "origin": {
-              "name": "origin",
-              "x": "575",
-              "y": "422"
+              "x": 575,
+              "y": 422
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -1137,172 +1051,156 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "759",
-            "height": "241"
+            "width": 759,
+            "height": 241
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "241"
+            "x": 375,
+            "y": 241
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "759",
-              "height": "241"
+              "width": 759,
+              "height": 241
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "241"
+              "x": 375,
+              "y": 241
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "759",
-              "height": "241"
+              "width": 759,
+              "height": 241
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "241"
+              "x": 375,
+              "y": 241
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "771",
-            "height": "243"
+            "width": 771,
+            "height": 243
           },
           "origin": {
-            "name": "origin",
-            "x": "396",
-            "y": "243"
+            "x": 396,
+            "y": 243
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "771",
-              "height": "243"
+              "width": 771,
+              "height": 243
             },
             "origin": {
-              "name": "origin",
-              "x": "396",
-              "y": "243"
+              "x": 396,
+              "y": 243
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "771",
-              "height": "243"
+              "width": 771,
+              "height": 243
             },
             "origin": {
-              "name": "origin",
-              "x": "396",
-              "y": "243"
+              "x": 396,
+              "y": 243
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "245"
+            "width": 750,
+            "height": 245
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "245"
+            "x": 375,
+            "y": 245
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "245"
+              "width": 750,
+              "height": 245
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "245"
+              "x": 375,
+              "y": 245
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "245"
+              "width": 750,
+              "height": 245
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "245"
+              "x": 375,
+              "y": 245
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "750",
-            "height": "419"
+            "width": 750,
+            "height": 419
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "239"
+            "x": 375,
+            "y": 239
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "419"
+              "width": 750,
+              "height": 419
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "239"
+              "x": 375,
+              "y": 239
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "750",
-              "height": "419"
+              "width": 750,
+              "height": 419
             },
             "origin": {
-              "name": "origin",
-              "x": "375",
-              "y": "239"
+              "x": 375,
+              "y": 239
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -1311,42 +1209,39 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1228",
-            "height": "404"
+            "width": 1228,
+            "height": 404
           },
           "origin": {
-            "name": "origin",
-            "x": "626",
-            "y": "405"
+            "x": 626,
+            "y": 405
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1139",
-              "height": "403"
+              "width": 1139,
+              "height": 403
             },
             "origin": {
-              "name": "origin",
-              "x": "623",
-              "y": "405"
+              "x": 623,
+              "y": 405
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1191",
-              "height": "393"
+              "width": 1191,
+              "height": 393
             },
             "origin": {
-              "name": "origin",
-              "x": "594",
-              "y": "393"
+              "x": 594,
+              "y": 393
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -1355,30 +1250,28 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "239"
+            "x": 375,
+            "y": 239
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "henesysType/shadow/0/0"
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "375",
-            "y": "-1"
+            "x": 375,
+            "y": -1
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "henesysType/shadow/1/0"
         }
       }
@@ -1389,756 +1282,696 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1131",
-            "height": "635"
+            "width": 1131,
+            "height": 635
           },
           "origin": {
-            "name": "origin",
-            "x": "548",
-            "y": "497"
+            "x": 548,
+            "y": 497
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1131",
-              "height": "635"
+              "width": 1131,
+              "height": 635
             },
             "origin": {
-              "name": "origin",
-              "x": "548",
-              "y": "497"
+              "x": 548,
+              "y": 497
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1131",
-              "height": "635"
+              "width": 1131,
+              "height": 635
             },
             "origin": {
-              "name": "origin",
-              "x": "548",
-              "y": "497"
+              "x": 548,
+              "y": 497
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1129",
-              "height": "596"
+              "width": 1129,
+              "height": 596
             },
             "origin": {
-              "name": "origin",
-              "x": "563",
-              "y": "561"
+              "x": 563,
+              "y": 561
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1129",
-              "height": "596"
+              "width": 1129,
+              "height": 596
             },
             "origin": {
-              "name": "origin",
-              "x": "563",
-              "y": "561"
+              "x": 563,
+              "y": 561
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1129",
-              "height": "596"
+              "width": 1129,
+              "height": 596
             },
             "origin": {
-              "name": "origin",
-              "x": "563",
-              "y": "561"
+              "x": 563,
+              "y": 561
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "455",
-            "height": "502"
+            "width": 455,
+            "height": 502
           },
           "origin": {
-            "name": "origin",
-            "x": "254",
-            "y": "766"
+            "x": 254,
+            "y": 766
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "455",
-              "height": "502"
+              "width": 455,
+              "height": 502
             },
             "origin": {
-              "name": "origin",
-              "x": "254",
-              "y": "766"
+              "x": 254,
+              "y": 766
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "455",
-              "height": "502"
+              "width": 455,
+              "height": 502
             },
             "origin": {
-              "name": "origin",
-              "x": "254",
-              "y": "766"
+              "x": 254,
+              "y": 766
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "245",
-              "height": "257"
+              "width": 245,
+              "height": 257
             },
             "origin": {
-              "name": "origin",
-              "x": "182",
-              "y": "526"
+              "x": 182,
+              "y": 526
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "245",
-              "height": "257"
+              "width": 245,
+              "height": 257
             },
             "origin": {
-              "name": "origin",
-              "x": "182",
-              "y": "526"
+              "x": 182,
+              "y": 526
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "245",
-              "height": "257"
+              "width": 245,
+              "height": 257
             },
             "origin": {
-              "name": "origin",
-              "x": "182",
-              "y": "526"
+              "x": 182,
+              "y": 526
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "660",
-            "height": "312"
+            "width": 660,
+            "height": 312
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "328"
+            "x": 551,
+            "y": 328
           },
-          "z": "0"
+          "z": 0
         },
         "1": {
           "_imageData": {
-            "width": "660",
-            "height": "313"
+            "width": 660,
+            "height": 313
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "329"
+            "x": 551,
+            "y": 329
           },
-          "z": "0"
+          "z": 0
         },
         "2": {
           "_imageData": {
-            "width": "660",
-            "height": "314"
+            "width": 660,
+            "height": 314
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "330"
+            "x": 551,
+            "y": 330
           },
-          "z": "0"
+          "z": 0
         },
         "3": {
           "_imageData": {
-            "width": "660",
-            "height": "312"
+            "width": 660,
+            "height": 312
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "328"
+            "x": 551,
+            "y": 328
           },
-          "z": "0"
+          "z": 0
         },
         "4": {
           "_imageData": {
-            "width": "660",
-            "height": "310"
+            "width": 660,
+            "height": 310
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "326"
+            "x": 551,
+            "y": 326
           },
-          "z": "0"
+          "z": 0
         },
         "5": {
           "_imageData": {
-            "width": "660",
-            "height": "309"
+            "width": 660,
+            "height": 309
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "325"
+            "x": 551,
+            "y": 325
           },
-          "z": "0"
+          "z": 0
         },
         "6": {
           "_imageData": {
-            "width": "660",
-            "height": "308"
+            "width": 660,
+            "height": 308
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "324"
+            "x": 551,
+            "y": 324
           },
-          "z": "0"
+          "z": 0
         },
         "7": {
           "_imageData": {
-            "width": "660",
-            "height": "310"
+            "width": 660,
+            "height": 310
           },
           "origin": {
-            "name": "origin",
-            "x": "551",
-            "y": "326"
+            "x": 551,
+            "y": 326
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "660",
-              "height": "312"
+              "width": 660,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "328"
+              "x": 551,
+              "y": 328
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "660",
-              "height": "313"
+              "width": 660,
+              "height": 313
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "329"
+              "x": 551,
+              "y": 329
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "660",
-              "height": "314"
+              "width": 660,
+              "height": 314
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "330"
+              "x": 551,
+              "y": 330
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "660",
-              "height": "312"
+              "width": 660,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "328"
+              "x": 551,
+              "y": 328
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "660",
-              "height": "310"
+              "width": 660,
+              "height": 310
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "326"
+              "x": 551,
+              "y": 326
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "660",
-              "height": "309"
+              "width": 660,
+              "height": 309
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "325"
+              "x": 551,
+              "y": 325
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "660",
-              "height": "308"
+              "width": 660,
+              "height": 308
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "324"
+              "x": 551,
+              "y": 324
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "660",
-              "height": "310"
+              "width": 660,
+              "height": 310
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "326"
+              "x": 551,
+              "y": 326
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "660",
-              "height": "312"
+              "width": 660,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "328"
+              "x": 551,
+              "y": 328
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "660",
-              "height": "313"
+              "width": 660,
+              "height": 313
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "329"
+              "x": 551,
+              "y": 329
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "660",
-              "height": "314"
+              "width": 660,
+              "height": 314
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "330"
+              "x": 551,
+              "y": 330
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "660",
-              "height": "312"
+              "width": 660,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "328"
+              "x": 551,
+              "y": 328
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "660",
-              "height": "310"
+              "width": 660,
+              "height": 310
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "326"
+              "x": 551,
+              "y": 326
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "660",
-              "height": "309"
+              "width": 660,
+              "height": 309
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "325"
+              "x": 551,
+              "y": 325
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "660",
-              "height": "308"
+              "width": 660,
+              "height": 308
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "324"
+              "x": 551,
+              "y": 324
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "660",
-              "height": "310"
+              "width": 660,
+              "height": 310
             },
             "origin": {
-              "name": "origin",
-              "x": "551",
-              "y": "326"
+              "x": 551,
+              "y": 326
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1120",
-              "height": "494"
+              "width": 1120,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "464"
+              "x": 565,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "1114",
-              "height": "493"
+              "width": 1114,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "463"
+              "x": 559,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "1114",
-              "height": "494"
+              "width": 1114,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "464"
+              "x": 559,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "1120",
-              "height": "493"
+              "width": 1120,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "463"
+              "x": 565,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "1114",
-              "height": "494"
+              "width": 1114,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "464"
+              "x": 559,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "1120",
-              "height": "494"
+              "width": 1120,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "464"
+              "x": 565,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "1120",
-              "height": "488"
+              "width": 1120,
+              "height": 488
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "458"
+              "x": 565,
+              "y": 458
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "1114",
-              "height": "493"
+              "width": 1114,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "463"
+              "x": 559,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1120",
-              "height": "494"
+              "width": 1120,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "464"
+              "x": 565,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "1114",
-              "height": "493"
+              "width": 1114,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "463"
+              "x": 559,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "1114",
-              "height": "494"
+              "width": 1114,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "464"
+              "x": 559,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "1120",
-              "height": "493"
+              "width": 1120,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "463"
+              "x": 565,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "1114",
-              "height": "494"
+              "width": 1114,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "464"
+              "x": 559,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "1120",
-              "height": "494"
+              "width": 1120,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "464"
+              "x": 565,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "1120",
-              "height": "488"
+              "width": 1120,
+              "height": 488
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "458"
+              "x": 565,
+              "y": 458
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "1114",
-              "height": "493"
+              "width": 1114,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "463"
+              "x": 559,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1120",
-              "height": "494"
+              "width": 1120,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "464"
+              "x": 565,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "1114",
-              "height": "493"
+              "width": 1114,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "463"
+              "x": 559,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "1114",
-              "height": "494"
+              "width": 1114,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "464"
+              "x": 559,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "1120",
-              "height": "493"
+              "width": 1120,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "463"
+              "x": 565,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "1114",
-              "height": "494"
+              "width": 1114,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "464"
+              "x": 559,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "1120",
-              "height": "494"
+              "width": 1120,
+              "height": 494
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "464"
+              "x": 565,
+              "y": 464
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "1120",
-              "height": "488"
+              "width": 1120,
+              "height": 488
             },
             "origin": {
-              "name": "origin",
-              "x": "565",
-              "y": "458"
+              "x": 565,
+              "y": 458
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "1114",
-              "height": "493"
+              "width": 1114,
+              "height": 493
             },
             "origin": {
-              "name": "origin",
-              "x": "559",
-              "y": "463"
+              "x": 559,
+              "y": 463
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -2147,84 +1980,78 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "600",
-            "height": "642"
+            "width": 600,
+            "height": 642
           },
           "origin": {
-            "name": "origin",
-            "x": "300",
-            "y": "628"
+            "x": 300,
+            "y": 628
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "600",
-              "height": "642"
+              "width": 600,
+              "height": 642
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "628"
+              "x": 300,
+              "y": 628
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "600",
-              "height": "642"
+              "width": 600,
+              "height": 642
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "628"
+              "x": 300,
+              "y": 628
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1061",
-            "height": "430"
+            "width": 1061,
+            "height": 430
           },
           "origin": {
-            "name": "origin",
-            "x": "541",
-            "y": "416"
+            "x": 541,
+            "y": 416
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1056",
-              "height": "430"
+              "width": 1056,
+              "height": 430
             },
             "origin": {
-              "name": "origin",
-              "x": "538",
-              "y": "416"
+              "x": 538,
+              "y": 416
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1052",
-              "height": "430"
+              "width": 1052,
+              "height": 430
             },
             "origin": {
-              "name": "origin",
-              "x": "536",
-              "y": "416"
+              "x": 536,
+              "y": 416
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -2233,130 +2060,117 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "600",
-            "height": "451"
+            "width": 600,
+            "height": 451
           },
           "origin": {
-            "name": "origin",
-            "x": "300",
-            "y": "437"
+            "x": 300,
+            "y": 437
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "600",
-              "height": "453"
+              "width": 600,
+              "height": 453
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "439"
+              "x": 300,
+              "y": 439
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "600",
-              "height": "451"
+              "width": 600,
+              "height": 451
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "437"
+              "x": 300,
+              "y": 437
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "618",
-            "height": "451"
+            "width": 618,
+            "height": 451
           },
           "origin": {
-            "name": "origin",
-            "x": "300",
-            "y": "437"
+            "x": 300,
+            "y": 437
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "618",
-              "height": "453"
+              "width": 618,
+              "height": 453
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "439"
+              "x": 300,
+              "y": 439
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "618",
-              "height": "451"
+              "width": 618,
+              "height": 451
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "437"
+              "x": 300,
+              "y": 437
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "600",
-            "height": "455"
+            "width": 600,
+            "height": 455
           },
           "origin": {
-            "name": "origin",
-            "x": "300",
-            "y": "441"
+            "x": 300,
+            "y": 441
           },
-          "z": "0",
-          "foothold": null,
-          "ladder": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "600",
-              "height": "455"
+              "width": 600,
+              "height": 455
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "441"
+              "x": 300,
+              "y": 441
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "600",
-              "height": "455"
+              "width": 600,
+              "height": 455
             },
             "origin": {
-              "name": "origin",
-              "x": "300",
-              "y": "441"
+              "x": 300,
+              "y": 441
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -2365,528 +2179,486 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1253",
-            "height": "412"
+            "width": 1253,
+            "height": 412
           },
           "origin": {
-            "name": "origin",
-            "x": "644",
-            "y": "398"
+            "x": 644,
+            "y": 398
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1253",
-              "height": "412"
+              "width": 1253,
+              "height": 412
             },
             "origin": {
-              "name": "origin",
-              "x": "644",
-              "y": "398"
+              "x": 644,
+              "y": 398
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1253",
-              "height": "412"
+              "width": 1253,
+              "height": 412
             },
             "origin": {
-              "name": "origin",
-              "x": "644",
-              "y": "398"
+              "x": 644,
+              "y": 398
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1201",
-              "height": "402"
+              "width": 1201,
+              "height": 402
             },
             "origin": {
-              "name": "origin",
-              "x": "602",
-              "y": "388"
+              "x": 602,
+              "y": 388
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "1201",
-              "height": "402"
+              "width": 1201,
+              "height": 402
             },
             "origin": {
-              "name": "origin",
-              "x": "602",
-              "y": "388"
+              "x": 602,
+              "y": 388
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "1201",
-              "height": "402"
+              "width": 1201,
+              "height": 402
             },
             "origin": {
-              "name": "origin",
-              "x": "602",
-              "y": "388"
+              "x": 602,
+              "y": 388
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "30",
-            "height": "32"
+            "width": 30,
+            "height": 32
           },
           "origin": {
-            "name": "origin",
-            "x": "631",
-            "y": "82"
+            "x": 631,
+            "y": 82
           },
-          "z": "0"
+          "z": 0
         },
         "1": {
           "_imageData": {
-            "width": "35",
-            "height": "33"
+            "width": 35,
+            "height": 33
           },
           "origin": {
-            "name": "origin",
-            "x": "634",
-            "y": "83"
+            "x": 634,
+            "y": 83
           },
-          "z": "0"
+          "z": 0
         },
         "2": {
           "_imageData": {
-            "width": "32",
-            "height": "32"
+            "width": 32,
+            "height": 32
           },
           "origin": {
-            "name": "origin",
-            "x": "633",
-            "y": "82"
+            "x": 633,
+            "y": 82
           },
-          "z": "0"
+          "z": 0
         },
         "3": {
           "_imageData": {
-            "width": "29",
-            "height": "32"
+            "width": 29,
+            "height": 32
           },
           "origin": {
-            "name": "origin",
-            "x": "632",
-            "y": "82"
+            "x": 632,
+            "y": 82
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "30",
-              "height": "32"
+              "width": 30,
+              "height": 32
             },
             "origin": {
-              "name": "origin",
-              "x": "631",
-              "y": "82"
+              "x": 631,
+              "y": 82
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "35",
-              "height": "33"
+              "width": 35,
+              "height": 33
             },
             "origin": {
-              "name": "origin",
-              "x": "634",
-              "y": "83"
+              "x": 634,
+              "y": 83
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "32",
-              "height": "32"
+              "width": 32,
+              "height": 32
             },
             "origin": {
-              "name": "origin",
-              "x": "633",
-              "y": "82"
+              "x": 633,
+              "y": 82
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "29",
-              "height": "32"
+              "width": 29,
+              "height": 32
             },
             "origin": {
-              "name": "origin",
-              "x": "632",
-              "y": "82"
+              "x": 632,
+              "y": 82
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "30",
-              "height": "32"
+              "width": 30,
+              "height": 32
             },
             "origin": {
-              "name": "origin",
-              "x": "631",
-              "y": "82"
+              "x": 631,
+              "y": 82
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "35",
-              "height": "33"
+              "width": 35,
+              "height": 33
             },
             "origin": {
-              "name": "origin",
-              "x": "634",
-              "y": "83"
+              "x": 634,
+              "y": 83
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "32",
-              "height": "32"
+              "width": 32,
+              "height": 32
             },
             "origin": {
-              "name": "origin",
-              "x": "633",
-              "y": "82"
+              "x": 633,
+              "y": 82
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "29",
-              "height": "32"
+              "width": 29,
+              "height": 32
             },
             "origin": {
-              "name": "origin",
-              "x": "632",
-              "y": "82"
+              "x": 632,
+              "y": 82
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "57",
-              "height": "38"
+              "width": 57,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "57",
-              "height": "38"
+              "width": 57,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s4": {
           "0": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "57",
-              "height": "38"
+              "width": 57,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "57",
-              "height": "38"
+              "width": 57,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s5": {
           "0": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "57",
-              "height": "38"
+              "width": 57,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "57",
-              "height": "38"
+              "width": 57,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "58",
-              "height": "38"
+              "width": 58,
+              "height": 38
             },
             "origin": {
-              "name": "origin",
-              "x": "363",
-              "y": "166"
+              "x": 363,
+              "y": 166
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -2895,209 +2667,192 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "-215",
-            "y": "573"
+            "x": -215,
+            "y": 573
           }
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "114",
-              "height": "123"
+              "width": 114,
+              "height": 123
             },
             "origin": {
-              "name": "origin",
-              "x": "-215",
-              "y": "573"
+              "x": -215,
+              "y": 573
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "114",
-              "height": "122"
+              "width": 114,
+              "height": 122
             },
             "origin": {
-              "name": "origin",
-              "x": "-215",
-              "y": "572"
+              "x": -215,
+              "y": 572
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "115",
-              "height": "121"
+              "width": 115,
+              "height": 121
             },
             "origin": {
-              "name": "origin",
-              "x": "-214",
-              "y": "571"
+              "x": -214,
+              "y": 571
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "115",
-              "height": "120"
+              "width": 115,
+              "height": 120
             },
             "origin": {
-              "name": "origin",
-              "x": "-214",
-              "y": "570"
+              "x": -214,
+              "y": 570
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "115",
-              "height": "121"
+              "width": 115,
+              "height": 121
             },
             "origin": {
-              "name": "origin",
-              "x": "-214",
-              "y": "571"
+              "x": -214,
+              "y": 571
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "115",
-              "height": "122"
+              "width": 115,
+              "height": 122
             },
             "origin": {
-              "name": "origin",
-              "x": "-214",
-              "y": "572"
+              "x": -214,
+              "y": 572
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "114",
-              "height": "123"
+              "width": 114,
+              "height": 123
             },
             "origin": {
-              "name": "origin",
-              "x": "-215",
-              "y": "573"
+              "x": -215,
+              "y": 573
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "114",
-              "height": "124"
+              "width": 114,
+              "height": 124
             },
             "origin": {
-              "name": "origin",
-              "x": "-215",
-              "y": "574"
+              "x": -215,
+              "y": 574
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "151",
-              "height": "165"
+              "width": 151,
+              "height": 165
             },
             "origin": {
-              "name": "origin",
-              "x": "387",
-              "y": "850"
+              "x": 387,
+              "y": 850
             },
-            "z": "0"
+            "z": 0
           },
           "1": {
             "_imageData": {
-              "width": "152",
-              "height": "168"
+              "width": 152,
+              "height": 168
             },
             "origin": {
-              "name": "origin",
-              "x": "388",
-              "y": "853"
+              "x": 388,
+              "y": 853
             },
-            "z": "0"
+            "z": 0
           },
           "2": {
             "_imageData": {
-              "width": "153",
-              "height": "170"
+              "width": 153,
+              "height": 170
             },
             "origin": {
-              "name": "origin",
-              "x": "389",
-              "y": "855"
+              "x": 389,
+              "y": 855
             },
-            "z": "0"
+            "z": 0
           },
           "3": {
             "_imageData": {
-              "width": "153",
-              "height": "170"
+              "width": 153,
+              "height": 170
             },
             "origin": {
-              "name": "origin",
-              "x": "389",
-              "y": "855"
+              "x": 389,
+              "y": 855
             },
-            "z": "0"
+            "z": 0
           },
           "4": {
             "_imageData": {
-              "width": "152",
-              "height": "168"
+              "width": 152,
+              "height": 168
             },
             "origin": {
-              "name": "origin",
-              "x": "388",
-              "y": "853"
+              "x": 388,
+              "y": 853
             },
-            "z": "0"
+            "z": 0
           },
           "5": {
             "_imageData": {
-              "width": "151",
-              "height": "165"
+              "width": 151,
+              "height": 165
             },
             "origin": {
-              "name": "origin",
-              "x": "387",
-              "y": "850"
+              "x": 387,
+              "y": 850
             },
-            "z": "0"
+            "z": 0
           },
           "6": {
             "_imageData": {
-              "width": "150",
-              "height": "163"
+              "width": 150,
+              "height": 163
             },
             "origin": {
-              "name": "origin",
-              "x": "386",
-              "y": "848"
+              "x": 386,
+              "y": 848
             },
-            "z": "0"
+            "z": 0
           },
           "7": {
             "_imageData": {
-              "width": "150",
-              "height": "163"
+              "width": 150,
+              "height": 163
             },
             "origin": {
-              "name": "origin",
-              "x": "386",
-              "y": "848"
+              "x": 386,
+              "y": 848
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -3106,15 +2861,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "600",
-            "height": "642"
+            "width": 600,
+            "height": 642
           },
           "origin": {
-            "name": "origin",
-            "x": "300",
-            "y": "628"
+            "x": 300,
+            "y": 628
           },
-          "z": "0"
+          "z": 0
         }
       }
     }
@@ -3124,166 +2878,154 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1286",
-            "height": "722"
+            "width": 1286,
+            "height": 722
           },
           "origin": {
-            "name": "origin",
-            "x": "643",
-            "y": "361"
+            "x": 643,
+            "y": 361
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1286",
-              "height": "722"
+              "width": 1286,
+              "height": 722
             },
             "origin": {
-              "name": "origin",
-              "x": "643",
-              "y": "361"
+              "x": 643,
+              "y": 361
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "1286",
-              "height": "722"
+              "width": 1286,
+              "height": 722
             },
             "origin": {
-              "name": "origin",
-              "x": "643",
-              "y": "361"
+              "x": 643,
+              "y": 361
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "1286",
-              "height": "722"
+              "width": 1286,
+              "height": 722
             },
             "origin": {
-              "name": "origin",
-              "x": "643",
-              "y": "361"
+              "x": 643,
+              "y": 361
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "538",
-            "height": "312"
+            "width": 538,
+            "height": 312
           },
           "origin": {
-            "name": "origin",
-            "x": "269",
-            "y": "297"
+            "x": 269,
+            "y": 297
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "538",
-              "height": "312"
+              "width": 538,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "269",
-              "y": "297"
+              "x": 269,
+              "y": 297
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "538",
-              "height": "312"
+              "width": 538,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "269",
-              "y": "297"
+              "x": 269,
+              "y": 297
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "538",
-              "height": "312"
+              "width": 538,
+              "height": 312
             },
             "origin": {
-              "name": "origin",
-              "x": "269",
-              "y": "297"
+              "x": 269,
+              "y": 297
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "-215",
-            "y": "573"
+            "x": -215,
+            "y": 573
           }
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1174",
-              "height": "484"
+              "width": 1174,
+              "height": 484
             },
             "origin": {
-              "name": "origin",
-              "x": "596",
-              "y": "14"
+              "x": 596,
+              "y": 14
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "-215",
-            "y": "573"
+            "x": -215,
+            "y": 573
           }
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "706",
-              "height": "116"
+              "width": 706,
+              "height": 116
             },
             "origin": {
-              "name": "origin",
-              "x": "357",
-              "y": "361"
+              "x": 357,
+              "y": 361
             },
-            "z": "0"
+            "z": 0
           }
         }
       }
@@ -3292,127 +3034,118 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "647",
-            "height": "568"
+            "width": 647,
+            "height": 568
           },
           "origin": {
-            "name": "origin",
-            "x": "353",
-            "y": "281"
+            "x": 353,
+            "y": 281
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "647",
-              "height": "575"
+              "width": 647,
+              "height": 575
             },
             "origin": {
-              "name": "origin",
-              "x": "353",
-              "y": "281"
+              "x": 353,
+              "y": 281
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "647",
-              "height": "623"
+              "width": 647,
+              "height": 623
             },
             "origin": {
-              "name": "origin",
-              "x": "353",
-              "y": "281"
+              "x": 353,
+              "y": 281
             },
-            "z": "0"
+            "z": 0
           }
         },
         "s3": {
           "0": {
             "_imageData": {
-              "width": "647",
-              "height": "558"
+              "width": 647,
+              "height": 558
             },
             "origin": {
-              "name": "origin",
-              "x": "353",
-              "y": "281"
+              "x": 353,
+              "y": 281
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1175",
-            "height": "801"
+            "width": 1175,
+            "height": 801
           },
           "origin": {
-            "name": "origin",
-            "x": "673",
-            "y": "517"
+            "x": 673,
+            "y": 517
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1175",
-              "height": "802"
+              "width": 1175,
+              "height": 802
             },
             "origin": {
-              "name": "origin",
-              "x": "673",
-              "y": "517"
+              "x": 673,
+              "y": 517
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "354",
-            "height": "149"
+            "width": 354,
+            "height": 149
           },
           "origin": {
-            "name": "origin",
-            "x": "178",
-            "y": "147"
+            "x": 178,
+            "y": 147
           },
-          "z": "0"
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "354",
-              "height": "149"
+              "width": 354,
+              "height": 149
             },
             "origin": {
-              "name": "origin",
-              "x": "178",
-              "y": "147"
+              "x": 178,
+              "y": 147
             },
-            "z": "0"
+            "z": 0
           }
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "701",
-            "height": "538"
+            "width": 701,
+            "height": 538
           },
           "origin": {
-            "name": "origin",
-            "x": "350",
-            "y": "276"
+            "x": 350,
+            "y": 276
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -3420,61 +3153,53 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "620",
-            "height": "362"
+            "width": 620,
+            "height": 362
           },
           "origin": {
-            "name": "origin",
-            "x": "290",
-            "y": "362"
+            "x": 290,
+            "y": 362
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "613",
-              "height": "362"
+              "width": 613,
+              "height": 362
             },
             "origin": {
-              "name": "origin",
-              "x": "290",
-              "y": "362"
+              "x": 290,
+              "y": 362
             },
-            "z": "0",
-            "foothold": null
+            "z": 0
           }
         },
         "s2": {
           "0": {
             "_imageData": {
-              "width": "620",
-              "height": "363"
+              "width": 620,
+              "height": 363
             },
             "origin": {
-              "name": "origin",
-              "x": "290",
-              "y": "362"
+              "x": 290,
+              "y": 362
             },
-            "z": "0",
-            "foothold": null
+            "z": 0
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "557",
-            "height": "136"
+            "width": 557,
+            "height": 136
           },
           "origin": {
-            "name": "origin",
-            "x": "254",
-            "y": "137"
+            "x": 254,
+            "y": 137
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       }
     },
@@ -3482,58 +3207,48 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 297,
+            "height": 254
           },
           "origin": {
-            "name": "origin",
-            "x": "134",
-            "y": "163"
-          },
-          "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/0/0"
+            "x": 134,
+            "y": 163
+          }
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": 318,
+              "height": 253
             },
             "origin": {
-              "name": "origin",
-              "x": "148",
-              "y": "162"
-            },
-            "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/0/s1/0"
+              "x": 148,
+              "y": 162
+            }
           }
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 223,
+            "height": 134
           },
           "origin": {
-            "name": "origin",
-            "x": "180",
-            "y": "163"
-          },
-          "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/1/0",
-          "foothold": null
+            "x": 180,
+            "y": 163
+          }
         },
         "s1": {
           "0": {
             "_imageData": {
-              "width": "1",
-              "height": "1"
+              "width": 251,
+              "height": 129
             },
             "origin": {
-              "name": "origin",
-              "x": "180",
-              "y": "168"
-            },
-            "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/exteriorDeco/1/s1/0",
-            "foothold": null
+              "x": 180,
+              "y": 168
+            }
           }
         }
       }
@@ -3542,15 +3257,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "38",
-            "height": "335"
+            "width": 38,
+            "height": 335
           },
           "origin": {
-            "name": "origin",
-            "x": "19",
-            "y": "167"
+            "x": 19,
+            "y": 167
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -3558,16 +3272,14 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 440,
+            "height": 336
           },
           "origin": {
-            "name": "origin",
-            "x": "156",
-            "y": "336"
+            "x": 156,
+            "y": 336
           },
-          "z": "0",
-          "_outlink": "Map/Obj/myHome2.img/NewYearExpandType/etc/0/0"
+          "z": 0
         }
       }
     }
@@ -3577,280 +3289,255 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "1483",
-            "height": "1134"
+            "width": 1483,
+            "height": 1134
           },
           "origin": {
-            "name": "origin",
-            "x": "741",
-            "y": "567"
+            "x": 741,
+            "y": 567
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "151",
-            "height": "345"
+            "width": 151,
+            "height": 345
           },
           "origin": {
-            "name": "origin",
-            "x": "75",
-            "y": "172"
+            "x": 75,
+            "y": 172
           },
-          "z": "0",
-          "moveType": "2",
-          "moveH": "20",
-          "moveP": "6000"
+          "z": 0,
+          "moveType": 2,
+          "moveH": 20,
+          "moveP": 6000
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "206",
-            "height": "269"
+            "width": 206,
+            "height": 269
           },
           "origin": {
-            "name": "origin",
-            "x": "103",
-            "y": "134"
+            "x": 103,
+            "y": 134
           },
-          "z": "0",
-          "moveType": "2",
-          "moveH": "10",
-          "moveP": "4000"
+          "z": 0,
+          "moveType": 2,
+          "moveH": 10,
+          "moveP": 4000
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "126",
-            "height": "112"
+            "width": 126,
+            "height": 112
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "112"
+            "x": 85,
+            "y": 112
           },
-          "z": "0"
+          "z": 0
         },
         "1": {
           "_imageData": {
-            "width": "126",
-            "height": "110"
+            "width": 126,
+            "height": 110
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "110"
+            "x": 85,
+            "y": 110
           },
-          "z": "0"
+          "z": 0
         },
         "2": {
           "_imageData": {
-            "width": "126",
-            "height": "106"
+            "width": 126,
+            "height": 106
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "106"
+            "x": 85,
+            "y": 106
           },
-          "z": "0"
+          "z": 0
         },
         "3": {
           "_imageData": {
-            "width": "126",
-            "height": "96"
+            "width": 126,
+            "height": 96
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "96"
+            "x": 85,
+            "y": 96
           },
-          "z": "0"
+          "z": 0
         },
         "4": {
           "_imageData": {
-            "width": "126",
-            "height": "150"
+            "width": 126,
+            "height": 150
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "150"
+            "x": 85,
+            "y": 150
           },
-          "z": "0"
+          "z": 0
         },
         "5": {
           "_imageData": {
-            "width": "126",
-            "height": "197"
+            "width": 126,
+            "height": 197
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "197"
+            "x": 85,
+            "y": 197
           },
-          "z": "0"
+          "z": 0
         },
         "6": {
           "_imageData": {
-            "width": "126",
-            "height": "224"
+            "width": 126,
+            "height": 224
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "224"
+            "x": 85,
+            "y": 224
           },
-          "z": "0"
+          "z": 0
         },
         "7": {
           "_imageData": {
-            "width": "126",
-            "height": "234"
+            "width": 126,
+            "height": 234
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "234"
+            "x": 85,
+            "y": 234
           },
-          "z": "0"
+          "z": 0
         },
         "8": {
           "_imageData": {
-            "width": "126",
-            "height": "254"
+            "width": 126,
+            "height": 254
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "254"
+            "x": 85,
+            "y": 254
           },
-          "z": "0"
+          "z": 0
         },
         "9": {
           "_imageData": {
-            "width": "126",
-            "height": "253"
+            "width": 126,
+            "height": 253
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "253"
+            "x": 85,
+            "y": 253
           },
-          "z": "0"
+          "z": 0
         },
         "10": {
           "_imageData": {
-            "width": "126",
-            "height": "110"
+            "width": 126,
+            "height": 110
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "110"
+            "x": 85,
+            "y": 110
           },
-          "z": "0"
+          "z": 0
         },
         "11": {
           "_imageData": {
-            "width": "126",
-            "height": "112"
+            "width": 126,
+            "height": 112
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "112"
+            "x": 85,
+            "y": 112
           },
-          "z": "0"
+          "z": 0
         },
         "12": {
           "_imageData": {
-            "width": "126",
-            "height": "112"
+            "width": 126,
+            "height": 112
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "112"
+            "x": 85,
+            "y": 112
           },
-          "z": "0"
+          "z": 0
         },
         "13": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "85",
-            "y": "112"
+            "x": 85,
+            "y": 112
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "Plaza/house/3/0"
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "242",
-            "height": "118"
+            "width": 242,
+            "height": 118
           },
           "origin": {
-            "name": "origin",
-            "x": "-273",
-            "y": "-252"
+            "x": -273,
+            "y": -252
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "5": {
         "0": {
           "_imageData": {
-            "width": "377",
-            "height": "220"
+            "width": 377,
+            "height": 220
           },
           "origin": {
-            "name": "origin",
-            "x": "-204",
-            "y": "-347"
+            "x": -204,
+            "y": -347
           },
-          "z": "0",
-          "foothold": null,
-          "ladder": null
+          "z": 0
         }
       },
       "6": {
         "0": {
           "_imageData": {
-            "width": "295",
-            "height": "320"
+            "width": 295,
+            "height": 320
           },
           "origin": {
-            "name": "origin",
-            "x": "173",
-            "y": "261"
+            "x": 173,
+            "y": 261
           },
-          "z": "0"
+          "z": 0
         }
       },
       "7": {
         "0": {
           "_imageData": {
-            "width": "68",
-            "height": "57"
+            "width": 68,
+            "height": 57
           },
           "origin": {
-            "name": "origin",
-            "x": "37",
-            "y": "32"
+            "x": 37,
+            "y": 32
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -3858,208 +3545,186 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "508",
-            "height": "348"
+            "width": 508,
+            "height": 348
           },
           "origin": {
-            "name": "origin",
-            "x": "254",
-            "y": "174"
+            "x": 254,
+            "y": 174
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "448",
-            "height": "284"
+            "width": 448,
+            "height": 284
           },
           "origin": {
-            "name": "origin",
-            "x": "224",
-            "y": "142"
+            "x": 224,
+            "y": 142
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "1": {
           "_imageData": {
-            "width": "448",
-            "height": "284"
+            "width": 448,
+            "height": 284
           },
           "origin": {
-            "name": "origin",
-            "x": "224",
-            "y": "142"
+            "x": 224,
+            "y": 142
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         },
         "2": {
           "_imageData": {
-            "width": "448",
-            "height": "284"
+            "width": 448,
+            "height": 284
           },
           "origin": {
-            "name": "origin",
-            "x": "224",
-            "y": "142"
+            "x": 224,
+            "y": 142
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "637",
-            "height": "142"
+            "width": 637,
+            "height": 142
           },
           "origin": {
-            "name": "origin",
-            "x": "318",
-            "y": "71"
+            "x": 318,
+            "y": 71
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "509",
-            "height": "390"
+            "width": 509,
+            "height": 390
           },
           "origin": {
-            "name": "origin",
-            "x": "254",
-            "y": "195"
+            "x": 254,
+            "y": 195
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "220",
-            "height": "154"
+            "width": 220,
+            "height": 154
           },
           "origin": {
-            "name": "origin",
-            "x": "110",
-            "y": "77"
+            "x": 110,
+            "y": 77
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "5": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "49",
-            "y": "134"
+            "x": 49,
+            "y": 134
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/0"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/0"
         },
         "1": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "48",
-            "y": "130"
+            "x": 48,
+            "y": 130
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/1"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/1"
         },
         "2": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "50",
-            "y": "123"
+            "x": 50,
+            "y": 123
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/2"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/2"
         },
         "3": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "50",
-            "y": "125"
+            "x": 50,
+            "y": 125
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/3"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/3"
         },
         "4": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "50",
-            "y": "130"
+            "x": 50,
+            "y": 130
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/4"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/4"
         },
         "5": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "51",
-            "y": "130"
+            "x": 51,
+            "y": 130
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/5"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/5"
         },
         "6": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "49",
-            "y": "126"
+            "x": 49,
+            "y": 126
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/6"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/6"
         },
         "7": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "49",
-            "y": "130"
+            "x": 49,
+            "y": 130
           },
-          "z": "0",
-          "_outlink": "Map/Obj/Wz2_Mukhyun.img/common/portal/0/7"
+          "z": 0,
+          "_outlink": "Map/Obj/CoronaFestival.img/main/portal/0/7"
         }
       }
     },
@@ -4067,183 +3732,169 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "542",
-            "height": "208"
+            "width": 542,
+            "height": 208
           },
           "origin": {
-            "name": "origin",
-            "x": "271",
-            "y": "104"
+            "x": 271,
+            "y": 104
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "542",
-            "height": "240"
+            "width": 542,
+            "height": 240
           },
           "origin": {
-            "name": "origin",
-            "x": "271",
-            "y": "120"
+            "x": 271,
+            "y": 120
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "543",
-            "height": "239"
+            "width": 543,
+            "height": 239
           },
           "origin": {
-            "name": "origin",
-            "x": "271",
-            "y": "119"
+            "x": 271,
+            "y": 119
           },
-          "z": "0"
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "1": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "2": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "3": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "4": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "5": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "6": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         },
         "7": {
           "_imageData": {
-            "width": "542",
-            "height": "349"
+            "width": 542,
+            "height": 349
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "265"
+            "x": 329,
+            "y": 265
           },
-          "z": "0"
+          "z": 0
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "542",
-            "height": "303"
+            "width": 542,
+            "height": 303
           },
           "origin": {
-            "name": "origin",
-            "x": "329",
-            "y": "219"
+            "x": 329,
+            "y": 219
           },
-          "z": "0"
+          "z": 0
         }
       },
       "5": {
         "0": {
           "_imageData": {
-            "width": "547",
-            "height": "302"
+            "width": 547,
+            "height": 302
           },
           "origin": {
-            "name": "origin",
-            "x": "332",
-            "y": "218"
+            "x": 332,
+            "y": 218
           },
-          "z": "0"
+          "z": 0
         }
       },
       "6": {
         "0": {
           "_imageData": {
-            "width": "559",
-            "height": "357"
+            "width": 559,
+            "height": 357
           },
           "origin": {
-            "name": "origin",
-            "x": "323",
-            "y": "273"
+            "x": 323,
+            "y": 273
           },
-          "z": "0"
+          "z": 0
         }
       }
     }
@@ -4253,72 +3904,67 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "400",
-            "height": "150"
+            "width": 400,
+            "height": 150
           },
           "origin": {
-            "name": "origin",
-            "x": "200",
-            "y": "75"
+            "x": 200,
+            "y": 75
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "400",
-            "height": "150"
+            "width": 400,
+            "height": 150
           },
           "origin": {
-            "name": "origin",
-            "x": "200",
-            "y": "75"
+            "x": 200,
+            "y": 75
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "85",
-            "height": "4"
+            "width": 85,
+            "height": 4
           },
           "origin": {
-            "name": "origin",
-            "x": "42",
-            "y": "2"
+            "x": 42,
+            "y": 2
           },
-          "z": "0"
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "200",
-            "y": "75"
+            "x": 200,
+            "y": 75
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "base/foot/1/0"
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "42",
-            "y": "2"
+            "x": 42,
+            "y": 2
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "base/foot/2/0"
         }
       }
@@ -4327,101 +3973,92 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "522",
-            "height": "197"
+            "width": 522,
+            "height": 197
           },
           "origin": {
-            "name": "origin",
-            "x": "261",
-            "y": "98"
+            "x": 261,
+            "y": 98
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "522",
-            "height": "231"
+            "width": 522,
+            "height": 231
           },
           "origin": {
-            "name": "origin",
-            "x": "261",
-            "y": "115"
+            "x": 261,
+            "y": 115
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "522",
-            "height": "172"
+            "width": 522,
+            "height": 172
           },
           "origin": {
-            "name": "origin",
-            "x": "261",
-            "y": "86"
+            "x": 261,
+            "y": 86
           },
-          "z": "0"
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 583,
+            "height": 131
           },
           "origin": {
-            "name": "origin",
-            "x": "291",
-            "y": "65"
+            "x": 291,
+            "y": 65
           },
-          "z": "0",
-          "_outlink": "Map/Back/myHome.img/back/23"
+          "z": 0
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 405,
+            "height": 90
           },
           "origin": {
-            "name": "origin",
-            "x": "202",
-            "y": "45"
+            "x": 202,
+            "y": 45
           },
-          "z": "0",
-          "_outlink": "Map/Back/myHome.img/back/24"
+          "z": 0
         }
       },
       "5": {
         "0": {
           "_imageData": {
-            "width": "551",
-            "height": "140"
+            "width": 551,
+            "height": 140
           },
           "origin": {
-            "name": "origin",
-            "x": "275",
-            "y": "70"
+            "x": 275,
+            "y": 70
           },
-          "z": "0"
+          "z": 0
         }
       },
       "6": {
         "0": {
           "_imageData": {
-            "width": "1366",
-            "height": "15"
+            "width": 1366,
+            "height": 15
           },
           "origin": {
-            "name": "origin",
-            "x": "683",
-            "y": "15"
+            "x": 683,
+            "y": 15
           },
-          "z": "0"
+          "z": 0
         }
       }
     }
@@ -4431,43 +4068,40 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "400",
-            "height": "150"
+            "width": 400,
+            "height": 150
           },
           "origin": {
-            "name": "origin",
-            "x": "200",
-            "y": "75"
+            "x": 200,
+            "y": 75
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "400",
-            "height": "150"
+            "width": 400,
+            "height": 150
           },
           "origin": {
-            "name": "origin",
-            "x": "200",
-            "y": "75"
+            "x": 200,
+            "y": 75
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 1,
+            "height": 1
           },
           "origin": {
-            "name": "origin",
-            "x": "42",
-            "y": "2"
+            "x": 42,
+            "y": 2
           },
-          "z": "0",
+          "z": 0,
           "_inlink": "base/foot/2/0"
         }
       }
@@ -4476,100 +4110,92 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "522",
-            "height": "197"
+            "width": 522,
+            "height": 197
           },
           "origin": {
-            "name": "origin",
-            "x": "261",
-            "y": "98"
+            "x": 261,
+            "y": 98
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "522",
-            "height": "231"
+            "width": 522,
+            "height": 231
           },
           "origin": {
-            "name": "origin",
-            "x": "261",
-            "y": "115"
+            "x": 261,
+            "y": 115
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "522",
-            "height": "172"
+            "width": 522,
+            "height": 172
           },
           "origin": {
-            "name": "origin",
-            "x": "261",
-            "y": "86"
+            "x": 261,
+            "y": 86
           },
-          "z": "0"
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "1",
-            "height": "1"
+            "width": 565,
+            "height": 131
           },
           "origin": {
-            "name": "origin",
-            "x": "282",
-            "y": "65"
+            "x": 282,
+            "y": 65
           },
-          "z": "0",
-          "_outlink": "Map/Back/myHome_night.img/back/23"
+          "z": 0
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "414",
-            "height": "90"
+            "width": 414,
+            "height": 90
           },
           "origin": {
-            "name": "origin",
-            "x": "207",
-            "y": "45"
+            "x": 207,
+            "y": 45
           },
-          "z": "0"
+          "z": 0
         }
       },
       "5": {
         "0": {
           "_imageData": {
-            "width": "551",
-            "height": "140"
+            "width": 551,
+            "height": 140
           },
           "origin": {
-            "name": "origin",
-            "x": "275",
-            "y": "70"
+            "x": 275,
+            "y": 70
           },
-          "z": "0"
+          "z": 0
         }
       },
       "6": {
         "0": {
           "_imageData": {
-            "width": "1366",
-            "height": "17"
+            "width": 1366,
+            "height": 17
           },
           "origin": {
-            "name": "origin",
-            "x": "683",
-            "y": "15"
+            "x": 683,
+            "y": 15
           },
-          "z": "0"
+          "z": 0
         }
       }
     },
@@ -4577,43 +4203,40 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "272",
-            "height": "499"
+            "width": 272,
+            "height": 499
           },
           "origin": {
-            "name": "origin",
-            "x": "136",
-            "y": "249"
+            "x": 136,
+            "y": 249
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "239",
-            "height": "189"
+            "width": 239,
+            "height": 189
           },
           "origin": {
-            "name": "origin",
-            "x": "119",
-            "y": "94"
+            "x": 119,
+            "y": 94
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "442",
-            "height": "213"
+            "width": 442,
+            "height": 213
           },
           "origin": {
-            "name": "origin",
-            "x": "221",
-            "y": "106"
+            "x": 221,
+            "y": 106
           },
-          "z": "0"
+          "z": 0
         }
       }
     }
@@ -4623,61 +4246,53 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "448",
-            "height": "132"
+            "width": 448,
+            "height": 132
           },
           "origin": {
-            "name": "origin",
-            "x": "224",
-            "y": "66"
+            "x": 224,
+            "y": 66
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "448",
-            "height": "140"
+            "width": 448,
+            "height": 140
           },
           "origin": {
-            "name": "origin",
-            "x": "224",
-            "y": "67"
+            "x": 224,
+            "y": 67
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "602",
-            "height": "132"
+            "width": 602,
+            "height": 132
           },
           "origin": {
-            "name": "origin",
-            "x": "301",
-            "y": "66"
+            "x": 301,
+            "y": 66
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "208",
-            "height": "136"
+            "width": 208,
+            "height": 136
           },
           "origin": {
-            "name": "origin",
-            "x": "0",
-            "y": "62"
+            "x": 0,
+            "y": 62
           },
-          "z": "0",
-          "foothold": null
+          "z": 0
         }
       }
     },
@@ -4685,155 +4300,144 @@
       "0": {
         "0": {
           "_imageData": {
-            "width": "158",
-            "height": "96"
+            "width": 158,
+            "height": 96
           },
           "origin": {
-            "name": "origin",
-            "x": "88",
-            "y": "96"
+            "x": 88,
+            "y": 96
           },
-          "z": "0"
+          "z": 0
         }
       },
       "1": {
         "0": {
           "_imageData": {
-            "width": "279",
-            "height": "118"
+            "width": 279,
+            "height": 118
           },
           "origin": {
-            "name": "origin",
-            "x": "132",
-            "y": "118"
+            "x": 132,
+            "y": 118
           },
-          "z": "0"
+          "z": 0
         }
       },
       "2": {
         "0": {
           "_imageData": {
-            "width": "583",
-            "height": "123"
+            "width": 583,
+            "height": 123
           },
           "origin": {
-            "name": "origin",
-            "x": "307",
-            "y": "123"
+            "x": 307,
+            "y": 123
           },
-          "z": "0"
+          "z": 0
         }
       },
       "3": {
         "0": {
           "_imageData": {
-            "width": "393",
-            "height": "83"
+            "width": 393,
+            "height": 83
           },
           "origin": {
-            "name": "origin",
-            "x": "201",
-            "y": "83"
+            "x": 201,
+            "y": 83
           },
-          "z": "0"
+          "z": 0
         }
       },
       "4": {
         "0": {
           "_imageData": {
-            "width": "399",
-            "height": "121"
+            "width": 399,
+            "height": 121
           },
           "origin": {
-            "name": "origin",
-            "x": "208",
-            "y": "121"
+            "x": 208,
+            "y": 121
           },
-          "z": "0"
+          "z": 0
         }
       },
       "5": {
         "0": {
           "_imageData": {
-            "width": "530",
-            "height": "112"
+            "width": 530,
+            "height": 112
           },
           "origin": {
-            "name": "origin",
-            "x": "270",
-            "y": "112"
+            "x": 270,
+            "y": 112
           },
-          "z": "0"
+          "z": 0
         }
       },
       "6": {
         "0": {
           "_imageData": {
-            "width": "174",
-            "height": "66"
+            "width": 174,
+            "height": 66
           },
           "origin": {
-            "name": "origin",
-            "x": "98",
-            "y": "67"
+            "x": 98,
+            "y": 67
           },
-          "z": "0"
+          "z": 0
         }
       },
       "7": {
         "0": {
           "_imageData": {
-            "width": "232",
-            "height": "99"
+            "width": 232,
+            "height": 99
           },
           "origin": {
-            "name": "origin",
-            "x": "129",
-            "y": "99"
+            "x": 129,
+            "y": 99
           },
-          "z": "0"
+          "z": 0
         }
       },
       "8": {
         "0": {
           "_imageData": {
-            "width": "398",
-            "height": "359"
+            "width": 398,
+            "height": 359
           },
           "origin": {
-            "name": "origin",
-            "x": "220",
-            "y": "357"
+            "x": 220,
+            "y": 357
           },
-          "z": "0"
+          "z": 0
         }
       },
       "9": {
         "0": {
           "_imageData": {
-            "width": "398",
-            "height": "398"
+            "width": 398,
+            "height": 398
           },
           "origin": {
-            "name": "origin",
-            "x": "192",
-            "y": "398"
+            "x": 192,
+            "y": 398
           },
-          "z": "0"
+          "z": 0
         }
       },
       "10": {
         "0": {
           "_imageData": {
-            "width": "451",
-            "height": "442"
+            "width": 451,
+            "height": 442
           },
           "origin": {
-            "name": "origin",
-            "x": "224",
-            "y": "442"
+            "x": 224,
+            "y": 442
           },
-          "z": "0"
+          "z": 0
         }
       }
     }

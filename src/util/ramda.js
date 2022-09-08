@@ -19,4 +19,4 @@ export const mapObject = curry((cb, obj) =>
   )(obj)
 )
 
-export const notNil = not(isNil)
+export const notNil = arg => not(isNil(arg))

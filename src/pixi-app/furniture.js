@@ -29,6 +29,7 @@ import {
   times,
   values,
   __,
+  composeP,
 } from 'ramda'
 import { entries, mapObject, notNil, notNilOr } from '@utils/ramda'
 import {
@@ -177,81 +178,78 @@ class Furniture {
   }
   parseFrames() {
     /* map state */
-    return mapObject(
-      ([state, { LayerSlots }]) =>
+    return mapObject(([state, { LayerSlots }]) => {
+      let _z = 10
+      /* map layers */
+      return mapObject(([layer, layerData]) => {
+        const z = layerData.z ? layerData.z : _z--
         /* map layers */
-        mapObject(
-          ([layer, layerData]) =>
-            /* map layers */
-            mapObject(([stage, stageData]) => {
-              const framsCount = keys(stageData.AnimReference).length
-              /* prevent all frame dont have delay, use generic delay count by total time */
-              const defaultDelay =
-                (+(stageData.EndPos || 0) - +(stageData.StartPos || 0)) /
-                framsCount
-              return {
-                name: layer,
-                z: +layerData.z || 0,
-                delay: 0,
-                /* map frames */
-                frames: entries(
-                  ([
-                    frame,
-                    { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
-                  ]) => {
-                    const linkObj = _inlink
-                      ? path(_inlink.split('/'), FurnitureMapping)
-                      : null
-                    let _id = this.furnitureID
-                    let _state = state
-                    let _stage = stage
-                    let _layer = layer
-                    let _frame = frame
-                    let _isAvatar = _inlink && _inlink.includes('info/avatar')
-                    if (_inlink && !_isAvatar) {
-                      /* ${furnitureID}/states/${state}/LayerSlots/${layer}/${stage}/AnimReference/${frame} */
-                      const linkpath = _inlink.split('/')
-                      _id = linkpath[0]
-                      _state = linkpath[2]
-                      _layer = linkpath[4]
-                      _stage = linkpath[5]
-                      _frame = linkpath[7]
-                    }
-                    const originX = notNil(origin?.x)
-                      ? origin.x
-                      : notNil(linkObj?.origin?.x)
-                      ? linkObj.origin.x
-                      : 0
-                    const originY = notNil(origin?.y)
-                      ? origin.y
-                      : notNil(linkObj?.origin?.y)
-                      ? linkObj.origin.y
-                      : 0
-                    return {
-                      frame,
-                      x: +originX * -1,
-                      y: +originY * -1,
-                      size: defaultTo(linkObj?._imageData, _imageData),
-                      src: _isAvatar
-                        ? getFurnitureAvatarPath({ id: _id })
-                        : getFurnitureImagePath({
-                            id: _id,
-                            state: _state,
-                            stage: _stage,
-                            layer: _layer,
-                            frame: _frame,
-                          }),
-                      delay: delay || defaultDelay,
-                    }
-                  },
-                  stageData.AnimReference
-                ),
-              }
-            }, layerData),
-          LayerSlots
-        ),
-      this.statesData
-    )
+        return mapObject(([stage, stageData]) => {
+          const framsCount = keys(stageData.AnimReference).length
+          /* prevent all frame dont have delay, use generic delay count by total time */
+          const defaultDelay =
+            (+(stageData.EndPos || 0) - +(stageData.StartPos || 0)) / framsCount
+          return {
+            name: layer,
+            z: z,
+            delay: 0,
+            /* map frames */
+            frames: entries(
+              ([
+                frame,
+                { origin = {}, _imageData = {}, delay = 0, _inlink } = {},
+              ]) => {
+                const linkObj = _inlink
+                  ? path(_inlink.split('/'), FurnitureMapping)
+                  : null
+                let _id = this.furnitureID
+                let _state = state
+                let _stage = stage
+                let _layer = layer
+                let _frame = frame
+                let _isAvatar = _inlink && _inlink.includes('info/avatar')
+                if (_inlink && !_isAvatar) {
+                  /* ${furnitureID}/states/${state}/LayerSlots/${layer}/${stage}/AnimReference/${frame} */
+                  const linkpath = _inlink.split('/')
+                  _id = linkpath[0]
+                  _state = linkpath[2]
+                  _layer = linkpath[4]
+                  _stage = linkpath[5]
+                  _frame = linkpath[7]
+                }
+                const originX = notNil(origin?.x)
+                  ? origin.x
+                  : notNil(linkObj?.origin?.x)
+                  ? linkObj.origin.x
+                  : 0
+                const originY = notNil(origin?.y)
+                  ? origin.y
+                  : notNil(linkObj?.origin?.y)
+                  ? linkObj.origin.y
+                  : 0
+                return {
+                  frame,
+                  x: +originX * -1,
+                  y: +originY * -1,
+                  size: defaultTo(linkObj?._imageData, _imageData),
+                  src: _isAvatar
+                    ? getFurnitureAvatarPath({ id: _id })
+                    : getFurnitureImagePath({
+                        id: _id,
+                        state: _state,
+                        stage: _stage,
+                        layer: _layer,
+                        frame: _frame,
+                      }),
+                  delay: delay || defaultDelay,
+                }
+              },
+              stageData.AnimReference
+            ),
+          }
+        }, layerData)
+      }, LayerSlots)
+    }, this.statesData)
   }
   get currentStateLayers() {
     return this.frames[this.state]

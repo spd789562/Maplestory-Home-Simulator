@@ -38,7 +38,7 @@ const Item = ({ id, furnitureID, index }) => {
   return (
     <Draggable draggableId={id} index={index}>
       {(provided, snapshot) => {
-        const name = StringMapping[+furnitureID].name
+        const name = StringMapping[+furnitureID]?.name
         const child = (
           <div
             ref={provided.innerRef}

@@ -178,10 +178,10 @@ class MapObject {
   animationTicker = () => {
     if (!this.sprite || !this.frames[this.sprite.currentFrame]) return
     const data = this.frames[this.sprite.currentFrame]
-    this.sprite.width = defaultTo(+data.size.width, this.sprite.width)
-    this.sprite.height = defaultTo(+data.size.height, this.sprite.height)
-    this.sprite.x = defaultTo(data.x, this.sprite.x)
-    this.sprite.y = defaultTo(data.y, this.sprite.y)
+    this.sprite.width = defaultTo(this.sprite.width, +data.size.width)
+    this.sprite.height = defaultTo(this.sprite.height, +data.size.height)
+    this.sprite.x = defaultTo(this.sprite.x, data.x)
+    this.sprite.y = defaultTo(this.sprite.y, data.y)
   }
 }
 

@@ -91,9 +91,9 @@ class Furniture {
       y: -this.offset.y / 2,
     }
     this.position = {
-      x: defaultTo(furnitureData.position?.x, 0),
-      y: defaultTo(furnitureData.position?.y, 0),
-      z: defaultTo(furnitureData.position?.z, 1),
+      x: defaultTo(0, furnitureData.position?.x),
+      y: defaultTo(0, furnitureData.position?.y),
+      z: defaultTo(1, furnitureData.position?.z),
       floor:
         (furnitureData.position?.floor &&
           pixiApp.mapData.housingGrid[furnitureData.position.floor] &&
@@ -608,10 +608,10 @@ class Furniture {
   static onFrameChange(sprite, frames) {
     const data = frames[sprite.currentFrame]
     sprite.animationSpeed = 1 / ((+data.delay || 80) / 16)
-    sprite.width = defaultTo(+data.size.width, sprite.width)
-    sprite.height = defaultTo(+data.size.height, sprite.height)
-    sprite.x = defaultTo(data.x, sprite.x)
-    sprite.y = defaultTo(data.y, sprite.y)
+    sprite.width = defaultTo(sprite.width, +data.size.w)
+    sprite.height = defaultTo(sprite.height, +data.size.h)
+    sprite.x = defaultTo(sprite.x, data.x)
+    sprite.y = defaultTo(sprite.y, data.y)
   }
 
   /**

@@ -73,7 +73,7 @@ class MapBack {
         return {
           x: +originX * -1 + this.offset.x,
           y: +originY * -1 + this.offset.y,
-          size: defaultTo(linkObj?._imageData, _imageData),
+          size: defaultTo(_imageData, linkObj?._imageData),
           src: getMapBackImagePath({
             ...this.dataPath,
             frame: this.animated ? index : null,
@@ -131,10 +131,10 @@ class MapBack {
   animationTicker = () => {
     if (!this.sprite) return
     const data = this.frames[this.sprite.currentFrame]
-    this.sprite.width = defaultTo(+data.size.width, this.sprite.width)
-    this.sprite.height = defaultTo(+data.size.height, this.sprite.height)
-    this.sprite.x = defaultTo(data.x, this.sprite.x)
-    this.sprite.y = defaultTo(data.y, this.sprite.y)
+    this.sprite.width = defaultTo(this.sprite.width, +data.size.width)
+    this.sprite.height = defaultTo(this.sprite.height, +data.size.height)
+    this.sprite.x = defaultTo(this.sprite.x, data.x)
+    this.sprite.y = defaultTo(this.sprite.y, data.y)
   }
   moveTicker = (delta) => {
     if (!this.sprite) return

@@ -1,4 +1,5 @@
 export const getTheme = (mapId) => {
+  if (!mapId) return
   switch (mapId.toString()) {
     case '001':
     case '871100000':
@@ -73,6 +74,7 @@ export const getTheme = (mapId) => {
 }
 
 export const getType = (mapId) => {
+  if (!mapId) return
   switch (mapId.toString()) {
     case '871100000':
     case '871100010':

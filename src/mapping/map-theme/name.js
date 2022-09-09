@@ -1,5 +1,5 @@
 export const getTheme = (mapId) => {
-  switch (mapId) {
+  switch (mapId.toString()) {
     case '001':
     case '871100000':
       return 'toturial'
@@ -73,7 +73,7 @@ export const getTheme = (mapId) => {
 }
 
 export const getType = (mapId) => {
-  switch (mapId) {
+  switch (mapId.toString()) {
     case '871100000':
     case '871100010':
       return 'basic'

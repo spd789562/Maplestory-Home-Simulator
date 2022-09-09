@@ -1,27 +1,9 @@
 /* components */
-import {
-  AnimatedSprite,
-  TilingSprite,
-  Graphics,
-  Sprite,
-  Rectangle,
-  Texture,
-} from 'pixi.js-legacy'
+import { AnimatedSprite } from 'pixi.js-legacy'
 import GapTilingSprite from './gap-tiling-sprite'
 
 /* utils */
-import {
-  clone,
-  includes,
-  map,
-  path,
-  pickBy,
-  pipe,
-  prop,
-  toPairs,
-  uniq,
-  values,
-} from 'ramda'
+import { defaultTo, map, path, prop, values } from 'ramda'
 import { getMapBackImagePath } from '@utils/get-image-path'
 import deltaMoveStep from '@utils/delta-move-step'
 
@@ -86,12 +68,12 @@ class MapBack {
           : null
 
         const linkObj = linkPath ? path(linkPath, MapBackMapping) : null
-        const originX = linkObj?.origin?.x || origin.x
-        const originY = linkObj?.origin?.y || origin.y
+        const originX = defaultTo(linkObj?.origin?.x, origin.x)
+        const originY = defaultTo(linkObj?.origin?.y, origin.y)
         return {
           x: +originX * -1 + this.offset.x,
           y: +originY * -1 + this.offset.y,
-          size: linkObj?._imageData || _imageData,
+          size: defaultTo(_imageData, linkObj?._imageData),
           src: getMapBackImagePath({
             ...this.dataPath,
             frame: this.animated ? index : null,
@@ -149,10 +131,10 @@ class MapBack {
   animationTicker = () => {
     if (!this.sprite) return
     const data = this.frames[this.sprite.currentFrame]
-    this.sprite.width = +data.size.width || this.sprite.width
-    this.sprite.height = +data.size.height || this.sprite.height
-    this.sprite.x = data.x || this.sprite.x
-    this.sprite.y = data.y || this.sprite.y
+    this.sprite.width = defaultTo(this.sprite.width, +data.size.width)
+    this.sprite.height = defaultTo(this.sprite.height, +data.size.height)
+    this.sprite.x = defaultTo(this.sprite.x, data.x)
+    this.sprite.y = defaultTo(this.sprite.y, data.y)
   }
   moveTicker = (delta) => {
     if (!this.sprite) return

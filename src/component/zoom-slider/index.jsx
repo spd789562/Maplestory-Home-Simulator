@@ -17,6 +17,7 @@ const sliderContainerStyle = {
 
 const ZoomSlider = ({ setZoom }) => {
   const [{ value, min, max }, dispatch] = useStore('meta.zoom')
+  const [isSideOpen] = useStore('meta.side.open')
   const marks = {
     [min]: '',
     1: '',
@@ -28,7 +29,7 @@ const ZoomSlider = ({ setZoom }) => {
     dispatch({ type: UPDATE_APP_ZOOM, payload: value })
   }
   return (
-    <div style={sliderContainerStyle}>
+    <div style={{ ...sliderContainerStyle, right: isSideOpen ? 340 : 40 }}>
       <Slider
         min={min}
         max={max}

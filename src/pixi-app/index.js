@@ -189,17 +189,20 @@ class PixiAPP {
     this.viewport.parentGroup = this.group.normal
 
     this.setVisibleRect()
-
     // binding destroy event
-    this.app.renderer?.runners['destroy']?.add({
-      destroy: this.viewport?.destroy.bind(this.viewport),
+    const destroyRunner = path(['renderer', 'runners', 'destroy'], this.app)
+    destroyRunner?.add({
+      destroy: this.viewport.destroy.bind(this.viewport),
     })
     this.app.stage.addChild(this.viewport)
 
     /* start render */
     this.renderMap()
   }
-  updateAPPWidth(width) {
+  updateAPPWidth(sideIsOpen) {
+    if (sideIsOpen !== undefined) this._sideIsOpen = sideIsOpen
+    const sideWidth = Math.min(window.innerWidth - 30, 300)
+    const width = window.innerWidth - (this._sideIsOpen ? sideWidth : 0)
     if (!this.viewport) {
       return
     }
@@ -256,6 +259,7 @@ class PixiAPP {
     this.$minimap = new Minimap(this)
     this.$minimap.renderMinimap(300)
     this.app.stage.addChild(this.$minimap)
+    this.updateAPPWidth()
   }
   initialFurniture(furnitures) {
     furnitures.forEach((furniture) => {

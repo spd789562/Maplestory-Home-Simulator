@@ -24,7 +24,7 @@ const tagHasChair = (furniture) =>
   )(furniture)
 
 const DetailPopover = ({ t, id, children }) => {
-  const mappedString = StringMapping[+id]
+  const mappedString = StringMapping[+id] || { name: id, desc: '' }
   const furniture = FurnitureMapping[id]
   const isRest = typeIsRest(furniture)
   const isChair = tagHasChair(furniture)
@@ -34,7 +34,7 @@ const DetailPopover = ({ t, id, children }) => {
     <Popover
       title={
         <div style={{ position: 'relative' }}>
-          {mappedString.name}
+          {mappedString.name || id}
           <Favorite
             id={id}
             buttonStyle={{

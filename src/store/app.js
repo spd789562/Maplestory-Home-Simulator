@@ -34,6 +34,7 @@ const reducer = reducerCreator(initialState, {
   [UPDATE_APP_WIDTH_BY_SIDE]: creactFlow((app, sideIsOpen) => {
     const sideWidth = Math.min(window.innerWidth - 30, 300)
     app.updateAPPWidth(window.innerWidth - (sideIsOpen ? sideWidth : 0))
+    app.updateAPPWidth(sideIsOpen)
   }),
   [UPDATE_APP_FURNITURE_HOVER]: creactFlow((app, { id, isHover }) => {
     const targetFurniture = app.getFurniture(id)

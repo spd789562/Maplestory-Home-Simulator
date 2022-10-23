@@ -8049,6 +8049,1002 @@
       }
     }
   },
+  "029": {
+    "templateMapID": 871100028,
+    "info": "halloween_Atype",
+    "category": "halloween_expanded",
+    "type": "center",
+    "name": "萬聖節月夜宅邸擴建型：宅邸階梯形",
+    "desc": "隱藏於中央雄偉臺階下的陰森地下室讓人想到有關宅邸的祕密故事。 ",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "철제 장식 지붕 - 남색",
+        "itemID": 2670254
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "철제 장식 지붕 - 청록",
+        "itemID": 2670233
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "철제 장식 지붕 - 와인",
+        "itemID": 2670234
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "네온 파티 지붕 - 레드",
+        "itemID": 2670235
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "네온 파티 지붕 - 바이올렛",
+        "itemID": 2670236
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "네온 파티 지붕 - 청록",
+        "itemID": 2670237
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "위험! 오싹오싹 인디고 지붕",
+        "itemID": 2670251
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "위험! 오싹오싹 그레이 지붕",
+        "itemID": 2670252
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "위험! 오싹오싹 바이올렛 지붕",
+        "itemID": 2670253
+      }
+    },
+    "roofDeco": {
+      "0": {
+        "0": {
+          "name": "roofDeco",
+          "state": 0
+        },
+        "info": "지붕장식 - 없음",
+        "itemID": 2670255
+      },
+      "1": {
+        "0": {
+          "name": "roofDeco",
+          "state": 1
+        },
+        "info": "지붕장식 - 박쥐",
+        "itemID": 2670238
+      },
+      "2": {
+        "0": {
+          "name": "roofDeco",
+          "state": 2
+        },
+        "info": "지붕장식 - 마녀",
+        "itemID": 2670239
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront",
+          "state": 0
+        },
+        "info": "이끼 낀 고벽돌 외벽",
+        "itemID": 2670256
+      },
+      "1": {
+        "0": {
+          "name": "wallFront",
+          "state": 1
+        },
+        "info": "짙은 통나무 외벽",
+        "itemID": 2670241
+      },
+      "2": {
+        "0": {
+          "name": "wallFront",
+          "state": 2
+        },
+        "info": "회색 스투코 외벽",
+        "itemID": 2670242
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack",
+          "state": 0
+        },
+        "info": "모던한 대리석 벽",
+        "itemID": 2670257
+      },
+      "1": {
+        "0": {
+          "name": "wallBack",
+          "state": 1
+        },
+        "info": "테라코타 벽",
+        "itemID": 2670243
+      },
+      "2": {
+        "0": {
+          "name": "wallBack",
+          "state": 2
+        },
+        "info": "클래식 실크 벽지",
+        "itemID": 2670244
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "집성목",
+        "itemID": 2670259
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "고벽돌",
+        "itemID": 2670250
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "월넛",
+        "itemID": 2670240
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window1",
+          "state": 0
+        },
+        "1": {
+          "name": "window2",
+          "state": 0
+        },
+        "info": "철제 창문 - 남색",
+        "itemID": 2670258
+      },
+      "1": {
+        "0": {
+          "name": "window1",
+          "state": 1
+        },
+        "1": {
+          "name": "window2",
+          "state": 1
+        },
+        "info": "철제 창문 - 청록",
+        "itemID": 2670245
+      },
+      "2": {
+        "0": {
+          "name": "window1",
+          "state": 2
+        },
+        "1": {
+          "name": "window2",
+          "state": 2
+        },
+        "info": "철제 창문 - 레드",
+        "itemID": 2670246
+      },
+      "3": {
+        "0": {
+          "name": "window1",
+          "state": 3
+        },
+        "1": {
+          "name": "window2",
+          "state": 3
+        },
+        "info": "네온 창문 - 레드",
+        "itemID": 2670247
+      },
+      "4": {
+        "0": {
+          "name": "window1",
+          "state": 4
+        },
+        "1": {
+          "name": "window2",
+          "state": 4
+        },
+        "info": "네온 창문 - 바이올렛",
+        "itemID": 2670248
+      },
+      "5": {
+        "0": {
+          "name": "window1",
+          "state": 5
+        },
+        "1": {
+          "name": "window2",
+          "state": 5
+        },
+        "info": "네온 창문 - 아카디아",
+        "itemID": 2670249
+      }
+    }
+  },
+  "030": {
+    "templateMapID": 871100029,
+    "info": "halloween_Btype",
+    "category": "halloween_expanded",
+    "type": "curved",
+    "name": "萬聖節月夜宅邸擴建型：彎梯形",
+    "desc": "能感受到彎曲樓梯均衡感的古典宅邸。陰森森的地下室為萬聖節增添了毛骨悚然的氣氛。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "철제 장식 지붕 - 남색",
+        "itemID": 2670254
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "철제 장식 지붕 - 청록",
+        "itemID": 2670233
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "철제 장식 지붕 - 와인",
+        "itemID": 2670234
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "네온 파티 지붕 - 레드",
+        "itemID": 2670235
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "네온 파티 지붕 - 바이올렛",
+        "itemID": 2670236
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "네온 파티 지붕 - 청록",
+        "itemID": 2670237
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "위험! 오싹오싹 인디고 지붕",
+        "itemID": 2670251
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "위험! 오싹오싹 그레이 지붕",
+        "itemID": 2670252
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "위험! 오싹오싹 바이올렛 지붕",
+        "itemID": 2670253
+      }
+    },
+    "roofDeco": {
+      "0": {
+        "0": {
+          "name": "roofDeco",
+          "state": 0
+        },
+        "info": "지붕장식 - 없음",
+        "itemID": 2670255
+      },
+      "1": {
+        "0": {
+          "name": "roofDeco",
+          "state": 1
+        },
+        "info": "지붕장식 - 박쥐",
+        "itemID": 2670238
+      },
+      "2": {
+        "0": {
+          "name": "roofDeco",
+          "state": 2
+        },
+        "info": "지붕장식 - 마녀",
+        "itemID": 2670239
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront",
+          "state": 0
+        },
+        "info": "이끼 낀 고벽돌 외벽",
+        "itemID": 2670256
+      },
+      "1": {
+        "0": {
+          "name": "wallFront",
+          "state": 1
+        },
+        "info": "짙은 통나무 외벽",
+        "itemID": 2670241
+      },
+      "2": {
+        "0": {
+          "name": "wallFront",
+          "state": 2
+        },
+        "info": "회색 스투코 외벽",
+        "itemID": 2670242
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack",
+          "state": 0
+        },
+        "info": "모던한 대리석 벽",
+        "itemID": 2670257
+      },
+      "1": {
+        "0": {
+          "name": "wallBack",
+          "state": 1
+        },
+        "info": "테라코타 벽",
+        "itemID": 2670243
+      },
+      "2": {
+        "0": {
+          "name": "wallBack",
+          "state": 2
+        },
+        "info": "클래식 실크 벽지",
+        "itemID": 2670244
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "집성목",
+        "itemID": 2670259
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "고벽돌",
+        "itemID": 2670250
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "월넛",
+        "itemID": 2670240
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window1",
+          "state": 0
+        },
+        "1": {
+          "name": "window2",
+          "state": 0
+        },
+        "info": "으스스 호박 장식 창문 - 회색",
+        "itemID": 2670258
+      },
+      "1": {
+        "0": {
+          "name": "window1",
+          "state": 1
+        },
+        "1": {
+          "name": "window2",
+          "state": 1
+        },
+        "info": "으스스 호박 장식 창문 - 적색",
+        "itemID": 2670245
+      },
+      "2": {
+        "0": {
+          "name": "window1",
+          "state": 2
+        },
+        "1": {
+          "name": "window2",
+          "state": 2
+        },
+        "info": "으스스 호박 장식 창문 - 남색",
+        "itemID": 2670246
+      },
+      "3": {
+        "0": {
+          "name": "window1",
+          "state": 3
+        },
+        "1": {
+          "name": "window2",
+          "state": 3
+        },
+        "info": "네온 파티 창문 - 갈색",
+        "itemID": 2670247
+      },
+      "4": {
+        "0": {
+          "name": "window1",
+          "state": 4
+        },
+        "1": {
+          "name": "window2",
+          "state": 4
+        },
+        "info": "네온 파티 창문 - 청색",
+        "itemID": 2670248
+      },
+      "5": {
+        "0": {
+          "name": "window1",
+          "state": 5
+        },
+        "1": {
+          "name": "window2",
+          "state": 5
+        },
+        "info": "네온 파티 창문 - 민트색",
+        "itemID": 2670249
+      }
+    }
+  },
+  "031": {
+    "templateMapID": 871100030,
+    "info": "halloween_Ctype",
+    "category": "halloween_expanded",
+    "type": "ladder",
+    "name": "萬聖節月夜宅邸擴建型：摺梯型",
+    "desc": "用梯子提高空間利用率的古典宅邸。 陰森森的地下室為萬聖節增添了毛骨悚然的氣氛。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "철제 장식 지붕 - 남색",
+        "itemID": 2670254
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "철제 장식 지붕 - 청록",
+        "itemID": 2670233
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "철제 장식 지붕 - 와인",
+        "itemID": 2670234
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "네온 파티 지붕 - 레드",
+        "itemID": 2670235
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "네온 파티 지붕 - 바이올렛",
+        "itemID": 2670236
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "네온 파티 지붕 - 청록",
+        "itemID": 2670237
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "위험! 오싹오싹 인디고 지붕",
+        "itemID": 2670251
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "위험! 오싹오싹 그레이 지붕",
+        "itemID": 2670252
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "위험! 오싹오싹 바이올렛 지붕",
+        "itemID": 2670253
+      }
+    },
+    "roofDeco": {
+      "0": {
+        "0": {
+          "name": "roofDeco",
+          "state": 0
+        },
+        "info": "지붕장식 - 없음",
+        "itemID": 2670255
+      },
+      "1": {
+        "0": {
+          "name": "roofDeco",
+          "state": 1
+        },
+        "info": "지붕장식 - 박쥐",
+        "itemID": 2670238
+      },
+      "2": {
+        "0": {
+          "name": "roofDeco",
+          "state": 2
+        },
+        "info": "지붕장식 - 마녀",
+        "itemID": 2670239
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront",
+          "state": 0
+        },
+        "info": "이끼 낀 고벽돌 외벽",
+        "itemID": 2670256
+      },
+      "1": {
+        "0": {
+          "name": "wallFront",
+          "state": 1
+        },
+        "info": "짙은 통나무 외벽",
+        "itemID": 2670241
+      },
+      "2": {
+        "0": {
+          "name": "wallFront",
+          "state": 2
+        },
+        "info": "회색 스투코 외벽",
+        "itemID": 2670242
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack",
+          "state": 0
+        },
+        "info": "모던한 대리석 벽",
+        "itemID": 2670257
+      },
+      "1": {
+        "0": {
+          "name": "wallBack",
+          "state": 1
+        },
+        "info": "테라코타 벽",
+        "itemID": 2670243
+      },
+      "2": {
+        "0": {
+          "name": "wallBack",
+          "state": 2
+        },
+        "info": "클래식 실크 벽지",
+        "itemID": 2670244
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "집성목",
+        "itemID": 2670259
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "고벽돌",
+        "itemID": 2670250
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "월넛",
+        "itemID": 2670240
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window1",
+          "state": 0
+        },
+        "1": {
+          "name": "window2",
+          "state": 0
+        },
+        "info": "으스스 호박 장식 창문 - 회색",
+        "itemID": 2670258
+      },
+      "1": {
+        "0": {
+          "name": "window1",
+          "state": 1
+        },
+        "1": {
+          "name": "window2",
+          "state": 1
+        },
+        "info": "으스스 호박 장식 창문 - 적색",
+        "itemID": 2670245
+      },
+      "2": {
+        "0": {
+          "name": "window1",
+          "state": 2
+        },
+        "1": {
+          "name": "window2",
+          "state": 2
+        },
+        "info": "으스스 호박 장식 창문 - 남색",
+        "itemID": 2670246
+      },
+      "3": {
+        "0": {
+          "name": "window1",
+          "state": 3
+        },
+        "1": {
+          "name": "window2",
+          "state": 3
+        },
+        "info": "네온 파티 창문 - 갈색",
+        "itemID": 2670247
+      },
+      "4": {
+        "0": {
+          "name": "window1",
+          "state": 4
+        },
+        "1": {
+          "name": "window2",
+          "state": 4
+        },
+        "info": "네온 파티 창문 - 청색",
+        "itemID": 2670248
+      },
+      "5": {
+        "0": {
+          "name": "window1",
+          "state": 5
+        },
+        "1": {
+          "name": "window2",
+          "state": 5
+        },
+        "info": "네온 파티 창문 - 민트색",
+        "itemID": 2670249
+      }
+    }
+  },
   "DefaultFurnitureInitialization": {
     "001": {
       "0": {

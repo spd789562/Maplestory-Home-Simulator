@@ -4104,6 +4104,32 @@
           "z": 0,
           "_inlink": "base/foot/2/0"
         }
+      },
+      "3": {
+        "0": {
+          "_imageData": {
+            "width": 400,
+            "height": 314
+          },
+          "origin": {
+            "x": 200,
+            "y": 90
+          },
+          "z": 0
+        }
+      },
+      "4": {
+        "0": {
+          "_imageData": {
+            "width": 800,
+            "height": 314
+          },
+          "origin": {
+            "x": 200,
+            "y": 90
+          },
+          "z": 0
+        }
       }
     },
     "nature": {

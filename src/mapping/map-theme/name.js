@@ -68,6 +68,13 @@ export const getTheme = (mapId) => {
     case '871100026':
     case '871100027':
       return 'newYearExpand'
+    case '029':
+    case '030':
+    case '031':
+    case '871100028':
+    case '871100029':
+    case '871100030':
+      return 'halloweenExpand'
     default:
       return ''
   }
@@ -86,9 +93,11 @@ export const getType = (mapId) => {
     case '871100017':
     case '871100020':
     case '871100024':
+    case '871100029':
       return 'right_curve_stair'
     case '871100013':
     case '871100014':
+    case '871100030':
       return 'right_stair'
     case '871100002':
     case '871100005':
@@ -107,6 +116,7 @@ export const getType = (mapId) => {
       return 'ladder'
     case '871100007':
     case '871100027':
+    case '871100028':
       return 'center_stair'
     case '871100016':
       return 'hidden_stair'

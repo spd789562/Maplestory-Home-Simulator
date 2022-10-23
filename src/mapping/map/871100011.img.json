@@ -612,6 +612,26 @@
       "backTags": "",
       "nameTW": ""
     },
+    "13": {
+      "bS": "myHome_lith",
+      "front": 0,
+      "ani": 1,
+      "no": 1,
+      "f": 0,
+      "w": 0,
+      "x": -935,
+      "y": -326,
+      "rx": -90,
+      "ry": -70,
+      "wx": 0,
+      "wy": 0,
+      "type": 0,
+      "cx": 0,
+      "cy": 0,
+      "a": 255,
+      "backTags": "",
+      "nameTW": ""
+    },
     "14": {
       "bS": "myHome_lith",
       "front": 0,

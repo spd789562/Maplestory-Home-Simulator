@@ -33471,5 +33471,555 @@
         }
       }
     }
+  },
+  "02672188": {
+    "info": {
+      "avatar": {
+        "_imageData": {
+          "width": 154,
+          "height": 121
+        },
+        "origin": {
+          "x": 79,
+          "y": 120
+        },
+        "delay": 150
+      },
+      "tradeBlock": 1,
+      "notSale": 1,
+      "slotMax": 99,
+      "gridX": 5,
+      "gridY": 4,
+      "refundPrice": 1,
+      "invisibleWeapon": 1,
+      "tag": {
+        "0": "bed",
+        "1": "bedroom",
+        "2": "oriental"
+      },
+      "type": "rest",
+      "interact": "chair",
+      "sitSlots": {
+        "0": {
+          "sitAction": "sit",
+          "bodyZ": 2,
+          "removeEffect": 1,
+          "sitEmotion": {
+            "0": 0,
+            "1": 14,
+            "2": 16,
+            "3": 17
+          }
+        },
+        "1": {
+          "sitAction": "sit",
+          "bodyZ": 2,
+          "removeEffect": 1,
+          "sitEmotion": {
+            "0": 0,
+            "1": 14,
+            "2": 16,
+            "3": 17
+          }
+        }
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 2720,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 154,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 80,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer1/0/AnimReference/1"
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer1/0/AnimReference/1"
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer1/0/AnimReference/4"
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 154,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 80,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "12": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "13": {
+                  "_imageData": {
+                    "width": 153,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "delay": 920
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 2720,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 151,
+                    "height": 56
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "12": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 150,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                },
+                "13": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": 3,
+                  "delay": 920,
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672189": {
+    "info": {
+      "avatar": {
+        "_imageData": {
+          "width": 1,
+          "height": 1
+        },
+        "origin": {
+          "x": 79,
+          "y": 120
+        },
+        "delay": 150,
+        "_inlink": "02672188/info/avatar"
+      },
+      "tradeBlock": 1,
+      "notSale": 1,
+      "slotMax": 99,
+      "gridX": 5,
+      "gridY": 4,
+      "refundPrice": 1,
+      "invisibleWeapon": 1,
+      "tag": {
+        "0": "bed",
+        "1": "bedroom",
+        "2": "oriental"
+      },
+      "type": "rest",
+      "interact": "chair",
+      "sitSlots": {
+        "0": {
+          "3": {
+            "_imageData": {
+              "width": 153,
+              "height": 121
+            },
+            "origin": {
+              "x": 79,
+              "y": 120
+            },
+            "z": 3
+          },
+          "sitAction": "sit",
+          "bodyZ": 2,
+          "removeEffect": 1,
+          "sitEmotion": {
+            "0": 0,
+            "1": 14,
+            "2": 16,
+            "3": 17
+          }
+        },
+        "1": {
+          "sitAction": "sit",
+          "bodyZ": 2,
+          "removeEffect": 1,
+          "sitEmotion": {
+            "0": 0,
+            "1": 14,
+            "2": 16,
+            "3": 17
+          }
+        }
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 55
+                  },
+                  "z": "3",
+                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 79,
+                    "y": 120
+                  },
+                  "z": 1,
+                  "_inlink": "02672188/states/0/LayerSlots/layer1/0/AnimReference/0"
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
   }
 }

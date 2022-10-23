@@ -186,12 +186,16 @@ class Furniture {
         /* map layers */
         return mapObject(([stage, stageData]) => {
           const framsCount = keys(stageData.AnimReference).length
+          const frameMaxZ = Math.max(
+            ...values(map(prop('z'), stageData.AnimReference))
+          )
+          const _z = frameMaxZ === -Infinity ? z : frameMaxZ
           /* prevent all frame dont have delay, use generic delay count by total time */
           const defaultDelay =
             (+(stageData.EndPos || 0) - +(stageData.StartPos || 0)) / framsCount
           return {
             name: layer,
-            z: z,
+            z: _z,
             delay: 0,
             /* map frames */
             frames: entries(

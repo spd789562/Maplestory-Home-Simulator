@@ -1,8 +1,8 @@
 module.exports = {
   // https://www.i18next.com/overview/configuration-options#logging
   debug: false,
+  defaultNS: 'index',
   i18n: {
-    defaultNS: 'index',
     defaultLocale: 'zh_tw',
     locales: ['en', 'zh_tw', 'zh_cn'],
   },

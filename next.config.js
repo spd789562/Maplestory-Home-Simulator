@@ -1,7 +1,4 @@
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
-})
 const { i18n } = require('./next-i18next.config')
 const withAntdLess = require('next-plugin-antd-less')
 const path = require('path')
@@ -16,19 +13,14 @@ const localeSubpaths = {
   zh_cn: 'zh_cn',
 }
 
-// fix: prevents error when .less files are required by node
-if (typeof require !== 'undefined') {
-  require.extensions['.less'] = (file) => {}
-}
-
 const plugins = [
   withAntdLess({
     lessVarsFilePath: './styles/antd.less',
   }),
-  withBundleAnalyzer,
 ]
 
 module.exports = withPlugins([plugins], {
+  reactStrictMode: true,
   webpack(config, options) {
     config.plugins.push(new MomentLocalesPlugin())
     config.resolve.modules.push(path.resolve('./'))
@@ -54,9 +46,6 @@ module.exports = withPlugins([plugins], {
     IMAGE_CDN: process.env.IMAGE_CDN || '',
     localeSubpaths,
     isProd,
-  },
-  experimental: {
-    jsconfigPaths: true,
   },
   i18n,
 })

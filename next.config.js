@@ -16,6 +16,7 @@ const localeSubpaths = {
 const plugins = [
   withAntdLess({
     lessVarsFilePath: './styles/antd.less',
+    javascriptEnabled: true,
   }),
 ]
 

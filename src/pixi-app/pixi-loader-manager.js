@@ -14,7 +14,7 @@ class PixiLoaderManager {
   }
   load(src, callback) {
     const needLoadSrc = this.getNeedLoadSrc(src)
-    if (!needLoadSrc.length) {
+    if (!needLoadSrc.length && this.app.loader) {
       callback()
       return
     }
@@ -58,7 +58,7 @@ class PixiLoaderManager {
       )
       .load((ld, resources) => {
         this.addResource(resources)
-        if (!this.task[taskId].cancel) {
+        if (!this.task[taskId].cancel && this.app.loader) {
           currentTask.callback()
         }
         delete this.task[taskId]

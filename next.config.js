@@ -1,17 +1,9 @@
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 const { i18n } = require('./next-i18next.config')
 const withAntdLess = require('next-plugin-antd-less')
-const path = require('path')
-const config = require('./config')
 const withPlugins = require('next-compose-plugins')
 
 const isProd = process.env.NODE_ENV === 'production'
-
-const localeSubpaths = {
-  en: 'en',
-  zh_tw: 'zh_tw',
-  zh_cn: 'zh_cn',
-}
 
 const plugins = [
   withAntdLess({
@@ -22,9 +14,9 @@ const plugins = [
 
 module.exports = withPlugins([plugins], {
   reactStrictMode: true,
+  swcMinify: true,
   webpack(config, options) {
     config.plugins.push(new MomentLocalesPlugin())
-    config.resolve.modules.push(path.resolve('./'))
 
     /* remove pixi warn */
     config.module.rules.push({
@@ -41,11 +33,9 @@ module.exports = withPlugins([plugins], {
 
     return config
   },
-  publicRuntimeConfig: {
-    ...config,
+  env: {
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID || '',
     IMAGE_CDN: process.env.IMAGE_CDN || '',
-    localeSubpaths,
     isProd,
   },
   i18n,

@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/*": ["src/*"],
       "@components/*": ["src/component/*"],
       "@utils/*": ["src/util/*"],
       "@mapping/*": ["src/mapping/*"],
@@ -9,9 +10,7 @@
       "@store/*": ["src/store/*"],
       "@hooks/*": ["src/hooks/*"],
       "@modules/*": ["src/modules/*"],
-      "@store": ["src/store"],
-      "@i18n": ["src/i18n"],
-      "@api": ["src/api"]
+      "@store": ["src/store"]
     }
   }
 }

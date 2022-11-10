@@ -1,8 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-import getConfig from 'next/config'
-
-const { isProd, GOOGLE_ANALYTICS_ID } = getConfig().publicRuntimeConfig
+const isProd = process.env.isProd
+const GOOGLE_ANALYTICS_ID = process.env.GOOGLE_ANALYTICS_ID
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {

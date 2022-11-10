@@ -3,10 +3,8 @@ import { Loader } from 'pixi.js-legacy'
 /* utils */
 import { pipe, filter, uniq, keys } from 'ramda'
 import { entries } from '@utils/ramda'
-import getConfig from 'next/config'
 
-const { IMAGE_CDN } = getConfig().publicRuntimeConfig
-
+const IMAGE_CDN = process.env.IMAGE_CDN || ''
 class PixiLoaderManager {
   constructor(app) {
     this.app = app

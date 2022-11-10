@@ -1,5 +1,5 @@
 import { useCallback } from 'react'
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Select, Form } from 'antd'
@@ -78,19 +78,22 @@ const filterOptions = [
 
 const options = indexBy(prop('title'), filterOptions)
 
-const FilterSelect = ({ onChange, t }) => (
-  <Form.Item label={t('furniture_filter')}>
-    <Select
-      onChange={(key) => {
-        onChange(() => options[key].value)
-      }}
-      defaultValue={filterOptions[0].title}
-      options={filterOptions.map(({ title }) => ({
-        label: t(title),
-        value: title,
-      }))}
-    />
-  </Form.Item>
-)
+const FilterSelect = ({ onChange }) => {
+  const { t } = useTranslation('index')
+  return (
+    <Form.Item label={t('furniture_filter')}>
+      <Select
+        onChange={(key) => {
+          onChange(() => options[key].value)
+        }}
+        defaultValue={filterOptions[0].title}
+        options={filterOptions.map(({ title }) => ({
+          label: t(title),
+          value: title,
+        }))}
+      />
+    </Form.Item>
+  )
+}
 
-export default withTranslation()(FilterSelect)
+export default FilterSelect

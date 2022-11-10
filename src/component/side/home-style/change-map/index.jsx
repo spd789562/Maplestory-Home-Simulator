@@ -1,4 +1,4 @@
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Popover } from 'antd'
@@ -10,7 +10,8 @@ import { F } from 'ramda'
 
 import styles from './change-map.module.scss'
 
-const ChangeMap = ({ t, mapList, currentId, handleChange }) => {
+const ChangeMap = ({ mapList, currentId, handleChange }) => {
+  const { t } = useTranslation('index')
   return mapList.map(({ id, templateMapID, desc }) => (
     <div
       className={`${styles.map} ${
@@ -47,8 +48,4 @@ const ChangeMap = ({ t, mapList, currentId, handleChange }) => {
   ))
 }
 
-ChangeMap.getInitialProps = async () => ({
-  namespacesRequired: ['index'],
-})
-
-export default withTranslation('index')(ChangeMap)
+export default ChangeMap

@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import { withTranslation } from '@i18n'
 
 /* store */
 import { useDispatch } from '@store'
@@ -17,7 +16,7 @@ import { defaultTo, equals, findIndex, path, pipe, values } from 'ramda'
 /* mapping */
 import { filteredFurniture as FurnitureMapping } from '@mapping/furniture'
 
-import styles from './item.scss'
+import styles from './item.module.scss'
 
 const isPoster = (furniture) =>
   pipe(
@@ -28,7 +27,7 @@ const isPoster = (furniture) =>
     (index) => index !== -1
   )(furniture)
 
-const Item = ({ t, id }) => {
+const Item = ({ id }) => {
   const dispatch = useDispatch()
   const handleClick = () => {
     dispatch({ type: ENTER_EDIT })
@@ -64,9 +63,4 @@ const Item = ({ t, id }) => {
     </div>
   )
 }
-
-Item.getInitialProps = async () => ({
-  namespacesRequired: ['index'],
-})
-
-export default withTranslation('index')(memo(Item))
+export default memo(Item)

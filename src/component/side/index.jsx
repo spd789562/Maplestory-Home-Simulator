@@ -1,5 +1,5 @@
 import { useMemo, useCallback } from 'react'
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* store */
 import { useStore } from '@store'
@@ -22,7 +22,8 @@ const TabMapping = [
   { id: 3, title: 'tab_setting', component: <Setting /> },
 ]
 
-const Side = ({ t }) => {
+const Side = () => {
+  const { t } = useTranslation('index')
   const [{ open, current: currentId }, dispatch] = useStore('meta.side')
   const currentTab = useMemo(() => TabMapping[currentId] || {}, [currentId])
   const width = Math.min(isClient() ? window.innerWidth - 30 : 300, 300)
@@ -31,19 +32,21 @@ const Side = ({ t }) => {
     []
   )
   return (
-    <Drawer
-      title={t(currentTab.title)}
-      placement="right"
-      mask={false}
-      visible={open}
-      width={width}
-      onClose={handleClose}
-      forceRender
-    >
+    <>
       <Tabs />
-      {currentTab.component}
-    </Drawer>
+      <Drawer
+        title={t(currentTab.title)}
+        placement="right"
+        mask={false}
+        open={open}
+        width={width}
+        onClose={handleClose}
+        forceRender
+      >
+        {currentTab.component}
+      </Drawer>
+    </>
   )
 }
 
-export default withTranslation()(Side)
+export default Side

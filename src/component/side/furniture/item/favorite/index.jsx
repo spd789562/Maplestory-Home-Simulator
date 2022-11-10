@@ -1,5 +1,5 @@
 import { useCallback, memo } from 'react'
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 import { useStoreSelector, useDispatch } from '@store'
 /* components */
 import { Badge, Tooltip } from 'antd'
@@ -14,7 +14,8 @@ import {
   REMOVE_FAVORITE_FURNITURE,
 } from '@store/favorite-furniture'
 
-const Favorite = ({ t, id, buttonStyle = {} }) => {
+const Favorite = ({ id, buttonStyle = {} }) => {
+  const { t } = useTranslation('index')
   const isFavorite = useStoreSelector(
     'favorite-furniture',
     pipe(find(equals(id)), Boolean)
@@ -45,4 +46,4 @@ const Favorite = ({ t, id, buttonStyle = {} }) => {
   )
 }
 
-export default withTranslation()(memo(Favorite))
+export default memo(Favorite)

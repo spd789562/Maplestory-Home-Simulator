@@ -5,15 +5,16 @@ import { useDispatch } from '@store'
 import { INITIAL_FAVORITE_FURNITURE } from '@store/favorite-furniture'
 
 /* i18n */
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Row, Col, Tabs } from 'antd'
 import FavoriteTab from './favorite-tab'
 import FurnitureTab from './furniture-tab'
 
-const Furniture = ({ t }) => {
+const Furniture = ({}) => {
   const dispatch = useDispatch()
+  const { t } = useTranslation('index')
   useEffect(() => {
     const localFavorites = localStorage.getItem('HOUSE_SIMULATOR_furnitures')
     const parsedData = localFavorites && JSON.parse(localFavorites)
@@ -40,8 +41,4 @@ const Furniture = ({ t }) => {
   )
 }
 
-Furniture.getInitialProps = async () => ({
-  namespacesRequired: ['index'],
-})
-
-export default withTranslation('index')(memo(Furniture))
+export default memo(Furniture)

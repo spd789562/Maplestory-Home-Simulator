@@ -5,7 +5,7 @@ import { useStore } from '@store'
 import { HOUSE_UPDATE } from '@store/house'
 
 /* i18n */
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Select, Form } from 'antd'
@@ -27,7 +27,8 @@ const selectOptions = keys(ParsedTheme).map((value) => ({
   value,
 }))
 
-const HomeStyle = ({ t }) => {
+const HomeStyle = ({}) => {
+  const { t } = useTranslation('index')
   const [currentIndex, dispatch] = useStore('house.current')
   const [currentHomeData = {}] = useStore(`house.houses.${currentIndex}`)
   const theme = getTheme(currentHomeData.selectId)
@@ -97,8 +98,4 @@ const HomeStyle = ({ t }) => {
   )
 }
 
-HomeStyle.getInitialProps = async () => ({
-  namespacesRequired: ['index'],
-})
-
-export default withTranslation('index')(HomeStyle)
+export default HomeStyle

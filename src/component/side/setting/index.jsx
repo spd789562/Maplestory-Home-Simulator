@@ -3,12 +3,13 @@ import { useStore } from '@store'
 import { ENTER_EDIT, EXIT_EDIT } from '@store/meta'
 
 /* i18n */
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Switch, Form } from 'antd'
 
-const Setting = ({ t }) => {
+const Setting = () => {
+  const { t } = useTranslation('index')
   const [{ edit }, dispatch] = useStore('meta')
 
   const handleChangeEdit = (checked) => {
@@ -29,9 +30,4 @@ const Setting = ({ t }) => {
     </div>
   )
 }
-
-Setting.getInitialProps = async () => ({
-  namespacesRequired: ['index'],
-})
-
-export default withTranslation('index')(Setting)
+export default Setting

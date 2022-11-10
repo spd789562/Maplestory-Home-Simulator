@@ -1,5 +1,5 @@
 import { memo } from 'react'
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Popover, Divider, Tag } from 'antd'
@@ -23,7 +23,8 @@ const tagHasChair = (furniture) =>
     (index) => index !== -1
   )(furniture)
 
-const DetailPopover = ({ t, id, children }) => {
+const DetailPopover = ({ id, children }) => {
+  const { t } = useTranslation('furniture')
   const mappedString = StringMapping[+id] || { name: id, desc: '' }
   const furniture = FurnitureMapping[id]
   const isRest = typeIsRest(furniture)
@@ -103,4 +104,4 @@ const DetailPopover = ({ t, id, children }) => {
   )
 }
 
-export default withTranslation('furniture')(memo(DetailPopover))
+export default memo(DetailPopover)

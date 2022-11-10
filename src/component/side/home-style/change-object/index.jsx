@@ -1,4 +1,4 @@
-import { withTranslation } from '@i18n'
+import { useTranslation } from 'next-i18next'
 
 /* components */
 import { Popover, Row, Col } from 'antd'
@@ -13,7 +13,8 @@ import StringMapping from '@mapping/furniture-string'
 
 import styles from './change-object.module.scss'
 
-const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
+const ChangeObject = ({ type, themes, handleChange, currentThemeData }) => {
+  const { t } = useTranslation('index')
   const currentSelectFields = keys(currentThemeData)
   return (
     <div className={styles.container}>
@@ -66,8 +67,4 @@ const ChangeObject = ({ t, type, themes, handleChange, currentThemeData }) => {
   )
 }
 
-ChangeObject.getInitialProps = async () => ({
-  namespacesRequired: ['index'],
-})
-
-export default withTranslation('index')(ChangeObject)
+export default ChangeObject

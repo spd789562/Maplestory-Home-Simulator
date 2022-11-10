@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 /* store */
 import { useStore } from '@store'
 import { CHANGE_SIDE_OPEN, CHANGE_SIDE_CURRENT } from '@store/meta'
@@ -25,6 +26,10 @@ const TabMapping = [
 
 const Tabs = () => {
   const [{ open, current: currentId }, dispatch] = useStore('meta.side')
+  const posRight = useMemo(
+    () => (open ? Math.min(window.innerWidth - 30, 300) : 0),
+    [open]
+  )
 
   const handleToggle = () => {
     dispatch({ type: CHANGE_SIDE_OPEN, payload: !open })
@@ -36,7 +41,7 @@ const Tabs = () => {
   }
 
   return (
-    <ul className={styles.tabs}>
+    <ul className={styles.tabs} style={{ right: posRight }}>
       <li
         className={[styles['tabs-tab'], styles['tabs-tab__arrow']].join(' ')}
         onClick={handleToggle}

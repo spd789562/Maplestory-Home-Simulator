@@ -2,16 +2,7 @@
 import * as PIXI from 'pixi.js-legacy'
 window.PIXI = PIXI
 require('pixi-layers')
-import {
-  Application,
-  Container,
-  AnimatedSprite,
-  Sprite,
-  Rectangle,
-  Graphics,
-  Point,
-  utils,
-} from 'pixi.js-legacy'
+import { Application, Container, Graphics, Point, utils } from 'pixi.js-legacy'
 import { Viewport } from 'pixi-viewport'
 import PixiLoaderManager from './pixi-loader-manager'
 import MapObject from './map-object'

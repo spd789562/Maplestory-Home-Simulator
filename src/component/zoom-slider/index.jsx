@@ -37,7 +37,9 @@ const ZoomSlider = ({ setZoom }) => {
         step={0.01}
         value={value}
         onChange={handleChange}
-        tooltipVisible={false}
+        tooltip={{
+          open: false,
+        }}
       />
     </div>
   )

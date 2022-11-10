@@ -1,22 +1,12 @@
-const { nextI18NextRewrites } = require('next-i18next/rewrites')
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
-const withSass = require('@zeit/next-sass')
-const withLess = require('@zeit/next-less')
-const withCSS = require('@zeit/next-css')
+const { i18n } = require('./next-i18next.config')
+const withAntdLess = require('next-plugin-antd-less')
 const path = require('path')
 const config = require('./config')
-
-const composeConfig = (...configs) => (defaultConfig) =>
-  configs.reduce(
-    (resultConfig, configFunc) => configFunc(resultConfig),
-    defaultConfig
-  )
-
-const withOtherParam = (configFunc, param) => (config) =>
-  configFunc(Object.assign(config, param))
+const withPlugins = require('next-compose-plugins')
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -31,37 +21,15 @@ if (typeof require !== 'undefined') {
   require.extensions['.less'] = (file) => {}
 }
 
-module.exports = composeConfig(
-  withLess,
-  withOtherParam(withSass, {
-    cssModules: true,
-    cssLoaderOptions: {
-      importLoaders: 1,
-      localIdentName: '[local]___[hash:base64:5]',
-    },
+const plugins = [
+  withAntdLess({
+    lessVarsFilePath: './styles/antd.less',
   }),
-  withOtherParam(withCSS, {
-    cssModules: true,
-    cssLoaderOptions: {
-      importLoaders: 1,
-      localIdentName: '[local]___[hash:base64:5]',
-    },
-  }),
-  withBundleAnalyzer
-)({
-  lessLoaderOptions: {
-    javascriptEnabled: true,
-  },
-  webpack(config, options) {
-    if (!options.isServer && config.mode === 'development') {
-      const { I18NextHMRPlugin } = require('i18next-hmr/plugin')
-      config.plugins.push(
-        new I18NextHMRPlugin({
-          localesDir: path.resolve(__dirname, 'public/static/locales'),
-        })
-      )
-    }
+  withBundleAnalyzer,
+]
 
+module.exports = withPlugins([plugins], {
+  webpack(config, options) {
     config.plugins.push(new MomentLocalesPlugin())
     config.resolve.modules.push(path.resolve('./'))
 
@@ -80,7 +48,6 @@ module.exports = composeConfig(
 
     return config
   },
-  rewrites: async () => nextI18NextRewrites(localeSubpaths),
   publicRuntimeConfig: {
     ...config,
     GOOGLE_ANALYTICS_ID: process.env.GOOGLE_ANALYTICS_ID || '',
@@ -91,4 +58,5 @@ module.exports = composeConfig(
   experimental: {
     jsconfigPaths: true,
   },
+  i18n,
 })

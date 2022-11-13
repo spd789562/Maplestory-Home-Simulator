@@ -75,6 +75,13 @@ export const getTheme = (mapId) => {
     case '871100029':
     case '871100030':
       return 'halloweenExpand'
+    case '032':
+    case '033':
+    case '034':
+    case '871100031':
+    case '871100032':
+    case '871100033':
+      return 'christmaxExpand'
     default:
       return ''
   }
@@ -94,6 +101,7 @@ export const getType = (mapId) => {
     case '871100020':
     case '871100024':
     case '871100029':
+    case '871100031':
       return 'right_curve_stair'
     case '871100013':
     case '871100014':
@@ -113,12 +121,14 @@ export const getType = (mapId) => {
     case '871100019':
     case '871100025':
     case '871100026':
+    case '871100032':
       return 'ladder'
     case '871100007':
     case '871100027':
     case '871100028':
       return 'center_stair'
     case '871100016':
+    case '871100033':
       return 'hidden_stair'
     default:
       return 'basic'

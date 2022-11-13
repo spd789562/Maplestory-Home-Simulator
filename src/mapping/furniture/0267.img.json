@@ -33909,15 +33909,14 @@
     "info": {
       "avatar": {
         "_imageData": {
-          "width": 1,
-          "height": 1
+          "width": 149,
+          "height": 118
         },
         "origin": {
           "x": 79,
-          "y": 120
+          "y": 118
         },
-        "delay": 150,
-        "_inlink": "02672188/info/avatar"
+        "z": 0
       },
       "tradeBlock": 1,
       "notSale": 1,
@@ -33937,14 +33936,15 @@
         "0": {
           "3": {
             "_imageData": {
-              "width": 153,
-              "height": 121
+              "width": 1,
+              "height": 1
             },
             "origin": {
               "x": 79,
-              "y": 120
+              "y": 118
             },
-            "z": 3
+            "z": 3,
+            "_inlink": "02672189/info/avatar"
           },
           "sitAction": "sit",
           "bodyZ": 2,
@@ -33967,7 +33967,8 @@
             "3": 17
           }
         }
-      }
+      },
+      "sitRandom": 1
     },
     "states": {
       "0": {
@@ -33979,15 +33980,15 @@
               "AnimReference": {
                 "0": {
                   "_imageData": {
-                    "width": 1,
-                    "height": 1
+                    "width": 147,
+                    "height": 28
                   },
                   "origin": {
-                    "x": 76,
-                    "y": 55
+                    "x": 79,
+                    "y": 28
                   },
                   "z": "3",
-                  "_inlink": "02672188/states/0/LayerSlots/layer2/0/AnimReference/0"
+                  "delay": 150
                 }
               }
             }
@@ -34004,10 +34005,11 @@
                   },
                   "origin": {
                     "x": 79,
-                    "y": 120
+                    "y": 118
                   },
                   "z": 1,
-                  "_inlink": "02672188/states/0/LayerSlots/layer1/0/AnimReference/0"
+                  "delay": 150,
+                  "_inlink": "02672189/info/avatar"
                 }
               }
             }

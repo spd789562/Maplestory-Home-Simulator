@@ -9060,5 +9060,1180 @@
         "Pos": "9, 3"
       }
     }
+  },"032": {
+    "templateMapID": 871100031,
+    "info": "크리스마스 오두막 확장형 - 사선 계단형",
+    "category": "Christmas_expanded",
+    "type": "diagonal",
+    "name": "聖誕小屋擴建型 - 傾斜台階型",
+    "desc": "讓人聯想起下雪的山中童話中的一個場面的小屋。用花環裝飾的樓梯增添了聖誕節的氣氛。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "눈내린 박공지붕(갈색)",
+        "itemID": 2670260
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "눈내린 박공지붕(초록색)",
+        "itemID": 2670261
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "눈내린 박공지붕(주황색)",
+        "itemID": 2670262
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "크래커 지붕 (빨강)",
+        "itemID": 2670263
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "초콜릿 지붕 (초록)",
+        "itemID": 2670264
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "비스킷 지붕 (보라)",
+        "itemID": 2670265
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "눈내린 소나무 지붕",
+        "itemID": 2670284
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "눈내린 전나무 지붕",
+        "itemID": 2670285
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "눈내린 자작나무 지붕",
+        "itemID": 2670286
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 0
+        },
+        "info": "목조 회반죽 외벽",
+        "itemID": 2670269
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 1
+        },
+        "info": "믹스매치 외벽",
+        "itemID": 2670270
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 2
+        },
+        "info": "붉은 나무 외벽",
+        "itemID": 2670271
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "따스한 나무 내벽",
+        "itemID": 2670272
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "심플 화이트 벽지",
+        "itemID": 2670273
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "클래식 몰딩 벽지",
+        "itemID": 2670274
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670281
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "크리스마스 카펫 바닥",
+        "itemID": 2670282
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "포근 양털 카펫 바닥",
+        "itemID": 2670283
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "리스 장식 창문(갈색)",
+        "itemID": 2670275
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "리스 장식 창문(초록색)",
+        "itemID": 2670276
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "리스 장식 창문(주황색)",
+        "itemID": 2670277
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "진저 쿠키 창문(크래커)(빨강)",
+        "itemID": 2670278
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "진저 쿠키 창문(초코)(초록)",
+        "itemID": 2670279
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "진저 쿠키 창문(비스킷)(보라)",
+        "itemID": 2670280
+      },
+      "6": {
+        "0": {
+          "name": "window",
+          "state": 6
+        },
+        "info": "가랜드 초록 커튼 창문",
+        "itemID": 2670287
+      },
+      "7": {
+        "0": {
+          "name": "window",
+          "state": 7
+        },
+        "info": "가랜드 붉은 커튼 창문",
+        "itemID": 2670288
+      },
+      "8": {
+        "0": {
+          "name": "window",
+          "state": 8
+        },
+        "info": "가랜드 보라 커튼 창문",
+        "itemID": 2670289
+      }
+    },
+    "chimney": {
+      "0": {
+        "0": {
+          "name": "chimney1",
+          "state": 0
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 0
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 0
+        },
+        "info": "붉은 벽돌 굴뚝",
+        "itemID": 2670266
+      },
+      "1": {
+        "0": {
+          "name": "chimney1",
+          "state": 1
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 1
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 1
+        },
+        "info": "산타클로스 굴뚝",
+        "itemID": 2670267
+      },
+      "2": {
+        "0": {
+          "name": "chimney1",
+          "state": 2
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 2
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 2
+        },
+        "info": "진저맨 굴뚝",
+        "itemID": 2670268
+      }
+    }
+  },
+  "033": {
+    "templateMapID": 871100032,
+    "info": "크리스마스 오두막 확장형 - 사다리형",
+    "category": "Christmas_expanded",
+    "type": "ladder",
+    "name": "聖誕小屋擴建型 - 梯子型",
+    "desc": "讓人聯想起下雪的山中童話中的一個場面的小屋。爬上使用拐杖糖製作的梯子時，糖水會不會粘在手上？",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "눈내린 박공지붕(갈색)",
+        "itemID": 2670260
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "눈내린 박공지붕(초록색)",
+        "itemID": 2670261
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "눈내린 박공지붕(주황색)",
+        "itemID": 2670262
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "크래커 지붕 (빨강)",
+        "itemID": 2670263
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "초콜릿 지붕 (초록)",
+        "itemID": 2670264
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "비스킷 지붕 (보라)",
+        "itemID": 2670265
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "눈내린 소나무 지붕",
+        "itemID": 2670284
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "눈내린 전나무 지붕",
+        "itemID": 2670285
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "눈내린 자작나무 지붕",
+        "itemID": 2670286
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 0
+        },
+        "info": "목조 회반죽 외벽",
+        "itemID": 2670269
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 1
+        },
+        "info": "믹스매치 외벽",
+        "itemID": 2670270
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 2
+        },
+        "info": "붉은 나무 외벽",
+        "itemID": 2670271
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "따스한 나무 내벽",
+        "itemID": 2670272
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "심플 화이트 벽지",
+        "itemID": 2670273
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "클래식 몰딩 벽지",
+        "itemID": 2670274
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670281
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "크리스마스 카펫 바닥",
+        "itemID": 2670282
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "포근 양털 카펫 바닥",
+        "itemID": 2670283
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "리스 장식 창문(갈색)",
+        "itemID": 2670275
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "리스 장식 창문(초록색)",
+        "itemID": 2670276
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "리스 장식 창문(주황색)",
+        "itemID": 2670277
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "진저 쿠키 창문(크래커)(빨강)",
+        "itemID": 2670278
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "진저 쿠키 창문(초코)(초록)",
+        "itemID": 2670279
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "진저 쿠키 창문(비스킷)(보라)",
+        "itemID": 2670280
+      },
+      "6": {
+        "0": {
+          "name": "window",
+          "state": 6
+        },
+        "info": "가랜드 초록 커튼 창문",
+        "itemID": 2670287
+      },
+      "7": {
+        "0": {
+          "name": "window",
+          "state": 7
+        },
+        "info": "가랜드 붉은 커튼 창문",
+        "itemID": 2670288
+      },
+      "8": {
+        "0": {
+          "name": "window",
+          "state": 8
+        },
+        "info": "가랜드 보라 커튼 창문",
+        "itemID": 2670289
+      }
+    },
+    "chimney": {
+      "0": {
+        "0": {
+          "name": "chimney1",
+          "state": 0
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 0
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 0
+        },
+        "info": "붉은 벽돌 굴뚝",
+        "itemID": 2670266
+      },
+      "1": {
+        "0": {
+          "name": "chimney1",
+          "state": 1
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 1
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 1
+        },
+        "info": "산타클로스 굴뚝",
+        "itemID": 2670267
+      },
+      "2": {
+        "0": {
+          "name": "chimney1",
+          "state": 2
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 2
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 2
+        },
+        "info": "진저맨 굴뚝",
+        "itemID": 2670268
+      }
+    }
+  },
+  "034": {
+    "templateMapID": 871100033,
+    "info": "크리스마스 오두막 확장형 - 숨은 계단형",
+    "category": "Christmas_expanded",
+    "type": "hidden",
+    "name": "聖誕小屋擴建型 - 隱藏台階型",
+    "desc": "讓人聯想起下雪的山中童話中的一個場面的小屋。牆壁上埋藏了隱藏的樓梯，提升了獨特感。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "눈내린 박공지붕(갈색)",
+        "itemID": 2670260
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "눈내린 박공지붕(초록색)",
+        "itemID": 2670261
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "눈내린 박공지붕(주황색)",
+        "itemID": 2670262
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "크래커 지붕 (빨강)",
+        "itemID": 2670263
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "초콜릿 지붕 (초록)",
+        "itemID": 2670264
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "비스킷 지붕 (보라)",
+        "itemID": 2670265
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "눈내린 소나무 지붕",
+        "itemID": 2670284
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "눈내린 전나무 지붕",
+        "itemID": 2670285
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "눈내린 자작나무 지붕",
+        "itemID": 2670286
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 0
+        },
+        "info": "목조 회반죽 외벽",
+        "itemID": 2670269
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 1
+        },
+        "info": "믹스매치 외벽",
+        "itemID": 2670270
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "2": {
+          "name": "wallFront3",
+          "state": 2
+        },
+        "info": "붉은 나무 외벽",
+        "itemID": 2670271
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "따스한 나무 내벽",
+        "itemID": 2670272
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "심플 화이트 벽지",
+        "itemID": 2670273
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "클래식 몰딩 벽지",
+        "itemID": 2670274
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670281
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "크리스마스 카펫 바닥",
+        "itemID": 2670282
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "포근 양털 카펫 바닥",
+        "itemID": 2670283
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "리스 장식 창문(갈색)",
+        "itemID": 2670275
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "리스 장식 창문(초록색)",
+        "itemID": 2670276
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "리스 장식 창문(주황색)",
+        "itemID": 2670277
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "진저 쿠키 창문(크래커)(빨강)",
+        "itemID": 2670278
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "진저 쿠키 창문(초코)(초록)",
+        "itemID": 2670279
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "진저 쿠키 창문(비스킷)(보라)",
+        "itemID": 2670280
+      },
+      "6": {
+        "0": {
+          "name": "window",
+          "state": 6
+        },
+        "info": "가랜드 초록 커튼 창문",
+        "itemID": 2670287
+      },
+      "7": {
+        "0": {
+          "name": "window",
+          "state": 7
+        },
+        "info": "가랜드 붉은 커튼 창문",
+        "itemID": 2670288
+      },
+      "8": {
+        "0": {
+          "name": "window",
+          "state": 8
+        },
+        "info": "가랜드 보라 커튼 창문",
+        "itemID": 2670289
+      }
+    },
+    "chimney": {
+      "0": {
+        "0": {
+          "name": "chimney1",
+          "state": 0
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 0
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 0
+        },
+        "info": "붉은 벽돌 굴뚝",
+        "itemID": 2670266
+      },
+      "1": {
+        "0": {
+          "name": "chimney1",
+          "state": 1
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 1
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 1
+        },
+        "info": "산타클로스 굴뚝",
+        "itemID": 2670267
+      },
+      "2": {
+        "0": {
+          "name": "chimney1",
+          "state": 2
+        },
+        "1": {
+          "name": "chimney2",
+          "state": 2
+        },
+        "2": {
+          "name": "chimney3",
+          "state": 2
+        },
+        "info": "진저맨 굴뚝",
+        "itemID": 2670268
+      }
+    }
   }
 }

@@ -5436,6 +5436,19 @@
             },
             "z": 0
           }
+        },
+        "s5": {
+          "0": {
+            "_imageData": {
+              "width": 1535,
+              "height": 1128
+            },
+            "origin": {
+              "x": 760,
+              "y": 1343
+            },
+            "z": 0
+          }
         }
       },
       "1": {
@@ -5490,6 +5503,19 @@
           }
         },
         "s4": {
+          "0": {
+            "_imageData": {
+              "width": 612,
+              "height": 365
+            },
+            "origin": {
+              "x": -963,
+              "y": 646
+            },
+            "z": 0
+          }
+        },
+        "s5": {
           "0": {
             "_imageData": {
               "width": 612,
@@ -8896,7 +8922,7 @@
             "height": 1
           },
           "origin": {
-            "x": 424,
+            "x": 421,
             "y": 1068
           },
           "z": 0,
@@ -8909,8 +8935,8 @@
               "height": 1
             },
             "origin": {
-              "x": 438,
-              "y": 1078
+              "x": 431,
+              "y": 1074
             },
             "z": 0,
             "_inlink": "ChristmasType/chimney/0/s1/0"
@@ -8919,15 +8945,98 @@
         "s2": {
           "0": {
             "_imageData": {
-              "width": 246,
-              "height": 403
+              "width": 1,
+              "height": 1
             },
             "origin": {
-              "x": 421,
-              "y": 1093
+              "x": 417,
+              "y": 1188
             },
             "z": 0,
-            "delay": 300
+            "_inlink": "ChristmasType/chimney/0/s2/0"
+          },
+          "1": {
+            "_imageData": {
+              "width": 1,
+              "height": 1
+            },
+            "origin": {
+              "x": 417,
+              "y": 1191
+            },
+            "z": 0,
+            "_inlink": "ChristmasType/chimney/0/s2/1"
+          },
+          "2": {
+            "_imageData": {
+              "width": 246,
+              "height": 466
+            },
+            "origin": {
+              "x": 417,
+              "y": 1188
+            },
+            "z": 0
+          },
+          "3": {
+            "_imageData": {
+              "width": 1,
+              "height": 1
+            },
+            "origin": {
+              "x": 417,
+              "y": 1191
+            },
+            "z": 0,
+            "_inlink": "ChristmasType/chimney/0/s2/3"
+          },
+          "4": {
+            "_imageData": {
+              "width": 1,
+              "height": 1
+            },
+            "origin": {
+              "x": 417,
+              "y": 1188
+            },
+            "z": 0,
+            "_inlink": "ChristmasType/chimney/0/s2/0"
+          },
+          "5": {
+            "_imageData": {
+              "width": 1,
+              "height": 1
+            },
+            "origin": {
+              "x": 417,
+              "y": 1191
+            },
+            "z": 0,
+            "_inlink": "ChristmasType/chimney/0/s2/3"
+          },
+          "6": {
+            "_imageData": {
+              "width": 1,
+              "height": 1
+            },
+            "origin": {
+              "x": 417,
+              "y": 1188
+            },
+            "z": 0,
+            "_inlink": "ChristmasType/chimney/0/s2/0"
+          },
+          "7": {
+            "_imageData": {
+              "width": 1,
+              "height": 1
+            },
+            "origin": {
+              "x": 417,
+              "y": 1191
+            },
+            "z": 0,
+            "_inlink": "ChristmasType/chimney/0/s2/1"
           }
         }
       },
@@ -9712,96 +9821,10 @@
         "s2": {
           "0": {
             "_imageData": {
-              "width": 161,
-              "height": 154
-            },
-            "origin": {
-              "x": 363,
-              "y": 1156
-            },
-            "z": 0
-          },
-          "1": {
-            "_imageData": {
-              "width": 159,
-              "height": 157
-            },
-            "origin": {
-              "x": 372,
-              "y": 1159
-            },
-            "z": 0
-          },
-          "2": {
-            "_imageData": {
               "width": 1,
               "height": 1
             },
-            "origin": {
-              "x": 363,
-              "y": 1156
-            },
-            "z": 0,
-            "_inlink": "ChristmasExpandType/chimney/1/s2/0"
-          },
-          "3": {
-            "_imageData": {
-              "width": 159,
-              "height": 157
-            },
-            "origin": {
-              "x": 372,
-              "y": 1159
-            },
-            "z": 0
-          },
-          "4": {
-            "_imageData": {
-              "width": 1,
-              "height": 1
-            },
-            "origin": {
-              "x": 363,
-              "y": 1156
-            },
-            "z": 0,
-            "_inlink": "ChristmasExpandType/chimney/1/s2/0"
-          },
-          "5": {
-            "_imageData": {
-              "width": 1,
-              "height": 1
-            },
-            "origin": {
-              "x": 372,
-              "y": 1159
-            },
-            "z": 0,
-            "_inlink": "ChristmasExpandType/chimney/1/s2/3"
-          },
-          "6": {
-            "_imageData": {
-              "width": 1,
-              "height": 1
-            },
-            "origin": {
-              "x": 363,
-              "y": 1156
-            },
-            "z": 0,
-            "_inlink": "ChristmasExpandType/chimney/1/s2/0"
-          },
-          "7": {
-            "_imageData": {
-              "width": 1,
-              "height": 1
-            },
-            "origin": {
-              "x": 372,
-              "y": 1159
-            },
-            "z": 0,
-            "_inlink": "ChristmasExpandType/chimney/1/s2/1"
+            "delay": 300
           }
         }
       },

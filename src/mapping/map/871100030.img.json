@@ -195,8 +195,8 @@
         "piece": 1
       },
       "2": {
-        "oS": "myHome",
-        "l0": "halloweenType",
+        "oS": "myHome2",
+        "l0": "halloweenExpandType",
         "l1": "tile",
         "l2": "2",
         "x": 31,
@@ -207,7 +207,8 @@
         "r": 0,
         "move": 0,
         "dynamic": 0,
-        "piece": 2
+        "piece": 2,
+        "name": "tile"
       }
     }
   },
@@ -1112,7 +1113,7 @@
   "housingGrid": {
     "1stFloor": {
       "left": -254,
-      "top": -76,
+      "top": -75,
       "row": 6,
       "col": 19,
       "disabled": {
@@ -1126,7 +1127,7 @@
     },
     "2ndFloor": {
       "left": -254,
-      "top": -287,
+      "top": -285,
       "row": 6,
       "col": 19,
       "disabled": {
@@ -1139,8 +1140,8 @@
       }
     },
     "Default": {
-      "left": -259,
-      "top": -436,
+      "left": -257,
+      "top": -434,
       "row": 4,
       "col": 11
     },

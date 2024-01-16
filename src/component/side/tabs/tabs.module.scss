@@ -35,7 +35,7 @@ $tab-border-height: 7.5px;
     top: -7.5px;
   }
   &::after {
-    bottom: -7.5px;
+    bottom: -7px;
     transform: rotateX(180deg);
   }
 }

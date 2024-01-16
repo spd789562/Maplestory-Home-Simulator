@@ -46,15 +46,14 @@
     },
     "4": {
       "_imageData": {
-        "width": 1,
-        "height": 1
+        "width": 850,
+        "height": 378
       },
       "origin": {
         "x": 425,
         "y": 189
       },
-      "z": 0,
-      "_outlink": "Map/Back/myHome.img/back/4"
+      "z": 0
     },
     "5": {
       "_imageData": {

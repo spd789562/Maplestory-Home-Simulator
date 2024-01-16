@@ -2,12 +2,12 @@
   "back": {
     "0": {
       "_imageData": {
-        "width": 32,
-        "height": 144
+        "width": 400,
+        "height": 600
       },
       "origin": {
-        "x": 16,
-        "y": 72
+        "x": 200,
+        "y": 300
       },
       "z": 0
     },
@@ -24,12 +24,12 @@
     },
     "2": {
       "_imageData": {
-        "width": 32,
-        "height": 144
+        "width": 400,
+        "height": 600
       },
       "origin": {
-        "x": 16,
-        "y": 72
+        "x": 200,
+        "y": 300
       },
       "z": 0
     },
@@ -244,15 +244,14 @@
     },
     "22": {
       "_imageData": {
-        "width": 1,
-        "height": 1
+        "width": 875,
+        "height": 629
       },
       "origin": {
         "x": 437,
         "y": 314
       },
-      "z": 0,
-      "_inlink": "back/21"
+      "z": 0
     },
     "23": {
       "_imageData": {

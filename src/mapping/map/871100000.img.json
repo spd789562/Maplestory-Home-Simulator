@@ -196,10 +196,12 @@
       }
     }
   },
+  "6": {},
+  "7": {},
   "info": {
     "version": 10,
     "cloud": 0,
-    "town": 0,
+    "town": 1,
     "swim": 0,
     "returnMap": 871000000,
     "forcedReturn": 999999999,

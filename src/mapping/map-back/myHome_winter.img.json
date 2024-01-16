@@ -167,15 +167,14 @@
     },
     "15": {
       "_imageData": {
-        "width": 1,
-        "height": 1
+        "width": 1050,
+        "height": 820
       },
       "origin": {
         "x": 525,
         "y": 410
       },
-      "z": 0,
-      "_inlink": "back/13"
+      "z": 0
     },
     "16": {
       "_imageData": {

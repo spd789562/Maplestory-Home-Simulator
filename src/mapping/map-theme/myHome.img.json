@@ -2376,7 +2376,7 @@
           "name": "wallBack",
           "state": 1
         },
-        "info": "고풍스러운 백색 벽지",
+        "info": "고풍스러운 심록색 벽지",
         "itemID": 2670085
       },
       "2": {
@@ -7826,7 +7826,7 @@
           "name": "wallBack",
           "state": 1
         },
-        "info": "고풍스러운 백색 벽지",
+        "info": "고풍스러운 심록색 벽지",
         "itemID": 2670230
       },
       "2": {
@@ -8068,7 +8068,7 @@
           "name": "wallBack",
           "state": 1
         },
-        "info": "고풍스러운 백색 벽지",
+        "info": "고풍스러운 심록색 벽지",
         "itemID": 2670230
       },
       "2": {
@@ -10258,6 +10258,22 @@
         },
         "info": "진저맨 굴뚝",
         "itemID": 2670268
+      }
+    }
+  },
+  "DefaultFurnitureInitialization": {
+    "001": {
+      "0": {
+        "itemID": 2672014,
+        "GridName": "1stFloor",
+        "Flip": -1,
+        "Pos": "2, 6"
+      },
+      "1": {
+        "itemID": 2671032,
+        "GridName": "1stFloor",
+        "Flip": -1,
+        "Pos": "9, 3"
       }
     }
   }

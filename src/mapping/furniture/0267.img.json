@@ -11773,7 +11773,7 @@
                     "x": 18,
                     "y": 81
                   },
-                  "z": -10
+                  "z": -1
                 }
               }
             }
@@ -11792,7 +11792,7 @@
                     "x": 33,
                     "y": 89
                   },
-                  "z": 0
+                  "z": 1
                 }
               }
             }
@@ -31571,9 +31571,57 @@
           "layer2": {
             "0": {
               "StartPos": 0,
-              "EndPos": 150,
+              "EndPos": 750,
               "AnimReference": {
                 "0": {
+                  "_imageData": {
+                    "width": 124,
+                    "height": 108
+                  },
+                  "origin": {
+                    "x": 59,
+                    "y": 105
+                  },
+                  "delay": 150,
+                  "z": 0
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 124,
+                    "height": 108
+                  },
+                  "origin": {
+                    "x": 59,
+                    "y": 105
+                  },
+                  "delay": 150,
+                  "z": 0
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 124,
+                    "height": 108
+                  },
+                  "origin": {
+                    "x": 59,
+                    "y": 105
+                  },
+                  "delay": 150,
+                  "z": 0
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 124,
+                    "height": 108
+                  },
+                  "origin": {
+                    "x": 59,
+                    "y": 105
+                  },
+                  "delay": 150,
+                  "z": 0
+                },
+                "4": {
                   "_imageData": {
                     "width": 124,
                     "height": 108
@@ -33659,7 +33707,8 @@
       },
       "refundPrice": 0,
       "onInteract": "furniture_animationOnOff",
-      "interact": "script"
+      "interact": "script",
+      "collabo": 1
     },
     "states": {
       "0": {
@@ -34487,6 +34536,428 @@
           "Loop": {
             "StartTime": 0,
             "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672192": {
+    "info": {
+      "avatar": {
+        "_imageData": {
+          "width": 96,
+          "height": 124
+        },
+        "origin": {
+          "x": 47,
+          "y": 124
+        },
+        "z": 0
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "gridX": 3,
+      "gridY": 4,
+      "type": "deco",
+      "onInteract": "furniture_animationOnOff",
+      "interact": "script",
+      "tag": {
+        "0": "closet",
+        "1": "bedroom",
+        "2": "dresser",
+        "3": "halloween"
+      },
+      "refundPrice": 1
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 47,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      },
+      "1": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 749,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 47,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 47,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 115,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 66,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                }
+              }
+            },
+            "1": {
+              "StartPos": 749,
+              "EndPos": 3449,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "12": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "13": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "14": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "15": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "16": {
+                  "_imageData": {
+                    "width": 115,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 66,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "17": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                }
+              }
+            },
+            "2": {
+              "StartPos": 3449,
+              "EndPos": 4049,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 115,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 66,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 113,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 47,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 124
+                  },
+                  "origin": {
+                    "x": 47,
+                    "y": 124
+                  },
+                  "z": 1,
+                  "delay": 150
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Start": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          },
+          "Loop": {
+            "StartTime": 749,
+            "NextSectionName": "Loop"
+          },
+          "End": {
+            "StartTime": 3449
           }
         }
       }

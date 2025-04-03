@@ -50,6 +50,10 @@
   "desc_punchingGame":"Just do it",
   "title_passwordGame":"Password Game",
   "desc_passwordGame":"Guess password and get free stuff",
+  "title_video": "Video",
+  "desc_video": "Unknown",
+  "title_calendar": "Calendar",
+  "desc_calendar": "Show current date",
 
   "desc_animate": ", click can change",
 
@@ -91,5 +95,7 @@
   "tag_partition": "Partition",
   "tag_instrument": "Instrument",
   "tag_living": "Living",
-  "tag_neoCastle": "NEO Castle"
+  "tag_neoCastle": "NEO Castle",
+  "tag_retro": "Retro",
+  "tag_video": "Video"
 }

@@ -36,4 +36,5 @@ export default {
   partition: 'orange-inverse',
   instrument: 'orange-inverse',
   living: 'orange-inverse',
+  retro: 'pink-inverse',
 }

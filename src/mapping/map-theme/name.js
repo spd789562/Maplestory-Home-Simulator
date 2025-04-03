@@ -82,6 +82,20 @@ export const getTheme = (mapId) => {
     case '871100032':
     case '871100033':
       return 'christmaxExpand'
+    case '035':
+    case '036':
+    case '037':
+    case '871100034':
+    case '871100035':
+    case '871100036':
+      return 'cherryblossom'
+    case '038':
+    case '039':
+    case '040':
+    case '871100037':
+    case '871100038':
+    case '871100039':
+      return 'cherryblossomExpand'
     default:
       return ''
   }
@@ -115,13 +129,14 @@ export const getType = (mapId) => {
     case '871100003':
     case '871100006':
     case '871100009':
-    case '871100013':
     case '871100015':
     case '871100022':
     case '871100019':
     case '871100025':
     case '871100026':
     case '871100032':
+    case '871100036':
+    case '871100039':
       return 'ladder'
     case '871100007':
     case '871100027':
@@ -130,6 +145,12 @@ export const getType = (mapId) => {
     case '871100016':
     case '871100033':
       return 'hidden_stair'
+    case '871100034':
+    case '871100037':
+      return 'straight_stair'
+    case '871100035':
+    case '871100038':
+      return 'curve_stair'
     default:
       return 'basic'
   }

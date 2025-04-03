@@ -50,6 +50,10 @@
   "desc_punchingGame":"反正就打他，我想不到介绍要写啥",
   "title_passwordGame":"密码游戏",
   "desc_passwordGame":"猜对密码即可获得奖励",
+  "title_video": "视频",
+  "desc_video": "功能未知",
+  "title_calendar": "日历",
+  "desc_calendar": "显示当前日期",
 
   "desc_animate": "，点他他会动",
 
@@ -91,5 +95,7 @@
   "tag_partition": "分隔",
   "tag_instrument": "乐器",
   "tag_living": "生活",
-  "tag_neoCastle": "NEO 城堡"
+  "tag_neoCastle": "NEO 城堡",
+  "tag_retro": "浪漫复古",
+  "tag_video": "视频"
 }

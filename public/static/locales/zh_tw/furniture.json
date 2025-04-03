@@ -50,6 +50,10 @@
   "desc_punchingGame":"反正就打他，我想不到介紹要寫啥，ㄅ歉",
   "title_passwordGame":"密碼遊戲",
   "desc_passwordGame":"猜對密碼即可獲得獎勵",
+  "title_video": "影片",
+  "desc_video": "功能未知",
+  "title_calendar": "日曆",
+  "desc_calendar": "顯示當前日期",
 
   "desc_animate": "，點他他會動",
 
@@ -92,5 +96,7 @@
   "tag_instrument": "樂器",
   "tag_living": "生活",
   "tag_minigame": "小遊戲",
-  "tag_neoCastle": "NEO 城堡"
+  "tag_neoCastle": "NEO 城堡",
+  "tag_retro": "浪漫復古",
+  "tag_video": "影片"
 }

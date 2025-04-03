@@ -10276,5 +10276,2249 @@
         "Pos": "9, 3"
       }
     }
+  },
+  "035": {
+    "templateMapID": 871100034,
+    "info": "봄날의 청춘 맨션 - 사선 계단형",
+    "category": "Blossom_normal",
+    "type": "diagonal",
+    "name": "春日青春宅邸 - 斜梯型",
+    "desc": "這是一座能讓人感受到春日暖陽與青春回憶的3層樓宅邸。 請欣賞盛開的櫻花享受春天。有 配置安全的鐵梯。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "info": "그리움 평지붕",
+        "itemID": 2670291
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "info": "벚꽃빛 평지붕",
+        "itemID": 2670292
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "info": "아네모이아 평지붕",
+        "itemID": 2670293
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "info": "아침 안개 기와지붕",
+        "itemID": 2670294
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "info": "봄밤 기와지붕",
+        "itemID": 2670295
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "info": "오후 두시 기와지붕",
+        "itemID": 2670296
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "info": "단단한 콘크리트 외벽",
+        "itemID": 2670297
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "info": "노란 페인트 외벽",
+        "itemID": 2670298
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "info": "하얀 타일 외벽",
+        "itemID": 2670299
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "시나브로 벽지",
+        "itemID": 2670300
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "벚꽃 벽지",
+        "itemID": 2670301
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "노스탤지어 벽지",
+        "itemID": 2670302
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670315
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "화이트 타일 바닥",
+        "itemID": 2670316
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "빈티지 타일 바닥",
+        "itemID": 2670317
+      }
+    },
+    "balcony": {
+      "0": {
+        "0": {
+          "name": "balcony1",
+          "state": 0
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 0
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 0
+        },
+        "info": "봄바람 철제 발코니",
+        "itemID": 2670309
+      },
+      "1": {
+        "0": {
+          "name": "balcony1",
+          "state": 1
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 1
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 1
+        },
+        "info": "일상의 풍경 철제 발코니",
+        "itemID": 2670310
+      },
+      "2": {
+        "0": {
+          "name": "balcony1",
+          "state": 2
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 2
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 2
+        },
+        "info": "활기찬 아침 시멘트 발코니 ",
+        "itemID": 2670311
+      },
+      "3": {
+        "0": {
+          "name": "balcony1",
+          "state": 3
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 3
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 3
+        },
+        "info": "아늑한 포옹 시멘트 발코니 ",
+        "itemID": 2670312
+      },
+      "4": {
+        "0": {
+          "name": "balcony1",
+          "state": 4
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 4
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 4
+        },
+        "info": "설레는 하루 원목 발코니 ",
+        "itemID": 2670313
+      },
+      "5": {
+        "0": {
+          "name": "balcony1",
+          "state": 5
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 5
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 5
+        },
+        "info": "견고한 일상 원목 발코니 ",
+        "itemID": 2670314
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "봄빛 철창 창문",
+        "itemID": 2670303
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "벚꽃빛 철창 창문",
+        "itemID": 2670304
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "햇살 아치 창문",
+        "itemID": 2670305
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "산들 아치 창문",
+        "itemID": 2670306
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "편백나무 창문 ",
+        "itemID": 2670307
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "단풍나무 창문 ",
+        "itemID": 2670308
+      }
+    }
+  },
+  "036": {
+    "templateMapID": 871100035,
+    "info": "봄날의 청춘 맨션 - 꺾인 계단형",
+    "category": "Blossom_normal",
+    "type": "curved",
+    "name": "春日青春宅邸 - L型樓梯型",
+    "desc": "這是能感受到春天的溫暖和清秀青春回憶的3層樓宅邸。 請看著盛開的櫻花享受春天。 配有很穩固的樓梯。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "info": "그리움 평지붕",
+        "itemID": 2670291
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "info": "벚꽃빛 평지붕",
+        "itemID": 2670292
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "info": "아네모이아 평지붕",
+        "itemID": 2670293
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "info": "아침 안개 기와지붕",
+        "itemID": 2670294
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "info": "봄밤 기와지붕",
+        "itemID": 2670295
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "info": "오후 두시 기와지붕",
+        "itemID": 2670296
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "info": "단단한 콘크리트 외벽",
+        "itemID": 2670297
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "info": "노란 페인트 외벽",
+        "itemID": 2670298
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "info": "하얀 타일 외벽",
+        "itemID": 2670299
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "시나브로 벽지",
+        "itemID": 2670300
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "벚꽃 벽지",
+        "itemID": 2670301
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "노스탤지어 벽지",
+        "itemID": 2670302
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670315
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "화이트 타일 바닥",
+        "itemID": 2670316
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "빈티지 타일 바닥",
+        "itemID": 2670317
+      }
+    },
+    "balcony": {
+      "0": {
+        "0": {
+          "name": "balcony1",
+          "state": 0
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 0
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 0
+        },
+        "info": "봄바람 철제 발코니",
+        "itemID": 2670309
+      },
+      "1": {
+        "0": {
+          "name": "balcony1",
+          "state": 1
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 1
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 1
+        },
+        "info": "일상의 풍경 철제 발코니",
+        "itemID": 2670310
+      },
+      "2": {
+        "0": {
+          "name": "balcony1",
+          "state": 2
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 2
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 2
+        },
+        "info": "활기찬 아침 시멘트 발코니 ",
+        "itemID": 2670311
+      },
+      "3": {
+        "0": {
+          "name": "balcony1",
+          "state": 3
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 3
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 3
+        },
+        "info": "아늑한 포옹 시멘트 발코니 ",
+        "itemID": 2670312
+      },
+      "4": {
+        "0": {
+          "name": "balcony1",
+          "state": 4
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 4
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 4
+        },
+        "info": "설레는 하루 원목 발코니 ",
+        "itemID": 2670313
+      },
+      "5": {
+        "0": {
+          "name": "balcony1",
+          "state": 5
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 5
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 5
+        },
+        "info": "견고한 일상 원목 발코니 ",
+        "itemID": 2670314
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "바랜 철창화 창문",
+        "itemID": 2670303
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "하얀 철창화 창문 ",
+        "itemID": 2670304
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "햇살 캐노피 창문 ",
+        "itemID": 2670305
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "산들 캐노피 창문 ",
+        "itemID": 2670306
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "편백나무 창문 ",
+        "itemID": 2670307
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "단풍나무 창문 ",
+        "itemID": 2670308
+      }
+    }
+  },
+  "037": {
+    "templateMapID": 871100036,
+    "info": "봄날의 청춘 맨션 - 심플 사다리형",
+    "category": "Blossom_normal",
+    "type": "ladder",
+    "name": "春日青春宅邸 - 簡約梯子型",
+    "desc": "這是能感受到春天溫暖與清秀的青春回憶的3層樓宅邸。 請欣賞綻放的櫻花享受春天。配置可有效利用空間的梯子。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "info": "그리움 평지붕",
+        "itemID": 2670291
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "info": "벚꽃빛 평지붕",
+        "itemID": 2670292
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "info": "아네모이아 평지붕",
+        "itemID": 2670293
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "info": "아침 안개 기와지붕",
+        "itemID": 2670294
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "info": "봄밤 기와지붕",
+        "itemID": 2670295
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "info": "오후 두시 기와지붕",
+        "itemID": 2670296
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "info": "단단한 콘크리트 외벽",
+        "itemID": 2670297
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "info": "노란 페인트 외벽",
+        "itemID": 2670298
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "info": "하얀 타일 외벽",
+        "itemID": 2670299
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "시나브로 벽지",
+        "itemID": 2670300
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "벚꽃 벽지",
+        "itemID": 2670301
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "노스탤지어 벽지",
+        "itemID": 2670302
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670315
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "화이트 타일 바닥",
+        "itemID": 2670316
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "빈티지 타일 바닥",
+        "itemID": 2670317
+      }
+    },
+    "balcony": {
+      "0": {
+        "0": {
+          "name": "balcony1",
+          "state": 0
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 0
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 0
+        },
+        "info": "봄바람 철제 발코니",
+        "itemID": 2670309
+      },
+      "1": {
+        "0": {
+          "name": "balcony1",
+          "state": 1
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 1
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 1
+        },
+        "info": "일상의 풍경 철제 발코니",
+        "itemID": 2670310
+      },
+      "2": {
+        "0": {
+          "name": "balcony1",
+          "state": 2
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 2
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 2
+        },
+        "info": "활기찬 아침 시멘트 발코니 ",
+        "itemID": 2670311
+      },
+      "3": {
+        "0": {
+          "name": "balcony1",
+          "state": 3
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 3
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 3
+        },
+        "info": "아늑한 포옹 시멘트 발코니 ",
+        "itemID": 2670312
+      },
+      "4": {
+        "0": {
+          "name": "balcony1",
+          "state": 4
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 4
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 4
+        },
+        "info": "설레는 하루 원목 발코니 ",
+        "itemID": 2670313
+      },
+      "5": {
+        "0": {
+          "name": "balcony1",
+          "state": 5
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 5
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 5
+        },
+        "info": "견고한 일상 원목 발코니 ",
+        "itemID": 2670314
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "바랜 철창화 창문",
+        "itemID": 2670303
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "하얀 철창화 창문 ",
+        "itemID": 2670304
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "햇살 캐노피 창문 ",
+        "itemID": 2670305
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "산들 캐노피 창문 ",
+        "itemID": 2670306
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "편백나무 창문 ",
+        "itemID": 2670307
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "단풍나무 창문 ",
+        "itemID": 2670308
+      }
+    }
+  },
+  "038": {
+    "templateMapID": 871100037,
+    "info": "봄날의 청춘 맨션 확장형 - 사선 계단형",
+    "category": "Blossom_expanded",
+    "type": "diagonal",
+    "name": "春日青春宅邸擴建型 - 右側樓梯型",
+    "desc": "雖然有點小，但這是一座高建築的4層樓宅邸。在裝飾得漂亮的陽台上，可以享受盛開的櫻花、溫暖的陽光、舒適的風。 內部配置有堅固的鐵梯。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "그리움 평지붕",
+        "itemID": 2670318
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "벚꽃빛 평지붕",
+        "itemID": 2670319
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "아네모이아 평지붕",
+        "itemID": 2670320
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "아침 안개 기와지붕",
+        "itemID": 2670321
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "봄밤 기와지붕",
+        "itemID": 2670322
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "오후 두시 기와지붕",
+        "itemID": 2670323
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "안식처 박공지붕 ",
+        "itemID": 2670345
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "봄날의 박공지붕",
+        "itemID": 2670346
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "환한 박공지붕",
+        "itemID": 2670347
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "info": "단단한 콘크리트 외벽",
+        "itemID": 2670324
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "info": "노란 페인트 외벽",
+        "itemID": 2670325
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "info": "하얀 타일 외벽",
+        "itemID": 2670326
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "시나브로 벽지",
+        "itemID": 2670327
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "벚꽃 벽지",
+        "itemID": 2670328
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "노스탤지어 벽지",
+        "itemID": 2670329
+      },
+      "3": {
+        "0": {
+          "name": "wallBack1",
+          "state": 3
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 3
+        },
+        "info": "원목 내벽",
+        "itemID": 2670348
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670342
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "화이트 타일 바닥",
+        "itemID": 2670343
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "빈티지 타일 바닥",
+        "itemID": 2670344
+      }
+    },
+    "balcony": {
+      "0": {
+        "0": {
+          "name": "balcony1",
+          "state": 0
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 0
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 0
+        },
+        "info": "봄바람 철제 발코니",
+        "itemID": 2670336
+      },
+      "1": {
+        "0": {
+          "name": "balcony1",
+          "state": 1
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 1
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 1
+        },
+        "info": "일상의 풍경 철제 발코니",
+        "itemID": 2670337
+      },
+      "2": {
+        "0": {
+          "name": "balcony1",
+          "state": 2
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 2
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 2
+        },
+        "info": "활기찬 아침 시멘트 발코니 ",
+        "itemID": 2670338
+      },
+      "3": {
+        "0": {
+          "name": "balcony1",
+          "state": 3
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 3
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 3
+        },
+        "info": "아늑한 포옹 시멘트 발코니 ",
+        "itemID": 2670339
+      },
+      "4": {
+        "0": {
+          "name": "balcony1",
+          "state": 4
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 4
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 4
+        },
+        "info": "설레는 하루 원목 발코니 ",
+        "itemID": 2670340
+      },
+      "5": {
+        "0": {
+          "name": "balcony1",
+          "state": 5
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 5
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 5
+        },
+        "info": "견고한 일상 원목 발코니 ",
+        "itemID": 2670341
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "봄빛 철창 창문",
+        "itemID": 2670330
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "벚꽃빛 철창 창문",
+        "itemID": 2670331
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "햇살 아치 창문",
+        "itemID": 2670332
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "산들 아치 창문 ",
+        "itemID": 2670333
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "편백나무 창문 ",
+        "itemID": 2670334
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "단풍나무 창문 ",
+        "itemID": 2670335
+      }
+    }
+  },
+  "039": {
+    "templateMapID": 871100038,
+    "info": "봄날의 청춘 맨션 확장형 - 꺾인 계단형",
+    "category": "Blossom_expanded",
+    "type": "curved",
+    "name": "春日青春宅邸 - 彎曲樓梯型",
+    "desc": "雖然有點小，但這是一座高建築的4層宅邸。在裝飾得漂亮的陽台上，可以享受盛開的櫻花、溫暖的陽光、舒適的風。 內部配置有穩固的樓梯。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "그리움 평지붕",
+        "itemID": 2670318
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "벚꽃빛 평지붕",
+        "itemID": 2670319
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "아네모이아 평지붕",
+        "itemID": 2670320
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "아침 안개 기와지붕",
+        "itemID": 2670321
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "봄밤 기와지붕",
+        "itemID": 2670322
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "오후 두시 기와지붕",
+        "itemID": 2670323
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "안식처 박공지붕 ",
+        "itemID": 2670345
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "봄날의 박공지붕",
+        "itemID": 2670346
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "환한 박공지붕",
+        "itemID": 2670347
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "info": "단단한 콘크리트 외벽",
+        "itemID": 2670324
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "info": "노란 페인트 외벽",
+        "itemID": 2670325
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "info": "하얀 타일 외벽",
+        "itemID": 2670326
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "시나브로 벽지",
+        "itemID": 2670327
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "벚꽃 벽지",
+        "itemID": 2670328
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "노스탤지어 벽지",
+        "itemID": 2670329
+      },
+      "3": {
+        "0": {
+          "name": "wallBack1",
+          "state": 3
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 3
+        },
+        "info": "원목 내벽",
+        "itemID": 2670348
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670342
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "화이트 타일 바닥",
+        "itemID": 2670343
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "빈티지 타일 바닥",
+        "itemID": 2670344
+      }
+    },
+    "balcony": {
+      "0": {
+        "0": {
+          "name": "balcony1",
+          "state": 0
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 0
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 0
+        },
+        "info": "봄바람 철제 발코니",
+        "itemID": 2670336
+      },
+      "1": {
+        "0": {
+          "name": "balcony1",
+          "state": 1
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 1
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 1
+        },
+        "info": "일상의 풍경 철제 발코니",
+        "itemID": 2670337
+      },
+      "2": {
+        "0": {
+          "name": "balcony1",
+          "state": 2
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 2
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 2
+        },
+        "info": "활기찬 아침 시멘트 발코니 ",
+        "itemID": 2670338
+      },
+      "3": {
+        "0": {
+          "name": "balcony1",
+          "state": 3
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 3
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 3
+        },
+        "info": "아늑한 포옹 시멘트 발코니 ",
+        "itemID": 2670339
+      },
+      "4": {
+        "0": {
+          "name": "balcony1",
+          "state": 4
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 4
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 4
+        },
+        "info": "설레는 하루 원목 발코니 ",
+        "itemID": 2670340
+      },
+      "5": {
+        "0": {
+          "name": "balcony1",
+          "state": 5
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 5
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 5
+        },
+        "info": "견고한 일상 원목 발코니 ",
+        "itemID": 2670341
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "봄빛 철창 창문",
+        "itemID": 2670330
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "벚꽃빛 철창 창문",
+        "itemID": 2670331
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "햇살 아치 창문",
+        "itemID": 2670332
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "산들 아치 창문 ",
+        "itemID": 2670333
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "편백나무 창문 ",
+        "itemID": 2670334
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "단풍나무 창문 ",
+        "itemID": 2670335
+      }
+    }
+  },
+  "040": {
+    "templateMapID": 871100039,
+    "info": "봄날의 청춘 맨션 확장형 - 사다리형",
+    "category": "Blossom_expanded",
+    "type": "ladder",
+    "name": "春日青春宅邸擴建型 - 梯子型",
+    "desc": "雖然有點小，但是座高建築的4層樓宅邸。在裝飾得漂亮的陽台上，可以享受盛開的櫻花、溫暖的陽光、舒適的風。內部配置可有效利用空間的梯子。",
+    "roof": {
+      "0": {
+        "0": {
+          "name": "roof1",
+          "state": 0
+        },
+        "1": {
+          "name": "roof2",
+          "state": 0
+        },
+        "2": {
+          "name": "roof3",
+          "state": 0
+        },
+        "info": "그리움 평지붕",
+        "itemID": 2670318
+      },
+      "1": {
+        "0": {
+          "name": "roof1",
+          "state": 1
+        },
+        "1": {
+          "name": "roof2",
+          "state": 1
+        },
+        "2": {
+          "name": "roof3",
+          "state": 1
+        },
+        "info": "벚꽃빛 평지붕",
+        "itemID": 2670319
+      },
+      "2": {
+        "0": {
+          "name": "roof1",
+          "state": 2
+        },
+        "1": {
+          "name": "roof2",
+          "state": 2
+        },
+        "2": {
+          "name": "roof3",
+          "state": 2
+        },
+        "info": "아네모이아 평지붕",
+        "itemID": 2670320
+      },
+      "3": {
+        "0": {
+          "name": "roof1",
+          "state": 3
+        },
+        "1": {
+          "name": "roof2",
+          "state": 3
+        },
+        "2": {
+          "name": "roof3",
+          "state": 3
+        },
+        "info": "아침 안개 기와지붕",
+        "itemID": 2670321
+      },
+      "4": {
+        "0": {
+          "name": "roof1",
+          "state": 4
+        },
+        "1": {
+          "name": "roof2",
+          "state": 4
+        },
+        "2": {
+          "name": "roof3",
+          "state": 4
+        },
+        "info": "봄밤 기와지붕",
+        "itemID": 2670322
+      },
+      "5": {
+        "0": {
+          "name": "roof1",
+          "state": 5
+        },
+        "1": {
+          "name": "roof2",
+          "state": 5
+        },
+        "2": {
+          "name": "roof3",
+          "state": 5
+        },
+        "info": "오후 두시 기와지붕",
+        "itemID": 2670323
+      },
+      "6": {
+        "0": {
+          "name": "roof1",
+          "state": 6
+        },
+        "1": {
+          "name": "roof2",
+          "state": 6
+        },
+        "2": {
+          "name": "roof3",
+          "state": 6
+        },
+        "info": "안식처 박공지붕 ",
+        "itemID": 2670345
+      },
+      "7": {
+        "0": {
+          "name": "roof1",
+          "state": 7
+        },
+        "1": {
+          "name": "roof2",
+          "state": 7
+        },
+        "2": {
+          "name": "roof3",
+          "state": 7
+        },
+        "info": "봄날의 박공지붕",
+        "itemID": 2670346
+      },
+      "8": {
+        "0": {
+          "name": "roof1",
+          "state": 8
+        },
+        "1": {
+          "name": "roof2",
+          "state": 8
+        },
+        "2": {
+          "name": "roof3",
+          "state": 8
+        },
+        "info": "환한 박공지붕",
+        "itemID": 2670347
+      }
+    },
+    "wallFront": {
+      "0": {
+        "0": {
+          "name": "wallFront1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 0
+        },
+        "info": "단단한 콘크리트 외벽",
+        "itemID": 2670324
+      },
+      "1": {
+        "0": {
+          "name": "wallFront1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 1
+        },
+        "info": "노란 페인트 외벽",
+        "itemID": 2670325
+      },
+      "2": {
+        "0": {
+          "name": "wallFront1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallFront2",
+          "state": 2
+        },
+        "info": "하얀 타일 외벽",
+        "itemID": 2670326
+      }
+    },
+    "wallBack": {
+      "0": {
+        "0": {
+          "name": "wallBack1",
+          "state": 0
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 0
+        },
+        "info": "시나브로 벽지",
+        "itemID": 2670327
+      },
+      "1": {
+        "0": {
+          "name": "wallBack1",
+          "state": 1
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 1
+        },
+        "info": "벚꽃 벽지",
+        "itemID": 2670328
+      },
+      "2": {
+        "0": {
+          "name": "wallBack1",
+          "state": 2
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 2
+        },
+        "info": "노스탤지어 벽지",
+        "itemID": 2670329
+      },
+      "3": {
+        "0": {
+          "name": "wallBack1",
+          "state": 3
+        },
+        "1": {
+          "name": "wallBack2",
+          "state": 3
+        },
+        "info": "원목 내벽",
+        "itemID": 2670348
+      }
+    },
+    "tile": {
+      "0": {
+        "0": {
+          "name": "tile",
+          "state": 0
+        },
+        "info": "마루 바닥",
+        "itemID": 2670342
+      },
+      "1": {
+        "0": {
+          "name": "tile",
+          "state": 1
+        },
+        "info": "화이트 타일 바닥",
+        "itemID": 2670343
+      },
+      "2": {
+        "0": {
+          "name": "tile",
+          "state": 2
+        },
+        "info": "빈티지 타일 바닥",
+        "itemID": 2670344
+      }
+    },
+    "balcony": {
+      "0": {
+        "0": {
+          "name": "balcony1",
+          "state": 0
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 0
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 0
+        },
+        "info": "봄바람 철제 발코니",
+        "itemID": 2670336
+      },
+      "1": {
+        "0": {
+          "name": "balcony1",
+          "state": 1
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 1
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 1
+        },
+        "info": "일상의 풍경 철제 발코니",
+        "itemID": 2670337
+      },
+      "2": {
+        "0": {
+          "name": "balcony1",
+          "state": 2
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 2
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 2
+        },
+        "info": "활기찬 아침 시멘트 발코니 ",
+        "itemID": 2670338
+      },
+      "3": {
+        "0": {
+          "name": "balcony1",
+          "state": 3
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 3
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 3
+        },
+        "info": "아늑한 포옹 시멘트 발코니 ",
+        "itemID": 2670339
+      },
+      "4": {
+        "0": {
+          "name": "balcony1",
+          "state": 4
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 4
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 4
+        },
+        "info": "설레는 하루 원목 발코니 ",
+        "itemID": 2670340
+      },
+      "5": {
+        "0": {
+          "name": "balcony1",
+          "state": 5
+        },
+        "1": {
+          "name": "balcony2",
+          "state": 5
+        },
+        "2": {
+          "name": "balcony3",
+          "state": 5
+        },
+        "info": "견고한 일상 원목 발코니 ",
+        "itemID": 2670341
+      }
+    },
+    "window": {
+      "0": {
+        "0": {
+          "name": "window",
+          "state": 0
+        },
+        "info": "봄빛 철창 창문",
+        "itemID": 2670330
+      },
+      "1": {
+        "0": {
+          "name": "window",
+          "state": 1
+        },
+        "info": "벚꽃빛 철창 창문",
+        "itemID": 2670331
+      },
+      "2": {
+        "0": {
+          "name": "window",
+          "state": 2
+        },
+        "info": "햇살 아치 창문",
+        "itemID": 2670332
+      },
+      "3": {
+        "0": {
+          "name": "window",
+          "state": 3
+        },
+        "info": "산들 아치 창문 ",
+        "itemID": 2670333
+      },
+      "4": {
+        "0": {
+          "name": "window",
+          "state": 4
+        },
+        "info": "편백나무 창문 ",
+        "itemID": 2670334
+      },
+      "5": {
+        "0": {
+          "name": "window",
+          "state": 5
+        },
+        "info": "단풍나무 창문 ",
+        "itemID": 2670335
+      }
+    }
   }
 }

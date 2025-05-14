@@ -38333,5 +38333,2869 @@
         }
       }
     }
+  },
+  "02672211": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 118,
+            "height": 89
+          },
+          "origin": {
+            "x": 58,
+            "y": 89
+          }
+        },
+        "z": 1
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 3,
+      "gridY": 2,
+      "type": "deco",
+      "refundPrice": 1,
+      "interact": "script",
+      "onInteract": "furniture_animationOnOff_WaitFinish",
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "table"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 118,
+                    "height": 89
+                  },
+                  "origin": {
+                    "x": 58,
+                    "y": 89
+                  },
+                  "z": 1
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 1,
+                    "height": 1
+                  },
+                  "origin": {
+                    "x": 58,
+                    "y": 89
+                  }
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      },
+      "1": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 720,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 118,
+                    "height": 89
+                  },
+                  "origin": {
+                    "x": 58,
+                    "y": 89
+                  },
+                  "z": 1,
+                  "delay": 720
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 720,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 50,
+                    "height": 48
+                  },
+                  "origin": {
+                    "x": 22,
+                    "y": 115
+                  },
+                  "z": 1,
+                  "delay": 120
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672212": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 37,
+            "height": 55
+          },
+          "origin": {
+            "x": 19,
+            "y": 55
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 2,
+      "type": "rest",
+      "interact": "chair",
+      "invisibleWeapon": 1,
+      "refundPrice": 1,
+      "sitSlots": {
+        "0": {
+          "sitAction": "sit",
+          "sitForceFlip": 1,
+          "bodyZ": 0,
+          "removeEffect": 1
+        }
+      },
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "chair"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 37,
+                    "height": 55
+                  },
+                  "origin": {
+                    "x": 19,
+                    "y": 55
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672213": {
+    "info": {
+      "avatar": {
+        "_imageData": {
+          "width": 129,
+          "height": 149
+        },
+        "origin": {
+          "x": 64,
+          "y": 148
+        },
+        "delay": 150,
+        "z": 1
+      },
+      "tradeBlock": 1,
+      "notSale": 1,
+      "slotMax": 99,
+      "gridX": 4,
+      "gridY": 5,
+      "type": "rest",
+      "interact": "chair",
+      "invisibleWeapon": 1,
+      "refundPrice": 1,
+      "sitSlots": {
+        "0": {
+          "sitAction": "stand",
+          "bodyZ": 2,
+          "removeEffect": 1
+        }
+      },
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "photobooth"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 126,
+                    "height": 148
+                  },
+                  "origin": {
+                    "x": 64,
+                    "y": 148
+                  },
+                  "delay": 150,
+                  "z": 3
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 121,
+                    "height": 146
+                  },
+                  "origin": {
+                    "x": 56,
+                    "y": 145
+                  },
+                  "delay": 150,
+                  "z": 1
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672214": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 62,
+            "height": 121
+          },
+          "origin": {
+            "x": 31,
+            "y": 121
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 2,
+      "gridY": 4,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "kitchen"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 180,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 62,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 31,
+                    "y": 121
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672215": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 61,
+            "height": 118
+          },
+          "origin": {
+            "x": 30,
+            "y": 118
+          }
+        },
+        "z": 0,
+        "delay": 120
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "notSale": 1,
+      "gridX": 2,
+      "gridY": 4,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "kitchen"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 720,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 61,
+                    "height": 118
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 118
+                  },
+                  "z": 0,
+                  "delay": 120
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672216": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 58,
+            "height": 89
+          },
+          "origin": {
+            "x": 32,
+            "y": 89
+          }
+        },
+        "z": 0,
+        "delay": 300
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 3,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "deco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 3600,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 58,
+                    "height": 89
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 89
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 58,
+                    "height": 88
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 88
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 57,
+                    "height": 87
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 87
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 57,
+                    "height": 87
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 87
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 57,
+                    "height": 87
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 87
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 58,
+                    "height": 88
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 88
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 58,
+                    "height": 89
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 89
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 58,
+                    "height": 90
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 90
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 57,
+                    "height": 91
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 91
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 57,
+                    "height": 91
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 91
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 57,
+                    "height": 91
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 91
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 58,
+                    "height": 90
+                  },
+                  "origin": {
+                    "x": 32,
+                    "y": 90
+                  },
+                  "z": 0,
+                  "delay": 300
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672217": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 66,
+            "height": 121
+          },
+          "origin": {
+            "x": 35,
+            "y": 121
+          }
+        },
+        "z": 0,
+        "delay": 300
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 4,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "deco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 3600,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 66,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 35,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 68,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 36,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 70,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 37,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 71,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 37,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 70,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 37,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 69,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 37,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 67,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 36,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 67,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 35,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 67,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 34,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 68,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 34,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 67,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 34,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 66,
+                    "height": 121
+                  },
+                  "origin": {
+                    "x": 34,
+                    "y": 121
+                  },
+                  "z": 0,
+                  "delay": 300
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672218": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 60,
+            "height": 71
+          },
+          "origin": {
+            "x": 29,
+            "y": 71
+          }
+        },
+        "z": 0
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "notSale": 1,
+      "gridX": 2,
+      "gridY": 2,
+      "refundPrice": 1,
+      "type": "weather",
+      "interact": "script",
+      "onInteract": "furniture_2672218",
+      "onUpdate": "onUserEnter_2672218",
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "deco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      },
+      "1": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 1320,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 60,
+                    "height": 71
+                  },
+                  "origin": {
+                    "x": 29,
+                    "y": 71
+                  },
+                  "z": 0,
+                  "delay": 120
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671159": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 149,
+            "height": 43
+          },
+          "origin": {
+            "x": 73,
+            "y": 35
+          }
+        },
+        "z": -1
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 3,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 149,
+                    "height": 43
+                  },
+                  "origin": {
+                    "x": 73,
+                    "y": 35
+                  },
+                  "z": -1
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671160": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 142,
+            "height": 32
+          },
+          "origin": {
+            "x": 69,
+            "y": 34
+          }
+        },
+        "z": 0
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "notSale": 1,
+      "gridX": 3,
+      "gridY": 1,
+      "type": "deco",
+      "onInteract": "furniture_2671160",
+      "interact": "script",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 142,
+                    "height": 32
+                  },
+                  "origin": {
+                    "x": 69,
+                    "y": 34
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      },
+      "1": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 960,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 195,
+                    "height": 82
+                  },
+                  "origin": {
+                    "x": 96,
+                    "y": 58
+                  },
+                  "z": 0,
+                  "delay": 300
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 155,
+                    "height": 77
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 52
+                  },
+                  "z": 0,
+                  "delay": 300
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      },
+      "2": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 960,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 195,
+                    "height": 83
+                  },
+                  "origin": {
+                    "x": 96,
+                    "y": 58
+                  },
+                  "z": 0,
+                  "delay": 180
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 155,
+                    "height": 76
+                  },
+                  "origin": {
+                    "x": 76,
+                    "y": 52
+                  },
+                  "z": 0,
+                  "delay": 180
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 195,
+                    "height": 83
+                  },
+                  "origin": {
+                    "x": 96,
+                    "y": 58
+                  },
+                  "z": 0,
+                  "delay": 180
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671205": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 140,
+            "height": 38
+          },
+          "origin": {
+            "x": 69,
+            "y": 35
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 3,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 140,
+                    "height": 38
+                  },
+                  "origin": {
+                    "x": 69,
+                    "y": 35
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671161": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 62,
+            "height": 55
+          },
+          "origin": {
+            "x": 30,
+            "y": 56
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 2,
+      "gridY": 2,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 62,
+                    "height": 55
+                  },
+                  "origin": {
+                    "x": 30,
+                    "y": 56
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671162": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 34,
+            "height": 30
+          },
+          "origin": {
+            "x": 16,
+            "y": 28
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 34,
+                    "height": 30
+                  },
+                  "origin": {
+                    "x": 16,
+                    "y": 28
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671206": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 34,
+            "height": 30
+          },
+          "origin": {
+            "x": 16,
+            "y": 28
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 34,
+                    "height": 30
+                  },
+                  "origin": {
+                    "x": 16,
+                    "y": 28
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671207": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 34,
+            "height": 30
+          },
+          "origin": {
+            "x": 16,
+            "y": 28
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 34,
+                    "height": 30
+                  },
+                  "origin": {
+                    "x": 16,
+                    "y": 28
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671208": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 34,
+            "height": 30
+          },
+          "origin": {
+            "x": 16,
+            "y": 28
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 34,
+                    "height": 30
+                  },
+                  "origin": {
+                    "x": 16,
+                    "y": 28
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671209": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 34,
+            "height": 30
+          },
+          "origin": {
+            "x": 16,
+            "y": 28
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 34,
+                    "height": 30
+                  },
+                  "origin": {
+                    "x": 16,
+                    "y": 28
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671163": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 59,
+            "height": 63
+          },
+          "origin": {
+            "x": 28,
+            "y": 60
+          }
+        },
+        "z": 0
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 2,
+      "gridY": 2,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 59,
+                    "height": 63
+                  },
+                  "origin": {
+                    "x": 28,
+                    "y": 60
+                  },
+                  "z": 0
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671164": {
+    "info": {
+      "avatar": {
+        "_imageData": {
+          "width": 87,
+          "height": 63
+        },
+        "origin": {
+          "x": 43,
+          "y": 61
+        },
+        "delay": 150
+      },
+      "slotMax": 99,
+      "tradeBlock": 1,
+      "notSale": 1,
+      "gridX": 3,
+      "gridY": 2,
+      "refundPrice": 1,
+      "type": "calendar",
+      "day": {
+        "0": {
+          "_imageData": {
+            "width": 48,
+            "height": 64
+          },
+          "origin": {
+            "x": 23,
+            "y": 60
+          },
+          "z": 0
+        },
+        "1": {
+          "_imageData": {
+            "width": 44,
+            "height": 59
+          },
+          "origin": {
+            "x": 23,
+            "y": 59
+          },
+          "z": 0
+        },
+        "2": {
+          "_imageData": {
+            "width": 48,
+            "height": 63
+          },
+          "origin": {
+            "x": 23,
+            "y": 62
+          },
+          "z": 0
+        },
+        "3": {
+          "_imageData": {
+            "width": 49,
+            "height": 66
+          },
+          "origin": {
+            "x": 25,
+            "y": 64
+          },
+          "z": 0
+        },
+        "4": {
+          "_imageData": {
+            "width": 51,
+            "height": 68
+          },
+          "origin": {
+            "x": 25,
+            "y": 65
+          },
+          "z": 0
+        },
+        "5": {
+          "_imageData": {
+            "width": 47,
+            "height": 69
+          },
+          "origin": {
+            "x": 23,
+            "y": 66
+          },
+          "z": 0
+        },
+        "6": {
+          "_imageData": {
+            "width": 49,
+            "height": 66
+          },
+          "origin": {
+            "x": 24,
+            "y": 64
+          },
+          "z": 0
+        },
+        "7": {
+          "_imageData": {
+            "width": 46,
+            "height": 66
+          },
+          "origin": {
+            "x": 23,
+            "y": 64
+          },
+          "z": 0
+        },
+        "8": {
+          "_imageData": {
+            "width": 50,
+            "height": 68
+          },
+          "origin": {
+            "x": 24,
+            "y": 64
+          },
+          "z": 0
+        },
+        "9": {
+          "_imageData": {
+            "width": 50,
+            "height": 67
+          },
+          "origin": {
+            "x": 25,
+            "y": 62
+          },
+          "z": 0
+        }
+      },
+      "dayPos": {
+        "0": {
+          "_imageData": {
+            "width": 96,
+            "height": 73
+          },
+          "origin": {
+            "x": 0,
+            "y": 0
+          },
+          "z": 0,
+          "delay": 120
+        }
+      },
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "walldeco"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 73
+                  },
+                  "origin": {
+                    "x": 48,
+                    "y": 66
+                  },
+                  "z": -1,
+                  "delay": 120
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 96,
+                    "height": 73
+                  },
+                  "origin": {
+                    "x": 48,
+                    "y": 66
+                  },
+                  "z": 0,
+                  "delay": 120
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671165": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 48,
+            "height": 52
+          },
+          "origin": {
+            "x": 24,
+            "y": 41
+          }
+        },
+        "z": -2
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "poster"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 48,
+                    "height": 52
+                  },
+                  "origin": {
+                    "x": 24,
+                    "y": 41
+                  },
+                  "z": -2
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671166": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 48,
+            "height": 52
+          },
+          "origin": {
+            "x": 24,
+            "y": 41
+          }
+        },
+        "z": -2
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "poster"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 48,
+                    "height": 52
+                  },
+                  "origin": {
+                    "x": 24,
+                    "y": 41
+                  },
+                  "z": -2
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671167": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 48,
+            "height": 52
+          },
+          "origin": {
+            "x": 24,
+            "y": 41
+          }
+        },
+        "z": -2
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "poster"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 48,
+                    "height": 52
+                  },
+                  "origin": {
+                    "x": 24,
+                    "y": 41
+                  },
+                  "z": -2
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671168": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 48,
+            "height": 52
+          },
+          "origin": {
+            "x": 24,
+            "y": 41
+          }
+        },
+        "z": -2
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 1,
+      "gridY": 1,
+      "type": "deco",
+      "refundPrice": 1,
+      "tag": {
+        "0": "party",
+        "1": "birthday",
+        "2": "poster"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 120,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 48,
+                    "height": 52
+                  },
+                  "origin": {
+                    "x": 24,
+                    "y": 41
+                  },
+                  "z": -2
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02672219": {
+    "info": {
+      "avatar": {
+        "_imageData": {
+          "width": 152,
+          "height": 122
+        },
+        "origin": {
+          "x": 75,
+          "y": 120
+        },
+        "delay": 150
+      },
+      "tradeBlock": 1,
+      "notSale": 1,
+      "slotMax": 99,
+      "gridX": 4,
+      "gridY": 4,
+      "invisibleWeapon": 1,
+      "type": "rest",
+      "interact": "chair",
+      "sitSlots": {
+        "0": {
+          "sitAction": "sit",
+          "sitForceFlip": 1,
+          "bodyZ": 0,
+          "removeEffect": 1
+        }
+      },
+      "dropIconScaleUp": 1,
+      "refundPrice": 0,
+      "tag": {
+        "0": "bed",
+        "1": "bedroom",
+        "2": "boss"
+      }
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 152,
+                    "height": 122
+                  },
+                  "origin": {
+                    "x": 75,
+                    "y": 121
+                  },
+                  "z": 1
+                }
+              }
+            }
+          },
+          "layer2": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 150,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 118,
+                    "height": 76
+                  },
+                  "origin": {
+                    "x": 57,
+                    "y": 90
+                  },
+                  "z": -2
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
+  },
+  "02671169": {
+    "info": {
+      "avatar": {
+        "": {
+          "_imageData": {
+            "width": 92,
+            "height": 119
+          },
+          "origin": {
+            "x": 45,
+            "y": 119
+          }
+        },
+        "z": 0,
+        "delay": 150
+      },
+      "tradeBlock": 1,
+      "slotMax": 99,
+      "notSale": 1,
+      "gridX": 3,
+      "gridY": 4,
+      "type": "deco",
+      "tag": {
+        "0": "window",
+        "1": "boss"
+      },
+      "interact": "animate",
+      "dropIconScaleUp": 1,
+      "refundPrice": 0
+    },
+    "states": {
+      "0": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 2400,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 120
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 120
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 120
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "12": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "13": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "14": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                },
+                "15": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 150
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      },
+      "1": {
+        "LayerSlots": {
+          "layer1": {
+            "0": {
+              "StartPos": 0,
+              "EndPos": 1890,
+              "AnimReference": {
+                "0": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "1": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "2": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "3": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "4": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "5": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "6": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "7": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 120
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "8": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 120
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "9": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 120
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "10": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "11": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "12": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "13": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "14": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                },
+                "15": {
+                  "_imageData": {
+                    "width": 92,
+                    "height": 119
+                  },
+                  "origin": {
+                    "x": 45,
+                    "y": 119
+                  },
+                  "z": 0,
+                  "delay": 120
+                }
+              }
+            }
+          }
+        },
+        "Sections": {
+          "Loop": {
+            "StartTime": 0,
+            "NextSectionName": "Loop"
+          }
+        }
+      }
+    }
   }
 }

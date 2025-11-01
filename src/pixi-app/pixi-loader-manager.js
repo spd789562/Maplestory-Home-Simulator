@@ -53,7 +53,7 @@ class PixiLoaderManager {
           url:
             !url.startsWith('/') || process.env.NODE_ENV === 'development'
               ? url
-              : `${IMAGE_CDN}${location.host}${url}`,
+              : `${IMAGE_CDN}${url}`,
         }))
       )
       .load((ld, resources) => {
